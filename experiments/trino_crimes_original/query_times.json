@@ -1,0 +1,3822 @@
+{
+  "generated_at": "2026-09-24T11:07:35+00:00",
+  "query_file": "data\\crimes_sql.json",
+  "trino_url": "http://localhost:8080",
+  "catalog": "postgresql",
+  "schema": "public",
+  "user": "demo",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": "https://asktom.oracle.com/ords/asktom.search?tag=ranksequence-on-condition",
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3295,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 110.269472,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-24T05:41:43+00:00",
+          "finished_at": "2026-09-24T05:43:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 107.044483,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-24T07:41:25+00:00",
+          "finished_at": "2026-09-24T07:43:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 107.220036,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-24T09:42:49+00:00",
+          "finished_at": "2026-09-24T09:44:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 108.177997
+    },
+    {
+      "id": 2,
+      "url": "https://asktom.oracle.com/ords/f?p=100%3A11%3A0%3A%3A%3A%3AP11_QUESTION_ID%3A9548719600346359362",
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 63,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 45.749891,
+          "rows_fetched": 63,
+          "started_at": "2026-09-24T05:43:34+00:00",
+          "finished_at": "2026-09-24T05:44:19+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.023427,
+          "rows_fetched": 63,
+          "started_at": "2026-09-24T07:43:12+00:00",
+          "finished_at": "2026-09-24T07:43:56+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.397151,
+          "rows_fetched": 63,
+          "started_at": "2026-09-24T09:44:36+00:00",
+          "finished_at": "2026-09-24T09:45:21+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.72349
+    },
+    {
+      "id": 3,
+      "url": "https://asktom.oracle.com/pls/apex/asktom.search?tag=counting-repeating-values",
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 19896,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 103.524949,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-24T05:44:19+00:00",
+          "finished_at": "2026-09-24T05:46:03+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.507324,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-24T07:43:56+00:00",
+          "finished_at": "2026-09-24T07:45:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 96.526429,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-24T09:45:21+00:00",
+          "finished_at": "2026-09-24T09:46:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 98.519567
+    },
+    {
+      "id": 4,
+      "url": "https://asktom.oracle.com/pls/apex/f?p=100:11:::YES:RP:P11_QUESTION_ID:9539280100346749147",
+      "output_file": "4.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 234.019469,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T05:46:03+00:00",
+          "finished_at": "2026-09-24T05:49:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 215.017092,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T07:45:32+00:00",
+          "finished_at": "2026-09-24T07:49:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 212.894139,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T09:46:57+00:00",
+          "finished_at": "2026-09-24T09:50:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 220.643567
+    },
+    {
+      "id": 5,
+      "url": "https://blogs.oracle.com/autonomous-ai-database/match_recognize-and-predicates-everything-you-need-to-know",
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1267806,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 86.452805,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-24T05:49:57+00:00",
+          "finished_at": "2026-09-24T05:51:24+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 82.310518,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-24T07:49:07+00:00",
+          "finished_at": "2026-09-24T07:50:30+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 82.295842,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-24T09:50:30+00:00",
+          "finished_at": "2026-09-24T09:51:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 83.686388
+    },
+    {
+      "id": 6,
+      "url": "https://cloud.tencent.com/developer/article/2028251",
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 59426,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.882985,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-24T05:51:24+00:00",
+          "finished_at": "2026-09-24T05:51:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.130368,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-24T07:50:30+00:00",
+          "finished_at": "2026-09-24T07:50:59+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 28.640516,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-24T09:51:53+00:00",
+          "finished_at": "2026-09-24T09:52:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 28.884623
+    },
+    {
+      "id": 7,
+      "url": "https://cloud.tencent.com/developer/article/2028251",
+      "output_file": "7.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.651342,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T05:51:53+00:00",
+          "finished_at": "2026-09-24T05:52:30+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.528321,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:50:59+00:00",
+          "finished_at": "2026-09-24T07:51:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.351776,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:52:22+00:00",
+          "finished_at": "2026-09-24T09:52:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.177146
+    },
+    {
+      "id": 8,
+      "url": "https://cloud.tencent.com/developer/article/2028251",
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 31.797294,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T05:52:30+00:00",
+          "finished_at": "2026-09-24T05:53:01+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 30.380452,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:51:33+00:00",
+          "finished_at": "2026-09-24T07:52:04+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.973635,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:52:56+00:00",
+          "finished_at": "2026-09-24T09:53:27+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 31.05046
+    },
+    {
+      "id": 9,
+      "url": "https://cloud.tencent.com/developer/article/2028251",
+      "output_file": "9.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 249,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.079919,
+          "rows_fetched": 249,
+          "started_at": "2026-09-24T05:53:01+00:00",
+          "finished_at": "2026-09-24T05:53:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 33.167934,
+          "rows_fetched": 249,
+          "started_at": "2026-09-24T07:52:04+00:00",
+          "finished_at": "2026-09-24T07:52:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.267205,
+          "rows_fetched": 249,
+          "started_at": "2026-09-24T09:53:27+00:00",
+          "finished_at": "2026-09-24T09:53:59+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 32.838353
+    },
+    {
+      "id": 10,
+      "url": "https://docs.oracle.com/middleware/1221/osa/cql-reference/CQLLR.pdf",
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 45895,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 40.868733,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-24T05:53:34+00:00",
+          "finished_at": "2026-09-24T05:54:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.258981,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-24T07:52:37+00:00",
+          "finished_at": "2026-09-24T07:53:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.141848,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-24T09:53:59+00:00",
+          "finished_at": "2026-09-24T09:54:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 38.089854
+    },
+    {
+      "id": 11,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/k1.query",
+      "output_file": "11.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 37450,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.032068,
+          "rows_fetched": 37450,
+          "started_at": "2026-09-24T05:54:15+00:00",
+          "finished_at": "2026-09-24T05:59:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.018259,
+          "rows_fetched": 37450,
+          "started_at": "2026-09-24T07:53:13+00:00",
+          "finished_at": "2026-09-24T07:58:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:54:37+00:00",
+          "finished_at": "2026-09-24T09:54:37+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.016776
+    },
+    {
+      "id": 12,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/k2.query",
+      "output_file": "12.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.034555,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T05:59:15+00:00",
+          "finished_at": "2026-09-24T06:04:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023161,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:58:13+00:00",
+          "finished_at": "2026-09-24T08:03:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:54:37+00:00",
+          "finished_at": "2026-09-24T09:54:37+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.019239
+    },
+    {
+      "id": 13,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/k3.query",
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.333399,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:04:16+00:00",
+          "finished_at": "2026-09-24T06:05:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 89.684173,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:03:13+00:00",
+          "finished_at": "2026-09-24T08:04:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.057078,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:54:37+00:00",
+          "finished_at": "2026-09-24T09:56:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 88.69155
+    },
+    {
+      "id": 14,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/reg1.query",
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15048,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.050527,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-24T06:05:40+00:00",
+          "finished_at": "2026-09-24T06:06:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 78.694955,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-24T08:04:43+00:00",
+          "finished_at": "2026-09-24T08:06:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 76.662511,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-24T09:56:09+00:00",
+          "finished_at": "2026-09-24T09:57:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 75.135998
+    },
+    {
+      "id": 15,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/reg2.query",
+      "output_file": "15.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035789,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:06:50+00:00",
+          "finished_at": "2026-09-24T06:11:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023988,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:06:02+00:00",
+          "finished_at": "2026-09-24T08:11:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:57:25+00:00",
+          "finished_at": "2026-09-24T09:57:25+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.019926
+    },
+    {
+      "id": 16,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/reg3.query",
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.945422,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:11:50+00:00",
+          "finished_at": "2026-09-24T06:12:39+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.00462,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:11:02+00:00",
+          "finished_at": "2026-09-24T08:11:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 55.48847,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:57:25+00:00",
+          "finished_at": "2026-09-24T09:58:21+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 52.146171
+    },
+    {
+      "id": 17,
+      "url": "https://github.com/Josehokec/CERMeetsDS/blob/main/src/main/java/request/crimes_query.txt",
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 25124,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.707403,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-24T06:12:39+00:00",
+          "finished_at": "2026-09-24T06:13:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.490301,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-24T08:11:54+00:00",
+          "finished_at": "2026-09-24T08:12:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.277677,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-24T09:58:21+00:00",
+          "finished_at": "2026-09-24T09:58:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.491794
+    },
+    {
+      "id": 18,
+      "url": "https://github.com/Josehokec/CERMeetsDS/blob/main/src/main/java/request/crimes_query.txt",
+      "output_file": "18.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 44.210636,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:13:15+00:00",
+          "finished_at": "2026-09-24T06:13:59+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.58MB, Delta: 943.02kB, Top Consumers: {MergeSortedPages=1015.23MB, GenericSpiller=8.35MB, TableScanOperator-ConnectorPageSource=2.47kB}]"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 47.663497,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:12:32+00:00",
+          "finished_at": "2026-09-24T08:13:20+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.58MB, Delta: 943.02kB, Top Consumers: {MergeSortedPages=1015.23MB, GenericSpiller=8.35MB, TableScanOperator-ConnectorPageSource=2.47kB}]"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 45.504096,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:58:53+00:00",
+          "finished_at": "2026-09-24T09:59:39+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.11MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1017.32MB, MergeSortedPages=5.75MB, GenericSpiller=28kB}]"
+        }
+      ],
+      "average_query_latency_seconds": 45.792743
+    },
+    {
+      "id": 19,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3394,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.6704,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-24T06:13:59+00:00",
+          "finished_at": "2026-09-24T06:14:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 31.238874,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-24T08:13:20+00:00",
+          "finished_at": "2026-09-24T08:13:51+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.346699,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-24T09:59:39+00:00",
+          "finished_at": "2026-09-24T10:00:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 30.085324
+    },
+    {
+      "id": 20,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 25.856793,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:14:28+00:00",
+          "finished_at": "2026-09-24T06:14:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.17003,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:13:51+00:00",
+          "finished_at": "2026-09-24T08:14:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 28.219954,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:00:09+00:00",
+          "finished_at": "2026-09-24T10:00:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 27.748926
+    },
+    {
+      "id": 21,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 25.937009,
+          "rows_fetched": 4,
+          "started_at": "2026-09-24T06:14:53+00:00",
+          "finished_at": "2026-09-24T06:15:19+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.428458,
+          "rows_fetched": 4,
+          "started_at": "2026-09-24T08:14:20+00:00",
+          "finished_at": "2026-09-24T08:14:50+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 28.712693,
+          "rows_fetched": 4,
+          "started_at": "2026-09-24T10:00:37+00:00",
+          "finished_at": "2026-09-24T10:01:06+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 28.026053
+    },
+    {
+      "id": 22,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 392,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.105886,
+          "rows_fetched": 392,
+          "started_at": "2026-09-24T06:15:19+00:00",
+          "finished_at": "2026-09-24T06:15:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 31.445635,
+          "rows_fetched": 392,
+          "started_at": "2026-09-24T08:14:50+00:00",
+          "finished_at": "2026-09-24T08:15:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.106726,
+          "rows_fetched": 392,
+          "started_at": "2026-09-24T10:01:06+00:00",
+          "finished_at": "2026-09-24T10:01:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.886082
+    },
+    {
+      "id": 23,
+      "url": "https://github.com/davisjam/vuln-regex-detector",
+      "output_file": "23.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 29960,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.021791,
+          "rows_fetched": 29960,
+          "started_at": "2026-09-24T06:15:48+00:00",
+          "finished_at": "2026-09-24T06:20:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023059,
+          "rows_fetched": 29960,
+          "started_at": "2026-09-24T08:15:21+00:00",
+          "finished_at": "2026-09-24T08:20:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:01:36+00:00",
+          "finished_at": "2026-09-24T10:01:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.01495
+    },
+    {
+      "id": 24,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/DynamicGeoBox/seq.sql",
+      "output_file": "24.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10603,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 106.005522,
+          "rows_fetched": 10603,
+          "started_at": "2026-09-24T06:20:48+00:00",
+          "finished_at": "2026-09-24T06:22:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 109.913524,
+          "rows_fetched": 10603,
+          "started_at": "2026-09-24T08:20:21+00:00",
+          "finished_at": "2026-09-24T08:22:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 98.019095,
+          "rows_fetched": 10603,
+          "started_at": "2026-09-24T10:01:36+00:00",
+          "finished_at": "2026-09-24T10:03:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 104.646047
+    },
+    {
+      "id": 25,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_kleene_seq.sql",
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 139,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.910535,
+          "rows_fetched": 139,
+          "started_at": "2026-09-24T06:22:34+00:00",
+          "finished_at": "2026-09-24T06:23:08+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.973161,
+          "rows_fetched": 139,
+          "started_at": "2026-09-24T08:22:11+00:00",
+          "finished_at": "2026-09-24T08:22:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.044564,
+          "rows_fetched": 139,
+          "started_at": "2026-09-24T10:03:14+00:00",
+          "finished_at": "2026-09-24T10:03:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.976087
+    },
+    {
+      "id": 26,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_kleene_seq.sql",
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.210519,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:23:08+00:00",
+          "finished_at": "2026-09-24T06:23:52+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.40606,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:22:48+00:00",
+          "finished_at": "2026-09-24T08:23:34+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.74739,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:03:48+00:00",
+          "finished_at": "2026-09-24T10:04:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.78799
+    },
+    {
+      "id": 27,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_kleene_seq.sql",
+      "output_file": "27.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.273953,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:23:52+00:00",
+          "finished_at": "2026-09-24T06:24:35+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.440708,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:23:34+00:00",
+          "finished_at": "2026-09-24T08:24:18+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.408447,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:04:33+00:00",
+          "finished_at": "2026-09-24T10:05:15+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.374369
+    },
+    {
+      "id": 28,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_kleene_seq.sql",
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 86,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 40.942199,
+          "rows_fetched": 86,
+          "started_at": "2026-09-24T06:24:35+00:00",
+          "finished_at": "2026-09-24T06:25:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.859651,
+          "rows_fetched": 86,
+          "started_at": "2026-09-24T08:24:18+00:00",
+          "finished_at": "2026-09-24T08:25:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.167522,
+          "rows_fetched": 86,
+          "started_at": "2026-09-24T10:05:15+00:00",
+          "finished_at": "2026-09-24T10:05:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 41.656457
+    },
+    {
+      "id": 29,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_seq.sql",
+      "output_file": "29.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 49015,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 38.144033,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-24T06:25:16+00:00",
+          "finished_at": "2026-09-24T06:25:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.108304,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-24T08:25:01+00:00",
+          "finished_at": "2026-09-24T08:25:41+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.894849,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-24T10:05:56+00:00",
+          "finished_at": "2026-09-24T10:06:35+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.049062
+    },
+    {
+      "id": 30,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_seq.sql",
+      "output_file": "30.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.604276,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:25:54+00:00",
+          "finished_at": "2026-09-24T06:26:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.264891,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:25:41+00:00",
+          "finished_at": "2026-09-24T08:26:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 51.027713,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:06:35+00:00",
+          "finished_at": "2026-09-24T10:07:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 51.29896
+    },
+    {
+      "id": 31,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_seq.sql",
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 209,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.159158,
+          "rows_fetched": 209,
+          "started_at": "2026-09-24T06:26:45+00:00",
+          "finished_at": "2026-09-24T06:27:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.468247,
+          "rows_fetched": 209,
+          "started_at": "2026-09-24T08:26:33+00:00",
+          "finished_at": "2026-09-24T08:27:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.92833,
+          "rows_fetched": 209,
+          "started_at": "2026-09-24T10:07:26+00:00",
+          "finished_at": "2026-09-24T10:08:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 46.851912
+    },
+    {
+      "id": 32,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_seq.sql",
+      "output_file": "32.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 18506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.81228,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-24T06:27:32+00:00",
+          "finished_at": "2026-09-24T06:28:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.949921,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-24T08:27:21+00:00",
+          "finished_at": "2026-09-24T08:28:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 43.693086,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-24T10:08:12+00:00",
+          "finished_at": "2026-09-24T10:08:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.485096
+    },
+    {
+      "id": 33,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/atom_seq.sql",
+      "output_file": "33.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.891946,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:28:16+00:00",
+          "finished_at": "2026-09-24T06:28:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.653766,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:28:07+00:00",
+          "finished_at": "2026-09-24T08:28:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 35.180919,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:08:56+00:00",
+          "finished_at": "2026-09-24T10:09:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.908877
+    },
+    {
+      "id": 34,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/atom_seq.sql",
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 40.832559,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:28:51+00:00",
+          "finished_at": "2026-09-24T06:29:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.221601,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:28:44+00:00",
+          "finished_at": "2026-09-24T08:29:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.92579,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:09:31+00:00",
+          "finished_at": "2026-09-24T10:10:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 41.993317
+    },
+    {
+      "id": 35,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/atom_seq.sql",
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 42.49844,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:29:32+00:00",
+          "finished_at": "2026-09-24T06:30:14+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.045458,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:29:29+00:00",
+          "finished_at": "2026-09-24T08:30:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.784711,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:10:12+00:00",
+          "finished_at": "2026-09-24T10:10:55+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.44287
+    },
+    {
+      "id": 36,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/atom_seq.sql",
+      "output_file": "36.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.881669,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:30:14+00:00",
+          "finished_at": "2026-09-24T06:30:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.060132,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:30:14+00:00",
+          "finished_at": "2026-09-24T08:31:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.53472,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:10:55+00:00",
+          "finished_at": "2026-09-24T10:11:41+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 46.15884
+    },
+    {
+      "id": 37,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/kleene_seq.sql",
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.064318,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:30:59+00:00",
+          "finished_at": "2026-09-24T06:31:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.811633,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:31:02+00:00",
+          "finished_at": "2026-09-24T08:31:39+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 33.539809,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:11:41+00:00",
+          "finished_at": "2026-09-24T10:12:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.47192
+    },
+    {
+      "id": 38,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/kleene_seq.sql",
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.037556,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:31:32+00:00",
+          "finished_at": "2026-09-24T06:32:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.764792,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:31:39+00:00",
+          "finished_at": "2026-09-24T08:32:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.097065,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:12:14+00:00",
+          "finished_at": "2026-09-24T10:12:59+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.299804
+    },
+    {
+      "id": 39,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/kleene_seq.sql",
+      "output_file": "39.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.223296,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:32:16+00:00",
+          "finished_at": "2026-09-24T06:32:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.590484,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:32:25+00:00",
+          "finished_at": "2026-09-24T08:33:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.435974,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:12:59+00:00",
+          "finished_at": "2026-09-24T10:13:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.749918
+    },
+    {
+      "id": 40,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/kleene_seq.sql",
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 175,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 39.455216,
+          "rows_fetched": 175,
+          "started_at": "2026-09-24T06:32:59+00:00",
+          "finished_at": "2026-09-24T06:33:39+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.391474,
+          "rows_fetched": 175,
+          "started_at": "2026-09-24T08:33:11+00:00",
+          "finished_at": "2026-09-24T08:33:53+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.384761,
+          "rows_fetched": 175,
+          "started_at": "2026-09-24T10:13:42+00:00",
+          "finished_at": "2026-09-24T10:14:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 40.743817
+    },
+    {
+      "id": 41,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.696488,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:33:39+00:00",
+          "finished_at": "2026-09-24T06:34:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.746921,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:33:53+00:00",
+          "finished_at": "2026-09-24T08:34:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.217839,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:14:22+00:00",
+          "finished_at": "2026-09-24T10:14:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.553749
+    },
+    {
+      "id": 42,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "42.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.993205,
+          "rows_fetched": 29,
+          "started_at": "2026-09-24T06:34:13+00:00",
+          "finished_at": "2026-09-24T06:34:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.283826,
+          "rows_fetched": 29,
+          "started_at": "2026-09-24T08:34:31+00:00",
+          "finished_at": "2026-09-24T08:35:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.722123,
+          "rows_fetched": 29,
+          "started_at": "2026-09-24T10:14:56+00:00",
+          "finished_at": "2026-09-24T10:15:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.999718
+    },
+    {
+      "id": 43,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "43.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.080405,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:34:48+00:00",
+          "finished_at": "2026-09-24T06:35:33+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.708931,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:35:09+00:00",
+          "finished_at": "2026-09-24T08:35:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.87926,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:15:31+00:00",
+          "finished_at": "2026-09-24T10:16:16+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.889532
+    },
+    {
+      "id": 44,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.02142,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:35:33+00:00",
+          "finished_at": "2026-09-24T06:36:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.602066,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:35:55+00:00",
+          "finished_at": "2026-09-24T08:36:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.235926,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:16:16+00:00",
+          "finished_at": "2026-09-24T10:17:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.619804
+    },
+    {
+      "id": 45,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 31.276295,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:36:17+00:00",
+          "finished_at": "2026-09-24T06:36:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.656944,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:36:43+00:00",
+          "finished_at": "2026-09-24T08:37:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 31.959284,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T10:17:01+00:00",
+          "finished_at": "2026-09-24T10:17:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 32.630841
+    },
+    {
+      "id": 46,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/WithinBeat/seq.sql",
+      "output_file": "46.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 17.609166,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:36:48+00:00",
+          "finished_at": "2026-09-24T06:37:06+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 17.259282,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:37:17+00:00",
+          "finished_at": "2026-09-24T08:37:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 17.483294,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T10:17:33+00:00",
+          "finished_at": "2026-09-24T10:17:51+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 17.450581
+    },
+    {
+      "id": 47,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/WithinDistrict/alternate_kleene_seq.sql",
+      "output_file": "47.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 380,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 20.595394,
+          "rows_fetched": 380,
+          "started_at": "2026-09-24T06:37:06+00:00",
+          "finished_at": "2026-09-24T06:37:26+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 20.482004,
+          "rows_fetched": 380,
+          "started_at": "2026-09-24T08:37:35+00:00",
+          "finished_at": "2026-09-24T08:37:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 20.524414,
+          "rows_fetched": 380,
+          "started_at": "2026-09-24T10:17:51+00:00",
+          "finished_at": "2026-09-24T10:18:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 20.533937
+    },
+    {
+      "id": 48,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "48.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3141,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 39.194099,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-24T06:37:26+00:00",
+          "finished_at": "2026-09-24T06:38:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.253736,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-24T08:37:55+00:00",
+          "finished_at": "2026-09-24T08:38:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.57338,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-24T10:18:11+00:00",
+          "finished_at": "2026-09-24T10:18:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.673738
+    },
+    {
+      "id": 49,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "49.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 46.346395,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:38:05+00:00",
+          "finished_at": "2026-09-24T06:38:52+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.212839,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:38:36+00:00",
+          "finished_at": "2026-09-24T08:39:28+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.687837,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:18:50+00:00",
+          "finished_at": "2026-09-24T10:19:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.082357
+    },
+    {
+      "id": 50,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "50.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.110233,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:38:52+00:00",
+          "finished_at": "2026-09-24T06:39:39+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.699685,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:39:28+00:00",
+          "finished_at": "2026-09-24T08:40:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.437307,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:19:36+00:00",
+          "finished_at": "2026-09-24T10:20:23+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 47.749075
+    },
+    {
+      "id": 51,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "51.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 45.379271,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:39:39+00:00",
+          "finished_at": "2026-09-24T06:40:24+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.733536,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:40:17+00:00",
+          "finished_at": "2026-09-24T08:41:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.997813,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T10:20:23+00:00",
+          "finished_at": "2026-09-24T10:21:08+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 46.70354
+    },
+    {
+      "id": 52,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/ChicagoCrime.java",
+      "output_file": "52.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 17.802976,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:40:24+00:00",
+          "finished_at": "2026-09-24T06:40:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 18.576589,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:41:07+00:00",
+          "finished_at": "2026-09-24T08:41:26+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 17.295718,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T10:21:08+00:00",
+          "finished_at": "2026-09-24T10:21:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 17.891761
+    },
+    {
+      "id": 53,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/ChicagoCrime.java",
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 22.878826,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:40:42+00:00",
+          "finished_at": "2026-09-24T06:41:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 23.560272,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:41:26+00:00",
+          "finished_at": "2026-09-24T08:41:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 23.293125,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T10:21:25+00:00",
+          "finished_at": "2026-09-24T10:21:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 23.244074
+    },
+    {
+      "id": 54,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/ChicagoCrime.java",
+      "output_file": "54.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 32.876058,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:41:05+00:00",
+          "finished_at": "2026-09-24T06:41:38+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 80.04kB, Top Consumers: {PagesToPagesIndexes=512.58MB, MatchAggregation=510.91MB, Matcher=481.71kB}]"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 35.014026,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:41:49+00:00",
+          "finished_at": "2026-09-24T08:42:24+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 80.04kB, Top Consumers: {PagesToPagesIndexes=512.58MB, MatchAggregation=510.91MB, Matcher=481.71kB}]"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 32.44779,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:21:48+00:00",
+          "finished_at": "2026-09-24T10:22:21+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 80.04kB, Top Consumers: {PagesToPagesIndexes=512.58MB, MatchAggregation=510.91MB, Matcher=481.71kB}]"
+        }
+      ],
+      "average_query_latency_seconds": 33.445958
+    },
+    {
+      "id": 55,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "output_file": "55.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 190056,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.750339,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-24T06:41:38+00:00",
+          "finished_at": "2026-09-24T06:42:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 54.596393,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-24T08:42:24+00:00",
+          "finished_at": "2026-09-24T08:43:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.422613,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-24T10:22:21+00:00",
+          "finished_at": "2026-09-24T10:23:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 51.589782
+    },
+    {
+      "id": 56,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "output_file": "56.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.197292,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:42:28+00:00",
+          "finished_at": "2026-09-24T06:43:26+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 62.433319,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:43:19+00:00",
+          "finished_at": "2026-09-24T08:44:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.443013,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:23:11+00:00",
+          "finished_at": "2026-09-24T10:24:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 59.691208
+    },
+    {
+      "id": 57,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "output_file": "57.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 11,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 56.046244,
+          "rows_fetched": 11,
+          "started_at": "2026-09-24T06:43:26+00:00",
+          "finished_at": "2026-09-24T06:44:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.794262,
+          "rows_fetched": 11,
+          "started_at": "2026-09-24T08:44:21+00:00",
+          "finished_at": "2026-09-24T08:45:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 56.4428,
+          "rows_fetched": 11,
+          "started_at": "2026-09-24T10:24:10+00:00",
+          "finished_at": "2026-09-24T10:25:06+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 57.427769
+    },
+    {
+      "id": 58,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 884,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.763894,
+          "rows_fetched": 884,
+          "started_at": "2026-09-24T06:44:22+00:00",
+          "finished_at": "2026-09-24T06:45:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.3574,
+          "rows_fetched": 884,
+          "started_at": "2026-09-24T08:45:21+00:00",
+          "finished_at": "2026-09-24T08:46:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.427601,
+          "rows_fetched": 884,
+          "started_at": "2026-09-24T10:25:06+00:00",
+          "finished_at": "2026-09-24T10:26:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 55.849632
+    },
+    {
+      "id": 59,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "59.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2334112,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 97.978101,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-24T06:45:17+00:00",
+          "finished_at": "2026-09-24T06:46:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 103.231593,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-24T08:46:20+00:00",
+          "finished_at": "2026-09-24T08:48:04+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 98.812699,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-24T10:26:01+00:00",
+          "finished_at": "2026-09-24T10:27:41+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 100.007464
+    },
+    {
+      "id": 60,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.76923,
+          "rows_fetched": 2,
+          "started_at": "2026-09-24T06:46:56+00:00",
+          "finished_at": "2026-09-24T06:48:27+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.279024,
+          "rows_fetched": 2,
+          "started_at": "2026-09-24T08:48:04+00:00",
+          "finished_at": "2026-09-24T08:49:39+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.759787,
+          "rows_fetched": 2,
+          "started_at": "2026-09-24T10:27:41+00:00",
+          "finished_at": "2026-09-24T10:29:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 92.60268
+    },
+    {
+      "id": 61,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "61.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 214,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 92.105767,
+          "rows_fetched": 214,
+          "started_at": "2026-09-24T06:48:27+00:00",
+          "finished_at": "2026-09-24T06:50:00+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.839479,
+          "rows_fetched": 214,
+          "started_at": "2026-09-24T08:49:39+00:00",
+          "finished_at": "2026-09-24T08:51:15+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 91.261374,
+          "rows_fetched": 214,
+          "started_at": "2026-09-24T10:29:11+00:00",
+          "finished_at": "2026-09-24T10:30:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 93.068873
+    },
+    {
+      "id": 62,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 36838,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.056428,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T06:50:00+00:00",
+          "finished_at": "2026-09-24T06:50:47+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.385984,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T08:51:15+00:00",
+          "finished_at": "2026-09-24T08:52:06+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.37397,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T10:30:43+00:00",
+          "finished_at": "2026-09-24T10:31:29+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.272127
+    },
+    {
+      "id": 63,
+      "url": "https://learn.microsoft.com/en-us/stream-analytics-query/match-recognize-stream-analytics#match_recognize-example",
+      "output_file": "63.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 1069572,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.037776,
+          "rows_fetched": 1069572,
+          "started_at": "2026-09-24T06:50:47+00:00",
+          "finished_at": "2026-09-24T06:55:47+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.034156,
+          "rows_fetched": 1048600,
+          "started_at": "2026-09-24T08:52:06+00:00",
+          "finished_at": "2026-09-24T08:57:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:31:29+00:00",
+          "finished_at": "2026-09-24T10:31:29+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.023977
+    },
+    {
+      "id": 64,
+      "url": "https://nightlies.apache.org/flink/flink-docs-release-2.3/docs/sql/reference/queries/match_recognize/#greedy--reluctant-quantifiers",
+      "output_file": "64.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 14093,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 30.628018,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-24T06:55:47+00:00",
+          "finished_at": "2026-09-24T06:56:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.53433,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-24T08:57:07+00:00",
+          "finished_at": "2026-09-24T08:57:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 29.733781,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-24T10:31:29+00:00",
+          "finished_at": "2026-09-24T10:31:59+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.965376
+    },
+    {
+      "id": 65,
+      "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS#evil-regex",
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 9902,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.189968,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-24T06:56:18+00:00",
+          "finished_at": "2026-09-24T06:56:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.467546,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-24T08:57:36+00:00",
+          "finished_at": "2026-09-24T08:58:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.506696,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-24T10:31:59+00:00",
+          "finished_at": "2026-09-24T10:32:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.721403
+    },
+    {
+      "id": 66,
+      "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS#evil-regex",
+      "output_file": "66.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7385,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.792933,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-24T06:56:53+00:00",
+          "finished_at": "2026-09-24T06:57:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.260659,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-24T08:58:11+00:00",
+          "finished_at": "2026-09-24T08:58:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.030728,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-24T10:32:33+00:00",
+          "finished_at": "2026-09-24T10:33:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.028107
+    },
+    {
+      "id": 67,
+      "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS#evil-regex",
+      "output_file": "67.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 28436011,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 287.098216,
+          "rows_fetched": 28436011,
+          "started_at": "2026-09-24T06:57:37+00:00",
+          "finished_at": "2026-09-24T07:02:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 286.15556,
+          "rows_fetched": 28135819,
+          "started_at": "2026-09-24T08:58:55+00:00",
+          "finished_at": "2026-09-24T09:03:56+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:33:17+00:00",
+          "finished_at": "2026-09-24T10:33:17+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 291.084592
+    },
+    {
+      "id": 68,
+      "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS#evil-regex",
+      "output_file": "68.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 109.495018,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:02:37+00:00",
+          "finished_at": "2026-09-24T07:04:26+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=1003.79MB, Matcher=10.23MB, MergeSortedPages=7.60MB}]"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 108.360511,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:03:56+00:00",
+          "finished_at": "2026-09-24T09:05:44+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=1002.88MB, Matcher=10.23MB, MergeSortedPages=8.51MB}]"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 110.359887,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:33:17+00:00",
+          "finished_at": "2026-09-24T10:35:08+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=1003.80MB, Matcher=10.23MB, MergeSortedPages=7.59MB}]"
+        }
+      ],
+      "average_query_latency_seconds": 109.405139
+    },
+    {
+      "id": 69,
+      "url": "https://people.cs.vt.edu/dongyoon/papers/FSE-18-ReDoS.pdf",
+      "output_file": "69.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 14253,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 38.266924,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-24T07:04:26+00:00",
+          "finished_at": "2026-09-24T07:05:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.401812,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-24T09:05:44+00:00",
+          "finished_at": "2026-09-24T09:06:23+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.088949,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-24T10:35:08+00:00",
+          "finished_at": "2026-09-24T10:35:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 38.919228
+    },
+    {
+      "id": 70,
+      "url": "https://people.cs.vt.edu/dongyoon/papers/FSE-18-ReDoS.pdf",
+      "output_file": "70.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 23584,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.32758,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-24T07:05:05+00:00",
+          "finished_at": "2026-09-24T07:05:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.696961,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-24T09:06:23+00:00",
+          "finished_at": "2026-09-24T09:07:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 48.786196,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-24T10:35:48+00:00",
+          "finished_at": "2026-09-24T10:36:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.936912
+    },
+    {
+      "id": 71,
+      "url": "https://people.cs.vt.edu/dongyoon/papers/FSE-18-ReDoS.pdf",
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 131072,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.005188,
+          "rows_fetched": 131072,
+          "started_at": "2026-09-24T07:05:54+00:00",
+          "finished_at": "2026-09-24T07:10:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.016605,
+          "rows_fetched": 131072,
+          "started_at": "2026-09-24T09:07:11+00:00",
+          "finished_at": "2026-09-24T09:12:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:36:37+00:00",
+          "finished_at": "2026-09-24T10:36:37+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.007264
+    },
+    {
+      "id": 72,
+      "url": "https://stackoverflow.com/questions/34175330/fill-in-missing-values-using-match-recognize",
+      "output_file": "72.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 52.524119,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:10:54+00:00",
+          "finished_at": "2026-09-24T07:11:47+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1022.88MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1016.18MB, MergeSortedPages=6.68MB, GenericSpiller=32kB}]"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 52.195196,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:12:12+00:00",
+          "finished_at": "2026-09-24T09:13:04+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1022.88MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1016.18MB, MergeSortedPages=6.67MB, GenericSpiller=36kB}]"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 44.774407,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:36:37+00:00",
+          "finished_at": "2026-09-24T10:37:21+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.11MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1017.32MB, MergeSortedPages=5.76MB, GenericSpiller=28kB}]"
+        }
+      ],
+      "average_query_latency_seconds": 49.831241
+    },
+    {
+      "id": 73,
+      "url": "https://stackoverflow.com/questions/34175330/fill-in-missing-values-using-match-recognize",
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.827663,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:11:47+00:00",
+          "finished_at": "2026-09-24T07:12:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.354476,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:13:04+00:00",
+          "finished_at": "2026-09-24T09:13:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 29.668077,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:37:21+00:00",
+          "finished_at": "2026-09-24T10:37:51+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 33.616739
+    },
+    {
+      "id": 74,
+      "url": "https://stackoverflow.com/questions/34175330/fill-in-missing-values-using-match-recognize",
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.000044,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:12:21+00:00",
+          "finished_at": "2026-09-24T07:13:10+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.732322,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:13:40+00:00",
+          "finished_at": "2026-09-24T09:14:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.360543,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:37:51+00:00",
+          "finished_at": "2026-09-24T10:38:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 47.697636
+    },
+    {
+      "id": 75,
+      "url": "https://stackoverflow.com/questions/34175330/fill-in-missing-values-using-match-recognize",
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 79,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.985687,
+          "rows_fetched": 79,
+          "started_at": "2026-09-24T07:13:10+00:00",
+          "finished_at": "2026-09-24T07:13:44+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 32.449616,
+          "rows_fetched": 79,
+          "started_at": "2026-09-24T09:14:29+00:00",
+          "finished_at": "2026-09-24T09:15:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 33.214602,
+          "rows_fetched": 79,
+          "started_at": "2026-09-24T10:38:36+00:00",
+          "finished_at": "2026-09-24T10:39:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 33.216635
+    },
+    {
+      "id": 76,
+      "url": "https://stackoverflow.com/questions/39754328/oracle-sql-trending-mtd-data",
+      "output_file": "76.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 98254,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.214241,
+          "rows_fetched": 98254,
+          "started_at": "2026-09-24T07:13:44+00:00",
+          "finished_at": "2026-09-24T07:14:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.926583,
+          "rows_fetched": 98254,
+          "started_at": "2026-09-24T09:15:01+00:00",
+          "finished_at": "2026-09-24T09:15:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.400828,
+          "rows_fetched": 98254,
+          "started_at": "2026-09-24T10:39:10+00:00",
+          "finished_at": "2026-09-24T10:39:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 37.513884
+    },
+    {
+      "id": 77,
+      "url": "https://stackoverflow.com/questions/53211400/return-results-only-if-there-are-enough-records",
+      "output_file": "77.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10915,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.529628,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-24T07:14:22+00:00",
+          "finished_at": "2026-09-24T07:15:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 88.764435,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-24T09:15:38+00:00",
+          "finished_at": "2026-09-24T09:17:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 91.564731,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-24T10:39:48+00:00",
+          "finished_at": "2026-09-24T10:41:20+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 90.619598
+    },
+    {
+      "id": 78,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "78.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 732506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 95.570091,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-24T07:15:53+00:00",
+          "finished_at": "2026-09-24T07:17:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.908619,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-24T09:17:07+00:00",
+          "finished_at": "2026-09-24T09:18:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 98.601061,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-24T10:41:20+00:00",
+          "finished_at": "2026-09-24T10:42:58+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 96.693257
+    },
+    {
+      "id": 79,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 54147,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 29.938398,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-24T07:17:29+00:00",
+          "finished_at": "2026-09-24T07:17:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 28.781875,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-24T09:18:43+00:00",
+          "finished_at": "2026-09-24T09:19:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.488319,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-24T10:42:58+00:00",
+          "finished_at": "2026-09-24T10:43:29+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.736197
+    },
+    {
+      "id": 80,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "80.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3935,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.221935,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-24T07:17:59+00:00",
+          "finished_at": "2026-09-24T07:18:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.232909,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-24T09:19:12+00:00",
+          "finished_at": "2026-09-24T09:20:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.691891,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-24T10:43:29+00:00",
+          "finished_at": "2026-09-24T10:44:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.715578
+    },
+    {
+      "id": 81,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "81.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29477,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.070437,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-24T07:18:48+00:00",
+          "finished_at": "2026-09-24T07:19:36+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.971301,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-24T09:20:00+00:00",
+          "finished_at": "2026-09-24T09:20:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.218903,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-24T10:44:22+00:00",
+          "finished_at": "2026-09-24T10:45:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.420214
+    },
+    {
+      "id": 82,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "82.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 354194,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.010332,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-24T07:19:36+00:00",
+          "finished_at": "2026-09-24T07:20:20+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.747237,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-24T09:20:48+00:00",
+          "finished_at": "2026-09-24T09:21:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.001543,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-24T10:45:14+00:00",
+          "finished_at": "2026-09-24T10:46:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.253037
+    },
+    {
+      "id": 83,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.332168,
+          "rows_fetched": 10,
+          "started_at": "2026-09-24T07:20:20+00:00",
+          "finished_at": "2026-09-24T07:20:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.272262,
+          "rows_fetched": 10,
+          "started_at": "2026-09-24T09:21:33+00:00",
+          "finished_at": "2026-09-24T09:22:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.039626,
+          "rows_fetched": 10,
+          "started_at": "2026-09-24T10:46:01+00:00",
+          "finished_at": "2026-09-24T10:46:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.214685
+    },
+    {
+      "id": 84,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 29.31258,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:20:48+00:00",
+          "finished_at": "2026-09-24T07:21:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.431438,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:22:02+00:00",
+          "finished_at": "2026-09-24T09:22:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.076889,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:46:31+00:00",
+          "finished_at": "2026-09-24T10:47:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.606969
+    },
+    {
+      "id": 85,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 20221,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 27.599377,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-24T07:21:17+00:00",
+          "finished_at": "2026-09-24T07:21:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 28.91842,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-24T09:22:32+00:00",
+          "finished_at": "2026-09-24T09:23:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 29.987832,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-24T10:47:01+00:00",
+          "finished_at": "2026-09-24T10:47:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 28.83521
+    },
+    {
+      "id": 86,
+      "url": "https://stackoverflow.com/questions/68510881/how-to-fetch-records-up-to-particular-data",
+      "output_file": "86.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1720,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 85.988202,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-24T07:21:45+00:00",
+          "finished_at": "2026-09-24T07:23:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 86.552865,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-24T09:23:01+00:00",
+          "finished_at": "2026-09-24T09:24:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.844042,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-24T10:47:31+00:00",
+          "finished_at": "2026-09-24T10:49:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 87.795036
+    },
+    {
+      "id": 87,
+      "url": "https://stackoverflow.com/questions/68510881/how-to-fetch-records-up-to-particular-data",
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1267,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 79.244532,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-24T07:23:11+00:00",
+          "finished_at": "2026-09-24T07:24:30+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.723937,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-24T09:24:27+00:00",
+          "finished_at": "2026-09-24T09:25:47+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 83.633961,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-24T10:49:02+00:00",
+          "finished_at": "2026-09-24T10:50:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 80.867477
+    },
+    {
+      "id": 88,
+      "url": "https://stackoverflow.com/questions/78844130/match-recognize-get-all-matches-with-restarting-from-first-element",
+      "output_file": "88.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1231744,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 263.043045,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-24T07:24:30+00:00",
+          "finished_at": "2026-09-24T07:28:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 266.157764,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-24T09:25:47+00:00",
+          "finished_at": "2026-09-24T09:30:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 272.678096,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-24T10:50:26+00:00",
+          "finished_at": "2026-09-24T10:54:58+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 267.292968
+    },
+    {
+      "id": 89,
+      "url": "https://stackoverflow.com/questions/78844130/match-recognize-get-all-matches-with-restarting-from-first-element",
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8531,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.499598,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T07:28:53+00:00",
+          "finished_at": "2026-09-24T07:29:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.350519,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T09:30:13+00:00",
+          "finished_at": "2026-09-24T09:30:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.05374,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T10:54:58+00:00",
+          "finished_at": "2026-09-24T10:55:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.967952
+    },
+    {
+      "id": 90,
+      "url": "https://stackoverflow.com/questions/79997241/how-can-i-find-a-specific-consecutive-sequence-of-rows-in-sql-without-match-reco",
+      "output_file": "90.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 12.308049,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:29:28+00:00",
+          "finished_at": "2026-09-24T07:29:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 11.988158,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:30:48+00:00",
+          "finished_at": "2026-09-24T09:31:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 11.63818,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:55:34+00:00",
+          "finished_at": "2026-09-24T10:55:46+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 11.978129
+    },
+    {
+      "id": 91,
+      "url": "https://stackoverflow.com/questions/79997241/how-can-i-find-a-specific-consecutive-sequence-of-rows-in-sql-without-match-reco",
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.994361,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:29:40+00:00",
+          "finished_at": "2026-09-24T07:30:25+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.293929,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:31:00+00:00",
+          "finished_at": "2026-09-24T09:31:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.38648,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:55:46+00:00",
+          "finished_at": "2026-09-24T10:56:32+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.224923
+    },
+    {
+      "id": 92,
+      "url": "https://stackoverflow.com/questions/79997241/how-can-i-find-a-specific-consecutive-sequence-of-rows-in-sql-without-match-reco",
+      "output_file": "92.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 41.099793,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:30:25+00:00",
+          "finished_at": "2026-09-24T07:31:06+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.823273,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:31:44+00:00",
+          "finished_at": "2026-09-24T09:32:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 39.861795,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:56:32+00:00",
+          "finished_at": "2026-09-24T10:57:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 40.594954
+    },
+    {
+      "id": 93,
+      "url": "https://stackoverflow.com/questions/79997241/how-can-i-find-a-specific-consecutive-sequence-of-rows-in-sql-without-match-reco",
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 266,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 31.496171,
+          "rows_fetched": 266,
+          "started_at": "2026-09-24T07:31:06+00:00",
+          "finished_at": "2026-09-24T07:31:38+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 31.769256,
+          "rows_fetched": 266,
+          "started_at": "2026-09-24T09:32:25+00:00",
+          "finished_at": "2026-09-24T09:32:57+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.34813,
+          "rows_fetched": 266,
+          "started_at": "2026-09-24T10:57:12+00:00",
+          "finished_at": "2026-09-24T10:57:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 31.204519
+    },
+    {
+      "id": 94,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "94.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 114,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 97.269915,
+          "rows_fetched": 114,
+          "started_at": "2026-09-24T07:31:38+00:00",
+          "finished_at": "2026-09-24T07:33:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 98.561487,
+          "rows_fetched": 114,
+          "started_at": "2026-09-24T09:32:57+00:00",
+          "finished_at": "2026-09-24T09:34:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 96.963466,
+          "rows_fetched": 114,
+          "started_at": "2026-09-24T10:57:43+00:00",
+          "finished_at": "2026-09-24T10:59:20+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 97.598289
+    },
+    {
+      "id": 95,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8640635,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 121.334411,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-24T07:33:15+00:00",
+          "finished_at": "2026-09-24T07:35:20+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 122.025162,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-24T09:34:35+00:00",
+          "finished_at": "2026-09-24T09:36:41+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 121.587289,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-24T10:59:20+00:00",
+          "finished_at": "2026-09-24T11:01:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 121.648954
+    },
+    {
+      "id": 96,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "96.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 533,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.290562,
+          "rows_fetched": 533,
+          "started_at": "2026-09-24T07:35:20+00:00",
+          "finished_at": "2026-09-24T07:36:35+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 76.832419,
+          "rows_fetched": 533,
+          "started_at": "2026-09-24T09:36:41+00:00",
+          "finished_at": "2026-09-24T09:37:57+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 75.885726,
+          "rows_fetched": 533,
+          "started_at": "2026-09-24T11:01:25+00:00",
+          "finished_at": "2026-09-24T11:02:41+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 76.002902
+    },
+    {
+      "id": 97,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31428,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 87.921655,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-24T07:36:35+00:00",
+          "finished_at": "2026-09-24T07:38:03+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 89.042815,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-24T09:37:57+00:00",
+          "finished_at": "2026-09-24T09:39:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 89.617436,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-24T11:02:41+00:00",
+          "finished_at": "2026-09-24T11:04:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 88.860635
+    },
+    {
+      "id": 98,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#running-and-final-semantics",
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 728780,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 112.009,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-24T07:38:03+00:00",
+          "finished_at": "2026-09-24T07:39:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 112.175845,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-24T09:39:27+00:00",
+          "finished_at": "2026-09-24T09:41:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 113.500616,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-24T11:04:10+00:00",
+          "finished_at": "2026-09-24T11:06:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 112.56182
+    },
+    {
+      "id": 99,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#union-pattern-variables",
+      "output_file": "99.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 704,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.85295,
+          "rows_fetched": 704,
+          "started_at": "2026-09-24T07:39:56+00:00",
+          "finished_at": "2026-09-24T07:40:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 43.480381,
+          "rows_fetched": 704,
+          "started_at": "2026-09-24T09:41:19+00:00",
+          "finished_at": "2026-09-24T09:42:03+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.545355,
+          "rows_fetched": 704,
+          "started_at": "2026-09-24T11:06:04+00:00",
+          "finished_at": "2026-09-24T11:06:49+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.959562
+    },
+    {
+      "id": 100,
+      "url": "https://www.usenix.org/conference/usenixsecurity21/presentation/li-yeting",
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 18436,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 45.553354,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-24T07:40:40+00:00",
+          "finished_at": "2026-09-24T07:41:25+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.717172,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-24T09:42:03+00:00",
+          "finished_at": "2026-09-24T09:42:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.660324,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-24T11:06:49+00:00",
+          "finished_at": "2026-09-24T11:07:35+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 46.310283
+    }
+  ]
+}

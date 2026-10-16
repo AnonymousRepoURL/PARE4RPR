@@ -1,0 +1,3839 @@
+{
+  "generated_at": "2026-10-01T10:57:24+00:00",
+  "query_file": "data\\nasdaq_sql_oracle_deepseek_v1_no_thinking.txt",
+  "schema": "EXPR",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 734315,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 69.642104,
+          "rows_fetched": 734315,
+          "started_at": "2026-09-30T12:39:56+00:00",
+          "finished_at": "2026-09-30T12:41:06+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 70.159348,
+          "rows_fetched": 734315,
+          "started_at": "2026-09-30T17:08:10+00:00",
+          "finished_at": "2026-09-30T17:09:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 69.696447,
+          "rows_fetched": 734315,
+          "started_at": "2026-09-30T21:22:27+00:00",
+          "finished_at": "2026-09-30T21:23:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 69.832633
+    },
+    {
+      "id": 2,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html",
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 291452,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 76.189819,
+          "rows_fetched": 291452,
+          "started_at": "2026-09-30T12:41:06+00:00",
+          "finished_at": "2026-09-30T12:42:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 73.848497,
+          "rows_fetched": 291452,
+          "started_at": "2026-09-30T17:09:21+00:00",
+          "finished_at": "2026-09-30T17:10:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.159543,
+          "rows_fetched": 291452,
+          "started_at": "2026-09-30T21:23:37+00:00",
+          "finished_at": "2026-09-30T21:24:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.065953
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/LandingPattern.java",
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.840463,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T12:42:23+00:00",
+          "finished_at": "2026-09-30T12:43:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.334582,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T17:10:35+00:00",
+          "finished_at": "2026-09-30T17:11:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.297567,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T21:24:50+00:00",
+          "finished_at": "2026-09-30T21:26:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 70.157537
+    },
+    {
+      "id": 4,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/k1.query",
+      "output_file": "4.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.074277,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T12:43:32+00:00",
+          "finished_at": "2026-09-30T12:48:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.075176,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:11:44+00:00",
+          "finished_at": "2026-09-30T17:16:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:26:02+00:00",
+          "finished_at": "2026-09-30T21:26:02+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.049818
+    },
+    {
+      "id": 5,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/k2.query",
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.047675,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T12:48:32+00:00",
+          "finished_at": "2026-09-30T12:49:41+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 68.265651,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:16:44+00:00",
+          "finished_at": "2026-09-30T17:17:52+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 68.929641,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:26:02+00:00",
+          "finished_at": "2026-09-30T21:27:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 68.414322
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/kn1.query",
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 72.220449,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T12:49:41+00:00",
+          "finished_at": "2026-09-30T12:50:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.943833,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:17:52+00:00",
+          "finished_at": "2026-09-30T17:19:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.965341,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:27:11+00:00",
+          "finished_at": "2026-09-30T21:28:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 71.043208
+    },
+    {
+      "id": 7,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/reg3.query",
+      "output_file": "7.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.079969,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T12:50:54+00:00",
+          "finished_at": "2026-09-30T12:55:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.056264,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:19:02+00:00",
+          "finished_at": "2026-09-30T17:24:03+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:28:22+00:00",
+          "finished_at": "2026-09-30T21:28:22+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.045411
+    },
+    {
+      "id": 8,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 443,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 64.545771,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T12:55:54+00:00",
+          "finished_at": "2026-09-30T12:56:58+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 63.328263,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T17:24:03+00:00",
+          "finished_at": "2026-09-30T17:25:06+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 65.926452,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T21:28:22+00:00",
+          "finished_at": "2026-09-30T21:29:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 64.600162
+    },
+    {
+      "id": 9,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "9.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 446,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 79.384094,
+          "rows_fetched": 446,
+          "started_at": "2026-09-30T12:56:58+00:00",
+          "finished_at": "2026-09-30T12:58:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 77.058279,
+          "rows_fetched": 446,
+          "started_at": "2026-09-30T17:25:06+00:00",
+          "finished_at": "2026-09-30T17:26:24+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 79.920509,
+          "rows_fetched": 446,
+          "started_at": "2026-09-30T21:29:28+00:00",
+          "finished_at": "2026-09-30T21:30:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 78.787627
+    },
+    {
+      "id": 10,
+      "url": null,
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 162718,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.049654,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-01T10:25:53+00:00",
+          "finished_at": "2026-10-01T10:26:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 64.314749,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-01T10:37:55+00:00",
+          "finished_at": "2026-10-01T10:39:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 67.220848,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-01T10:50:02+00:00",
+          "finished_at": "2026-10-01T10:51:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 65.86175
+    },
+    {
+      "id": 11,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "11.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 142.716703,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T12:59:26+00:00",
+          "finished_at": "2026-09-30T13:01:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 137.167826,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T17:27:32+00:00",
+          "finished_at": "2026-09-30T17:29:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 151.878022,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T21:31:56+00:00",
+          "finished_at": "2026-09-30T21:34:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 143.92085
+    },
+    {
+      "id": 12,
+      "url": null,
+      "output_file": "12.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 0.001008,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:26:59+00:00",
+          "finished_at": "2026-10-01T10:26:59+00:00",
+          "error": "ORA-00934: group function is not allowed here"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 0.000778,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:39:00+00:00",
+          "finished_at": "2026-10-01T10:39:00+00:00",
+          "error": "ORA-00934: group function is not allowed here"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 0.000638,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:51:09+00:00",
+          "finished_at": "2026-10-01T10:51:09+00:00",
+          "error": "ORA-00934: group function is not allowed here"
+        }
+      ],
+      "average_query_latency_seconds": 0.000808
+    },
+    {
+      "id": 13,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 544,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 157.258949,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T13:02:45+00:00",
+          "finished_at": "2026-09-30T13:05:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 156.852834,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T17:30:45+00:00",
+          "finished_at": "2026-09-30T17:33:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 157.501631,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T21:35:26+00:00",
+          "finished_at": "2026-09-30T21:38:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 157.204471
+    },
+    {
+      "id": 14,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-union-variables",
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 76,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 112.058052,
+          "rows_fetched": 76,
+          "started_at": "2026-09-30T13:05:23+00:00",
+          "finished_at": "2026-09-30T13:07:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 110.007596,
+          "rows_fetched": 76,
+          "started_at": "2026-09-30T17:33:22+00:00",
+          "finished_at": "2026-09-30T17:35:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 110.963322,
+          "rows_fetched": 76,
+          "started_at": "2026-09-30T21:38:04+00:00",
+          "finished_at": "2026-09-30T21:39:55+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 111.009657
+    },
+    {
+      "id": 15,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "15.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.101078,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:07:15+00:00",
+          "finished_at": "2026-09-30T13:12:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.090655,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:35:12+00:00",
+          "finished_at": "2026-09-30T17:40:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:39:55+00:00",
+          "finished_at": "2026-09-30T21:39:55+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.063911
+    },
+    {
+      "id": 16,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.734022,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:12:15+00:00",
+          "finished_at": "2026-09-30T13:13:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 83.185051,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:40:12+00:00",
+          "finished_at": "2026-09-30T17:41:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 87.165847,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:39:55+00:00",
+          "finished_at": "2026-09-30T21:41:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 85.028307
+    },
+    {
+      "id": 17,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 89.242928,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T13:13:40+00:00",
+          "finished_at": "2026-09-30T13:15:09+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 84.756335,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T17:41:36+00:00",
+          "finished_at": "2026-09-30T17:43:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 85.2011,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T21:41:22+00:00",
+          "finished_at": "2026-09-30T21:42:47+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 86.400121
+    },
+    {
+      "id": 18,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "18.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 71.492937,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T13:15:09+00:00",
+          "finished_at": "2026-09-30T13:16:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 73.826661,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T17:43:01+00:00",
+          "finished_at": "2026-09-30T17:44:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.907747,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T21:42:47+00:00",
+          "finished_at": "2026-09-30T21:43:58+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 72.075782
+    },
+    {
+      "id": 19,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.805844,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T13:16:21+00:00",
+          "finished_at": "2026-09-30T13:17:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 76.882798,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T17:44:14+00:00",
+          "finished_at": "2026-09-30T17:45:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 71.639573,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T21:43:58+00:00",
+          "finished_at": "2026-09-30T21:45:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.776072
+    },
+    {
+      "id": 20,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 928,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.296242,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T13:17:37+00:00",
+          "finished_at": "2026-09-30T13:19:01+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 81.914923,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T17:45:31+00:00",
+          "finished_at": "2026-09-30T17:46:53+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 78.48124,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T21:45:10+00:00",
+          "finished_at": "2026-09-30T21:46:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 81.564135
+    },
+    {
+      "id": 21,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 143.242588,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:19:01+00:00",
+          "finished_at": "2026-09-30T13:21:25+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 134.617733,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:46:53+00:00",
+          "finished_at": "2026-09-30T17:49:08+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 131.810483,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:46:28+00:00",
+          "finished_at": "2026-09-30T21:48:40+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 136.556935
+    },
+    {
+      "id": 22,
+      "url": "https://link.springer.com/article/10.1007/s13222-022-00404-3",
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2169,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 144.185286,
+          "rows_fetched": 2169,
+          "started_at": "2026-09-30T13:21:25+00:00",
+          "finished_at": "2026-09-30T13:23:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 142.27099,
+          "rows_fetched": 2169,
+          "started_at": "2026-09-30T17:49:08+00:00",
+          "finished_at": "2026-09-30T17:51:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 135.812494,
+          "rows_fetched": 2169,
+          "started_at": "2026-09-30T21:48:40+00:00",
+          "finished_at": "2026-09-30T21:50:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 140.756257
+    },
+    {
+      "id": 23,
+      "url": null,
+      "output_file": "23.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 946,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 131.537165,
+          "rows_fetched": 946,
+          "started_at": "2026-10-01T10:26:59+00:00",
+          "finished_at": "2026-10-01T10:29:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 129.735471,
+          "rows_fetched": 946,
+          "started_at": "2026-10-01T10:39:00+00:00",
+          "finished_at": "2026-10-01T10:41:10+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 141.887695,
+          "rows_fetched": 946,
+          "started_at": "2026-10-01T10:51:09+00:00",
+          "finished_at": "2026-10-01T10:53:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 134.386777
+    },
+    {
+      "id": 24,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "24.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 6000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.111034,
+          "rows_fetched": 6000,
+          "started_at": "2026-09-30T13:28:49+00:00",
+          "finished_at": "2026-09-30T13:33:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.11626,
+          "rows_fetched": 6000,
+          "started_at": "2026-09-30T17:56:31+00:00",
+          "finished_at": "2026-09-30T18:01:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:50:56+00:00",
+          "finished_at": "2026-09-30T21:50:56+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.075765
+    },
+    {
+      "id": 25,
+      "url": "https://docs.snowflake.com/en/sql-reference/constructs/match_recognize",
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15807,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 118.269192,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T13:33:50+00:00",
+          "finished_at": "2026-09-30T13:35:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 118.265373,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T18:01:31+00:00",
+          "finished_at": "2026-09-30T18:03:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 111.80691,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T21:50:56+00:00",
+          "finished_at": "2026-09-30T21:52:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 116.113825
+    },
+    {
+      "id": 26,
+      "url": "https://link.springer.com/article/10.1007/s13222-022-00404-3",
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 149.411043,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:35:49+00:00",
+          "finished_at": "2026-09-30T13:38:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 139.626933,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:03:29+00:00",
+          "finished_at": "2026-09-30T18:05:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 132.09638,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:52:48+00:00",
+          "finished_at": "2026-09-30T21:55:00+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 140.378119
+    },
+    {
+      "id": 27,
+      "url": null,
+      "output_file": "27.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.028444,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:29:11+00:00",
+          "finished_at": "2026-10-01T10:34:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.046215,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:41:10+00:00",
+          "finished_at": "2026-10-01T10:46:10+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:53:31+00:00",
+          "finished_at": "2026-10-01T10:53:31+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.024886
+    },
+    {
+      "id": 28,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5785,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.891892,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T13:43:19+00:00",
+          "finished_at": "2026-09-30T13:44:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 92.158885,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T18:10:49+00:00",
+          "finished_at": "2026-09-30T18:12:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 89.309825,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T21:55:00+00:00",
+          "finished_at": "2026-09-30T21:56:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 91.120201
+    },
+    {
+      "id": 29,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "29.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.073947,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:44:51+00:00",
+          "finished_at": "2026-09-30T13:49:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.04465,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:12:21+00:00",
+          "finished_at": "2026-09-30T18:17:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:56:30+00:00",
+          "finished_at": "2026-09-30T21:56:30+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.039532
+    },
+    {
+      "id": 30,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "30.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 137,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 147.403531,
+          "rows_fetched": 137,
+          "started_at": "2026-09-30T13:49:51+00:00",
+          "finished_at": "2026-09-30T13:52:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 144.805907,
+          "rows_fetched": 137,
+          "started_at": "2026-09-30T18:17:21+00:00",
+          "finished_at": "2026-09-30T18:19:46+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 133.800802,
+          "rows_fetched": 137,
+          "started_at": "2026-09-30T21:56:30+00:00",
+          "finished_at": "2026-09-30T21:58:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 142.003413
+    },
+    {
+      "id": 31,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 71.442239,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:52:18+00:00",
+          "finished_at": "2026-09-30T13:53:30+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 70.239068,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:19:46+00:00",
+          "finished_at": "2026-09-30T18:20:57+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 68.168196,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:58:44+00:00",
+          "finished_at": "2026-09-30T21:59:52+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 69.949834
+    },
+    {
+      "id": 32,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "32.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 68158,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 157.533693,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T13:53:30+00:00",
+          "finished_at": "2026-09-30T13:56:08+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 150.483052,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T18:20:57+00:00",
+          "finished_at": "2026-09-30T18:23:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 141.889171,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T21:59:52+00:00",
+          "finished_at": "2026-09-30T22:02:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 149.968639
+    },
+    {
+      "id": 33,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "33.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.13294,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:56:08+00:00",
+          "finished_at": "2026-09-30T14:01:08+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.088796,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:23:27+00:00",
+          "finished_at": "2026-09-30T18:28:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:02:14+00:00",
+          "finished_at": "2026-09-30T22:02:14+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.073912
+    },
+    {
+      "id": 34,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 66,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 98.152734,
+          "rows_fetched": 66,
+          "started_at": "2026-09-30T14:01:08+00:00",
+          "finished_at": "2026-09-30T14:02:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 74.273444,
+          "rows_fetched": 66,
+          "started_at": "2026-09-30T18:28:27+00:00",
+          "finished_at": "2026-09-30T18:29:42+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 75.552765,
+          "rows_fetched": 66,
+          "started_at": "2026-09-30T22:02:14+00:00",
+          "finished_at": "2026-09-30T22:03:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 82.659648
+    },
+    {
+      "id": 35,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 202,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 127.405233,
+          "rows_fetched": 202,
+          "started_at": "2026-09-30T14:02:46+00:00",
+          "finished_at": "2026-09-30T14:04:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 78.627605,
+          "rows_fetched": 202,
+          "started_at": "2026-09-30T18:29:42+00:00",
+          "finished_at": "2026-09-30T18:31:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 80.526811,
+          "rows_fetched": 202,
+          "started_at": "2026-09-30T22:03:30+00:00",
+          "finished_at": "2026-09-30T22:04:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 95.519883
+    },
+    {
+      "id": 36,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "36.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.092847,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:04:54+00:00",
+          "finished_at": "2026-09-30T14:09:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.092443,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:31:00+00:00",
+          "finished_at": "2026-09-30T18:36:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:04:50+00:00",
+          "finished_at": "2026-09-30T22:04:50+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.061763
+    },
+    {
+      "id": 37,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 119.683305,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T14:09:54+00:00",
+          "finished_at": "2026-09-30T14:11:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 76.365069,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T18:36:01+00:00",
+          "finished_at": "2026-09-30T18:37:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.160573,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T22:04:50+00:00",
+          "finished_at": "2026-09-30T22:06:21+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 95.402982
+    },
+    {
+      "id": 38,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3538,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 170.498473,
+          "rows_fetched": 3538,
+          "started_at": "2026-09-30T14:11:54+00:00",
+          "finished_at": "2026-09-30T14:14:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.269378,
+          "rows_fetched": 3538,
+          "started_at": "2026-09-30T18:37:17+00:00",
+          "finished_at": "2026-09-30T18:38:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 82.971243,
+          "rows_fetched": 3538,
+          "started_at": "2026-09-30T22:06:21+00:00",
+          "finished_at": "2026-09-30T22:07:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 110.913031
+    },
+    {
+      "id": 39,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "39.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.121784,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:14:45+00:00",
+          "finished_at": "2026-09-30T14:19:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.059674,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:38:36+00:00",
+          "finished_at": "2026-09-30T18:43:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:07:44+00:00",
+          "finished_at": "2026-09-30T22:07:44+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.060486
+    },
+    {
+      "id": 40,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 196.744473,
+          "rows_fetched": 10,
+          "started_at": "2026-09-30T14:19:46+00:00",
+          "finished_at": "2026-09-30T14:23:03+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 91.782237,
+          "rows_fetched": 10,
+          "started_at": "2026-09-30T18:43:37+00:00",
+          "finished_at": "2026-09-30T18:45:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.995797,
+          "rows_fetched": 10,
+          "started_at": "2026-09-30T22:07:44+00:00",
+          "finished_at": "2026-09-30T22:09:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 127.174169
+    },
+    {
+      "id": 41,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 424804,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.004954,
+          "rows_fetched": 424000,
+          "started_at": "2026-09-30T14:23:03+00:00",
+          "finished_at": "2026-09-30T14:28:03+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 82.776501,
+          "rows_fetched": 424804,
+          "started_at": "2026-09-30T18:45:09+00:00",
+          "finished_at": "2026-09-30T18:46:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 87.09374,
+          "rows_fetched": 424804,
+          "started_at": "2026-09-30T22:09:17+00:00",
+          "finished_at": "2026-09-30T22:10:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 156.625065
+    },
+    {
+      "id": 42,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "42.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.113975,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:28:03+00:00",
+          "finished_at": "2026-09-30T14:33:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.112729,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:46:31+00:00",
+          "finished_at": "2026-09-30T18:51:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:10:44+00:00",
+          "finished_at": "2026-09-30T22:10:44+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.075568
+    },
+    {
+      "id": 43,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "43.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.017402,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:33:04+00:00",
+          "finished_at": "2026-09-30T14:38:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.121869,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:51:32+00:00",
+          "finished_at": "2026-09-30T18:56:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:10:44+00:00",
+          "finished_at": "2026-09-30T22:10:44+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.046424
+    },
+    {
+      "id": 44,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 1.1021,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:38:04+00:00",
+          "finished_at": "2026-09-30T14:38:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 1.12185,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:56:32+00:00",
+          "finished_at": "2026-09-30T18:56:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.103448,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:10:44+00:00",
+          "finished_at": "2026-09-30T22:10:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 1.109133
+    },
+    {
+      "id": 45,
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1546,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 85.44342,
+          "rows_fetched": 1546,
+          "started_at": "2026-09-30T14:38:05+00:00",
+          "finished_at": "2026-09-30T14:39:31+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 80.504921,
+          "rows_fetched": 1546,
+          "started_at": "2026-09-30T18:56:33+00:00",
+          "finished_at": "2026-09-30T18:57:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 83.013477,
+          "rows_fetched": 1546,
+          "started_at": "2026-09-30T22:10:45+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 82.987273
+    },
+    {
+      "id": 46,
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "output_file": "46.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.124691,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:39:31+00:00",
+          "finished_at": "2026-09-30T14:44:31+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.101281,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:57:54+00:00",
+          "finished_at": "2026-09-30T19:02:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.075324
+    },
+    {
+      "id": 47,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "47.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.022303,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:44:31+00:00",
+          "finished_at": "2026-09-30T14:49:31+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.068062,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:02:54+00:00",
+          "finished_at": "2026-09-30T19:07:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.030122
+    },
+    {
+      "id": 48,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "48.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.124399,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:49:31+00:00",
+          "finished_at": "2026-09-30T14:54:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.040967,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:07:54+00:00",
+          "finished_at": "2026-09-30T19:12:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.055122
+    },
+    {
+      "id": 49,
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "output_file": "49.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.088392,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:54:32+00:00",
+          "finished_at": "2026-09-30T14:59:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.107419,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:12:54+00:00",
+          "finished_at": "2026-09-30T19:17:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.06527
+    },
+    {
+      "id": 50,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "50.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 2000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.049683,
+          "rows_fetched": 2000,
+          "started_at": "2026-09-30T14:59:32+00:00",
+          "finished_at": "2026-09-30T15:04:33+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.018035,
+          "rows_fetched": 2000,
+          "started_at": "2026-09-30T19:17:54+00:00",
+          "finished_at": "2026-09-30T19:22:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.022573
+    },
+    {
+      "id": 51,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "51.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.045256,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:04:33+00:00",
+          "finished_at": "2026-09-30T15:09:33+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0237,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:22:54+00:00",
+          "finished_at": "2026-09-30T19:27:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.022985
+    },
+    {
+      "id": 52,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "52.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.081496,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:09:33+00:00",
+          "finished_at": "2026-09-30T15:14:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.123565,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:27:55+00:00",
+          "finished_at": "2026-09-30T19:32:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.068354
+    },
+    {
+      "id": 53,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1670,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 16.188988,
+          "rows_fetched": 1670,
+          "started_at": "2026-09-30T15:14:34+00:00",
+          "finished_at": "2026-09-30T15:14:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 16.395324,
+          "rows_fetched": 1670,
+          "started_at": "2026-09-30T19:32:55+00:00",
+          "finished_at": "2026-09-30T19:33:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 16.335457,
+          "rows_fetched": 1670,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 16.30659
+    },
+    {
+      "id": 54,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "54.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.078999,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:14:51+00:00",
+          "finished_at": "2026-09-30T15:19:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 62.824207,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:33:12+00:00",
+          "finished_at": "2026-09-30T19:34:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.234568,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:26+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 144.379258
+    },
+    {
+      "id": 55,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "55.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.018911,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:19:53+00:00",
+          "finished_at": "2026-09-30T15:24:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.041737,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:34:14+00:00",
+          "finished_at": "2026-09-30T19:39:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:13:36+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020216
+    },
+    {
+      "id": 56,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "56.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.102138,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:24:53+00:00",
+          "finished_at": "2026-09-30T15:29:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.026389,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:39:14+00:00",
+          "finished_at": "2026-09-30T19:44:15+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:13:36+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.042842
+    },
+    {
+      "id": 57,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "57.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.069387,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:29:54+00:00",
+          "finished_at": "2026-09-30T15:34:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.129658,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:44:15+00:00",
+          "finished_at": "2026-09-30T19:49:16+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:13:36+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.066348
+    },
+    {
+      "id": 58,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3530,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 77.309289,
+          "rows_fetched": 3530,
+          "started_at": "2026-09-30T15:34:54+00:00",
+          "finished_at": "2026-09-30T15:36:12+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 80.094995,
+          "rows_fetched": 3530,
+          "started_at": "2026-09-30T19:49:16+00:00",
+          "finished_at": "2026-09-30T19:50:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 80.289397,
+          "rows_fetched": 3530,
+          "started_at": "2026-09-30T22:13:36+00:00",
+          "finished_at": "2026-09-30T22:14:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 79.231227
+    },
+    {
+      "id": 59,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "59.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.080707,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:36:12+00:00",
+          "finished_at": "2026-09-30T15:41:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.05025,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:50:36+00:00",
+          "finished_at": "2026-09-30T19:55:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:14:56+00:00",
+          "finished_at": "2026-09-30T22:14:56+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.043652
+    },
+    {
+      "id": 60,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.052957,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:41:13+00:00",
+          "finished_at": "2026-09-30T15:42:14+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.008722,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:55:36+00:00",
+          "finished_at": "2026-09-30T19:56:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.502538,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:14:56+00:00",
+          "finished_at": "2026-09-30T22:15:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 59.854739
+    },
+    {
+      "id": 61,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "61.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.22621,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:42:14+00:00",
+          "finished_at": "2026-09-30T15:47:14+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.099103,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:56:35+00:00",
+          "finished_at": "2026-09-30T20:01:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:15:56+00:00",
+          "finished_at": "2026-09-30T22:15:56+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.108438
+    },
+    {
+      "id": 62,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 87.809654,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:47:14+00:00",
+          "finished_at": "2026-09-30T15:48:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 87.193922,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:01:36+00:00",
+          "finished_at": "2026-09-30T20:03:04+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.558487,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:15:56+00:00",
+          "finished_at": "2026-09-30T22:17:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 88.520688
+    },
+    {
+      "id": 63,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "63.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 743,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 111.30284,
+          "rows_fetched": 743,
+          "started_at": "2026-09-30T15:48:42+00:00",
+          "finished_at": "2026-09-30T15:50:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 108.119794,
+          "rows_fetched": 743,
+          "started_at": "2026-09-30T20:03:04+00:00",
+          "finished_at": "2026-09-30T20:04:52+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 113.385487,
+          "rows_fetched": 743,
+          "started_at": "2026-09-30T22:17:26+00:00",
+          "finished_at": "2026-09-30T22:19:20+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 110.93604
+    },
+    {
+      "id": 64,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "64.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.52637,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:50:34+00:00",
+          "finished_at": "2026-09-30T15:51:44+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.269652,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:04:52+00:00",
+          "finished_at": "2026-09-30T20:06:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.532379,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:19:20+00:00",
+          "finished_at": "2026-09-30T22:20:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 70.776134
+    },
+    {
+      "id": 65,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 139.065862,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:51:44+00:00",
+          "finished_at": "2026-09-30T15:54:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 140.571781,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:06:01+00:00",
+          "finished_at": "2026-09-30T20:08:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 140.720897,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:20:33+00:00",
+          "finished_at": "2026-09-30T22:22:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 140.119513
+    },
+    {
+      "id": 66,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "66.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.107314,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:54:04+00:00",
+          "finished_at": "2026-09-30T15:59:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.102907,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:08:22+00:00",
+          "finished_at": "2026-09-30T20:13:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:22:53+00:00",
+          "finished_at": "2026-09-30T22:22:53+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.070074
+    },
+    {
+      "id": 67,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "67.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.063583,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T15:59:04+00:00",
+          "finished_at": "2026-09-30T16:00:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.005189,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T20:13:22+00:00",
+          "finished_at": "2026-09-30T20:14:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.362086,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T22:22:53+00:00",
+          "finished_at": "2026-09-30T22:23:54+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 60.476953
+    },
+    {
+      "id": 68,
+      "url": null,
+      "output_file": "68.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 181,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 88.406452,
+          "rows_fetched": 181,
+          "started_at": "2026-10-01T10:34:11+00:00",
+          "finished_at": "2026-10-01T10:35:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 93.564735,
+          "rows_fetched": 181,
+          "started_at": "2026-10-01T10:46:10+00:00",
+          "finished_at": "2026-10-01T10:47:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 94.375538,
+          "rows_fetched": 181,
+          "started_at": "2026-10-01T10:53:31+00:00",
+          "finished_at": "2026-10-01T10:55:06+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 92.115575
+    },
+    {
+      "id": 69,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "69.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 40274,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 142.435506,
+          "rows_fetched": 40274,
+          "started_at": "2026-09-30T16:01:43+00:00",
+          "finished_at": "2026-09-30T16:04:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 143.220852,
+          "rows_fetched": 40274,
+          "started_at": "2026-09-30T20:15:57+00:00",
+          "finished_at": "2026-09-30T20:18:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 146.689278,
+          "rows_fetched": 40274,
+          "started_at": "2026-09-30T22:25:29+00:00",
+          "finished_at": "2026-09-30T22:27:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 144.115212
+    },
+    {
+      "id": 70,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "70.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 137.159693,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:04:05+00:00",
+          "finished_at": "2026-09-30T16:06:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 136.554067,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:18:20+00:00",
+          "finished_at": "2026-09-30T20:20:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 136.479223,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:27:56+00:00",
+          "finished_at": "2026-09-30T22:30:13+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 136.730994
+    },
+    {
+      "id": 71,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.095873,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:06:22+00:00",
+          "finished_at": "2026-09-30T16:11:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.079687,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:20:37+00:00",
+          "finished_at": "2026-09-30T20:25:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:30:13+00:00",
+          "finished_at": "2026-09-30T22:30:13+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.05852
+    },
+    {
+      "id": 72,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "output_file": "72.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3942,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.747505,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T16:11:23+00:00",
+          "finished_at": "2026-09-30T16:11:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 35.253553,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T20:25:37+00:00",
+          "finished_at": "2026-09-30T20:26:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.7218,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T22:30:13+00:00",
+          "finished_at": "2026-09-30T22:30:49+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 36.240953
+    },
+    {
+      "id": 73,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 402,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.083682,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T16:11:59+00:00",
+          "finished_at": "2026-09-30T16:12:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.363745,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T20:26:13+00:00",
+          "finished_at": "2026-09-30T20:26:50+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 35.999752,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T22:30:49+00:00",
+          "finished_at": "2026-09-30T22:31:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 36.815726
+    },
+    {
+      "id": 74,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1937,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 73.226959,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T16:12:37+00:00",
+          "finished_at": "2026-09-30T16:13:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.296107,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T20:26:50+00:00",
+          "finished_at": "2026-09-30T20:27:59+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 81.234756,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T22:31:26+00:00",
+          "finished_at": "2026-09-30T22:32:47+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.585941
+    },
+    {
+      "id": 75,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-recognition-expressions",
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 67.015116,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:13:50+00:00",
+          "finished_at": "2026-09-30T16:14:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 68.142081,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:27:59+00:00",
+          "finished_at": "2026-09-30T20:29:08+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 69.553377,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:32:47+00:00",
+          "finished_at": "2026-09-30T22:33:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 68.236858
+    },
+    {
+      "id": 76,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "76.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 245997,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 79.251933,
+          "rows_fetched": 245997,
+          "started_at": "2026-09-30T16:14:57+00:00",
+          "finished_at": "2026-09-30T16:16:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 72.123531,
+          "rows_fetched": 245997,
+          "started_at": "2026-09-30T20:29:08+00:00",
+          "finished_at": "2026-09-30T20:30:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.363255,
+          "rows_fetched": 245997,
+          "started_at": "2026-09-30T22:33:57+00:00",
+          "finished_at": "2026-09-30T22:35:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.579573
+    },
+    {
+      "id": 77,
+      "url": "https://asktom.oracle.com/ords/f?p=100%3A11%3A%3A%3A%3A%3AP11_QUESTION_ID%3A9539596000346559947",
+      "output_file": "77.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.057562,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:16:16+00:00",
+          "finished_at": "2026-09-30T16:21:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.111842,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:30:20+00:00",
+          "finished_at": "2026-09-30T20:35:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:35:09+00:00",
+          "finished_at": "2026-09-30T22:35:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.056468
+    },
+    {
+      "id": 78,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "78.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10263,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 151.532746,
+          "rows_fetched": 10263,
+          "started_at": "2026-09-30T16:21:17+00:00",
+          "finished_at": "2026-09-30T16:23:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 143.22084,
+          "rows_fetched": 10263,
+          "started_at": "2026-09-30T20:35:20+00:00",
+          "finished_at": "2026-09-30T20:37:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 153.143881,
+          "rows_fetched": 10263,
+          "started_at": "2026-09-30T22:35:09+00:00",
+          "finished_at": "2026-09-30T22:37:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 149.299156
+    },
+    {
+      "id": 79,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2010,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.337808,
+          "rows_fetched": 2010,
+          "started_at": "2026-09-30T16:23:48+00:00",
+          "finished_at": "2026-09-30T16:24:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 83.347543,
+          "rows_fetched": 2010,
+          "started_at": "2026-09-30T20:37:43+00:00",
+          "finished_at": "2026-09-30T20:39:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 67.516714,
+          "rows_fetched": 2010,
+          "started_at": "2026-09-30T22:37:42+00:00",
+          "finished_at": "2026-09-30T22:38:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 73.067355
+    },
+    {
+      "id": 80,
+      "url": "https://docs.oracle.com/cd/E15523_01/doc.1111/e14476/examples.htm",
+      "output_file": "80.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 11017,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 240.698465,
+          "rows_fetched": 11017,
+          "started_at": "2026-09-30T16:24:57+00:00",
+          "finished_at": "2026-09-30T16:28:58+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 237.762136,
+          "rows_fetched": 11017,
+          "started_at": "2026-09-30T20:39:07+00:00",
+          "finished_at": "2026-09-30T20:43:04+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 242.82757,
+          "rows_fetched": 11017,
+          "started_at": "2026-09-30T22:38:50+00:00",
+          "finished_at": "2026-09-30T22:42:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 240.42939
+    },
+    {
+      "id": 81,
+      "url": "https://arxiv.org/abs/2401.12639",
+      "output_file": "81.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 22962,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 163.210704,
+          "rows_fetched": 22962,
+          "started_at": "2026-09-30T16:28:58+00:00",
+          "finished_at": "2026-09-30T16:31:41+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 170.127361,
+          "rows_fetched": 22962,
+          "started_at": "2026-09-30T20:43:04+00:00",
+          "finished_at": "2026-09-30T20:45:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 163.47952,
+          "rows_fetched": 22962,
+          "started_at": "2026-09-30T22:42:53+00:00",
+          "finished_at": "2026-09-30T22:45:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 165.605862
+    },
+    {
+      "id": 82,
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "output_file": "82.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 42000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.071927,
+          "rows_fetched": 42000,
+          "started_at": "2026-09-30T16:31:41+00:00",
+          "finished_at": "2026-09-30T16:36:41+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.031323,
+          "rows_fetched": 42000,
+          "started_at": "2026-09-30T20:45:55+00:00",
+          "finished_at": "2026-09-30T20:50:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:45:36+00:00",
+          "finished_at": "2026-09-30T22:45:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.034417
+    },
+    {
+      "id": 83,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 808,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.796943,
+          "rows_fetched": 808,
+          "started_at": "2026-09-30T16:36:41+00:00",
+          "finished_at": "2026-09-30T16:37:43+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 61.971176,
+          "rows_fetched": 808,
+          "started_at": "2026-09-30T20:50:55+00:00",
+          "finished_at": "2026-09-30T20:51:57+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 61.968925,
+          "rows_fetched": 808,
+          "started_at": "2026-09-30T22:45:36+00:00",
+          "finished_at": "2026-09-30T22:46:38+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 61.912348
+    },
+    {
+      "id": 84,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 522,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 137.639154,
+          "rows_fetched": 522,
+          "started_at": "2026-09-30T16:37:43+00:00",
+          "finished_at": "2026-09-30T16:40:01+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 137.457587,
+          "rows_fetched": 522,
+          "started_at": "2026-09-30T20:51:57+00:00",
+          "finished_at": "2026-09-30T20:54:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 138.303896,
+          "rows_fetched": 522,
+          "started_at": "2026-09-30T22:46:38+00:00",
+          "finished_at": "2026-09-30T22:48:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 137.800212
+    },
+    {
+      "id": 85,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 41,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 53.427098,
+          "rows_fetched": 41,
+          "started_at": "2026-09-30T16:40:01+00:00",
+          "finished_at": "2026-09-30T16:40:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.161799,
+          "rows_fetched": 41,
+          "started_at": "2026-09-30T20:54:14+00:00",
+          "finished_at": "2026-09-30T20:55:08+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.615628,
+          "rows_fetched": 41,
+          "started_at": "2026-09-30T22:48:57+00:00",
+          "finished_at": "2026-09-30T22:49:52+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 53.734842
+    },
+    {
+      "id": 86,
+      "url": "https://arxiv.org/abs/2401.12639",
+      "output_file": "86.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5437,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 134.291672,
+          "rows_fetched": 5437,
+          "started_at": "2026-09-30T16:40:54+00:00",
+          "finished_at": "2026-09-30T16:43:09+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 134.608768,
+          "rows_fetched": 5437,
+          "started_at": "2026-09-30T20:55:08+00:00",
+          "finished_at": "2026-09-30T20:57:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 137.53349,
+          "rows_fetched": 5437,
+          "started_at": "2026-09-30T22:49:52+00:00",
+          "finished_at": "2026-09-30T22:52:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 135.477977
+    },
+    {
+      "id": 87,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 59.515011,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T16:43:09+00:00",
+          "finished_at": "2026-09-30T16:44:08+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.037802,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T20:57:22+00:00",
+          "finished_at": "2026-09-30T20:58:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.57526,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T22:52:09+00:00",
+          "finished_at": "2026-09-30T22:53:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 59.709358
+    },
+    {
+      "id": 88,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "88.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 93.542172,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:44:08+00:00",
+          "finished_at": "2026-09-30T16:45:42+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 91.524892,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:58:21+00:00",
+          "finished_at": "2026-09-30T20:59:53+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 91.593883,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:53:10+00:00",
+          "finished_at": "2026-09-30T22:54:42+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        }
+      ],
+      "average_query_latency_seconds": 92.220316
+    },
+    {
+      "id": 89,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 62.719158,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:45:42+00:00",
+          "finished_at": "2026-09-30T16:46:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 64.9172,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:59:53+00:00",
+          "finished_at": "2026-09-30T21:00:58+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 66.674493,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:54:42+00:00",
+          "finished_at": "2026-09-30T22:55:49+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 64.770284
+    },
+    {
+      "id": 90,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "90.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 26,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 137.844893,
+          "rows_fetched": 26,
+          "started_at": "2026-09-30T16:46:45+00:00",
+          "finished_at": "2026-09-30T16:49:03+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 138.7108,
+          "rows_fetched": 26,
+          "started_at": "2026-09-30T21:00:58+00:00",
+          "finished_at": "2026-09-30T21:03:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 141.642567,
+          "rows_fetched": 26,
+          "started_at": "2026-09-30T22:55:49+00:00",
+          "finished_at": "2026-09-30T22:58:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 139.39942
+    },
+    {
+      "id": 91,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.827421,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:49:03+00:00",
+          "finished_at": "2026-09-30T16:49:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 54.920389,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:03:17+00:00",
+          "finished_at": "2026-09-30T21:04:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.995451,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:58:11+00:00",
+          "finished_at": "2026-09-30T22:59:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 53.247754
+    },
+    {
+      "id": 92,
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "output_file": "92.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 239,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 141.101007,
+          "rows_fetched": 239,
+          "started_at": "2026-09-30T16:49:55+00:00",
+          "finished_at": "2026-09-30T16:52:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 138.815358,
+          "rows_fetched": 239,
+          "started_at": "2026-09-30T21:04:12+00:00",
+          "finished_at": "2026-09-30T21:06:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 135.916522,
+          "rows_fetched": 239,
+          "started_at": "2026-09-30T22:59:04+00:00",
+          "finished_at": "2026-09-30T23:01:20+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 138.610962
+    },
+    {
+      "id": 93,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4057,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 59.152094,
+          "rows_fetched": 4057,
+          "started_at": "2026-09-30T16:52:16+00:00",
+          "finished_at": "2026-09-30T16:53:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 61.171597,
+          "rows_fetched": 4057,
+          "started_at": "2026-09-30T21:06:31+00:00",
+          "finished_at": "2026-09-30T21:07:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.601759,
+          "rows_fetched": 4057,
+          "started_at": "2026-09-30T23:01:20+00:00",
+          "finished_at": "2026-09-30T23:02:19+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 59.97515
+    },
+    {
+      "id": 94,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#permutation",
+      "output_file": "94.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 764,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 151.845856,
+          "rows_fetched": 764,
+          "started_at": "2026-09-30T16:53:15+00:00",
+          "finished_at": "2026-09-30T16:55:47+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 146.896196,
+          "rows_fetched": 764,
+          "started_at": "2026-09-30T21:07:32+00:00",
+          "finished_at": "2026-09-30T21:09:59+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 145.653953,
+          "rows_fetched": 764,
+          "started_at": "2026-09-30T23:02:19+00:00",
+          "finished_at": "2026-09-30T23:04:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 148.132002
+    },
+    {
+      "id": 95,
+      "url": "https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#best_practices_for_pattern_recognition",
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7217,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 63.295494,
+          "rows_fetched": 7217,
+          "started_at": "2026-09-30T16:55:47+00:00",
+          "finished_at": "2026-09-30T16:56:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.281948,
+          "rows_fetched": 7217,
+          "started_at": "2026-09-30T21:09:59+00:00",
+          "finished_at": "2026-09-30T21:11:05+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 66.021423,
+          "rows_fetched": 7217,
+          "started_at": "2026-09-30T23:04:45+00:00",
+          "finished_at": "2026-09-30T23:05:51+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 65.199622
+    },
+    {
+      "id": 96,
+      "url": null,
+      "output_file": "96.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 135.393129,
+          "rows_fetched": 2,
+          "started_at": "2026-10-01T10:35:40+00:00",
+          "finished_at": "2026-10-01T10:37:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 138.054644,
+          "rows_fetched": 2,
+          "started_at": "2026-10-01T10:47:43+00:00",
+          "finished_at": "2026-10-01T10:50:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 138.186285,
+          "rows_fetched": 2,
+          "started_at": "2026-10-01T10:55:06+00:00",
+          "finished_at": "2026-10-01T10:57:24+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 137.211353
+    },
+    {
+      "id": 97,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 99.292337,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:58:33+00:00",
+          "finished_at": "2026-09-30T17:00:12+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 97.50908,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:12:48+00:00",
+          "finished_at": "2026-09-30T21:14:26+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 97.616887,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T23:07:36+00:00",
+          "finished_at": "2026-09-30T23:09:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 98.139435
+    },
+    {
+      "id": 98,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4100,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 103.006499,
+          "rows_fetched": 4100,
+          "started_at": "2026-09-30T17:00:12+00:00",
+          "finished_at": "2026-09-30T17:01:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 103.676062,
+          "rows_fetched": 4100,
+          "started_at": "2026-09-30T21:14:26+00:00",
+          "finished_at": "2026-09-30T21:16:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 105.625259,
+          "rows_fetched": 4100,
+          "started_at": "2026-09-30T23:09:14+00:00",
+          "finished_at": "2026-09-30T23:11:00+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 104.102607
+    },
+    {
+      "id": 99,
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "output_file": "99.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5331,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 150.729492,
+          "rows_fetched": 5331,
+          "started_at": "2026-09-30T17:01:55+00:00",
+          "finished_at": "2026-09-30T17:04:26+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 149.768768,
+          "rows_fetched": 5331,
+          "started_at": "2026-09-30T21:16:09+00:00",
+          "finished_at": "2026-09-30T21:18:39+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 153.419596,
+          "rows_fetched": 5331,
+          "started_at": "2026-09-30T23:11:00+00:00",
+          "finished_at": "2026-09-30T23:13:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 151.305952
+    },
+    {
+      "id": 100,
+      "url": "https://dl.acm.org/doi/abs/10.14778/3494124.3494137",
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12771,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 224.330487,
+          "rows_fetched": 12771,
+          "started_at": "2026-09-30T17:04:26+00:00",
+          "finished_at": "2026-09-30T17:08:10+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 227.961093,
+          "rows_fetched": 12771,
+          "started_at": "2026-09-30T21:18:39+00:00",
+          "finished_at": "2026-09-30T21:22:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 223.424736,
+          "rows_fetched": 12771,
+          "started_at": "2026-09-30T23:13:33+00:00",
+          "finished_at": "2026-09-30T23:17:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 225.238772
+    }
+  ]
+}

@@ -1,0 +1,4037 @@
+{
+  "generated_at": "2026-09-27T20:34:42+00:00",
+  "query_file": "data\\crimes_sql_trino_gpt-6-astra_v1.txt",
+  "trino_url": "http://localhost:8080",
+  "catalog": "postgresql",
+  "schema": "public",
+  "user": "demo",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": null,
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3295,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 140.017652,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-27T16:19:35+00:00",
+          "finished_at": "2026-09-27T16:21:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 100.229856,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-27T18:08:38+00:00",
+          "finished_at": "2026-09-27T18:10:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 135.195378,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-27T19:36:03+00:00",
+          "finished_at": "2026-09-27T19:38:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 125.147629
+    },
+    {
+      "id": 2,
+      "url": null,
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 63,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 1.182036,
+          "rows_fetched": 63,
+          "started_at": "2026-09-27T16:21:55+00:00",
+          "finished_at": "2026-09-27T16:21:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.847786,
+          "rows_fetched": 63,
+          "started_at": "2026-09-27T18:10:19+00:00",
+          "finished_at": "2026-09-27T18:10:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.875008,
+          "rows_fetched": 63,
+          "started_at": "2026-09-27T19:38:18+00:00",
+          "finished_at": "2026-09-27T19:38:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 0.968277
+    },
+    {
+      "id": 3,
+      "url": null,
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 19896,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 9.785748,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-27T16:21:57+00:00",
+          "finished_at": "2026-09-27T16:22:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 5.555954,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-27T18:10:19+00:00",
+          "finished_at": "2026-09-27T18:10:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 6.634982,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-27T19:38:19+00:00",
+          "finished_at": "2026-09-27T19:38:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 7.325561
+    },
+    {
+      "id": 4,
+      "url": null,
+      "output_file": "4.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 2.204472,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T16:22:06+00:00",
+          "finished_at": "2026-09-27T16:22:09+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 1.728188,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T18:10:25+00:00",
+          "finished_at": "2026-09-27T18:10:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.642502,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T19:38:25+00:00",
+          "finished_at": "2026-09-27T19:38:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 1.858387
+    },
+    {
+      "id": 5,
+      "url": null,
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 1267806,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 31.324194,
+          "rows_fetched": 14764,
+          "started_at": "2026-09-27T16:22:09+00:00",
+          "finished_at": "2026-09-27T16:22:40+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.31MB, Delta: 1.15MB, Top Consumers: {MergeSortedPages=984.73MB, PagesToPagesIndexes=34.41MB, GenericSpiller=4.18MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.544367,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-27T18:10:27+00:00",
+          "finished_at": "2026-09-27T18:11:09+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.658613,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-27T19:38:27+00:00",
+          "finished_at": "2026-09-27T19:39:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.175725
+    },
+    {
+      "id": 6,
+      "url": null,
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 59426,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.479211,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-27T16:22:40+00:00",
+          "finished_at": "2026-09-27T16:23:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 26.771165,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-27T18:11:09+00:00",
+          "finished_at": "2026-09-27T18:11:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 31.75812,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-27T19:39:15+00:00",
+          "finished_at": "2026-09-27T19:39:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 30.669499
+    },
+    {
+      "id": 7,
+      "url": null,
+      "output_file": "7.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 2.558591,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:23:14+00:00",
+          "finished_at": "2026-09-27T16:23:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 1.736098,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:11:36+00:00",
+          "finished_at": "2026-09-27T18:11:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.825617,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:39:47+00:00",
+          "finished_at": "2026-09-27T19:39:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 2.040102
+    },
+    {
+      "id": 8,
+      "url": null,
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.152852,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:23:16+00:00",
+          "finished_at": "2026-09-27T16:23:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.134884,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:11:37+00:00",
+          "finished_at": "2026-09-27T18:11:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.113965,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:39:49+00:00",
+          "finished_at": "2026-09-27T19:39:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 0.1339
+    },
+    {
+      "id": 9,
+      "url": null,
+      "output_file": "9.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 249,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.326272,
+          "rows_fetched": 249,
+          "started_at": "2026-09-27T16:23:16+00:00",
+          "finished_at": "2026-09-27T16:23:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 30.858812,
+          "rows_fetched": 249,
+          "started_at": "2026-09-27T18:11:37+00:00",
+          "finished_at": "2026-09-27T18:12:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.378047,
+          "rows_fetched": 249,
+          "started_at": "2026-09-27T19:39:49+00:00",
+          "finished_at": "2026-09-27T19:40:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 34.854377
+    },
+    {
+      "id": 10,
+      "url": "https://docs.oracle.com/middleware/1221/osa/cql-reference/CQLLR.pdf",
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 45895,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 40.868733,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-24T05:53:34+00:00",
+          "finished_at": "2026-09-24T05:54:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.258981,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-24T07:52:37+00:00",
+          "finished_at": "2026-09-24T07:53:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.141848,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-24T09:53:59+00:00",
+          "finished_at": "2026-09-24T09:54:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 38.089854
+    },
+    {
+      "id": 11,
+      "url": null,
+      "output_file": "11.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 322926,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 202.780687,
+          "rows_fetched": 322926,
+          "started_at": "2026-09-27T16:23:53+00:00",
+          "finished_at": "2026-09-27T16:27:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 158.297063,
+          "rows_fetched": 322926,
+          "started_at": "2026-09-27T18:12:08+00:00",
+          "finished_at": "2026-09-27T18:14:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 175.315809,
+          "rows_fetched": 322926,
+          "started_at": "2026-09-27T19:40:26+00:00",
+          "finished_at": "2026-09-27T19:43:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 178.797853
+    },
+    {
+      "id": 12,
+      "url": null,
+      "output_file": "12.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023528,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:27:15+00:00",
+          "finished_at": "2026-09-27T16:32:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035224,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:14:47+00:00",
+          "finished_at": "2026-09-27T18:19:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:43:22+00:00",
+          "finished_at": "2026-09-27T19:43:22+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.019584
+    },
+    {
+      "id": 13,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/k3.query",
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.333399,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:04:16+00:00",
+          "finished_at": "2026-09-24T06:05:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 89.684173,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:03:13+00:00",
+          "finished_at": "2026-09-24T08:04:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.057078,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:54:37+00:00",
+          "finished_at": "2026-09-24T09:56:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 88.69155
+    },
+    {
+      "id": 14,
+      "url": null,
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15048,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 63.217435,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-27T16:32:16+00:00",
+          "finished_at": "2026-09-27T16:33:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.515144,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-27T18:19:47+00:00",
+          "finished_at": "2026-09-27T18:20:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.836433,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-27T19:43:22+00:00",
+          "finished_at": "2026-09-27T19:44:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.523004
+    },
+    {
+      "id": 15,
+      "url": null,
+      "output_file": "15.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.013502,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:33:19+00:00",
+          "finished_at": "2026-09-27T16:38:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.01425,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:20:29+00:00",
+          "finished_at": "2026-09-27T18:25:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:44:05+00:00",
+          "finished_at": "2026-09-27T19:44:05+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.009251
+    },
+    {
+      "id": 16,
+      "url": null,
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 108.827197,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:38:19+00:00",
+          "finished_at": "2026-09-27T16:40:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.486303,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:25:29+00:00",
+          "finished_at": "2026-09-27T18:26:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 66.769378,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:44:05+00:00",
+          "finished_at": "2026-09-27T19:45:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 80.694293
+    },
+    {
+      "id": 17,
+      "url": null,
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 25124,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 16.654222,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-27T16:40:08+00:00",
+          "finished_at": "2026-09-27T16:40:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 9.537024,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-27T18:26:36+00:00",
+          "finished_at": "2026-09-27T18:26:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 9.484995,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-27T19:45:11+00:00",
+          "finished_at": "2026-09-27T19:45:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 11.89208
+    },
+    {
+      "id": 18,
+      "url": null,
+      "output_file": "18.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027817,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:40:24+00:00",
+          "finished_at": "2026-09-27T16:45:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.028399,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:26:45+00:00",
+          "finished_at": "2026-09-27T18:31:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:45:21+00:00",
+          "finished_at": "2026-09-27T19:45:21+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.018739
+    },
+    {
+      "id": 19,
+      "url": null,
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3394,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 53.038773,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-27T16:45:25+00:00",
+          "finished_at": "2026-09-27T16:46:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 21.789027,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-27T18:31:45+00:00",
+          "finished_at": "2026-09-27T18:32:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 24.262677,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-27T19:45:21+00:00",
+          "finished_at": "2026-09-27T19:45:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 33.030159
+    },
+    {
+      "id": 20,
+      "url": null,
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027492,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:46:18+00:00",
+          "finished_at": "2026-09-27T16:51:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 25.36863,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:32:07+00:00",
+          "finished_at": "2026-09-27T18:32:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 31.624644,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:45:45+00:00",
+          "finished_at": "2026-09-27T19:46:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 119.006922
+    },
+    {
+      "id": 21,
+      "url": null,
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 4,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.015096,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:51:18+00:00",
+          "finished_at": "2026-09-27T16:56:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 27.68417,
+          "rows_fetched": 4,
+          "started_at": "2026-09-27T18:32:33+00:00",
+          "finished_at": "2026-09-27T18:33:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.603207,
+          "rows_fetched": 4,
+          "started_at": "2026-09-27T19:46:17+00:00",
+          "finished_at": "2026-09-27T19:46:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 120.100824
+    },
+    {
+      "id": 22,
+      "url": null,
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 392,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027565,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T16:56:18+00:00",
+          "finished_at": "2026-09-27T17:01:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 21.929121,
+          "rows_fetched": 392,
+          "started_at": "2026-09-27T18:33:00+00:00",
+          "finished_at": "2026-09-27T18:33:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 23.550348,
+          "rows_fetched": 392,
+          "started_at": "2026-09-27T19:46:49+00:00",
+          "finished_at": "2026-09-27T19:47:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 115.169011
+    },
+    {
+      "id": 23,
+      "url": null,
+      "output_file": "23.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 62594,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.022629,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:01:18+00:00",
+          "finished_at": "2026-09-27T17:06:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 257.971655,
+          "rows_fetched": 62594,
+          "started_at": "2026-09-27T18:33:22+00:00",
+          "finished_at": "2026-09-27T18:37:40+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 255.644888,
+          "rows_fetched": 62594,
+          "started_at": "2026-09-27T19:47:13+00:00",
+          "finished_at": "2026-09-27T19:51:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 271.213057
+    },
+    {
+      "id": 24,
+      "url": null,
+      "output_file": "24.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10603,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 163.995402,
+          "rows_fetched": 10603,
+          "started_at": "2026-09-27T17:06:18+00:00",
+          "finished_at": "2026-09-27T17:09:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 101.009875,
+          "rows_fetched": 10603,
+          "started_at": "2026-09-27T18:37:40+00:00",
+          "finished_at": "2026-09-27T18:39:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 100.632541,
+          "rows_fetched": 10603,
+          "started_at": "2026-09-27T19:51:29+00:00",
+          "finished_at": "2026-09-27T19:53:09+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 121.879273
+    },
+    {
+      "id": 25,
+      "url": null,
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 139,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 41.253738,
+          "rows_fetched": 139,
+          "started_at": "2026-09-27T17:09:02+00:00",
+          "finished_at": "2026-09-27T17:09:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.780463,
+          "rows_fetched": 139,
+          "started_at": "2026-09-27T18:39:21+00:00",
+          "finished_at": "2026-09-27T18:40:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.079,
+          "rows_fetched": 139,
+          "started_at": "2026-09-27T19:53:09+00:00",
+          "finished_at": "2026-09-27T19:53:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.037734
+    },
+    {
+      "id": 26,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_kleene_seq.sql",
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.210519,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:23:08+00:00",
+          "finished_at": "2026-09-24T06:23:52+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.40606,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:22:48+00:00",
+          "finished_at": "2026-09-24T08:23:34+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.74739,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:03:48+00:00",
+          "finished_at": "2026-09-24T10:04:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.78799
+    },
+    {
+      "id": 27,
+      "url": null,
+      "output_file": "27.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 52.949741,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:09:43+00:00",
+          "finished_at": "2026-09-27T17:10:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.673049,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:40:02+00:00",
+          "finished_at": "2026-09-27T18:40:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.842651,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:53:50+00:00",
+          "finished_at": "2026-09-27T19:54:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 52.821814
+    },
+    {
+      "id": 28,
+      "url": null,
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 86,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 52.10622,
+          "rows_fetched": 86,
+          "started_at": "2026-09-27T17:10:36+00:00",
+          "finished_at": "2026-09-27T17:11:28+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.987178,
+          "rows_fetched": 86,
+          "started_at": "2026-09-27T18:40:55+00:00",
+          "finished_at": "2026-09-27T18:41:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.611178,
+          "rows_fetched": 86,
+          "started_at": "2026-09-27T19:54:43+00:00",
+          "finished_at": "2026-09-27T19:55:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 50.901525
+    },
+    {
+      "id": 29,
+      "url": null,
+      "output_file": "29.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 49015,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 42.216257,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-27T17:11:28+00:00",
+          "finished_at": "2026-09-27T17:12:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.397721,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-27T18:41:45+00:00",
+          "finished_at": "2026-09-27T18:42:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.775727,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-27T19:55:34+00:00",
+          "finished_at": "2026-09-27T19:56:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.463235
+    },
+    {
+      "id": 30,
+      "url": null,
+      "output_file": "30.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.648359,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:12:11+00:00",
+          "finished_at": "2026-09-27T17:13:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.916714,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:42:27+00:00",
+          "finished_at": "2026-09-27T18:43:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.910723,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:56:17+00:00",
+          "finished_at": "2026-09-27T19:57:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 61.491932
+    },
+    {
+      "id": 31,
+      "url": null,
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 209,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 56.899334,
+          "rows_fetched": 209,
+          "started_at": "2026-09-27T17:13:17+00:00",
+          "finished_at": "2026-09-27T17:14:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.714483,
+          "rows_fetched": 209,
+          "started_at": "2026-09-27T18:43:26+00:00",
+          "finished_at": "2026-09-27T18:44:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.546995,
+          "rows_fetched": 209,
+          "started_at": "2026-09-27T19:57:16+00:00",
+          "finished_at": "2026-09-27T19:58:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 55.053604
+    },
+    {
+      "id": 32,
+      "url": null,
+      "output_file": "32.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 18506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 52.647036,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-27T17:14:14+00:00",
+          "finished_at": "2026-09-27T17:15:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 50.973075,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-27T18:44:20+00:00",
+          "finished_at": "2026-09-27T18:45:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.370013,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-27T19:58:10+00:00",
+          "finished_at": "2026-09-27T19:59:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 51.330041
+    },
+    {
+      "id": 33,
+      "url": null,
+      "output_file": "33.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 41.813586,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:15:07+00:00",
+          "finished_at": "2026-09-27T17:15:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.968066,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:45:11+00:00",
+          "finished_at": "2026-09-27T18:45:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.039435,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:59:01+00:00",
+          "finished_at": "2026-09-27T19:59:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.940362
+    },
+    {
+      "id": 34,
+      "url": null,
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.927002,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:15:49+00:00",
+          "finished_at": "2026-09-27T17:16:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.703954,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:45:53+00:00",
+          "finished_at": "2026-09-27T18:46:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.439714,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:59:43+00:00",
+          "finished_at": "2026-09-27T20:00:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.690223
+    },
+    {
+      "id": 35,
+      "url": null,
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 53.461504,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:16:38+00:00",
+          "finished_at": "2026-09-27T17:17:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.051772,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:46:42+00:00",
+          "finished_at": "2026-09-27T18:47:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 51.989503,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:00:33+00:00",
+          "finished_at": "2026-09-27T20:01:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 52.500926
+    },
+    {
+      "id": 36,
+      "url": null,
+      "output_file": "36.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 60.878699,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:17:31+00:00",
+          "finished_at": "2026-09-27T17:18:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 54.749486,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:47:35+00:00",
+          "finished_at": "2026-09-27T18:48:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.98518,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:01:25+00:00",
+          "finished_at": "2026-09-27T20:02:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.871122
+    },
+    {
+      "id": 37,
+      "url": null,
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 41.133455,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:18:32+00:00",
+          "finished_at": "2026-09-27T17:19:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.517721,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:48:29+00:00",
+          "finished_at": "2026-09-27T18:49:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.381401,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:02:20+00:00",
+          "finished_at": "2026-09-27T20:03:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.010859
+    },
+    {
+      "id": 38,
+      "url": null,
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 56.761284,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:19:13+00:00",
+          "finished_at": "2026-09-27T17:20:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.863124,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:49:10+00:00",
+          "finished_at": "2026-09-27T18:50:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.886168,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:03:01+00:00",
+          "finished_at": "2026-09-27T20:03:54+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 54.170192
+    },
+    {
+      "id": 39,
+      "url": null,
+      "output_file": "39.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 52.823424,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:20:10+00:00",
+          "finished_at": "2026-09-27T17:21:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.595169,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:50:03+00:00",
+          "finished_at": "2026-09-27T18:50:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.669771,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:03:54+00:00",
+          "finished_at": "2026-09-27T20:04:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 52.696121
+    },
+    {
+      "id": 40,
+      "url": null,
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 175,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.361921,
+          "rows_fetched": 175,
+          "started_at": "2026-09-27T17:21:03+00:00",
+          "finished_at": "2026-09-27T17:21:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.090602,
+          "rows_fetched": 175,
+          "started_at": "2026-09-27T18:50:55+00:00",
+          "finished_at": "2026-09-27T18:51:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 48.379901,
+          "rows_fetched": 175,
+          "started_at": "2026-09-27T20:04:47+00:00",
+          "finished_at": "2026-09-27T20:05:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.277475
+    },
+    {
+      "id": 41,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.696488,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:33:39+00:00",
+          "finished_at": "2026-09-24T06:34:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.746921,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:33:53+00:00",
+          "finished_at": "2026-09-24T08:34:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.217839,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:14:22+00:00",
+          "finished_at": "2026-09-24T10:14:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.553749
+    },
+    {
+      "id": 42,
+      "url": null,
+      "output_file": "42.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.044504,
+          "rows_fetched": 29,
+          "started_at": "2026-09-27T17:21:53+00:00",
+          "finished_at": "2026-09-27T17:22:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.886049,
+          "rows_fetched": 29,
+          "started_at": "2026-09-27T18:51:44+00:00",
+          "finished_at": "2026-09-27T18:52:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.462497,
+          "rows_fetched": 29,
+          "started_at": "2026-09-27T20:05:35+00:00",
+          "finished_at": "2026-09-27T20:06:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.46435
+    },
+    {
+      "id": 43,
+      "url": null,
+      "output_file": "43.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 56.194725,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:22:36+00:00",
+          "finished_at": "2026-09-27T17:23:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.961426,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:52:26+00:00",
+          "finished_at": "2026-09-27T18:53:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.287673,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:06:18+00:00",
+          "finished_at": "2026-09-27T20:07:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 53.814608
+    },
+    {
+      "id": 44,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/nested_kleene_seq.sql",
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.02142,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:35:33+00:00",
+          "finished_at": "2026-09-24T06:36:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.602066,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:35:55+00:00",
+          "finished_at": "2026-09-24T08:36:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.235926,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:16:16+00:00",
+          "finished_at": "2026-09-24T10:17:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.619804
+    },
+    {
+      "id": 45,
+      "url": null,
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.373676,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T17:23:33+00:00",
+          "finished_at": "2026-09-27T17:24:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.483892,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T18:53:19+00:00",
+          "finished_at": "2026-09-27T18:53:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.948971,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T20:07:10+00:00",
+          "finished_at": "2026-09-27T20:07:48+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.60218
+    },
+    {
+      "id": 46,
+      "url": null,
+      "output_file": "46.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 1.845877,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T17:24:22+00:00",
+          "finished_at": "2026-09-27T17:24:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 1.168169,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T18:53:57+00:00",
+          "finished_at": "2026-09-27T18:53:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.031932,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T20:07:48+00:00",
+          "finished_at": "2026-09-27T20:07:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 1.348659
+    },
+    {
+      "id": 47,
+      "url": null,
+      "output_file": "47.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 380,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.230121,
+          "rows_fetched": 380,
+          "started_at": "2026-09-27T17:24:24+00:00",
+          "finished_at": "2026-09-27T17:24:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 21.687428,
+          "rows_fetched": 380,
+          "started_at": "2026-09-27T18:53:58+00:00",
+          "finished_at": "2026-09-27T18:54:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 21.666958,
+          "rows_fetched": 380,
+          "started_at": "2026-09-27T20:07:49+00:00",
+          "finished_at": "2026-09-27T20:08:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 26.194836
+    },
+    {
+      "id": 48,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "48.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3141,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 39.194099,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-24T06:37:26+00:00",
+          "finished_at": "2026-09-24T06:38:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.253736,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-24T08:37:55+00:00",
+          "finished_at": "2026-09-24T08:38:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.57338,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-24T10:18:11+00:00",
+          "finished_at": "2026-09-24T10:18:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.673738
+    },
+    {
+      "id": 49,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "49.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 46.346395,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:38:05+00:00",
+          "finished_at": "2026-09-24T06:38:52+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.212839,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:38:36+00:00",
+          "finished_at": "2026-09-24T08:39:28+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.687837,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:18:50+00:00",
+          "finished_at": "2026-09-24T10:19:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.082357
+    },
+    {
+      "id": 50,
+      "url": null,
+      "output_file": "50.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.090645,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:24:59+00:00",
+          "finished_at": "2026-09-27T17:26:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 54.35307,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:54:20+00:00",
+          "finished_at": "2026-09-27T18:55:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 55.309031,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:08:11+00:00",
+          "finished_at": "2026-09-27T20:09:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.917582
+    },
+    {
+      "id": 51,
+      "url": null,
+      "output_file": "51.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 60.406594,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T17:26:00+00:00",
+          "finished_at": "2026-09-27T17:27:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.835118,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T18:55:14+00:00",
+          "finished_at": "2026-09-27T18:56:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.881025,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T20:09:06+00:00",
+          "finished_at": "2026-09-27T20:10:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.040912
+    },
+    {
+      "id": 52,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/ChicagoCrime.java",
+      "output_file": "52.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 17.802976,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:40:24+00:00",
+          "finished_at": "2026-09-24T06:40:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 18.576589,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:41:07+00:00",
+          "finished_at": "2026-09-24T08:41:26+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 17.295718,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T10:21:08+00:00",
+          "finished_at": "2026-09-24T10:21:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 17.891761
+    },
+    {
+      "id": 53,
+      "url": null,
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 42.354293,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T17:27:01+00:00",
+          "finished_at": "2026-09-27T17:27:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 24.791831,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T18:56:08+00:00",
+          "finished_at": "2026-09-27T18:56:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 24.611152,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T20:10:00+00:00",
+          "finished_at": "2026-09-27T20:10:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 30.585759
+    },
+    {
+      "id": 54,
+      "url": null,
+      "output_file": "54.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.773474,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T17:27:43+00:00",
+          "finished_at": "2026-09-27T17:28:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 26.805503,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T18:56:33+00:00",
+          "finished_at": "2026-09-27T18:56:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 26.577628,
+          "rows_fetched": 1,
+          "started_at": "2026-09-27T20:10:25+00:00",
+          "finished_at": "2026-09-27T20:10:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 33.718868
+    },
+    {
+      "id": 55,
+      "url": null,
+      "output_file": "55.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 190056,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 41.457234,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-27T17:28:31+00:00",
+          "finished_at": "2026-09-27T17:29:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.649963,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-27T18:56:59+00:00",
+          "finished_at": "2026-09-27T18:57:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 43.157094,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-27T20:10:51+00:00",
+          "finished_at": "2026-09-27T20:11:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.42143
+    },
+    {
+      "id": 56,
+      "url": null,
+      "output_file": "56.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.150581,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:29:12+00:00",
+          "finished_at": "2026-09-27T17:29:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.1488,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:57:42+00:00",
+          "finished_at": "2026-09-27T18:58:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.109127,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:11:34+00:00",
+          "finished_at": "2026-09-27T20:12:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.802836
+    },
+    {
+      "id": 57,
+      "url": null,
+      "output_file": "57.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 11,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 65.041955,
+          "rows_fetched": 11,
+          "started_at": "2026-09-27T17:29:55+00:00",
+          "finished_at": "2026-09-27T17:31:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.015096,
+          "rows_fetched": 11,
+          "started_at": "2026-09-27T18:58:23+00:00",
+          "finished_at": "2026-09-27T18:59:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.274704,
+          "rows_fetched": 11,
+          "started_at": "2026-09-27T20:12:16+00:00",
+          "finished_at": "2026-09-27T20:13:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 61.443918
+    },
+    {
+      "id": 58,
+      "url": null,
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 884,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 64.992542,
+          "rows_fetched": 884,
+          "started_at": "2026-09-27T17:31:00+00:00",
+          "finished_at": "2026-09-27T17:32:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.774398,
+          "rows_fetched": 884,
+          "started_at": "2026-09-27T18:59:23+00:00",
+          "finished_at": "2026-09-27T19:00:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 57.443805,
+          "rows_fetched": 884,
+          "started_at": "2026-09-27T20:13:15+00:00",
+          "finished_at": "2026-09-27T20:14:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 60.070248
+    },
+    {
+      "id": 59,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "59.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2334112,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 97.978101,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-24T06:45:17+00:00",
+          "finished_at": "2026-09-24T06:46:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 103.231593,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-24T08:46:20+00:00",
+          "finished_at": "2026-09-24T08:48:04+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 98.812699,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-24T10:26:01+00:00",
+          "finished_at": "2026-09-24T10:27:41+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 100.007464
+    },
+    {
+      "id": 60,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.76923,
+          "rows_fetched": 2,
+          "started_at": "2026-09-24T06:46:56+00:00",
+          "finished_at": "2026-09-24T06:48:27+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.279024,
+          "rows_fetched": 2,
+          "started_at": "2026-09-24T08:48:04+00:00",
+          "finished_at": "2026-09-24T08:49:39+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.759787,
+          "rows_fetched": 2,
+          "started_at": "2026-09-24T10:27:41+00:00",
+          "finished_at": "2026-09-24T10:29:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 92.60268
+    },
+    {
+      "id": 61,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "61.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 214,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 92.105767,
+          "rows_fetched": 214,
+          "started_at": "2026-09-24T06:48:27+00:00",
+          "finished_at": "2026-09-24T06:50:00+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.839479,
+          "rows_fetched": 214,
+          "started_at": "2026-09-24T08:49:39+00:00",
+          "finished_at": "2026-09-24T08:51:15+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 91.261374,
+          "rows_fetched": 214,
+          "started_at": "2026-09-24T10:29:11+00:00",
+          "finished_at": "2026-09-24T10:30:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 93.068873
+    },
+    {
+      "id": 62,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 36838,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.056428,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T06:50:00+00:00",
+          "finished_at": "2026-09-24T06:50:47+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.385984,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T08:51:15+00:00",
+          "finished_at": "2026-09-24T08:52:06+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.37397,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T10:30:43+00:00",
+          "finished_at": "2026-09-24T10:31:29+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.272127
+    },
+    {
+      "id": 63,
+      "url": null,
+      "output_file": "63.txt",
+      "output_complete": false,
+      "output_source_run": 2,
+      "best_partial_rows": 1048600,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.029532,
+          "rows_fetched": 1006656,
+          "started_at": "2026-09-27T17:32:05+00:00",
+          "finished_at": "2026-09-27T17:37:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.013265,
+          "rows_fetched": 1048600,
+          "started_at": "2026-09-27T19:00:21+00:00",
+          "finished_at": "2026-09-27T19:05:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:14:12+00:00",
+          "finished_at": "2026-09-27T20:14:12+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.014266
+    },
+    {
+      "id": 64,
+      "url": null,
+      "output_file": "64.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 14093,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.127991,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-27T17:37:06+00:00",
+          "finished_at": "2026-09-27T17:38:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.797441,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-27T19:05:21+00:00",
+          "finished_at": "2026-09-27T19:05:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.496853,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-27T20:14:12+00:00",
+          "finished_at": "2026-09-27T20:14:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.140762
+    },
+    {
+      "id": 65,
+      "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS#evil-regex",
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 9902,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.189968,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-24T06:56:18+00:00",
+          "finished_at": "2026-09-24T06:56:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.467546,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-24T08:57:36+00:00",
+          "finished_at": "2026-09-24T08:58:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.506696,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-24T10:31:59+00:00",
+          "finished_at": "2026-09-24T10:32:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.721403
+    },
+    {
+      "id": 66,
+      "url": null,
+      "output_file": "66.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7385,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.559253,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-27T17:38:00+00:00",
+          "finished_at": "2026-09-27T17:38:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.403886,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-27T19:05:56+00:00",
+          "finished_at": "2026-09-27T19:06:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.3625,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-27T20:14:47+00:00",
+          "finished_at": "2026-09-27T20:15:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 47.44188
+    },
+    {
+      "id": 67,
+      "url": null,
+      "output_file": "67.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 30065459,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 289.161669,
+          "rows_fetched": 30065459,
+          "started_at": "2026-09-27T17:42:09+00:00",
+          "finished_at": "2026-09-27T17:47:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 286.088056,
+          "rows_fetched": 23927057,
+          "started_at": "2026-09-27T19:06:43+00:00",
+          "finished_at": "2026-09-27T19:11:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:15:32+00:00",
+          "finished_at": "2026-09-27T20:15:32+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 291.749908
+    },
+    {
+      "id": 68,
+      "url": null,
+      "output_file": "68.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 112.67224,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:47:10+00:00",
+          "finished_at": "2026-09-27T17:49:03+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=1009.63MB, MergeSortedPages=6.68MB, Matcher=5.32MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 131.757969,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:11:43+00:00",
+          "finished_at": "2026-09-27T19:13:55+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=1007.77MB, MergeSortedPages=8.52MB, Matcher=5.32MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 134.11907,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:15:32+00:00",
+          "finished_at": "2026-09-27T20:17:46+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=1007.77MB, MergeSortedPages=8.52MB, Matcher=5.32MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 126.183093
+    },
+    {
+      "id": 69,
+      "url": null,
+      "output_file": "69.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 14253,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 25.943224,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-27T17:49:03+00:00",
+          "finished_at": "2026-09-27T17:49:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.581059,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-27T19:13:55+00:00",
+          "finished_at": "2026-09-27T19:14:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.353653,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-27T20:17:46+00:00",
+          "finished_at": "2026-09-27T20:18:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 34.292645
+    },
+    {
+      "id": 70,
+      "url": null,
+      "output_file": "70.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 23584,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 45.404878,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-27T17:49:29+00:00",
+          "finished_at": "2026-09-27T17:50:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.776261,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-27T19:14:33+00:00",
+          "finished_at": "2026-09-27T19:15:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.803521,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-27T20:18:25+00:00",
+          "finished_at": "2026-09-27T20:19:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 50.994887
+    },
+    {
+      "id": 71,
+      "url": null,
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 131072,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.015883,
+          "rows_fetched": 131072,
+          "started_at": "2026-09-27T17:50:14+00:00",
+          "finished_at": "2026-09-27T17:55:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02403,
+          "rows_fetched": 98304,
+          "started_at": "2026-09-27T19:15:27+00:00",
+          "finished_at": "2026-09-27T19:20:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:19:19+00:00",
+          "finished_at": "2026-09-27T20:19:19+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.013304
+    },
+    {
+      "id": 72,
+      "url": null,
+      "output_file": "72.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 32.933238,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:55:14+00:00",
+          "finished_at": "2026-09-27T17:55:47+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.47MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1020.77MB, MergeSortedPages=2.68MB, GenericSpiller=16kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 37.149864,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:20:27+00:00",
+          "finished_at": "2026-09-27T19:21:05+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.24MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1019.62MB, MergeSortedPages=3.60MB, GenericSpiller=20kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 32.486471,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:19:19+00:00",
+          "finished_at": "2026-09-27T20:19:51+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.24MB, Delta: 1.15MB, Top Consumers: {PagesToPagesIndexes=1019.62MB, MergeSortedPages=3.60MB, GenericSpiller=16kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 34.189858
+    },
+    {
+      "id": 73,
+      "url": null,
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 2.074245,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:55:47+00:00",
+          "finished_at": "2026-09-27T17:55:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 2.282375,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:21:05+00:00",
+          "finished_at": "2026-09-27T19:21:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.950373,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:19:51+00:00",
+          "finished_at": "2026-09-27T20:19:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 2.102331
+    },
+    {
+      "id": 74,
+      "url": null,
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.159214,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:55:49+00:00",
+          "finished_at": "2026-09-27T17:56:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.237273,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:21:07+00:00",
+          "finished_at": "2026-09-27T19:22:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.773412,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:19:53+00:00",
+          "finished_at": "2026-09-27T20:20:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 52.7233
+    },
+    {
+      "id": 75,
+      "url": null,
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 79,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.687189,
+          "rows_fetched": 79,
+          "started_at": "2026-09-27T17:56:39+00:00",
+          "finished_at": "2026-09-27T17:57:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 39.173366,
+          "rows_fetched": 79,
+          "started_at": "2026-09-27T19:22:02+00:00",
+          "finished_at": "2026-09-27T19:22:41+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.932671,
+          "rows_fetched": 79,
+          "started_at": "2026-09-27T20:20:47+00:00",
+          "finished_at": "2026-09-27T20:21:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 37.264409
+    },
+    {
+      "id": 76,
+      "url": null,
+      "output_file": "76.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 98254,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 1.354425,
+          "rows_fetched": 98254,
+          "started_at": "2026-09-27T17:57:12+00:00",
+          "finished_at": "2026-09-27T17:57:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 1.204672,
+          "rows_fetched": 98254,
+          "started_at": "2026-09-27T19:22:41+00:00",
+          "finished_at": "2026-09-27T19:22:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.158315,
+          "rows_fetched": 98254,
+          "started_at": "2026-09-27T20:21:26+00:00",
+          "finished_at": "2026-09-27T20:21:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 1.239137
+    },
+    {
+      "id": 77,
+      "url": null,
+      "output_file": "77.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10915,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 31.446313,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-27T17:57:14+00:00",
+          "finished_at": "2026-09-27T17:57:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.385122,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-27T19:22:42+00:00",
+          "finished_at": "2026-09-27T19:23:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.862232,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-27T20:21:27+00:00",
+          "finished_at": "2026-09-27T20:22:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 32.897889
+    },
+    {
+      "id": 78,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "78.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 732506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 95.570091,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-24T07:15:53+00:00",
+          "finished_at": "2026-09-24T07:17:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.908619,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-24T09:17:07+00:00",
+          "finished_at": "2026-09-24T09:18:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 98.601061,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-24T10:41:20+00:00",
+          "finished_at": "2026-09-24T10:42:58+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 96.693257
+    },
+    {
+      "id": 79,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 54147,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 29.938398,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-24T07:17:29+00:00",
+          "finished_at": "2026-09-24T07:17:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 28.781875,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-24T09:18:43+00:00",
+          "finished_at": "2026-09-24T09:19:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.488319,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-24T10:42:58+00:00",
+          "finished_at": "2026-09-24T10:43:29+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.736197
+    },
+    {
+      "id": 80,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "80.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3935,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.221935,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-24T07:17:59+00:00",
+          "finished_at": "2026-09-24T07:18:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.232909,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-24T09:19:12+00:00",
+          "finished_at": "2026-09-24T09:20:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.691891,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-24T10:43:29+00:00",
+          "finished_at": "2026-09-24T10:44:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.715578
+    },
+    {
+      "id": 81,
+      "url": null,
+      "output_file": "81.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29477,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 42.168032,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-27T17:57:45+00:00",
+          "finished_at": "2026-09-27T17:58:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.549593,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-27T19:23:17+00:00",
+          "finished_at": "2026-09-27T19:24:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.841601,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-27T20:22:00+00:00",
+          "finished_at": "2026-09-27T20:22:48+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 46.186409
+    },
+    {
+      "id": 82,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "82.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 354194,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.010332,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-24T07:19:36+00:00",
+          "finished_at": "2026-09-24T07:20:20+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.747237,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-24T09:20:48+00:00",
+          "finished_at": "2026-09-24T09:21:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.001543,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-24T10:45:14+00:00",
+          "finished_at": "2026-09-24T10:46:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.253037
+    },
+    {
+      "id": 83,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.332168,
+          "rows_fetched": 10,
+          "started_at": "2026-09-24T07:20:20+00:00",
+          "finished_at": "2026-09-24T07:20:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 29.272262,
+          "rows_fetched": 10,
+          "started_at": "2026-09-24T09:21:33+00:00",
+          "finished_at": "2026-09-24T09:22:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.039626,
+          "rows_fetched": 10,
+          "started_at": "2026-09-24T10:46:01+00:00",
+          "finished_at": "2026-09-24T10:46:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 29.214685
+    },
+    {
+      "id": 84,
+      "url": null,
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 2.397581,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T17:58:27+00:00",
+          "finished_at": "2026-09-27T17:58:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 2.455671,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:24:05+00:00",
+          "finished_at": "2026-09-27T19:24:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 2.719421,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:22:48+00:00",
+          "finished_at": "2026-09-27T20:22:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 2.524224
+    },
+    {
+      "id": 85,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 20221,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 27.599377,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-24T07:21:17+00:00",
+          "finished_at": "2026-09-24T07:21:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 28.91842,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-24T09:22:32+00:00",
+          "finished_at": "2026-09-24T09:23:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 29.987832,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-24T10:47:01+00:00",
+          "finished_at": "2026-09-24T10:47:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 28.83521
+    },
+    {
+      "id": 86,
+      "url": "https://stackoverflow.com/questions/68510881/how-to-fetch-records-up-to-particular-data",
+      "output_file": "86.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1720,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 85.988202,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-24T07:21:45+00:00",
+          "finished_at": "2026-09-24T07:23:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 86.552865,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-24T09:23:01+00:00",
+          "finished_at": "2026-09-24T09:24:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.844042,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-24T10:47:31+00:00",
+          "finished_at": "2026-09-24T10:49:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 87.795036
+    },
+    {
+      "id": 87,
+      "url": "https://stackoverflow.com/questions/68510881/how-to-fetch-records-up-to-particular-data",
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1267,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 79.244532,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-24T07:23:11+00:00",
+          "finished_at": "2026-09-24T07:24:30+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.723937,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-24T09:24:27+00:00",
+          "finished_at": "2026-09-24T09:25:47+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 83.633961,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-24T10:49:02+00:00",
+          "finished_at": "2026-09-24T10:50:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 80.867477
+    },
+    {
+      "id": 88,
+      "url": null,
+      "output_file": "88.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1231744,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 232.57774,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-27T17:58:30+00:00",
+          "finished_at": "2026-09-27T18:02:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 263.873536,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-27T19:24:08+00:00",
+          "finished_at": "2026-09-27T19:28:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 262.132472,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-27T20:22:50+00:00",
+          "finished_at": "2026-09-27T20:27:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 252.861249
+    },
+    {
+      "id": 89,
+      "url": "https://stackoverflow.com/questions/78844130/match-recognize-get-all-matches-with-restarting-from-first-element",
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8531,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.499598,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T07:28:53+00:00",
+          "finished_at": "2026-09-24T07:29:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.350519,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T09:30:13+00:00",
+          "finished_at": "2026-09-24T09:30:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.05374,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T10:54:58+00:00",
+          "finished_at": "2026-09-24T10:55:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.967952
+    },
+    {
+      "id": 90,
+      "url": null,
+      "output_file": "90.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 11.336816,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:02:23+00:00",
+          "finished_at": "2026-09-27T18:02:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 19.921977,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:28:32+00:00",
+          "finished_at": "2026-09-27T19:28:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 19.748839,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:27:13+00:00",
+          "finished_at": "2026-09-27T20:27:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 17.002544
+    },
+    {
+      "id": 91,
+      "url": "https://stackoverflow.com/questions/79997241/how-can-i-find-a-specific-consecutive-sequence-of-rows-in-sql-without-match-reco",
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.994361,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:29:40+00:00",
+          "finished_at": "2026-09-24T07:30:25+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.293929,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T09:31:00+00:00",
+          "finished_at": "2026-09-24T09:31:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.38648,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T10:55:46+00:00",
+          "finished_at": "2026-09-24T10:56:32+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.224923
+    },
+    {
+      "id": 92,
+      "url": null,
+      "output_file": "92.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 40.705316,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T18:02:34+00:00",
+          "finished_at": "2026-09-27T18:03:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 50.125688,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T19:28:52+00:00",
+          "finished_at": "2026-09-27T19:29:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 49.403259,
+          "rows_fetched": 0,
+          "started_at": "2026-09-27T20:27:32+00:00",
+          "finished_at": "2026-09-27T20:28:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 46.744754
+    },
+    {
+      "id": 93,
+      "url": null,
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 266,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 29.91933,
+          "rows_fetched": 266,
+          "started_at": "2026-09-27T18:03:15+00:00",
+          "finished_at": "2026-09-27T18:03:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.730257,
+          "rows_fetched": 266,
+          "started_at": "2026-09-27T19:29:42+00:00",
+          "finished_at": "2026-09-27T19:30:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.153095,
+          "rows_fetched": 266,
+          "started_at": "2026-09-27T20:28:22+00:00",
+          "finished_at": "2026-09-27T20:28:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 34.600894
+    },
+    {
+      "id": 94,
+      "url": null,
+      "output_file": "94.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 114,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 103.647523,
+          "rows_fetched": 114,
+          "started_at": "2026-09-27T18:03:45+00:00",
+          "finished_at": "2026-09-27T18:05:28+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 117.492844,
+          "rows_fetched": 114,
+          "started_at": "2026-09-27T19:30:20+00:00",
+          "finished_at": "2026-09-27T19:32:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 119.472586,
+          "rows_fetched": 114,
+          "started_at": "2026-09-27T20:28:58+00:00",
+          "finished_at": "2026-09-27T20:30:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 113.537651
+    },
+    {
+      "id": 95,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8640635,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 121.334411,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-24T07:33:15+00:00",
+          "finished_at": "2026-09-24T07:35:20+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 122.025162,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-24T09:34:35+00:00",
+          "finished_at": "2026-09-24T09:36:41+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 121.587289,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-24T10:59:20+00:00",
+          "finished_at": "2026-09-24T11:01:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 121.648954
+    },
+    {
+      "id": 96,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "96.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 533,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.290562,
+          "rows_fetched": 533,
+          "started_at": "2026-09-24T07:35:20+00:00",
+          "finished_at": "2026-09-24T07:36:35+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 76.832419,
+          "rows_fetched": 533,
+          "started_at": "2026-09-24T09:36:41+00:00",
+          "finished_at": "2026-09-24T09:37:57+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 75.885726,
+          "rows_fetched": 533,
+          "started_at": "2026-09-24T11:01:25+00:00",
+          "finished_at": "2026-09-24T11:02:41+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 76.002902
+    },
+    {
+      "id": 97,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31428,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 87.921655,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-24T07:36:35+00:00",
+          "finished_at": "2026-09-24T07:38:03+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 89.042815,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-24T09:37:57+00:00",
+          "finished_at": "2026-09-24T09:39:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 89.617436,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-24T11:02:41+00:00",
+          "finished_at": "2026-09-24T11:04:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 88.860635
+    },
+    {
+      "id": 98,
+      "url": null,
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 728780,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 114.904158,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-27T18:05:28+00:00",
+          "finished_at": "2026-09-27T18:07:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 135.14391,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-27T19:32:17+00:00",
+          "finished_at": "2026-09-27T19:34:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 135.262894,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-27T20:30:57+00:00",
+          "finished_at": "2026-09-27T20:33:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 128.436987
+    },
+    {
+      "id": 99,
+      "url": null,
+      "output_file": "99.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 704,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 39.376862,
+          "rows_fetched": 704,
+          "started_at": "2026-09-27T18:07:23+00:00",
+          "finished_at": "2026-09-27T18:08:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.264518,
+          "rows_fetched": 704,
+          "started_at": "2026-09-27T19:34:33+00:00",
+          "finished_at": "2026-09-27T19:35:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 48.250692,
+          "rows_fetched": 704,
+          "started_at": "2026-09-27T20:33:13+00:00",
+          "finished_at": "2026-09-27T20:34:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 45.297357
+    },
+    {
+      "id": 100,
+      "url": null,
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 18436,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.452359,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-27T18:08:03+00:00",
+          "finished_at": "2026-09-27T18:08:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.485317,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-27T19:35:21+00:00",
+          "finished_at": "2026-09-27T19:36:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.568166,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-27T20:34:01+00:00",
+          "finished_at": "2026-09-27T20:34:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 39.168614
+    }
+  ]
+}

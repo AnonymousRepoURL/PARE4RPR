@@ -1,0 +1,108 @@
+rpr_sql> python .\sota_method.py .\data\crimes_sql.json `
+>>   --sample-table CRIMES_SAMPLE `
+>>   --schema EXPR `
+>>   --runs 3 `
+>>   --timeout 5 `
+>>   --fetch-size 2000
+[1/100] 0.007s (sampling 0.000s): unchanged
+[2/100] 0.015s (sampling 0.011s): unchanged
+[3/100] 0.013s (sampling 0.009s): incremental_condition_pushdown, sequence_filtering
+[4/100] 0.004s (sampling 0.000s): define_partition_pushdown
+[5/100] 0.003s (sampling 0.000s): unchanged
+[6/100] 0.014s (sampling 0.000s): incremental_condition_pushdown, row_filtering
+[7/100] 0.010s (sampling 0.000s): define_partition_pushdown, row_filtering
+[8/100] 0.010s (sampling 0.000s): define_partition_pushdown, row_filtering
+[9/100] 0.008s (sampling 0.000s): row_filtering
+[10/100] 0.015s (sampling 0.012s): unchanged
+[11/100] 0.009s (sampling 0.000s): incremental_condition_pushdown
+[12/100] 0.018s (sampling 0.000s): incremental_condition_pushdown
+[13/100] 0.047s (sampling 0.013s): incremental_condition_pushdown
+[14/100] 0.007s (sampling 0.000s): incremental_condition_pushdown
+[15/100] 0.014s (sampling 0.000s): incremental_condition_pushdown
+[16/100] 0.028s (sampling 0.005s): incremental_condition_pushdown
+[17/100] 0.273s (sampling 0.258s): incremental_condition_pushdown
+[18/100] 0.263s (sampling 0.250s): incremental_condition_pushdown, window_condition_pre_filter
+[19/100] 0.003s (sampling 0.000s): unchanged
+[20/100] 0.003s (sampling 0.000s): unchanged
+[21/100] 0.003s (sampling 0.000s): unchanged
+[22/100] 0.002s (sampling 0.000s): unchanged
+[23/100] 0.006s (sampling 0.000s): unchanged
+[24/100] 0.344s (sampling 0.329s): incremental_condition_pushdown, window_condition_pre_filter
+[25/100] 0.007s (sampling 0.000s): incremental_condition_pushdown
+[26/100] 0.011s (sampling 0.000s): row_filtering
+[27/100] 0.010s (sampling 0.000s): row_filtering
+[28/100] 0.012s (sampling 0.000s): row_filtering
+[29/100] 0.005s (sampling 0.000s): row_filtering
+[30/100] 0.012s (sampling 0.000s): alternation_variable_merge, row_filtering
+[31/100] 0.010s (sampling 0.000s): alternation_variable_merge, row_filtering
+[32/100] 0.010s (sampling 0.000s): alternation_variable_merge, row_filtering
+[33/100] 0.025s (sampling 0.000s): incremental_condition_pushdown, row_filtering
+[34/100] 0.019s (sampling 0.000s): row_filtering
+[35/100] 0.017s (sampling 0.000s): row_filtering
+[36/100] 0.015s (sampling 0.000s): row_filtering
+[37/100] 0.019s (sampling 0.000s): incremental_condition_pushdown, row_filtering
+[38/100] 0.007s (sampling 0.000s): row_filtering
+[39/100] 0.006s (sampling 0.000s): row_filtering
+[40/100] 0.006s (sampling 0.000s): row_filtering
+[41/100] 0.012s (sampling 0.000s): incremental_condition_pushdown, row_filtering
+[42/100] 0.011s (sampling 0.000s): incremental_condition_pushdown, row_filtering
+[43/100] 0.009s (sampling 0.000s): row_filtering
+[44/100] 0.010s (sampling 0.000s): row_filtering
+[45/100] 0.008s (sampling 0.000s): row_filtering
+[46/100] 0.007s (sampling 0.000s): incremental_condition_pushdown
+[47/100] 0.009s (sampling 0.000s): incremental_condition_pushdown
+[48/100] 0.006s (sampling 0.000s): unchanged
+[49/100] 0.006s (sampling 0.000s): unchanged
+[50/100] 0.006s (sampling 0.000s): unchanged
+[51/100] 0.005s (sampling 0.000s): unchanged
+[52/100] 0.006s (sampling 0.000s): incremental_condition_pushdown
+[53/100] 0.010s (sampling 0.000s): incremental_condition_pushdown
+[54/100] 0.005s (sampling 0.000s): unchanged
+[55/100] 0.004s (sampling 0.000s): unchanged
+[56/100] 0.007s (sampling 0.000s): unchanged
+[57/100] 0.005s (sampling 0.000s): unchanged
+[58/100] 0.006s (sampling 0.000s): unchanged
+[59/100] 0.005s (sampling 0.000s): row_filtering
+[60/100] 0.007s (sampling 0.000s): row_filtering
+[61/100] 0.007s (sampling 0.000s): row_filtering
+[62/100] 0.006s (sampling 0.000s): row_filtering
+[63/100] 0.003s (sampling 0.000s): unchanged
+[64/100] 0.010s (sampling 0.000s): row_filtering
+[65/100] 0.002s (sampling 0.000s): unchanged
+[66/100] 0.002s (sampling 0.000s): unchanged
+[67/100] 0.002s (sampling 0.000s): unchanged
+[68/100] 0.002s (sampling 0.000s): unchanged
+[69/100] 0.003s (sampling 0.000s): alternation_variable_merge
+[70/100] 0.002s (sampling 0.000s): unchanged
+[71/100] 0.002s (sampling 0.000s): unchanged
+[72/100] 0.003s (sampling 0.000s): unchanged
+[73/100] 0.009s (sampling 0.000s): define_partition_pushdown, row_filtering
+[74/100] 0.010s (sampling 0.000s): row_filtering
+[75/100] 0.008s (sampling 0.000s): row_filtering
+[76/100] 0.002s (sampling 0.000s): row_filtering
+[77/100] 0.001s (sampling 0.000s): unchanged
+[78/100] 0.004s (sampling 0.000s): row_filtering
+[79/100] 0.004s (sampling 0.000s): row_filtering
+[80/100] 0.006s (sampling 0.000s): row_filtering
+[81/100] 0.007s (sampling 0.000s): row_filtering
+[82/100] 0.005s (sampling 0.000s): row_filtering
+[83/100] 0.004s (sampling 0.000s): row_filtering
+[84/100] 0.004s (sampling 0.000s): define_partition_pushdown, row_filtering
+[85/100] 0.004s (sampling 0.000s): row_filtering
+[86/100] 0.001s (sampling 0.000s): unchanged
+[87/100] 0.001s (sampling 0.000s): unchanged
+[88/100] 0.006s (sampling 0.000s): incremental_condition_pushdown
+[89/100] 0.003s (sampling 0.000s): unchanged
+[90/100] 0.002s (sampling 0.000s): unchanged
+[91/100] 0.007s (sampling 0.000s): row_filtering
+[92/100] 0.007s (sampling 0.000s): row_filtering
+[93/100] 0.007s (sampling 0.000s): row_filtering
+[94/100] 0.006s (sampling 0.000s): unchanged
+[95/100] 0.001s (sampling 0.000s): unchanged
+[96/100] 0.002s (sampling 0.000s): unchanged
+[97/100] 0.002s (sampling 0.000s): unchanged
+[98/100] 0.003s (sampling 0.000s): unchanged
+[99/100] 0.007s (sampling 0.000s): alternation_variable_merge
+[100/100] 0.003s (sampling 0.000s): alternation_variable_merge
+rewritten queries written to data\crimes_sql_sota_method.txt
+rewrite metrics written to data\crimes_sql_sota_method.metrics.json

@@ -1,0 +1,110 @@
+------------------------------------------------------------------
+rpr_sql % python3 llm_method.py data/crimes_sql_trino.json \
+  --provider openai \
+  --model gpt-5.6-sol \
+  --reasoning-effort high \
+  --max-output-tokens 65536 \
+  --prompt-version v1
+------------------------------------------------------------------
+[1/100] (trino): 19.236s, 2107 tokens, estimated $0.02079600
+[2/100] (trino): 86.364s, 5613 tokens, estimated $0.09112400
+[3/100] (trino): 66.601s, 4485 tokens, estimated $0.06976400
+[4/100] (trino): 46.647s, 3583 tokens, estimated $0.05137200
+[5/100] (trino): 17.912s, 1794 tokens, estimated $0.01572000
+[6/100] (trino): 53.710s, 2892 tokens, estimated $0.03563200
+[7/100] (trino): 23.507s, 2565 tokens, estimated $0.02923600
+[8/100] (trino): 18.268s, 1973 tokens, estimated $0.01720400
+[9/100] (trino): 76.944s, 3258 tokens, estimated $0.04330400
+[10/100] (trino): 19.598s, 1891 tokens, estimated $0.01646000
+[11/100] (trino): 58.682s, 2980 tokens, estimated $0.03801600
+[12/100] (trino): 116.640s, 7372 tokens, estimated $0.12446400
+[13/100] (trino): 56.753s, 4538 tokens, estimated $0.06567200
+[14/100] (trino): 278.250s, 6114 tokens, estimated $0.09643840
+[15/100] (trino): 350.286s, 9821 tokens, estimated $0.16857920
+[16/100] (trino): 107.419s, 7156 tokens, estimated $0.11944000
+[17/100] (trino): 93.592s, 6017 tokens, estimated $0.09834000
+[18/100] (trino): 104.064s, 4135 tokens, estimated $0.06185200
+[19/100] (trino): 195.660s, 2088 tokens, estimated $0.01546760
+[20/100] (trino): 81.350s, 3430 tokens, estimated $0.04768800
+[21/100] (trino): 228.490s, 3755 tokens, estimated $0.04937600
+[22/100] (trino): 80.127s, 3526 tokens, estimated $0.04973600
+[23/100] (trino): 67.806s, 3120 tokens, estimated $0.04155200
+[24/100] (trino): 103.439s, 4252 tokens, estimated $0.06318400
+[25/100] (trino): 128.819s, 7165 tokens, estimated $0.12170000
+[26/100] (trino): 26.679s, 2702 tokens, estimated $0.03210400
+[27/100] (trino): 13.519s, 2083 tokens, estimated $0.01994800
+[28/100] (trino): 49.072s, 2813 tokens, estimated $0.03424400
+[29/100] (trino): 47.397s, 2728 tokens, estimated $0.03342400
+[30/100] (trino): 63.086s, 3135 tokens, estimated $0.04108400
+[31/100] (trino): 39.177s, 2586 tokens, estimated $0.03037600
+[32/100] (trino): 22.515s, 2070 tokens, estimated $0.01994400
+[33/100] (trino): 69.731s, 4951 tokens, estimated $0.07622000
+[34/100] (trino): 48.337s, 3039 tokens, estimated $0.03788400
+[35/100] (trino): 24.246s, 2733 tokens, estimated $0.03210000
+[36/100] (trino): 96.545s, 6336 tokens, estimated $0.10420800
+[37/100] (trino): 72.423s, 3573 tokens, estimated $0.04899600
+[38/100] (trino): 59.454s, 3187 tokens, estimated $0.04276400
+[39/100] (trino): 28.770s, 2760 tokens, estimated $0.03444800
+[40/100] (trino): 23.593s, 1926 tokens, estimated $0.01776800
+[41/100] (trino): 33.058s, 3009 tokens, estimated $0.03891600
+[42/100] (trino): 47.936s, 3690 tokens, estimated $0.05252000
+[43/100] (trino): 18.870s, 2339 tokens, estimated $0.02545200
+[44/100] (trino): 62.619s, 4425 tokens, estimated $0.06702800
+[45/100] (trino): 45.537s, 3550 tokens, estimated $0.04944800
+[46/100] (trino): 120.742s, 5388 tokens, estimated $0.08643200
+[47/100] (trino): 14.113s, 2114 tokens, estimated $0.02021600
+[48/100] (trino): 100.592s, 6680 tokens, estimated $0.11068800
+[49/100] (trino): 41.197s, 3641 tokens, estimated $0.05072400
+[50/100] (trino): 12.806s, 2087 tokens, estimated $0.01969200
+[51/100] (trino): 67.582s, 3042 tokens, estimated $0.03904800
+[52/100] (trino): 327.505s, 5198 tokens, estimated $0.07768720
+[53/100] (trino): 101.003s, 6998 tokens, estimated $0.11676000
+[54/100] (trino): 22.456s, 2609 tokens, estimated $0.02955600
+[55/100] (trino): 33.995s, 3146 tokens, estimated $0.04232800
+[56/100] (trino): 36.176s, 3277 tokens, estimated $0.04451600
+[57/100] (trino): 78.125s, 3622 tokens, estimated $0.05168800
+[58/100] (trino): 46.678s, 3806 tokens, estimated $0.05540000
+[59/100] (trino): 19.518s, 2297 tokens, estimated $0.02498000
+[60/100] (trino): 28.251s, 2753 tokens, estimated $0.03379600
+[61/100] (trino): 22.613s, 2432 tokens, estimated $0.02753600
+[62/100] (trino): 10.013s, 1843 tokens, estimated $0.01542000
+[63/100] (trino): 27.870s, 2370 tokens, estimated $0.02556000
+[64/100] (trino): 302.274s, 7184 tokens, estimated $0.11723080
+[65/100] (trino): 19.428s, 1843 tokens, estimated $0.01631600
+[66/100] (trino): 15.719s, 1752 tokens, estimated $0.01456000
+[67/100] (trino): 15.134s, 1967 tokens, estimated $0.01905200
+[68/100] (trino): 211.302s, 2692 tokens, estimated $0.02944880
+[69/100] (trino): 13.460s, 1988 tokens, estimated $0.01854400
+[70/100] (trino): 163.853s, 6118 tokens, estimated $0.10162400
+[71/100] (trino): 23.306s, 2031 tokens, estimated $0.02006000
+[72/100] (trino): 57.998s, 3188 tokens, estimated $0.04238400
+[73/100] (trino): 79.332s, 3933 tokens, estimated $0.05736400
+[74/100] (trino): 40.429s, 3204 tokens, estimated $0.04267200
+[75/100] (trino): 41.190s, 2814 tokens, estimated $0.03504800
+[76/100] (trino): 13.582s, 1709 tokens, estimated $0.01398800
+[77/100] (trino): 81.245s, 5551 tokens, estimated $0.09158000
+[78/100] (trino): 18.950s, 1905 tokens, estimated $0.01749200
+[79/100] (trino): 14.129s, 1917 tokens, estimated $0.01763600
+[80/100] (trino): 70.851s, 3587 tokens, estimated $0.05042800
+[81/100] (trino): 62.488s, 3690 tokens, estimated $0.05252000
+[82/100] (trino): 21.849s, 2069 tokens, estimated $0.02027600
+[83/100] (trino): 42.273s, 3225 tokens, estimated $0.04386000
+[84/100] (trino): 25.485s, 2337 tokens, estimated $0.02606800
+[85/100] (trino): 13.544s, 1821 tokens, estimated $0.01586000
+[86/100] (trino): 13.593s, 1724 tokens, estimated $0.01483200
+[87/100] (trino): 124.189s, 7533 tokens, estimated $0.13064400
+[88/100] (trino): 167.444s, 7047 tokens, estimated $0.11962800
+[89/100] (trino): 56.162s, 3485 tokens, estimated $0.04853200
+[90/100] (trino): 48.125s, 3053 tokens, estimated $0.04032400
+[91/100] (trino): 29.420s, 2438 tokens, estimated $0.02797600
+[92/100] (trino): 36.371s, 3023 tokens, estimated $0.03961200
+[93/100] (trino): 30.411s, 2772 tokens, estimated $0.03449600
+[94/100] (trino): 14.052s, 1976 tokens, estimated $0.01835200
+[95/100] (trino): 10.336s, 1774 tokens, estimated $0.01480800
+[96/100] (trino): 13.051s, 1928 tokens, estimated $0.01804800
+[97/100] (trino): 31.435s, 2256 tokens, estimated $0.02484800
+[98/100] (trino): 12.383s, 1928 tokens, estimated $0.01764800
+[99/100] (trino): 89.866s, 4162 tokens, estimated $0.06117600
+[100/100] (trino): 14.250s, 1930 tokens, estimated $0.01740000
+------------------------------------------------------------------
+total estimated LLM cost: $4.75535600

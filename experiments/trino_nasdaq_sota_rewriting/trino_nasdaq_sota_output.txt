@@ -1,0 +1,110 @@
+rpr_sql> python sota_method.py data/nasdaq_sql_trino.json `
+>>   --system trino `
+>>   --sample-table nasdaq_sample `
+>>   --trino-url http://localhost:8080 `
+>>   --catalog postgresql `
+>>   --schema public `
+>>   --runs 3 `
+>>   --timeout 1.5
+[1/100] 0.946s (sampling 0.936s): sequence_filtering
+[2/100] 0.800s (sampling 0.790s): sequence_filtering
+[3/100] 0.805s (sampling 0.799s): sequence_filtering
+[4/100] 11.390s (sampling 11.371s): incremental_condition_pushdown
+[5/100] 34.013s (sampling 33.940s): incremental_condition_pushdown
+[6/100] 0.620s (sampling 0.613s): incremental_condition_pushdown, sequence_filtering
+[7/100] 0.781s (sampling 0.768s): incremental_condition_pushdown, sequence_filtering
+[8/100] 0.672s (sampling 0.667s): incremental_condition_pushdown
+[9/100] 3.405s (sampling 3.397s): incremental_condition_pushdown
+[10/100] 0.624s (sampling 0.622s): sequence_filtering
+[11/100] 6.535s (sampling 6.527s): incremental_condition_pushdown
+[12/100] 0.412s (sampling 0.410s): unchanged
+[13/100] 0.545s (sampling 0.540s): sequence_filtering
+[14/100] 0.492s (sampling 0.485s): alternation_variable_merge, define_partition_pushdown
+[15/100] 6.061s (sampling 6.050s): incremental_condition_pushdown
+[16/100] 24.274s (sampling 24.246s): incremental_condition_pushdown
+[17/100] 11.471s (sampling 11.449s): incremental_condition_pushdown
+[18/100] 3.133s (sampling 3.126s): incremental_condition_pushdown
+[19/100] 0.586s (sampling 0.581s): incremental_condition_pushdown, sequence_filtering
+[20/100] 15.780s (sampling 15.765s): incremental_condition_pushdown
+[21/100] 0.712s (sampling 0.709s): sequence_filtering
+[22/100] 0.779s (sampling 0.777s): sequence_filtering
+[23/100] 0.717s (sampling 0.713s): incremental_condition_pushdown, sequence_filtering
+[24/100] 8.391s (sampling 8.370s): incremental_condition_pushdown, window_condition_pre_filter, row_filtering
+[25/100] 0.006s (sampling 0.000s): unchanged
+[26/100] 1.342s (sampling 1.338s): sequence_filtering
+[27/100] 0.004s (sampling 0.000s): unchanged
+[28/100] 1.053s (sampling 1.038s): unchanged
+[29/100] 0.433s (sampling 0.428s): unchanged
+[30/100] 0.842s (sampling 0.837s): unchanged
+[31/100] 0.806s (sampling 0.803s): unchanged
+[32/100] 0.918s (sampling 0.915s): unchanged
+[33/100] 0.474s (sampling 0.466s): row_filtering
+[34/100] 0.852s (sampling 0.847s): sequence_filtering
+[35/100] 0.669s (sampling 0.664s): sequence_filtering
+[36/100] 0.802s (sampling 0.799s): sequence_filtering
+[37/100] 0.746s (sampling 0.742s): sequence_filtering
+[38/100] 0.777s (sampling 0.774s): sequence_filtering
+[39/100] 0.756s (sampling 0.751s): unchanged
+[40/100] 0.715s (sampling 0.711s): sequence_filtering
+[41/100] 0.772s (sampling 0.769s): sequence_filtering
+[42/100] 0.511s (sampling 0.508s): define_partition_pushdown, sequence_filtering
+[43/100] 0.324s (sampling 0.321s): define_partition_pushdown
+[44/100] 0.559s (sampling 0.556s): unchanged
+[45/100] 0.685s (sampling 0.683s): unchanged
+[46/100] 0.340s (sampling 0.337s): unchanged
+[47/100] 0.854s (sampling 0.849s): sequence_filtering
+[48/100] 0.003s (sampling 0.000s): unchanged
+[49/100] 0.479s (sampling 0.475s): alternation_variable_merge
+[50/100] 7.829s (sampling 7.814s): alternation_variable_merge, incremental_condition_pushdown
+[51/100] 0.999s (sampling 0.995s): row_filtering
+[52/100] 0.585s (sampling 0.581s): row_filtering
+[53/100] 0.538s (sampling 0.532s): row_filtering
+[54/100] 0.733s (sampling 0.730s): sequence_filtering
+[55/100] 0.873s (sampling 0.867s): row_filtering
+[56/100] 0.666s (sampling 0.663s): unchanged
+[57/100] 0.391s (sampling 0.386s): unchanged
+[58/100] 0.697s (sampling 0.694s): sequence_filtering
+[59/100] 0.820s (sampling 0.815s): incremental_condition_pushdown, sequence_filtering
+[60/100] 0.003s (sampling 0.000s): unchanged
+[61/100] 0.352s (sampling 0.343s): alternation_variable_merge, define_partition_pushdown, row_filtering
+[62/100] 0.731s (sampling 0.725s): row_filtering
+[63/100] 0.343s (sampling 0.340s): define_partition_pushdown
+[64/100] 0.463s (sampling 0.456s): define_partition_pushdown
+[65/100] 0.619s (sampling 0.617s): sequence_filtering
+[66/100] 0.839s (sampling 0.836s): sequence_filtering
+[67/100] 0.654s (sampling 0.651s): sequence_filtering
+[68/100] 0.740s (sampling 0.734s): sequence_filtering
+[69/100] 0.580s (sampling 0.578s): sequence_filtering
+[70/100] 0.920s (sampling 0.915s): unchanged
+[71/100] 0.472s (sampling 0.468s): unchanged
+[72/100] 0.607s (sampling 0.605s): sequence_filtering
+[73/100] 0.533s (sampling 0.527s): sequence_filtering
+[74/100] 0.727s (sampling 0.722s): row_filtering
+[75/100] 0.687s (sampling 0.681s): row_filtering
+[76/100] 0.354s (sampling 0.350s): unchanged
+[77/100] 0.002s (sampling 0.000s): alternation_variable_merge
+[78/100] 0.912s (sampling 0.909s): sequence_filtering
+[79/100] 0.701s (sampling 0.698s): sequence_filtering
+[80/100] 0.718s (sampling 0.715s): unchanged
+[81/100] 0.357s (sampling 0.349s): row_filtering
+[82/100] 0.338s (sampling 0.336s): define_partition_pushdown
+[83/100] 0.698s (sampling 0.695s): define_partition_pushdown, sequence_filtering
+[84/100] 0.622s (sampling 0.619s): sequence_filtering
+[85/100] 0.462s (sampling 0.459s): row_filtering
+[86/100] 0.388s (sampling 0.384s): alternation_variable_merge
+[87/100] 0.883s (sampling 0.880s): unchanged
+[88/100] 0.654s (sampling 0.650s): unchanged
+[89/100] 0.480s (sampling 0.472s): unchanged
+[90/100] 0.674s (sampling 0.670s): sequence_filtering
+[91/100] 0.332s (sampling 0.327s): row_filtering
+[92/100] 0.373s (sampling 0.367s): alternation_variable_merge, row_filtering
+[93/100] 0.591s (sampling 0.586s): row_filtering
+[94/100] 0.496s (sampling 0.490s): unchanged
+[95/100] 0.341s (sampling 0.338s): unchanged
+[96/100] 0.359s (sampling 0.355s): unchanged
+[97/100] 0.796s (sampling 0.791s): row_filtering
+[98/100] 0.638s (sampling 0.632s): sequence_filtering, row_filtering
+[99/100] 0.355s (sampling 0.350s): alternation_variable_merge
+[100/100] 0.758s (sampling 0.755s): unchanged
+rewritten queries written to data\nasdaq_sql_trino_sota_method.txt
+rewrite metrics written to data\nasdaq_sql_trino_sota_method.metrics.json

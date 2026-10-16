@@ -1,0 +1,3830 @@
+{
+  "generated_at": "2026-10-01T10:25:49+00:00",
+  "query_file": "data\\nasdaq_sql_oracle_gpt-6-astra_v1.txt",
+  "schema": "EXPR",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": null,
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 734315,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 65.578114,
+          "rows_fetched": 734315,
+          "started_at": "2026-10-01T05:38:42+00:00",
+          "finished_at": "2026-10-01T05:39:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.652487,
+          "rows_fetched": 734315,
+          "started_at": "2026-10-01T07:27:18+00:00",
+          "finished_at": "2026-10-01T07:28:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 65.875761,
+          "rows_fetched": 734315,
+          "started_at": "2026-10-01T09:16:38+00:00",
+          "finished_at": "2026-10-01T09:17:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 66.035454
+    },
+    {
+      "id": 2,
+      "url": null,
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 291452,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.532168,
+          "rows_fetched": 291452,
+          "started_at": "2026-10-01T05:39:48+00:00",
+          "finished_at": "2026-10-01T05:40:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.286155,
+          "rows_fetched": 291452,
+          "started_at": "2026-10-01T07:28:25+00:00",
+          "finished_at": "2026-10-01T07:29:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.38369,
+          "rows_fetched": 291452,
+          "started_at": "2026-10-01T09:17:44+00:00",
+          "finished_at": "2026-10-01T09:18:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 72.734004
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/LandingPattern.java",
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.840463,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T12:42:23+00:00",
+          "finished_at": "2026-09-30T12:43:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.334582,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T17:10:35+00:00",
+          "finished_at": "2026-09-30T17:11:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.297567,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T21:24:50+00:00",
+          "finished_at": "2026-09-30T21:26:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 70.157537
+    },
+    {
+      "id": 4,
+      "url": null,
+      "output_file": "4.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.00242,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:40:59+00:00",
+          "finished_at": "2026-10-01T05:40:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.000977,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:29:40+00:00",
+          "finished_at": "2026-10-01T07:29:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.000972,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:18:57+00:00",
+          "finished_at": "2026-10-01T09:18:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.001456
+    },
+    {
+      "id": 5,
+      "url": null,
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 67.666245,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:40:59+00:00",
+          "finished_at": "2026-10-01T05:42:07+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 67.532948,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:29:40+00:00",
+          "finished_at": "2026-10-01T07:30:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 67.799646,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:18:57+00:00",
+          "finished_at": "2026-10-01T09:20:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 67.66628
+    },
+    {
+      "id": 6,
+      "url": null,
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 69.060528,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:42:07+00:00",
+          "finished_at": "2026-10-01T05:43:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 100.885927,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:30:48+00:00",
+          "finished_at": "2026-10-01T07:32:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 69.618428,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:20:04+00:00",
+          "finished_at": "2026-10-01T09:21:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 79.854961
+    },
+    {
+      "id": 7,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/reg3.query",
+      "output_file": "7.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.079969,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T12:50:54+00:00",
+          "finished_at": "2026-09-30T12:55:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.056264,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:19:02+00:00",
+          "finished_at": "2026-09-30T17:24:03+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:28:22+00:00",
+          "finished_at": "2026-09-30T21:28:22+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.045411
+    },
+    {
+      "id": 8,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 443,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 64.545771,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T12:55:54+00:00",
+          "finished_at": "2026-09-30T12:56:58+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 63.328263,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T17:24:03+00:00",
+          "finished_at": "2026-09-30T17:25:06+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 65.926452,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T21:28:22+00:00",
+          "finished_at": "2026-09-30T21:29:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 64.600162
+    },
+    {
+      "id": 9,
+      "url": null,
+      "output_file": "9.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 446,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 72.848593,
+          "rows_fetched": 446,
+          "started_at": "2026-10-01T05:43:16+00:00",
+          "finished_at": "2026-10-01T05:44:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 72.684405,
+          "rows_fetched": 446,
+          "started_at": "2026-10-01T07:32:29+00:00",
+          "finished_at": "2026-10-01T07:33:41+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 76.585153,
+          "rows_fetched": 446,
+          "started_at": "2026-10-01T09:21:14+00:00",
+          "finished_at": "2026-10-01T09:22:31+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.039384
+    },
+    {
+      "id": 10,
+      "url": null,
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 162718,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.534031,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-01T05:44:29+00:00",
+          "finished_at": "2026-10-01T05:45:35+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.002192,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-01T07:33:41+00:00",
+          "finished_at": "2026-10-01T07:34:51+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 71.114259,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-01T09:22:31+00:00",
+          "finished_at": "2026-10-01T09:23:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 68.883494
+    },
+    {
+      "id": 11,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "11.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 142.716703,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T12:59:26+00:00",
+          "finished_at": "2026-09-30T13:01:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 137.167826,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T17:27:32+00:00",
+          "finished_at": "2026-09-30T17:29:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 151.878022,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T21:31:56+00:00",
+          "finished_at": "2026-09-30T21:34:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 143.92085
+    },
+    {
+      "id": 12,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "12.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 6,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 56.582034,
+          "rows_fetched": 6,
+          "started_at": "2026-09-30T13:01:49+00:00",
+          "finished_at": "2026-09-30T13:02:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.89132,
+          "rows_fetched": 6,
+          "started_at": "2026-09-30T17:29:49+00:00",
+          "finished_at": "2026-09-30T17:30:45+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 57.662349,
+          "rows_fetched": 6,
+          "started_at": "2026-09-30T21:34:28+00:00",
+          "finished_at": "2026-09-30T21:35:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 56.711901
+    },
+    {
+      "id": 13,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 544,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 157.258949,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T13:02:45+00:00",
+          "finished_at": "2026-09-30T13:05:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 156.852834,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T17:30:45+00:00",
+          "finished_at": "2026-09-30T17:33:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 157.501631,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T21:35:26+00:00",
+          "finished_at": "2026-09-30T21:38:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 157.204471
+    },
+    {
+      "id": 14,
+      "url": null,
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 76,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 20.40765,
+          "rows_fetched": 76,
+          "started_at": "2026-10-01T05:45:35+00:00",
+          "finished_at": "2026-10-01T05:45:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 19.335762,
+          "rows_fetched": 76,
+          "started_at": "2026-10-01T07:34:51+00:00",
+          "finished_at": "2026-10-01T07:35:10+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 19.577001,
+          "rows_fetched": 76,
+          "started_at": "2026-10-01T09:23:42+00:00",
+          "finished_at": "2026-10-01T09:24:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 19.773471
+    },
+    {
+      "id": 15,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "15.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.101078,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:07:15+00:00",
+          "finished_at": "2026-09-30T13:12:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.090655,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:35:12+00:00",
+          "finished_at": "2026-09-30T17:40:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:39:55+00:00",
+          "finished_at": "2026-09-30T21:39:55+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.063911
+    },
+    {
+      "id": 16,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.734022,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:12:15+00:00",
+          "finished_at": "2026-09-30T13:13:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 83.185051,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:40:12+00:00",
+          "finished_at": "2026-09-30T17:41:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 87.165847,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:39:55+00:00",
+          "finished_at": "2026-09-30T21:41:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 85.028307
+    },
+    {
+      "id": 17,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 89.242928,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T13:13:40+00:00",
+          "finished_at": "2026-09-30T13:15:09+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 84.756335,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T17:41:36+00:00",
+          "finished_at": "2026-09-30T17:43:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 85.2011,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T21:41:22+00:00",
+          "finished_at": "2026-09-30T21:42:47+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 86.400121
+    },
+    {
+      "id": 18,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "18.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 71.492937,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T13:15:09+00:00",
+          "finished_at": "2026-09-30T13:16:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 73.826661,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T17:43:01+00:00",
+          "finished_at": "2026-09-30T17:44:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.907747,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T21:42:47+00:00",
+          "finished_at": "2026-09-30T21:43:58+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 72.075782
+    },
+    {
+      "id": 19,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.805844,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T13:16:21+00:00",
+          "finished_at": "2026-09-30T13:17:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 76.882798,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T17:44:14+00:00",
+          "finished_at": "2026-09-30T17:45:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 71.639573,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T21:43:58+00:00",
+          "finished_at": "2026-09-30T21:45:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.776072
+    },
+    {
+      "id": 20,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 928,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.296242,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T13:17:37+00:00",
+          "finished_at": "2026-09-30T13:19:01+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 81.914923,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T17:45:31+00:00",
+          "finished_at": "2026-09-30T17:46:53+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 78.48124,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T21:45:10+00:00",
+          "finished_at": "2026-09-30T21:46:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 81.564135
+    },
+    {
+      "id": 21,
+      "url": null,
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 135.073989,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:45:56+00:00",
+          "finished_at": "2026-10-01T05:48:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 137.642346,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:35:10+00:00",
+          "finished_at": "2026-10-01T07:37:28+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 138.689233,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:24:02+00:00",
+          "finished_at": "2026-10-01T09:26:21+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 137.135189
+    },
+    {
+      "id": 22,
+      "url": null,
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2169,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 3.953313,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-01T05:48:11+00:00",
+          "finished_at": "2026-10-01T05:48:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 3.848337,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-01T07:37:28+00:00",
+          "finished_at": "2026-10-01T07:37:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 3.832516,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-01T09:26:21+00:00",
+          "finished_at": "2026-10-01T09:26:24+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 3.878055
+    },
+    {
+      "id": 23,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "23.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 98000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.136238,
+          "rows_fetched": 98000,
+          "started_at": "2026-09-30T13:23:49+00:00",
+          "finished_at": "2026-09-30T13:28:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.020646,
+          "rows_fetched": 98000,
+          "started_at": "2026-09-30T17:51:31+00:00",
+          "finished_at": "2026-09-30T17:56:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:50:56+00:00",
+          "finished_at": "2026-09-30T21:50:56+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.052295
+    },
+    {
+      "id": 24,
+      "url": null,
+      "output_file": "24.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 62722,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 161.263988,
+          "rows_fetched": 62722,
+          "started_at": "2026-10-01T05:48:15+00:00",
+          "finished_at": "2026-10-01T05:50:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 165.129282,
+          "rows_fetched": 62722,
+          "started_at": "2026-10-01T07:37:32+00:00",
+          "finished_at": "2026-10-01T07:40:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 162.882219,
+          "rows_fetched": 62722,
+          "started_at": "2026-10-01T09:26:24+00:00",
+          "finished_at": "2026-10-01T09:29:07+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 163.09183
+    },
+    {
+      "id": 25,
+      "url": "https://docs.snowflake.com/en/sql-reference/constructs/match_recognize",
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15807,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 118.269192,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T13:33:50+00:00",
+          "finished_at": "2026-09-30T13:35:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 118.265373,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T18:01:31+00:00",
+          "finished_at": "2026-09-30T18:03:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 111.80691,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T21:50:56+00:00",
+          "finished_at": "2026-09-30T21:52:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 116.113825
+    },
+    {
+      "id": 26,
+      "url": "https://link.springer.com/article/10.1007/s13222-022-00404-3",
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 149.411043,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T13:35:49+00:00",
+          "finished_at": "2026-09-30T13:38:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 139.626933,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:03:29+00:00",
+          "finished_at": "2026-09-30T18:05:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 132.09638,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:52:48+00:00",
+          "finished_at": "2026-09-30T21:55:00+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 140.378119
+    },
+    {
+      "id": 27,
+      "url": null,
+      "output_file": "27.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.002342,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:50:57+00:00",
+          "finished_at": "2026-10-01T05:50:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.000913,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:40:17+00:00",
+          "finished_at": "2026-10-01T07:40:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.000796,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:29:07+00:00",
+          "finished_at": "2026-10-01T09:29:07+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.00135
+    },
+    {
+      "id": 28,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5785,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.891892,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T13:43:19+00:00",
+          "finished_at": "2026-09-30T13:44:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 92.158885,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T18:10:49+00:00",
+          "finished_at": "2026-09-30T18:12:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 89.309825,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T21:55:00+00:00",
+          "finished_at": "2026-09-30T21:56:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 91.120201
+    },
+    {
+      "id": 29,
+      "url": null,
+      "output_file": "29.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.003739,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:50:57+00:00",
+          "finished_at": "2026-10-01T05:50:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.001857,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:40:17+00:00",
+          "finished_at": "2026-10-01T07:40:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.001582,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:29:07+00:00",
+          "finished_at": "2026-10-01T09:29:07+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.002393
+    },
+    {
+      "id": 30,
+      "url": null,
+      "output_file": "30.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 137,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 144.646154,
+          "rows_fetched": 137,
+          "started_at": "2026-10-01T05:50:57+00:00",
+          "finished_at": "2026-10-01T05:53:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 142.569259,
+          "rows_fetched": 137,
+          "started_at": "2026-10-01T07:40:17+00:00",
+          "finished_at": "2026-10-01T07:42:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 142.282724,
+          "rows_fetched": 137,
+          "started_at": "2026-10-01T09:29:07+00:00",
+          "finished_at": "2026-10-01T09:31:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 143.166046
+    },
+    {
+      "id": 31,
+      "url": null,
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.002128,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:53:21+00:00",
+          "finished_at": "2026-10-01T05:53:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.000768,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:42:40+00:00",
+          "finished_at": "2026-10-01T07:42:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.001085,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:31:30+00:00",
+          "finished_at": "2026-10-01T09:31:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.001327
+    },
+    {
+      "id": 32,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "32.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 68158,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 157.533693,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T13:53:30+00:00",
+          "finished_at": "2026-09-30T13:56:08+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 150.483052,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T18:20:57+00:00",
+          "finished_at": "2026-09-30T18:23:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 141.889171,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T21:59:52+00:00",
+          "finished_at": "2026-09-30T22:02:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 149.968639
+    },
+    {
+      "id": 33,
+      "url": null,
+      "output_file": "33.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.097741,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T05:53:22+00:00",
+          "finished_at": "2026-10-01T05:58:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027536,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:42:40+00:00",
+          "finished_at": "2026-10-01T07:47:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:31:30+00:00",
+          "finished_at": "2026-10-01T09:31:30+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.041759
+    },
+    {
+      "id": 34,
+      "url": null,
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 66,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 73.837173,
+          "rows_fetched": 66,
+          "started_at": "2026-10-01T05:58:22+00:00",
+          "finished_at": "2026-10-01T05:59:36+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.332702,
+          "rows_fetched": 66,
+          "started_at": "2026-10-01T07:47:40+00:00",
+          "finished_at": "2026-10-01T07:48:56+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 76.446901,
+          "rows_fetched": 66,
+          "started_at": "2026-10-01T09:31:30+00:00",
+          "finished_at": "2026-10-01T09:32:46+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 75.205592
+    },
+    {
+      "id": 35,
+      "url": null,
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 202,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.092643,
+          "rows_fetched": 202,
+          "started_at": "2026-10-01T05:59:36+00:00",
+          "finished_at": "2026-10-01T06:00:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.100127,
+          "rows_fetched": 202,
+          "started_at": "2026-10-01T07:48:56+00:00",
+          "finished_at": "2026-10-01T07:50:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 90.842599,
+          "rows_fetched": 202,
+          "started_at": "2026-10-01T09:32:46+00:00",
+          "finished_at": "2026-10-01T09:34:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 80.345123
+    },
+    {
+      "id": 36,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "36.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.092847,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:04:54+00:00",
+          "finished_at": "2026-09-30T14:09:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.092443,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:31:00+00:00",
+          "finished_at": "2026-09-30T18:36:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:04:50+00:00",
+          "finished_at": "2026-09-30T22:04:50+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.061763
+    },
+    {
+      "id": 37,
+      "url": null,
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.196694,
+          "rows_fetched": 31,
+          "started_at": "2026-10-01T06:00:51+00:00",
+          "finished_at": "2026-10-01T06:01:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.878286,
+          "rows_fetched": 31,
+          "started_at": "2026-10-01T07:50:11+00:00",
+          "finished_at": "2026-10-01T07:51:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 69.163998,
+          "rows_fetched": 31,
+          "started_at": "2026-10-01T09:34:17+00:00",
+          "finished_at": "2026-10-01T09:35:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 69.079659
+    },
+    {
+      "id": 38,
+      "url": null,
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3538,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.654652,
+          "rows_fetched": 3538,
+          "started_at": "2026-10-01T06:01:59+00:00",
+          "finished_at": "2026-10-01T06:03:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.520954,
+          "rows_fetched": 3538,
+          "started_at": "2026-10-01T07:51:21+00:00",
+          "finished_at": "2026-10-01T07:52:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 78.702503,
+          "rows_fetched": 3538,
+          "started_at": "2026-10-01T09:35:26+00:00",
+          "finished_at": "2026-10-01T09:36:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 76.626036
+    },
+    {
+      "id": 39,
+      "url": null,
+      "output_file": "39.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.03084,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:03:15+00:00",
+          "finished_at": "2026-10-01T06:08:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.029282,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:52:36+00:00",
+          "finished_at": "2026-10-01T07:57:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:36:45+00:00",
+          "finished_at": "2026-10-01T09:36:45+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020041
+    },
+    {
+      "id": 40,
+      "url": null,
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 90.729973,
+          "rows_fetched": 10,
+          "started_at": "2026-10-01T06:08:15+00:00",
+          "finished_at": "2026-10-01T06:09:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 92.461059,
+          "rows_fetched": 10,
+          "started_at": "2026-10-01T07:57:37+00:00",
+          "finished_at": "2026-10-01T07:59:10+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 93.504848,
+          "rows_fetched": 10,
+          "started_at": "2026-10-01T09:36:45+00:00",
+          "finished_at": "2026-10-01T09:38:19+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 92.23196
+    },
+    {
+      "id": 41,
+      "url": null,
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 424804,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 69.974966,
+          "rows_fetched": 424804,
+          "started_at": "2026-10-01T06:09:46+00:00",
+          "finished_at": "2026-10-01T06:10:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 67.984171,
+          "rows_fetched": 424804,
+          "started_at": "2026-10-01T07:59:10+00:00",
+          "finished_at": "2026-10-01T08:00:18+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 68.251659,
+          "rows_fetched": 424804,
+          "started_at": "2026-10-01T09:38:19+00:00",
+          "finished_at": "2026-10-01T09:39:27+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 68.736932
+    },
+    {
+      "id": 42,
+      "url": null,
+      "output_file": "42.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.752221,
+          "rows_fetched": 8,
+          "started_at": "2026-10-01T06:10:56+00:00",
+          "finished_at": "2026-10-01T06:10:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.73354,
+          "rows_fetched": 8,
+          "started_at": "2026-10-01T08:00:18+00:00",
+          "finished_at": "2026-10-01T08:00:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.765656,
+          "rows_fetched": 8,
+          "started_at": "2026-10-01T09:39:27+00:00",
+          "finished_at": "2026-10-01T09:39:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.750472
+    },
+    {
+      "id": 43,
+      "url": null,
+      "output_file": "43.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3904725,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 94.222058,
+          "rows_fetched": 3904725,
+          "started_at": "2026-10-01T06:10:57+00:00",
+          "finished_at": "2026-10-01T06:12:31+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 93.959848,
+          "rows_fetched": 3904725,
+          "started_at": "2026-10-01T08:00:19+00:00",
+          "finished_at": "2026-10-01T08:01:53+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 93.724208,
+          "rows_fetched": 3904725,
+          "started_at": "2026-10-01T09:39:28+00:00",
+          "finished_at": "2026-10-01T09:41:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 93.968705
+    },
+    {
+      "id": 44,
+      "url": null,
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.954382,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:12:31+00:00",
+          "finished_at": "2026-10-01T06:12:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.953383,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:01:53+00:00",
+          "finished_at": "2026-10-01T08:01:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.973448,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:41:02+00:00",
+          "finished_at": "2026-10-01T09:41:03+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.960404
+    },
+    {
+      "id": 45,
+      "url": null,
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1546,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 80.461463,
+          "rows_fetched": 1546,
+          "started_at": "2026-10-01T06:12:32+00:00",
+          "finished_at": "2026-10-01T06:13:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.475373,
+          "rows_fetched": 1546,
+          "started_at": "2026-10-01T08:01:54+00:00",
+          "finished_at": "2026-10-01T08:03:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 80.517659,
+          "rows_fetched": 1546,
+          "started_at": "2026-10-01T09:41:03+00:00",
+          "finished_at": "2026-10-01T09:42:24+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 80.151498
+    },
+    {
+      "id": 46,
+      "url": null,
+      "output_file": "46.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1602,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 175.25426,
+          "rows_fetched": 1602,
+          "started_at": "2026-10-01T06:13:53+00:00",
+          "finished_at": "2026-10-01T06:16:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 175.125775,
+          "rows_fetched": 1602,
+          "started_at": "2026-10-01T08:03:14+00:00",
+          "finished_at": "2026-10-01T08:06:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 174.207796,
+          "rows_fetched": 1602,
+          "started_at": "2026-10-01T09:42:24+00:00",
+          "finished_at": "2026-10-01T09:45:18+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 174.86261
+    },
+    {
+      "id": 47,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "47.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.022303,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:44:31+00:00",
+          "finished_at": "2026-09-30T14:49:31+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.068062,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:02:54+00:00",
+          "finished_at": "2026-09-30T19:07:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:09+00:00",
+          "finished_at": "2026-09-30T22:12:09+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.030122
+    },
+    {
+      "id": 48,
+      "url": null,
+      "output_file": "48.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 69.220245,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:16:48+00:00",
+          "finished_at": "2026-10-01T06:17:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 70.559459,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:06:09+00:00",
+          "finished_at": "2026-10-01T08:07:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 69.063836,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:45:18+00:00",
+          "finished_at": "2026-10-01T09:46:27+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 69.614513
+    },
+    {
+      "id": 49,
+      "url": null,
+      "output_file": "49.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.03106,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:17:57+00:00",
+          "finished_at": "2026-10-01T06:22:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.03927,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:07:20+00:00",
+          "finished_at": "2026-10-01T08:12:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:46:27+00:00",
+          "finished_at": "2026-10-01T09:46:27+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.023443
+    },
+    {
+      "id": 50,
+      "url": null,
+      "output_file": "50.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 2000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.098773,
+          "rows_fetched": 2000,
+          "started_at": "2026-10-01T06:22:57+00:00",
+          "finished_at": "2026-10-01T06:27:57+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.083047,
+          "rows_fetched": 2000,
+          "started_at": "2026-10-01T08:12:20+00:00",
+          "finished_at": "2026-10-01T08:17:20+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:46:27+00:00",
+          "finished_at": "2026-10-01T09:46:27+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.060607
+    },
+    {
+      "id": 51,
+      "url": null,
+      "output_file": "51.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.106187,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:27:57+00:00",
+          "finished_at": "2026-10-01T06:32:58+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.058676,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:17:20+00:00",
+          "finished_at": "2026-10-01T08:22:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:46:27+00:00",
+          "finished_at": "2026-10-01T09:46:27+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.054954
+    },
+    {
+      "id": 52,
+      "url": null,
+      "output_file": "52.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.072879,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:32:58+00:00",
+          "finished_at": "2026-10-01T06:37:58+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.102249,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:22:21+00:00",
+          "finished_at": "2026-10-01T08:27:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:46:27+00:00",
+          "finished_at": "2026-10-01T09:46:27+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.058376
+    },
+    {
+      "id": 53,
+      "url": null,
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1670,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 16.177598,
+          "rows_fetched": 1670,
+          "started_at": "2026-10-01T06:37:58+00:00",
+          "finished_at": "2026-10-01T06:38:15+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 16.221542,
+          "rows_fetched": 1670,
+          "started_at": "2026-10-01T08:27:21+00:00",
+          "finished_at": "2026-10-01T08:27:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 16.249934,
+          "rows_fetched": 1670,
+          "started_at": "2026-10-01T09:46:27+00:00",
+          "finished_at": "2026-10-01T09:46:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 16.216358
+    },
+    {
+      "id": 54,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "54.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.078999,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:14:51+00:00",
+          "finished_at": "2026-09-30T15:19:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 62.824207,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:33:12+00:00",
+          "finished_at": "2026-09-30T19:34:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.234568,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:12:26+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 144.379258
+    },
+    {
+      "id": 55,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "55.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.018911,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:19:53+00:00",
+          "finished_at": "2026-09-30T15:24:53+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.041737,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:34:14+00:00",
+          "finished_at": "2026-09-30T19:39:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:13:36+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020216
+    },
+    {
+      "id": 56,
+      "url": null,
+      "output_file": "56.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.131643,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:38:15+00:00",
+          "finished_at": "2026-10-01T06:43:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.053476,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:27:38+00:00",
+          "finished_at": "2026-10-01T08:32:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:46:43+00:00",
+          "finished_at": "2026-10-01T09:46:43+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.061706
+    },
+    {
+      "id": 57,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "57.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.069387,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:29:54+00:00",
+          "finished_at": "2026-09-30T15:34:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.129658,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:44:15+00:00",
+          "finished_at": "2026-09-30T19:49:16+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:13:36+00:00",
+          "finished_at": "2026-09-30T22:13:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.066348
+    },
+    {
+      "id": 58,
+      "url": null,
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3530,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 78.625421,
+          "rows_fetched": 3530,
+          "started_at": "2026-10-01T06:43:16+00:00",
+          "finished_at": "2026-10-01T06:44:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.395783,
+          "rows_fetched": 3530,
+          "started_at": "2026-10-01T08:32:38+00:00",
+          "finished_at": "2026-10-01T08:33:58+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 77.493949,
+          "rows_fetched": 3530,
+          "started_at": "2026-10-01T09:46:43+00:00",
+          "finished_at": "2026-10-01T09:48:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 78.505051
+    },
+    {
+      "id": 59,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "59.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.080707,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:36:12+00:00",
+          "finished_at": "2026-09-30T15:41:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.05025,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:50:36+00:00",
+          "finished_at": "2026-09-30T19:55:36+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:14:56+00:00",
+          "finished_at": "2026-09-30T22:14:56+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.043652
+    },
+    {
+      "id": 60,
+      "url": null,
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.002508,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:44:34+00:00",
+          "finished_at": "2026-10-01T06:44:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.000782,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:33:58+00:00",
+          "finished_at": "2026-10-01T08:33:58+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.001095,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:48:01+00:00",
+          "finished_at": "2026-10-01T09:48:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.001462
+    },
+    {
+      "id": 61,
+      "url": null,
+      "output_file": "61.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.062998,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:44:34+00:00",
+          "finished_at": "2026-10-01T06:49:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.109054,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:33:58+00:00",
+          "finished_at": "2026-10-01T08:38:58+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:48:01+00:00",
+          "finished_at": "2026-10-01T09:48:01+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.057351
+    },
+    {
+      "id": 62,
+      "url": null,
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 95.659934,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:49:34+00:00",
+          "finished_at": "2026-10-01T06:51:10+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 95.483001,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:38:58+00:00",
+          "finished_at": "2026-10-01T08:40:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 95.694297,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:48:01+00:00",
+          "finished_at": "2026-10-01T09:49:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 95.612411
+    },
+    {
+      "id": 63,
+      "url": null,
+      "output_file": "63.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 743,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.226464,
+          "rows_fetched": 743,
+          "started_at": "2026-10-01T06:51:10+00:00",
+          "finished_at": "2026-10-01T06:52:12+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.355632,
+          "rows_fetched": 743,
+          "started_at": "2026-10-01T08:40:33+00:00",
+          "finished_at": "2026-10-01T08:41:34+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.85328,
+          "rows_fetched": 743,
+          "started_at": "2026-10-01T09:49:37+00:00",
+          "finished_at": "2026-10-01T09:50:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 62.145125
+    },
+    {
+      "id": 64,
+      "url": null,
+      "output_file": "64.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.59238,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:52:12+00:00",
+          "finished_at": "2026-10-01T06:52:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.581003,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:41:34+00:00",
+          "finished_at": "2026-10-01T08:41:34+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.582507,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:50:42+00:00",
+          "finished_at": "2026-10-01T09:50:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.585297
+    },
+    {
+      "id": 65,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 139.065862,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:51:44+00:00",
+          "finished_at": "2026-09-30T15:54:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 140.571781,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:06:01+00:00",
+          "finished_at": "2026-09-30T20:08:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 140.720897,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:20:33+00:00",
+          "finished_at": "2026-09-30T22:22:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 140.119513
+    },
+    {
+      "id": 66,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "66.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.107314,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:54:04+00:00",
+          "finished_at": "2026-09-30T15:59:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.102907,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:08:22+00:00",
+          "finished_at": "2026-09-30T20:13:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:22:53+00:00",
+          "finished_at": "2026-09-30T22:22:53+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.070074
+    },
+    {
+      "id": 67,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "67.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.063583,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T15:59:04+00:00",
+          "finished_at": "2026-09-30T16:00:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.005189,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T20:13:22+00:00",
+          "finished_at": "2026-09-30T20:14:22+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.362086,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T22:22:53+00:00",
+          "finished_at": "2026-09-30T22:23:54+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 60.476953
+    },
+    {
+      "id": 68,
+      "url": null,
+      "output_file": "68.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 181,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.169219,
+          "rows_fetched": 181,
+          "started_at": "2026-10-01T06:52:13+00:00",
+          "finished_at": "2026-10-01T06:53:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.638229,
+          "rows_fetched": 181,
+          "started_at": "2026-10-01T08:41:34+00:00",
+          "finished_at": "2026-10-01T08:42:41+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.866673,
+          "rows_fetched": 181,
+          "started_at": "2026-10-01T09:50:43+00:00",
+          "finished_at": "2026-10-01T09:51:54+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 68.55804
+    },
+    {
+      "id": 69,
+      "url": null,
+      "output_file": "69.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 40274,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.79521,
+          "rows_fetched": 40274,
+          "started_at": "2026-10-01T06:53:21+00:00",
+          "finished_at": "2026-10-01T06:53:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.789598,
+          "rows_fetched": 40274,
+          "started_at": "2026-10-01T08:42:41+00:00",
+          "finished_at": "2026-10-01T08:42:42+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.786814,
+          "rows_fetched": 40274,
+          "started_at": "2026-10-01T09:51:54+00:00",
+          "finished_at": "2026-10-01T09:51:55+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.790541
+    },
+    {
+      "id": 70,
+      "url": null,
+      "output_file": "70.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.003075,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:53:22+00:00",
+          "finished_at": "2026-10-01T06:53:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.001576,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:42:42+00:00",
+          "finished_at": "2026-10-01T08:42:42+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.000928,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:51:55+00:00",
+          "finished_at": "2026-10-01T09:51:55+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.00186
+    },
+    {
+      "id": 71,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.095873,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:06:22+00:00",
+          "finished_at": "2026-09-30T16:11:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.079687,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:20:37+00:00",
+          "finished_at": "2026-09-30T20:25:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:30:13+00:00",
+          "finished_at": "2026-09-30T22:30:13+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.05852
+    },
+    {
+      "id": 72,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "output_file": "72.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3942,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.747505,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T16:11:23+00:00",
+          "finished_at": "2026-09-30T16:11:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 35.253553,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T20:25:37+00:00",
+          "finished_at": "2026-09-30T20:26:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.7218,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T22:30:13+00:00",
+          "finished_at": "2026-09-30T22:30:49+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 36.240953
+    },
+    {
+      "id": 73,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 402,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.083682,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T16:11:59+00:00",
+          "finished_at": "2026-09-30T16:12:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.363745,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T20:26:13+00:00",
+          "finished_at": "2026-09-30T20:26:50+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 35.999752,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T22:30:49+00:00",
+          "finished_at": "2026-09-30T22:31:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 36.815726
+    },
+    {
+      "id": 74,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1937,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 73.226959,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T16:12:37+00:00",
+          "finished_at": "2026-09-30T16:13:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.296107,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T20:26:50+00:00",
+          "finished_at": "2026-09-30T20:27:59+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 81.234756,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T22:31:26+00:00",
+          "finished_at": "2026-09-30T22:32:47+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 74.585941
+    },
+    {
+      "id": 75,
+      "url": null,
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 65.120995,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T06:53:22+00:00",
+          "finished_at": "2026-10-01T06:54:27+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.261266,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:42:42+00:00",
+          "finished_at": "2026-10-01T08:43:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 67.925239,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T09:51:55+00:00",
+          "finished_at": "2026-10-01T09:53:03+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 66.435833
+    },
+    {
+      "id": 76,
+      "url": null,
+      "output_file": "76.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 245997,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.983103,
+          "rows_fetched": 245997,
+          "started_at": "2026-10-01T06:54:27+00:00",
+          "finished_at": "2026-10-01T06:55:38+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 72.621348,
+          "rows_fetched": 245997,
+          "started_at": "2026-10-01T08:43:48+00:00",
+          "finished_at": "2026-10-01T08:45:01+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 74.390606,
+          "rows_fetched": 245997,
+          "started_at": "2026-10-01T09:53:03+00:00",
+          "finished_at": "2026-10-01T09:54:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 72.665019
+    },
+    {
+      "id": 77,
+      "url": null,
+      "output_file": "77.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 165,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 137.60457,
+          "rows_fetched": 165,
+          "started_at": "2026-10-01T06:55:38+00:00",
+          "finished_at": "2026-10-01T06:57:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 138.416491,
+          "rows_fetched": 165,
+          "started_at": "2026-10-01T08:45:01+00:00",
+          "finished_at": "2026-10-01T08:47:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 142.212135,
+          "rows_fetched": 165,
+          "started_at": "2026-10-01T09:54:17+00:00",
+          "finished_at": "2026-10-01T09:56:40+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 139.411065
+    },
+    {
+      "id": 78,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "78.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10263,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 151.532746,
+          "rows_fetched": 10263,
+          "started_at": "2026-09-30T16:21:17+00:00",
+          "finished_at": "2026-09-30T16:23:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 143.22084,
+          "rows_fetched": 10263,
+          "started_at": "2026-09-30T20:35:20+00:00",
+          "finished_at": "2026-09-30T20:37:43+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 153.143881,
+          "rows_fetched": 10263,
+          "started_at": "2026-09-30T22:35:09+00:00",
+          "finished_at": "2026-09-30T22:37:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 149.299156
+    },
+    {
+      "id": 79,
+      "url": null,
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2010,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 64.737383,
+          "rows_fetched": 2010,
+          "started_at": "2026-10-01T06:57:56+00:00",
+          "finished_at": "2026-10-01T06:59:01+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 65.531102,
+          "rows_fetched": 2010,
+          "started_at": "2026-10-01T08:47:19+00:00",
+          "finished_at": "2026-10-01T08:48:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.758002,
+          "rows_fetched": 2010,
+          "started_at": "2026-10-01T09:56:40+00:00",
+          "finished_at": "2026-10-01T09:57:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 65.008829
+    },
+    {
+      "id": 80,
+      "url": null,
+      "output_file": "80.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 11017,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 183.731654,
+          "rows_fetched": 11017,
+          "started_at": "2026-10-01T06:59:01+00:00",
+          "finished_at": "2026-10-01T07:02:04+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 182.825162,
+          "rows_fetched": 11017,
+          "started_at": "2026-10-01T08:48:25+00:00",
+          "finished_at": "2026-10-01T08:51:28+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 180.372935,
+          "rows_fetched": 11017,
+          "started_at": "2026-10-01T09:57:45+00:00",
+          "finished_at": "2026-10-01T10:00:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 182.309917
+    },
+    {
+      "id": 81,
+      "url": null,
+      "output_file": "81.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 22962,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 136.991138,
+          "rows_fetched": 22962,
+          "started_at": "2026-10-01T07:02:04+00:00",
+          "finished_at": "2026-10-01T07:04:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 140.615272,
+          "rows_fetched": 22962,
+          "started_at": "2026-10-01T08:51:28+00:00",
+          "finished_at": "2026-10-01T08:53:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 138.02917,
+          "rows_fetched": 22962,
+          "started_at": "2026-10-01T10:00:45+00:00",
+          "finished_at": "2026-10-01T10:03:03+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 138.545193
+    },
+    {
+      "id": 82,
+      "url": null,
+      "output_file": "82.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 43978,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 13.81716,
+          "rows_fetched": 43978,
+          "started_at": "2026-10-01T07:04:21+00:00",
+          "finished_at": "2026-10-01T07:04:35+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 13.789316,
+          "rows_fetched": 43978,
+          "started_at": "2026-10-01T08:53:49+00:00",
+          "finished_at": "2026-10-01T08:54:03+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 13.80724,
+          "rows_fetched": 43978,
+          "started_at": "2026-10-01T10:03:03+00:00",
+          "finished_at": "2026-10-01T10:03:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 13.804572
+    },
+    {
+      "id": 83,
+      "url": null,
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 808,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 29.779568,
+          "rows_fetched": 808,
+          "started_at": "2026-10-01T07:04:35+00:00",
+          "finished_at": "2026-10-01T07:05:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 30.513853,
+          "rows_fetched": 808,
+          "started_at": "2026-10-01T08:54:03+00:00",
+          "finished_at": "2026-10-01T08:54:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.884632,
+          "rows_fetched": 808,
+          "started_at": "2026-10-01T10:03:17+00:00",
+          "finished_at": "2026-10-01T10:03:48+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 30.392684
+    },
+    {
+      "id": 84,
+      "url": null,
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 522,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 1.875147,
+          "rows_fetched": 522,
+          "started_at": "2026-10-01T07:05:05+00:00",
+          "finished_at": "2026-10-01T07:05:07+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 1.865308,
+          "rows_fetched": 522,
+          "started_at": "2026-10-01T08:54:33+00:00",
+          "finished_at": "2026-10-01T08:54:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.853098,
+          "rows_fetched": 522,
+          "started_at": "2026-10-01T10:03:48+00:00",
+          "finished_at": "2026-10-01T10:03:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 1.864518
+    },
+    {
+      "id": 85,
+      "url": null,
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 41,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 53.465685,
+          "rows_fetched": 41,
+          "started_at": "2026-10-01T07:05:07+00:00",
+          "finished_at": "2026-10-01T07:06:01+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.327991,
+          "rows_fetched": 41,
+          "started_at": "2026-10-01T08:54:35+00:00",
+          "finished_at": "2026-10-01T08:55:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.081384,
+          "rows_fetched": 41,
+          "started_at": "2026-10-01T10:03:50+00:00",
+          "finished_at": "2026-10-01T10:04:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 53.62502
+    },
+    {
+      "id": 86,
+      "url": null,
+      "output_file": "86.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5437,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 136.120642,
+          "rows_fetched": 5437,
+          "started_at": "2026-10-01T07:06:01+00:00",
+          "finished_at": "2026-10-01T07:08:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 131.252735,
+          "rows_fetched": 5437,
+          "started_at": "2026-10-01T08:55:29+00:00",
+          "finished_at": "2026-10-01T08:57:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 133.100448,
+          "rows_fetched": 5437,
+          "started_at": "2026-10-01T10:04:44+00:00",
+          "finished_at": "2026-10-01T10:06:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 133.491275
+    },
+    {
+      "id": 87,
+      "url": null,
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 61.997015,
+          "rows_fetched": 1,
+          "started_at": "2026-10-01T07:08:17+00:00",
+          "finished_at": "2026-10-01T07:09:19+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 61.649611,
+          "rows_fetched": 1,
+          "started_at": "2026-10-01T08:57:40+00:00",
+          "finished_at": "2026-10-01T08:58:42+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.214186,
+          "rows_fetched": 1,
+          "started_at": "2026-10-01T10:06:57+00:00",
+          "finished_at": "2026-10-01T10:07:56+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 60.953604
+    },
+    {
+      "id": 88,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "88.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 93.542172,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:44:08+00:00",
+          "finished_at": "2026-09-30T16:45:42+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 91.524892,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:58:21+00:00",
+          "finished_at": "2026-09-30T20:59:53+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 91.593883,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:53:10+00:00",
+          "finished_at": "2026-09-30T22:54:42+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        }
+      ],
+      "average_query_latency_seconds": 92.220316
+    },
+    {
+      "id": 89,
+      "url": null,
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 63.867999,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T07:09:19+00:00",
+          "finished_at": "2026-10-01T07:10:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 64.147099,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T08:58:42+00:00",
+          "finished_at": "2026-10-01T08:59:46+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.889875,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T10:07:56+00:00",
+          "finished_at": "2026-10-01T10:09:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 64.301658
+    },
+    {
+      "id": 90,
+      "url": null,
+      "output_file": "90.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 26,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 136.745757,
+          "rows_fetched": 26,
+          "started_at": "2026-10-01T07:10:23+00:00",
+          "finished_at": "2026-10-01T07:12:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 136.157188,
+          "rows_fetched": 26,
+          "started_at": "2026-10-01T08:59:46+00:00",
+          "finished_at": "2026-10-01T09:02:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 133.985247,
+          "rows_fetched": 26,
+          "started_at": "2026-10-01T10:09:01+00:00",
+          "finished_at": "2026-10-01T10:11:15+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 135.629397
+    },
+    {
+      "id": 91,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.827421,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:49:03+00:00",
+          "finished_at": "2026-09-30T16:49:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 54.920389,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:03:17+00:00",
+          "finished_at": "2026-09-30T21:04:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.995451,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T22:58:11+00:00",
+          "finished_at": "2026-09-30T22:59:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 53.247754
+    },
+    {
+      "id": 92,
+      "url": null,
+      "output_file": "92.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 239,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 138.712483,
+          "rows_fetched": 239,
+          "started_at": "2026-10-01T07:12:40+00:00",
+          "finished_at": "2026-10-01T07:14:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 136.692162,
+          "rows_fetched": 239,
+          "started_at": "2026-10-01T09:02:02+00:00",
+          "finished_at": "2026-10-01T09:04:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 139.547047,
+          "rows_fetched": 239,
+          "started_at": "2026-10-01T10:11:15+00:00",
+          "finished_at": "2026-10-01T10:13:35+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 138.317231
+    },
+    {
+      "id": 93,
+      "url": null,
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4057,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 60.638293,
+          "rows_fetched": 4057,
+          "started_at": "2026-10-01T07:14:59+00:00",
+          "finished_at": "2026-10-01T07:15:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.662221,
+          "rows_fetched": 4057,
+          "started_at": "2026-10-01T09:04:19+00:00",
+          "finished_at": "2026-10-01T09:05:18+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.582358,
+          "rows_fetched": 4057,
+          "started_at": "2026-10-01T10:13:35+00:00",
+          "finished_at": "2026-10-01T10:14:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 59.294291
+    },
+    {
+      "id": 94,
+      "url": null,
+      "output_file": "94.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 764,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 145.531034,
+          "rows_fetched": 764,
+          "started_at": "2026-10-01T07:15:59+00:00",
+          "finished_at": "2026-10-01T07:18:25+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 150.23552,
+          "rows_fetched": 764,
+          "started_at": "2026-10-01T09:05:18+00:00",
+          "finished_at": "2026-10-01T09:07:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 155.620087,
+          "rows_fetched": 764,
+          "started_at": "2026-10-01T10:14:34+00:00",
+          "finished_at": "2026-10-01T10:17:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 150.462214
+    },
+    {
+      "id": 95,
+      "url": null,
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7217,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 62.490035,
+          "rows_fetched": 7217,
+          "started_at": "2026-10-01T07:18:25+00:00",
+          "finished_at": "2026-10-01T07:19:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.061756,
+          "rows_fetched": 7217,
+          "started_at": "2026-10-01T09:07:48+00:00",
+          "finished_at": "2026-10-01T09:08:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.080936,
+          "rows_fetched": 7217,
+          "started_at": "2026-10-01T10:17:09+00:00",
+          "finished_at": "2026-10-01T10:18:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 60.210909
+    },
+    {
+      "id": 96,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "96.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 102.064162,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:56:50+00:00",
+          "finished_at": "2026-09-30T16:58:33+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 102.503931,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:11:05+00:00",
+          "finished_at": "2026-09-30T21:12:48+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 105.05217,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T23:05:51+00:00",
+          "finished_at": "2026-09-30T23:07:36+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        }
+      ],
+      "average_query_latency_seconds": 103.206754
+    },
+    {
+      "id": 97,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 99.292337,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:58:33+00:00",
+          "finished_at": "2026-09-30T17:00:12+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 97.50908,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:12:48+00:00",
+          "finished_at": "2026-09-30T21:14:26+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 97.616887,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T23:07:36+00:00",
+          "finished_at": "2026-09-30T23:09:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 98.139435
+    },
+    {
+      "id": 98,
+      "url": null,
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4100,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 104.608069,
+          "rows_fetched": 4100,
+          "started_at": "2026-10-01T07:19:28+00:00",
+          "finished_at": "2026-10-01T07:21:12+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 102.365413,
+          "rows_fetched": 4100,
+          "started_at": "2026-10-01T09:08:48+00:00",
+          "finished_at": "2026-10-01T09:10:30+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 104.916978,
+          "rows_fetched": 4100,
+          "started_at": "2026-10-01T10:18:09+00:00",
+          "finished_at": "2026-10-01T10:19:54+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 103.963487
+    },
+    {
+      "id": 99,
+      "url": null,
+      "output_file": "99.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5331,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 143.784401,
+          "rows_fetched": 5331,
+          "started_at": "2026-10-01T07:21:12+00:00",
+          "finished_at": "2026-10-01T07:23:36+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 141.183576,
+          "rows_fetched": 5331,
+          "started_at": "2026-10-01T09:10:30+00:00",
+          "finished_at": "2026-10-01T09:12:52+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 141.828994,
+          "rows_fetched": 5331,
+          "started_at": "2026-10-01T10:19:54+00:00",
+          "finished_at": "2026-10-01T10:22:15+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 142.265657
+    },
+    {
+      "id": 100,
+      "url": null,
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12771,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 221.297994,
+          "rows_fetched": 12771,
+          "started_at": "2026-10-01T07:23:36+00:00",
+          "finished_at": "2026-10-01T07:27:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 226.341082,
+          "rows_fetched": 12771,
+          "started_at": "2026-10-01T09:12:52+00:00",
+          "finished_at": "2026-10-01T09:16:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 213.169246,
+          "rows_fetched": 12771,
+          "started_at": "2026-10-01T10:22:15+00:00",
+          "finished_at": "2026-10-01T10:25:49+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 220.269441
+    }
+  ]
+}

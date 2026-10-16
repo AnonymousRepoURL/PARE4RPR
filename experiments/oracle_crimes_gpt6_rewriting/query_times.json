@@ -1,0 +1,3816 @@
+{
+  "generated_at": "2026-09-24T09:06:18+00:00",
+  "query_file": "data\\crimes_sql_oracle_gpt-6-astra_v1.txt",
+  "schema": "EXPR",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": "https://asktom.oracle.com/ords/asktom.search?tag=ranksequence-on-condition",
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3295,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 46.396253,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-20T08:11:47+00:00",
+          "finished_at": "2026-09-20T08:12:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.911524,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-20T11:11:26+00:00",
+          "finished_at": "2026-09-20T11:12:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.482269,
+          "rows_fetched": 3295,
+          "started_at": "2026-09-20T13:55:22+00:00",
+          "finished_at": "2026-09-20T13:56:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 46.263349
+    },
+    {
+      "id": 2,
+      "url": "https://asktom.oracle.com/ords/f?p=100%3A11%3A0%3A%3A%3A%3AP11_QUESTION_ID%3A9548719600346359362",
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 63,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 39.319994,
+          "rows_fetched": 63,
+          "started_at": "2026-09-20T08:12:34+00:00",
+          "finished_at": "2026-09-20T08:13:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 39.996004,
+          "rows_fetched": 63,
+          "started_at": "2026-09-20T11:12:11+00:00",
+          "finished_at": "2026-09-20T11:12:51+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 43.094348,
+          "rows_fetched": 63,
+          "started_at": "2026-09-20T13:56:10+00:00",
+          "finished_at": "2026-09-20T13:56:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 40.803449
+    },
+    {
+      "id": 3,
+      "url": "https://asktom.oracle.com/pls/apex/asktom.search?tag=counting-repeating-values",
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 19896,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 182.858856,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-20T08:13:13+00:00",
+          "finished_at": "2026-09-20T08:16:16+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 178.007377,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-20T11:12:51+00:00",
+          "finished_at": "2026-09-20T11:15:49+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 173.154548,
+          "rows_fetched": 19896,
+          "started_at": "2026-09-20T13:56:53+00:00",
+          "finished_at": "2026-09-20T13:59:46+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 178.006927
+    },
+    {
+      "id": 4,
+      "url": null,
+      "output_file": "4.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.811803,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:04:22+00:00",
+          "finished_at": "2026-09-24T06:04:23+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.825932,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T07:10:51+00:00",
+          "finished_at": "2026-09-24T07:10:52+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.767484,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:19:02+00:00",
+          "finished_at": "2026-09-24T08:19:03+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.80174
+    },
+    {
+      "id": 5,
+      "url": null,
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1267806,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 89.075801,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-24T06:04:23+00:00",
+          "finished_at": "2026-09-24T06:05:52+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 97.362879,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-24T07:10:52+00:00",
+          "finished_at": "2026-09-24T07:12:30+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 93.458065,
+          "rows_fetched": 1267806,
+          "started_at": "2026-09-24T08:19:03+00:00",
+          "finished_at": "2026-09-24T08:20:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 93.298915
+    },
+    {
+      "id": 6,
+      "url": null,
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 59426,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.063981,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-24T06:05:52+00:00",
+          "finished_at": "2026-09-24T06:06:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.50967,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-24T07:12:30+00:00",
+          "finished_at": "2026-09-24T07:13:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.005756,
+          "rows_fetched": 59426,
+          "started_at": "2026-09-24T08:20:37+00:00",
+          "finished_at": "2026-09-24T08:21:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.526469
+    },
+    {
+      "id": 7,
+      "url": null,
+      "output_file": "7.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.698203,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:06:28+00:00",
+          "finished_at": "2026-09-24T06:06:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.694285,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:13:07+00:00",
+          "finished_at": "2026-09-24T07:13:07+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.667303,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:21:11+00:00",
+          "finished_at": "2026-09-24T08:21:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.686597
+    },
+    {
+      "id": 8,
+      "url": null,
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.00078,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:06:29+00:00",
+          "finished_at": "2026-09-24T06:06:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.001174,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:13:07+00:00",
+          "finished_at": "2026-09-24T07:13:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.001076,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:21:12+00:00",
+          "finished_at": "2026-09-24T08:21:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.00101
+    },
+    {
+      "id": 9,
+      "url": null,
+      "output_file": "9.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 249,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.17286,
+          "rows_fetched": 249,
+          "started_at": "2026-09-24T06:06:29+00:00",
+          "finished_at": "2026-09-24T06:07:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.308364,
+          "rows_fetched": 249,
+          "started_at": "2026-09-24T07:13:09+00:00",
+          "finished_at": "2026-09-24T07:13:56+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.966757,
+          "rows_fetched": 249,
+          "started_at": "2026-09-24T08:21:12+00:00",
+          "finished_at": "2026-09-24T08:21:58+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 46.815994
+    },
+    {
+      "id": 10,
+      "url": "https://docs.oracle.com/middleware/1221/osa/cql-reference/CQLLR.pdf",
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 45895,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 34.763079,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-20T08:21:36+00:00",
+          "finished_at": "2026-09-20T08:22:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 33.706536,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-20T11:20:57+00:00",
+          "finished_at": "2026-09-20T11:21:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 35.688614,
+          "rows_fetched": 45895,
+          "started_at": "2026-09-20T14:04:49+00:00",
+          "finished_at": "2026-09-20T14:05:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.71941
+    },
+    {
+      "id": 11,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/k1.query",
+      "output_file": "11.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 28000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.045979,
+          "rows_fetched": 28000,
+          "started_at": "2026-09-20T08:34:48+00:00",
+          "finished_at": "2026-09-20T08:39:48+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.014131,
+          "rows_fetched": 28000,
+          "started_at": "2026-09-20T11:21:31+00:00",
+          "finished_at": "2026-09-20T11:26:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.108016,
+          "rows_fetched": 28000,
+          "started_at": "2026-09-20T14:05:25+00:00",
+          "finished_at": "2026-09-20T14:10:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 300.056042
+    },
+    {
+      "id": 12,
+      "url": null,
+      "output_file": "12.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.136923,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:07:17+00:00",
+          "finished_at": "2026-09-24T06:12:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.121019,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:13:56+00:00",
+          "finished_at": "2026-09-24T07:18:56+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:21:58+00:00",
+          "finished_at": "2026-09-24T08:21:58+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.085981
+    },
+    {
+      "id": 13,
+      "url": null,
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.258188,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:12:17+00:00",
+          "finished_at": "2026-09-24T06:13:27+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 72.880484,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:18:56+00:00",
+          "finished_at": "2026-09-24T07:20:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 71.370119,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:21:58+00:00",
+          "finished_at": "2026-09-24T08:23:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 71.50293
+    },
+    {
+      "id": 14,
+      "url": null,
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15048,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.490849,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-24T06:13:27+00:00",
+          "finished_at": "2026-09-24T06:14:11+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.478913,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-24T07:20:09+00:00",
+          "finished_at": "2026-09-24T07:20:55+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.463559,
+          "rows_fetched": 15048,
+          "started_at": "2026-09-24T08:23:10+00:00",
+          "finished_at": "2026-09-24T08:23:52+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.811107
+    },
+    {
+      "id": 15,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/taxiqueries/ESPER/reg2.query",
+      "output_file": "15.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29045,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 285.786286,
+          "rows_fetched": 29045,
+          "started_at": "2026-09-20T08:46:56+00:00",
+          "finished_at": "2026-09-20T08:51:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 290.940913,
+          "rows_fetched": 29045,
+          "started_at": "2026-09-20T11:33:40+00:00",
+          "finished_at": "2026-09-20T11:38:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 289.782158,
+          "rows_fetched": 29045,
+          "started_at": "2026-09-20T14:17:36+00:00",
+          "finished_at": "2026-09-20T14:22:25+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 288.836452
+    },
+    {
+      "id": 16,
+      "url": null,
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 60.786002,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:14:11+00:00",
+          "finished_at": "2026-09-24T06:15:12+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 65.472231,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:20:55+00:00",
+          "finished_at": "2026-09-24T07:22:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.384902,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:23:52+00:00",
+          "finished_at": "2026-09-24T08:24:53+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 62.214378
+    },
+    {
+      "id": 17,
+      "url": null,
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 25124,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.406053,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-24T06:15:12+00:00",
+          "finished_at": "2026-09-24T06:15:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.001394,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-24T07:22:00+00:00",
+          "finished_at": "2026-09-24T07:22:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.811658,
+          "rows_fetched": 25124,
+          "started_at": "2026-09-24T08:24:53+00:00",
+          "finished_at": "2026-09-24T08:25:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.073035
+    },
+    {
+      "id": 18,
+      "url": null,
+      "output_file": "18.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.1013,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:15:55+00:00",
+          "finished_at": "2026-09-24T06:20:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.041565,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:22:44+00:00",
+          "finished_at": "2026-09-24T07:27:45+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:25:34+00:00",
+          "finished_at": "2026-09-24T08:25:34+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.047622
+    },
+    {
+      "id": 19,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3394,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.57909,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-20T08:56:01+00:00",
+          "finished_at": "2026-09-20T08:56:38+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 39.758289,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-20T11:42:57+00:00",
+          "finished_at": "2026-09-20T11:43:37+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 39.187754,
+          "rows_fetched": 3394,
+          "started_at": "2026-09-20T14:26:54+00:00",
+          "finished_at": "2026-09-20T14:27:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 38.508378
+    },
+    {
+      "id": 20,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.439229,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T08:56:38+00:00",
+          "finished_at": "2026-09-20T08:57:14+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 35.33491,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T11:43:37+00:00",
+          "finished_at": "2026-09-20T11:44:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.102259,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T14:27:34+00:00",
+          "finished_at": "2026-09-20T14:28:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 35.958799
+    },
+    {
+      "id": 21,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 36.34572,
+          "rows_fetched": 4,
+          "started_at": "2026-09-20T08:57:14+00:00",
+          "finished_at": "2026-09-20T08:57:50+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.944097,
+          "rows_fetched": 4,
+          "started_at": "2026-09-20T11:44:12+00:00",
+          "finished_at": "2026-09-20T11:44:51+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 39.455228,
+          "rows_fetched": 4,
+          "started_at": "2026-09-20T14:28:11+00:00",
+          "finished_at": "2026-09-20T14:28:50+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 38.248348
+    },
+    {
+      "id": 22,
+      "url": "https://github.com/confluentinc/agent-skills/blob/main/skills/confluent-cloud-flink-sql/references/sql-patterns-cc.md#pattern-detection-match_recognize",
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 392,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.049865,
+          "rows_fetched": 392,
+          "started_at": "2026-09-20T08:57:50+00:00",
+          "finished_at": "2026-09-20T08:58:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 43.864466,
+          "rows_fetched": 392,
+          "started_at": "2026-09-20T11:44:51+00:00",
+          "finished_at": "2026-09-20T11:45:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.504973,
+          "rows_fetched": 392,
+          "started_at": "2026-09-20T14:28:50+00:00",
+          "finished_at": "2026-09-20T14:29:36+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.473101
+    },
+    {
+      "id": 23,
+      "url": null,
+      "output_file": "23.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 54000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.098914,
+          "rows_fetched": 54000,
+          "started_at": "2026-09-24T06:20:55+00:00",
+          "finished_at": "2026-09-24T06:25:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.113248,
+          "rows_fetched": 52000,
+          "started_at": "2026-09-24T07:27:45+00:00",
+          "finished_at": "2026-09-24T07:32:45+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:25:34+00:00",
+          "finished_at": "2026-09-24T08:25:34+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.070721
+    },
+    {
+      "id": 24,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/DynamicGeoBox/seq.sql",
+      "output_file": "24.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 831378,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 121.273586,
+          "rows_fetched": 831378,
+          "started_at": "2026-09-20T09:03:35+00:00",
+          "finished_at": "2026-09-20T09:05:38+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 115.156848,
+          "rows_fetched": 831378,
+          "started_at": "2026-09-20T11:50:35+00:00",
+          "finished_at": "2026-09-20T11:52:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 119.075678,
+          "rows_fetched": 831378,
+          "started_at": "2026-09-20T14:34:36+00:00",
+          "finished_at": "2026-09-20T14:36:35+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 118.502037
+    },
+    {
+      "id": 25,
+      "url": null,
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 139,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 30.86481,
+          "rows_fetched": 139,
+          "started_at": "2026-09-24T06:25:55+00:00",
+          "finished_at": "2026-09-24T06:26:26+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 31.201848,
+          "rows_fetched": 139,
+          "started_at": "2026-09-24T07:32:45+00:00",
+          "finished_at": "2026-09-24T07:33:16+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.111438,
+          "rows_fetched": 139,
+          "started_at": "2026-09-24T08:25:34+00:00",
+          "finished_at": "2026-09-24T08:26:07+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 31.392699
+    },
+    {
+      "id": 26,
+      "url": null,
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.966899,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:26:26+00:00",
+          "finished_at": "2026-09-24T06:27:18+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.854968,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:33:16+00:00",
+          "finished_at": "2026-09-24T07:34:09+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.385627,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:26:07+00:00",
+          "finished_at": "2026-09-24T08:27:05+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 54.402498
+    },
+    {
+      "id": 27,
+      "url": null,
+      "output_file": "27.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 46.021732,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:27:18+00:00",
+          "finished_at": "2026-09-24T06:28:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.943511,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:34:09+00:00",
+          "finished_at": "2026-09-24T07:35:03+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.643854,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:27:05+00:00",
+          "finished_at": "2026-09-24T08:27:51+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.536366
+    },
+    {
+      "id": 28,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/PartitionByBeat/alternate_kleene_seq.sql",
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 86,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.33924,
+          "rows_fetched": 86,
+          "started_at": "2026-09-20T09:07:45+00:00",
+          "finished_at": "2026-09-20T09:08:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.551388,
+          "rows_fetched": 86,
+          "started_at": "2026-09-20T11:54:39+00:00",
+          "finished_at": "2026-09-20T11:55:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.04338,
+          "rows_fetched": 86,
+          "started_at": "2026-09-20T14:38:45+00:00",
+          "finished_at": "2026-09-20T14:39:30+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 44.978003
+    },
+    {
+      "id": 29,
+      "url": null,
+      "output_file": "29.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 49015,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.336905,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-24T06:28:05+00:00",
+          "finished_at": "2026-09-24T06:28:38+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 35.847424,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-24T07:35:03+00:00",
+          "finished_at": "2026-09-24T07:35:39+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 31.353611,
+          "rows_fetched": 49015,
+          "started_at": "2026-09-24T08:27:51+00:00",
+          "finished_at": "2026-09-24T08:28:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 33.512647
+    },
+    {
+      "id": 30,
+      "url": null,
+      "output_file": "30.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.949047,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:28:38+00:00",
+          "finished_at": "2026-09-24T06:29:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 61.609582,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:35:39+00:00",
+          "finished_at": "2026-09-24T07:36:41+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.107111,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:28:22+00:00",
+          "finished_at": "2026-09-24T08:29:23+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 60.221913
+    },
+    {
+      "id": 31,
+      "url": null,
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 209,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 59.131474,
+          "rows_fetched": 209,
+          "started_at": "2026-09-24T06:29:37+00:00",
+          "finished_at": "2026-09-24T06:30:36+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.746059,
+          "rows_fetched": 209,
+          "started_at": "2026-09-24T07:36:41+00:00",
+          "finished_at": "2026-09-24T07:37:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.441572,
+          "rows_fetched": 209,
+          "started_at": "2026-09-24T08:29:23+00:00",
+          "finished_at": "2026-09-24T08:30:16+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 56.773035
+    },
+    {
+      "id": 32,
+      "url": null,
+      "output_file": "32.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 18506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.527681,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-24T06:30:36+00:00",
+          "finished_at": "2026-09-24T06:31:26+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.659374,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-24T07:37:38+00:00",
+          "finished_at": "2026-09-24T07:38:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.567569,
+          "rows_fetched": 18506,
+          "started_at": "2026-09-24T08:30:16+00:00",
+          "finished_at": "2026-09-24T08:31:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.251541
+    },
+    {
+      "id": 33,
+      "url": null,
+      "output_file": "33.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 32.826233,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:31:26+00:00",
+          "finished_at": "2026-09-24T06:31:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.606259,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:38:31+00:00",
+          "finished_at": "2026-09-24T07:39:08+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.218432,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:31:02+00:00",
+          "finished_at": "2026-09-24T08:31:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 33.883641
+    },
+    {
+      "id": 34,
+      "url": null,
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.811139,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:31:59+00:00",
+          "finished_at": "2026-09-24T06:32:44+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.892021,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:39:08+00:00",
+          "finished_at": "2026-09-24T07:39:56+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.404721,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:31:34+00:00",
+          "finished_at": "2026-09-24T08:32:19+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.702627
+    },
+    {
+      "id": 35,
+      "url": null,
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.247956,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:32:44+00:00",
+          "finished_at": "2026-09-24T06:33:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.954086,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:39:56+00:00",
+          "finished_at": "2026-09-24T07:40:50+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.187295,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:32:19+00:00",
+          "finished_at": "2026-09-24T08:33:09+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 50.796446
+    },
+    {
+      "id": 36,
+      "url": null,
+      "output_file": "36.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.627841,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:33:32+00:00",
+          "finished_at": "2026-09-24T06:34:28+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 56.214851,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:40:50+00:00",
+          "finished_at": "2026-09-24T07:41:46+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.948768,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:33:09+00:00",
+          "finished_at": "2026-09-24T08:34:04+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 55.597153
+    },
+    {
+      "id": 37,
+      "url": null,
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 32.589327,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:34:28+00:00",
+          "finished_at": "2026-09-24T06:35:00+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.824758,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:41:46+00:00",
+          "finished_at": "2026-09-24T07:42:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 29.217001,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:34:04+00:00",
+          "finished_at": "2026-09-24T08:34:33+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 32.210362
+    },
+    {
+      "id": 38,
+      "url": null,
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.096887,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:35:00+00:00",
+          "finished_at": "2026-09-24T06:35:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.737864,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:42:21+00:00",
+          "finished_at": "2026-09-24T07:43:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.75937,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:34:33+00:00",
+          "finished_at": "2026-09-24T08:35:26+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 56.19804
+    },
+    {
+      "id": 39,
+      "url": null,
+      "output_file": "39.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.436228,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:35:59+00:00",
+          "finished_at": "2026-09-24T06:36:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.068932,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:43:19+00:00",
+          "finished_at": "2026-09-24T07:44:08+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.787347,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:35:26+00:00",
+          "finished_at": "2026-09-24T08:36:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 47.097502
+    },
+    {
+      "id": 40,
+      "url": null,
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 175,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.512177,
+          "rows_fetched": 175,
+          "started_at": "2026-09-24T06:36:46+00:00",
+          "finished_at": "2026-09-24T06:37:37+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.154583,
+          "rows_fetched": 175,
+          "started_at": "2026-09-24T07:44:08+00:00",
+          "finished_at": "2026-09-24T07:44:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 49.943369,
+          "rows_fetched": 175,
+          "started_at": "2026-09-24T08:36:11+00:00",
+          "finished_at": "2026-09-24T08:37:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 48.870043
+    },
+    {
+      "id": 41,
+      "url": null,
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 32.923821,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:37:37+00:00",
+          "finished_at": "2026-09-24T06:38:10+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 34.975839,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:44:54+00:00",
+          "finished_at": "2026-09-24T07:45:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.638524,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:37:01+00:00",
+          "finished_at": "2026-09-24T08:37:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 33.512728
+    },
+    {
+      "id": 42,
+      "url": null,
+      "output_file": "42.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 32.182746,
+          "rows_fetched": 29,
+          "started_at": "2026-09-24T06:38:10+00:00",
+          "finished_at": "2026-09-24T06:38:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 33.136865,
+          "rows_fetched": 29,
+          "started_at": "2026-09-24T07:45:29+00:00",
+          "finished_at": "2026-09-24T07:46:03+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 30.800365,
+          "rows_fetched": 29,
+          "started_at": "2026-09-24T08:37:34+00:00",
+          "finished_at": "2026-09-24T08:38:05+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 32.039992
+    },
+    {
+      "id": 43,
+      "url": null,
+      "output_file": "43.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 52.419851,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:38:42+00:00",
+          "finished_at": "2026-09-24T06:39:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.916433,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:46:03+00:00",
+          "finished_at": "2026-09-24T07:46:59+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.325198,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:38:05+00:00",
+          "finished_at": "2026-09-24T08:38:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 53.553827
+    },
+    {
+      "id": 44,
+      "url": null,
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.743096,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:39:34+00:00",
+          "finished_at": "2026-09-24T06:40:33+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.564905,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:46:59+00:00",
+          "finished_at": "2026-09-24T07:47:54+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.909167,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:38:57+00:00",
+          "finished_at": "2026-09-24T08:39:52+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 56.405723
+    },
+    {
+      "id": 45,
+      "url": null,
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.957644,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:40:33+00:00",
+          "finished_at": "2026-09-24T06:41:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.718198,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T07:47:54+00:00",
+          "finished_at": "2026-09-24T07:48:42+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.892479,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:39:52+00:00",
+          "finished_at": "2026-09-24T08:40:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.18944
+    },
+    {
+      "id": 46,
+      "url": "https://github.com/ekzhu/match-recognize-vldb2023/blob/main/query-templates/crimes/WithinBeat/seq.sql",
+      "output_file": "46.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 32.824194,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T09:21:13+00:00",
+          "finished_at": "2026-09-20T09:21:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 31.547994,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T12:08:39+00:00",
+          "finished_at": "2026-09-20T12:09:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.250238,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T14:52:33+00:00",
+          "finished_at": "2026-09-20T14:53:06+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 32.207475
+    },
+    {
+      "id": 47,
+      "url": null,
+      "output_file": "47.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 380,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 32.313082,
+          "rows_fetched": 380,
+          "started_at": "2026-09-24T06:41:22+00:00",
+          "finished_at": "2026-09-24T06:41:55+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 30.82287,
+          "rows_fetched": 380,
+          "started_at": "2026-09-24T07:48:42+00:00",
+          "finished_at": "2026-09-24T07:49:13+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 29.405626,
+          "rows_fetched": 380,
+          "started_at": "2026-09-24T08:40:43+00:00",
+          "finished_at": "2026-09-24T08:41:13+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 30.847193
+    },
+    {
+      "id": 48,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "48.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3141,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.45603,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-20T09:22:19+00:00",
+          "finished_at": "2026-09-20T09:22:56+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 39.310284,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-20T12:09:44+00:00",
+          "finished_at": "2026-09-20T12:10:23+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.560361,
+          "rows_fetched": 3141,
+          "started_at": "2026-09-20T14:53:41+00:00",
+          "finished_at": "2026-09-20T14:54:18+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 38.108892
+    },
+    {
+      "id": 49,
+      "url": null,
+      "output_file": "49.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 56.291757,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:41:55+00:00",
+          "finished_at": "2026-09-24T06:42:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.702895,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:49:13+00:00",
+          "finished_at": "2026-09-24T07:50:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.532356,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:41:13+00:00",
+          "finished_at": "2026-09-24T08:42:07+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 57.175669
+    },
+    {
+      "id": 50,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "50.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.023345,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T09:23:52+00:00",
+          "finished_at": "2026-09-20T09:24:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.714084,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T12:11:23+00:00",
+          "finished_at": "2026-09-20T12:12:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 56.425183,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T14:55:15+00:00",
+          "finished_at": "2026-09-20T14:56:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 56.054204
+    },
+    {
+      "id": 51,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "51.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.16069,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T09:24:46+00:00",
+          "finished_at": "2026-09-20T09:25:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.263698,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T12:12:21+00:00",
+          "finished_at": "2026-09-20T12:13:18+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.332415,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T14:56:12+00:00",
+          "finished_at": "2026-09-20T14:57:06+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 55.585601
+    },
+    {
+      "id": 52,
+      "url": null,
+      "output_file": "52.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 30.872705,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:42:51+00:00",
+          "finished_at": "2026-09-24T06:43:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 33.532559,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T07:50:14+00:00",
+          "finished_at": "2026-09-24T07:50:47+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 34.564937,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:42:07+00:00",
+          "finished_at": "2026-09-24T08:42:42+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 32.990067
+    },
+    {
+      "id": 53,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/ChicagoCrime.java",
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.428469,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T09:26:14+00:00",
+          "finished_at": "2026-09-20T09:26:59+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 39.326061,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T12:13:45+00:00",
+          "finished_at": "2026-09-20T12:14:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.806191,
+          "rows_fetched": 1,
+          "started_at": "2026-09-20T14:57:37+00:00",
+          "finished_at": "2026-09-20T14:58:19+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 41.853574
+    },
+    {
+      "id": 54,
+      "url": null,
+      "output_file": "54.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.654202,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T06:43:22+00:00",
+          "finished_at": "2026-09-24T06:44:07+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.761242,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T07:50:47+00:00",
+          "finished_at": "2026-09-24T07:51:32+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.009985,
+          "rows_fetched": 1,
+          "started_at": "2026-09-24T08:42:42+00:00",
+          "finished_at": "2026-09-24T08:43:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 43.14181
+    },
+    {
+      "id": 55,
+      "url": null,
+      "output_file": "55.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 190056,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.864324,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-24T06:44:07+00:00",
+          "finished_at": "2026-09-24T06:44:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.540883,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-24T07:51:32+00:00",
+          "finished_at": "2026-09-24T07:52:10+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.500971,
+          "rows_fetched": 190056,
+          "started_at": "2026-09-24T08:43:22+00:00",
+          "finished_at": "2026-09-24T08:44:00+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 37.635393
+    },
+    {
+      "id": 56,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "output_file": "56.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.328022,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T09:28:17+00:00",
+          "finished_at": "2026-09-20T09:29:07+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.200344,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T12:15:38+00:00",
+          "finished_at": "2026-09-20T12:16:28+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 51.4463,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T14:59:36+00:00",
+          "finished_at": "2026-09-20T15:00:28+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.991555
+    },
+    {
+      "id": 57,
+      "url": null,
+      "output_file": "57.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 11,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.368704,
+          "rows_fetched": 11,
+          "started_at": "2026-09-24T06:44:45+00:00",
+          "finished_at": "2026-09-24T06:45:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 48.960437,
+          "rows_fetched": 11,
+          "started_at": "2026-09-24T07:52:10+00:00",
+          "finished_at": "2026-09-24T07:52:59+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 49.49474,
+          "rows_fetched": 11,
+          "started_at": "2026-09-24T08:44:00+00:00",
+          "finished_at": "2026-09-24T08:44:49+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.274627
+    },
+    {
+      "id": 58,
+      "url": null,
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 884,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 53.045957,
+          "rows_fetched": 884,
+          "started_at": "2026-09-24T06:45:34+00:00",
+          "finished_at": "2026-09-24T06:46:27+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.566448,
+          "rows_fetched": 884,
+          "started_at": "2026-09-24T07:52:59+00:00",
+          "finished_at": "2026-09-24T07:53:53+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.612231,
+          "rows_fetched": 884,
+          "started_at": "2026-09-24T08:44:49+00:00",
+          "finished_at": "2026-09-24T08:45:40+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 52.408212
+    },
+    {
+      "id": 59,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "59.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2334112,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 202.132947,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-20T09:30:43+00:00",
+          "finished_at": "2026-09-20T09:34:36+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 197.010946,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-20T12:18:09+00:00",
+          "finished_at": "2026-09-20T12:21:26+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 188.708513,
+          "rows_fetched": 2334112,
+          "started_at": "2026-09-20T15:02:05+00:00",
+          "finished_at": "2026-09-20T15:05:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 195.950802
+    },
+    {
+      "id": 60,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 189.247053,
+          "rows_fetched": 2,
+          "started_at": "2026-09-20T09:34:36+00:00",
+          "finished_at": "2026-09-20T09:37:45+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 172.630265,
+          "rows_fetched": 2,
+          "started_at": "2026-09-20T12:21:26+00:00",
+          "finished_at": "2026-09-20T12:24:19+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 175.802604,
+          "rows_fetched": 2,
+          "started_at": "2026-09-20T15:05:14+00:00",
+          "finished_at": "2026-09-20T15:08:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 179.226641
+    },
+    {
+      "id": 61,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-8-2-extended-functions",
+      "output_file": "61.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 214,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 182.267202,
+          "rows_fetched": 214,
+          "started_at": "2026-09-20T09:37:45+00:00",
+          "finished_at": "2026-09-20T09:40:47+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 174.923019,
+          "rows_fetched": 214,
+          "started_at": "2026-09-20T12:24:19+00:00",
+          "finished_at": "2026-09-20T12:27:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 167.112202,
+          "rows_fetched": 214,
+          "started_at": "2026-09-20T15:08:10+00:00",
+          "finished_at": "2026-09-20T15:10:57+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 174.767474
+    },
+    {
+      "id": 62,
+      "url": null,
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 36838,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.311869,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T06:46:27+00:00",
+          "finished_at": "2026-09-24T06:47:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.955155,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T07:53:53+00:00",
+          "finished_at": "2026-09-24T07:54:51+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.053272,
+          "rows_fetched": 36838,
+          "started_at": "2026-09-24T08:45:40+00:00",
+          "finished_at": "2026-09-24T08:47:12+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 68.106765
+    },
+    {
+      "id": 63,
+      "url": null,
+      "output_file": "63.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1112973,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 122.199674,
+          "rows_fetched": 1112973,
+          "started_at": "2026-09-24T06:47:22+00:00",
+          "finished_at": "2026-09-24T06:49:24+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 125.616576,
+          "rows_fetched": 1112973,
+          "started_at": "2026-09-24T07:54:51+00:00",
+          "finished_at": "2026-09-24T07:56:57+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 144.21234,
+          "rows_fetched": 1112973,
+          "started_at": "2026-09-24T08:47:12+00:00",
+          "finished_at": "2026-09-24T08:49:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 130.676197
+    },
+    {
+      "id": 64,
+      "url": null,
+      "output_file": "64.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 14093,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.443541,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-24T06:49:24+00:00",
+          "finished_at": "2026-09-24T06:50:02+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.492922,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-24T07:56:57+00:00",
+          "finished_at": "2026-09-24T07:57:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.679172,
+          "rows_fetched": 14093,
+          "started_at": "2026-09-24T08:49:37+00:00",
+          "finished_at": "2026-09-24T08:50:17+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.538545
+    },
+    {
+      "id": 65,
+      "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS#evil-regex",
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 9902,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.715478,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-20T09:44:18+00:00",
+          "finished_at": "2026-09-20T09:44:54+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.321329,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-20T12:30:51+00:00",
+          "finished_at": "2026-09-20T12:31:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.36398,
+          "rows_fetched": 9902,
+          "started_at": "2026-09-20T15:14:35+00:00",
+          "finished_at": "2026-09-20T15:15:15+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.133596
+    },
+    {
+      "id": 66,
+      "url": null,
+      "output_file": "66.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7385,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.853083,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-24T06:50:02+00:00",
+          "finished_at": "2026-09-24T06:50:38+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.43856,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-24T07:57:38+00:00",
+          "finished_at": "2026-09-24T07:58:16+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.318252,
+          "rows_fetched": 7385,
+          "started_at": "2026-09-24T08:50:17+00:00",
+          "finished_at": "2026-09-24T08:50:54+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 36.869965
+    },
+    {
+      "id": 67,
+      "url": null,
+      "output_file": "67.txt",
+      "output_complete": false,
+      "output_source_run": 2,
+      "best_partial_rows": 40116000,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.008347,
+          "rows_fetched": 32934000,
+          "started_at": "2026-09-24T06:50:38+00:00",
+          "finished_at": "2026-09-24T06:55:44+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.005693,
+          "rows_fetched": 40116000,
+          "started_at": "2026-09-24T07:58:16+00:00",
+          "finished_at": "2026-09-24T08:03:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:50:54+00:00",
+          "finished_at": "2026-09-24T08:50:54+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.00468
+    },
+    {
+      "id": 68,
+      "url": null,
+      "output_file": "68.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5660,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 162.185145,
+          "rows_fetched": 5660,
+          "started_at": "2026-09-24T06:55:44+00:00",
+          "finished_at": "2026-09-24T06:58:27+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 165.159842,
+          "rows_fetched": 5660,
+          "started_at": "2026-09-24T08:03:25+00:00",
+          "finished_at": "2026-09-24T08:06:10+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 168.886111,
+          "rows_fetched": 5660,
+          "started_at": "2026-09-24T08:50:54+00:00",
+          "finished_at": "2026-09-24T08:53:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 165.410366
+    },
+    {
+      "id": 69,
+      "url": null,
+      "output_file": "69.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 14253,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.634235,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-24T06:58:27+00:00",
+          "finished_at": "2026-09-24T06:59:02+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.32907,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-24T08:06:10+00:00",
+          "finished_at": "2026-09-24T08:06:48+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.677024,
+          "rows_fetched": 14253,
+          "started_at": "2026-09-24T08:53:43+00:00",
+          "finished_at": "2026-09-24T08:54:22+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 37.546776
+    },
+    {
+      "id": 70,
+      "url": null,
+      "output_file": "70.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 23584,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 38.173111,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-24T06:59:02+00:00",
+          "finished_at": "2026-09-24T06:59:41+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.761983,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-24T08:06:48+00:00",
+          "finished_at": "2026-09-24T08:07:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 38.549473,
+          "rows_fetched": 23584,
+          "started_at": "2026-09-24T08:54:22+00:00",
+          "finished_at": "2026-09-24T08:55:00+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.161522
+    },
+    {
+      "id": 71,
+      "url": "https://people.cs.vt.edu/dongyoon/papers/FSE-18-ReDoS.pdf",
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.126601,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T10:14:24+00:00",
+          "finished_at": "2026-09-20T10:19:25+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.022821,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T13:01:00+00:00",
+          "finished_at": "2026-09-20T13:06:00+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.051824,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T15:44:39+00:00",
+          "finished_at": "2026-09-20T15:49:40+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 300.067082
+    },
+    {
+      "id": 72,
+      "url": "https://stackoverflow.com/questions/34175330/fill-in-missing-values-using-match-recognize",
+      "output_file": "72.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 155.084118,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T10:19:25+00:00",
+          "finished_at": "2026-09-20T10:22:00+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 159.64191,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T13:06:00+00:00",
+          "finished_at": "2026-09-20T13:08:40+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 163.680109,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T15:49:40+00:00",
+          "finished_at": "2026-09-20T15:52:24+00:00",
+          "error": "ORA-30009: Not enough memory for MATCH_RECOGNIZE posmap operation"
+        }
+      ],
+      "average_query_latency_seconds": 159.468712
+    },
+    {
+      "id": 73,
+      "url": null,
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.727961,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:59:41+00:00",
+          "finished_at": "2026-09-24T06:59:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.692068,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:07:29+00:00",
+          "finished_at": "2026-09-24T08:07:30+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.802637,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:55:00+00:00",
+          "finished_at": "2026-09-24T08:55:01+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.740889
+    },
+    {
+      "id": 74,
+      "url": null,
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.37721,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T06:59:42+00:00",
+          "finished_at": "2026-09-24T07:00:32+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.855549,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:07:30+00:00",
+          "finished_at": "2026-09-24T08:08:24+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.371693,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:55:01+00:00",
+          "finished_at": "2026-09-24T08:55:55+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 52.534817
+    },
+    {
+      "id": 75,
+      "url": null,
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 79,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.608133,
+          "rows_fetched": 79,
+          "started_at": "2026-09-24T07:00:32+00:00",
+          "finished_at": "2026-09-24T07:01:20+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 50.053486,
+          "rows_fetched": 79,
+          "started_at": "2026-09-24T08:08:24+00:00",
+          "finished_at": "2026-09-24T08:09:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 49.509933,
+          "rows_fetched": 79,
+          "started_at": "2026-09-24T08:55:55+00:00",
+          "finished_at": "2026-09-24T08:56:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.057184
+    },
+    {
+      "id": 76,
+      "url": null,
+      "output_file": "76.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 0.000818,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:01:20+00:00",
+          "finished_at": "2026-09-24T07:01:20+00:00",
+          "error": "ORA-00905: missing keyword"
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 0.000825,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:09:14+00:00",
+          "finished_at": "2026-09-24T08:09:14+00:00",
+          "error": "ORA-00905: missing keyword"
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 0.000674,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:56:44+00:00",
+          "finished_at": "2026-09-24T08:56:44+00:00",
+          "error": "ORA-00905: missing keyword"
+        }
+      ],
+      "average_query_latency_seconds": 0.000772
+    },
+    {
+      "id": 77,
+      "url": "https://stackoverflow.com/questions/53211400/return-results-only-if-there-are-enough-records",
+      "output_file": "77.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10915,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 183.612071,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-20T10:24:57+00:00",
+          "finished_at": "2026-09-20T10:28:00+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 168.228388,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-20T13:11:38+00:00",
+          "finished_at": "2026-09-20T13:14:27+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 161.271924,
+          "rows_fetched": 10915,
+          "started_at": "2026-09-20T15:55:28+00:00",
+          "finished_at": "2026-09-20T15:58:10+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 171.037461
+    },
+    {
+      "id": 78,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "78.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 732506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 175.336437,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-20T10:28:00+00:00",
+          "finished_at": "2026-09-20T10:31:06+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 165.41116,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-20T13:14:27+00:00",
+          "finished_at": "2026-09-20T13:17:12+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 171.789035,
+          "rows_fetched": 732506,
+          "started_at": "2026-09-20T15:58:10+00:00",
+          "finished_at": "2026-09-20T16:01:02+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 170.845544
+    },
+    {
+      "id": 79,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 54147,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.414109,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-20T10:31:06+00:00",
+          "finished_at": "2026-09-20T10:31:42+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 32.356287,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-20T13:17:12+00:00",
+          "finished_at": "2026-09-20T13:17:45+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 35.986044,
+          "rows_fetched": 54147,
+          "started_at": "2026-09-20T16:01:02+00:00",
+          "finished_at": "2026-09-20T16:01:38+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.58548
+    },
+    {
+      "id": 80,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "80.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3935,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 64.543946,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-20T10:31:42+00:00",
+          "finished_at": "2026-09-20T10:32:46+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 62.520906,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-20T13:17:45+00:00",
+          "finished_at": "2026-09-20T13:18:47+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.807034,
+          "rows_fetched": 3935,
+          "started_at": "2026-09-20T16:01:38+00:00",
+          "finished_at": "2026-09-20T16:02:43+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 63.957295
+    },
+    {
+      "id": 81,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "81.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 29477,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 57.588406,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-20T10:32:46+00:00",
+          "finished_at": "2026-09-20T10:33:44+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.967531,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-20T13:18:47+00:00",
+          "finished_at": "2026-09-20T13:19:45+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 61.123397,
+          "rows_fetched": 29477,
+          "started_at": "2026-09-20T16:02:43+00:00",
+          "finished_at": "2026-09-20T16:03:44+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 58.893111
+    },
+    {
+      "id": 82,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "82.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 354194,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.955189,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-20T10:33:44+00:00",
+          "finished_at": "2026-09-20T10:34:34+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.925125,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-20T13:19:45+00:00",
+          "finished_at": "2026-09-20T13:20:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.067682,
+          "rows_fetched": 354194,
+          "started_at": "2026-09-20T16:03:44+00:00",
+          "finished_at": "2026-09-20T16:04:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 49.649332
+    },
+    {
+      "id": 83,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 39.070353,
+          "rows_fetched": 10,
+          "started_at": "2026-09-20T10:34:34+00:00",
+          "finished_at": "2026-09-20T10:35:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 38.580213,
+          "rows_fetched": 10,
+          "started_at": "2026-09-20T13:20:35+00:00",
+          "finished_at": "2026-09-20T13:21:14+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.451037,
+          "rows_fetched": 10,
+          "started_at": "2026-09-20T16:04:34+00:00",
+          "finished_at": "2026-09-20T16:05:15+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.367201
+    },
+    {
+      "id": 84,
+      "url": null,
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 0.83973,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:01:20+00:00",
+          "finished_at": "2026-09-24T07:01:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 0.820953,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:09:14+00:00",
+          "finished_at": "2026-09-24T08:09:15+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 0.813387,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:56:44+00:00",
+          "finished_at": "2026-09-24T08:56:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 0.82469
+    },
+    {
+      "id": 85,
+      "url": "https://stackoverflow.com/questions/53736584/how-to-get-the-desired-results-with-match-recognize",
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 20221,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 33.549617,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-20T10:35:51+00:00",
+          "finished_at": "2026-09-20T10:36:24+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.029179,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-20T13:21:53+00:00",
+          "finished_at": "2026-09-20T13:22:29+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 33.369014,
+          "rows_fetched": 20221,
+          "started_at": "2026-09-20T16:05:56+00:00",
+          "finished_at": "2026-09-20T16:06:29+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 34.315937
+    },
+    {
+      "id": 86,
+      "url": "https://stackoverflow.com/questions/68510881/how-to-fetch-records-up-to-particular-data",
+      "output_file": "86.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1720,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 172.889722,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-20T10:36:24+00:00",
+          "finished_at": "2026-09-20T10:39:17+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 168.442444,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-20T13:22:29+00:00",
+          "finished_at": "2026-09-20T13:25:17+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 166.112923,
+          "rows_fetched": 1720,
+          "started_at": "2026-09-20T16:06:29+00:00",
+          "finished_at": "2026-09-20T16:09:15+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 169.148363
+    },
+    {
+      "id": 87,
+      "url": "https://stackoverflow.com/questions/68510881/how-to-fetch-records-up-to-particular-data",
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1267,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 167.698393,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-20T10:39:17+00:00",
+          "finished_at": "2026-09-20T10:42:05+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 168.841869,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-20T13:25:17+00:00",
+          "finished_at": "2026-09-20T13:28:06+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 171.461944,
+          "rows_fetched": 1267,
+          "started_at": "2026-09-20T16:09:15+00:00",
+          "finished_at": "2026-09-20T16:12:07+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 169.334069
+    },
+    {
+      "id": 88,
+      "url": "https://stackoverflow.com/questions/78844130/match-recognize-get-all-matches-with-restarting-from-first-element",
+      "output_file": "88.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1231744,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 155.665144,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-20T10:42:05+00:00",
+          "finished_at": "2026-09-20T10:44:44+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 153.770508,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-20T13:28:06+00:00",
+          "finished_at": "2026-09-20T13:30:40+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 159.138442,
+          "rows_fetched": 1231744,
+          "started_at": "2026-09-20T16:12:07+00:00",
+          "finished_at": "2026-09-20T16:14:46+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 156.191365
+    },
+    {
+      "id": 89,
+      "url": null,
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8531,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 27.984175,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T07:01:21+00:00",
+          "finished_at": "2026-09-24T07:01:49+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 31.771023,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T08:09:15+00:00",
+          "finished_at": "2026-09-24T08:09:47+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 32.211855,
+          "rows_fetched": 8531,
+          "started_at": "2026-09-24T08:56:45+00:00",
+          "finished_at": "2026-09-24T08:57:18+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 30.655684
+    },
+    {
+      "id": 90,
+      "url": "https://stackoverflow.com/questions/79997241/how-can-i-find-a-specific-consecutive-sequence-of-rows-in-sql-without-match-reco",
+      "output_file": "90.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 23.595921,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T10:45:15+00:00",
+          "finished_at": "2026-09-20T10:45:39+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 24.308956,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T13:31:14+00:00",
+          "finished_at": "2026-09-20T13:31:38+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 27.430873,
+          "rows_fetched": 0,
+          "started_at": "2026-09-20T16:15:18+00:00",
+          "finished_at": "2026-09-20T16:15:45+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 25.111917
+    },
+    {
+      "id": 91,
+      "url": null,
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.619908,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:01:49+00:00",
+          "finished_at": "2026-09-24T07:02:40+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.587234,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:09:47+00:00",
+          "finished_at": "2026-09-24T08:10:42+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.152199,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:57:18+00:00",
+          "finished_at": "2026-09-24T08:58:11+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 53.453114
+    },
+    {
+      "id": 92,
+      "url": null,
+      "output_file": "92.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 40.11692,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T07:02:40+00:00",
+          "finished_at": "2026-09-24T07:03:21+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.304787,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:10:42+00:00",
+          "finished_at": "2026-09-24T08:11:25+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 40.696677,
+          "rows_fetched": 0,
+          "started_at": "2026-09-24T08:58:11+00:00",
+          "finished_at": "2026-09-24T08:58:52+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 41.039461
+    },
+    {
+      "id": 93,
+      "url": null,
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 266,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 45.200129,
+          "rows_fetched": 266,
+          "started_at": "2026-09-24T07:03:21+00:00",
+          "finished_at": "2026-09-24T07:04:06+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.753834,
+          "rows_fetched": 266,
+          "started_at": "2026-09-24T08:11:25+00:00",
+          "finished_at": "2026-09-24T08:12:11+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 45.062135,
+          "rows_fetched": 266,
+          "started_at": "2026-09-24T08:58:52+00:00",
+          "finished_at": "2026-09-24T08:59:37+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 45.672033
+    },
+    {
+      "id": 94,
+      "url": null,
+      "output_file": "94.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 114,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 160.726876,
+          "rows_fetched": 114,
+          "started_at": "2026-09-24T07:04:06+00:00",
+          "finished_at": "2026-09-24T07:06:47+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 160.483727,
+          "rows_fetched": 114,
+          "started_at": "2026-09-24T08:12:11+00:00",
+          "finished_at": "2026-09-24T08:14:52+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 156.804923,
+          "rows_fetched": 114,
+          "started_at": "2026-09-24T08:59:37+00:00",
+          "finished_at": "2026-09-24T09:02:14+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 159.338509
+    },
+    {
+      "id": 95,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8640635,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 221.855131,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-20T10:50:57+00:00",
+          "finished_at": "2026-09-20T10:56:29+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 214.108964,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-20T13:36:57+00:00",
+          "finished_at": "2026-09-20T13:40:33+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 217.078726,
+          "rows_fetched": 8640635,
+          "started_at": "2026-09-20T16:20:55+00:00",
+          "finished_at": "2026-09-20T16:24:34+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 217.68094
+    },
+    {
+      "id": 96,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "96.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 533,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 173.25505,
+          "rows_fetched": 533,
+          "started_at": "2026-09-20T10:56:29+00:00",
+          "finished_at": "2026-09-20T10:59:22+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 181.483775,
+          "rows_fetched": 533,
+          "started_at": "2026-09-20T13:40:33+00:00",
+          "finished_at": "2026-09-20T13:43:35+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 170.254637,
+          "rows_fetched": 533,
+          "started_at": "2026-09-20T16:24:34+00:00",
+          "finished_at": "2026-09-20T16:27:24+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 174.997821
+    },
+    {
+      "id": 97,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#rows-per-match",
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31428,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 177.441108,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-20T10:59:22+00:00",
+          "finished_at": "2026-09-20T11:02:20+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 176.436978,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-20T13:43:35+00:00",
+          "finished_at": "2026-09-20T13:46:31+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 174.288474,
+          "rows_fetched": 31428,
+          "started_at": "2026-09-20T16:27:24+00:00",
+          "finished_at": "2026-09-20T16:30:18+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 176.05552
+    },
+    {
+      "id": 98,
+      "url": null,
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 728780,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 167.91369,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-24T07:06:47+00:00",
+          "finished_at": "2026-09-24T07:09:35+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 171.729972,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-24T08:14:52+00:00",
+          "finished_at": "2026-09-24T08:17:44+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 166.225304,
+          "rows_fetched": 728780,
+          "started_at": "2026-09-24T09:02:14+00:00",
+          "finished_at": "2026-09-24T09:05:00+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 168.622989
+    },
+    {
+      "id": 99,
+      "url": null,
+      "output_file": "99.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 704,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.505693,
+          "rows_fetched": 704,
+          "started_at": "2026-09-24T07:09:35+00:00",
+          "finished_at": "2026-09-24T07:10:13+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 36.865526,
+          "rows_fetched": 704,
+          "started_at": "2026-09-24T08:17:44+00:00",
+          "finished_at": "2026-09-24T08:18:21+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 39.117345,
+          "rows_fetched": 704,
+          "started_at": "2026-09-24T09:05:00+00:00",
+          "finished_at": "2026-09-24T09:05:39+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 37.829521
+    },
+    {
+      "id": 100,
+      "url": null,
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 18436,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 38.724781,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-24T07:10:13+00:00",
+          "finished_at": "2026-09-24T07:10:51+00:00",
+          "error": null
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 41.16758,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-24T08:18:21+00:00",
+          "finished_at": "2026-09-24T08:19:02+00:00",
+          "error": null
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 39.022512,
+          "rows_fetched": 18436,
+          "started_at": "2026-09-24T09:05:39+00:00",
+          "finished_at": "2026-09-24T09:06:18+00:00",
+          "error": null
+        }
+      ],
+      "average_query_latency_seconds": 39.638291
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "dataset_url": "https://alpaca.markets/data",
+  "name": "nasdaq_trades_pattern_tests",
+  "database": "oracle",
+  "database_version": "19c",
+  "description": "Trade-level market data for 20 high-liquidity NASDAQ-listed stocks sourced from Alpaca. The dataset contains 20,000,000 rows and is organized into contiguous SYMBOL partitions, with rows ordered by nanosecond timestamp (TS) within each partition for SQL pattern-matching tests.",
+  "table_schemas": {
+    "NASDAQ": {
+      "columns": [
+        "SYMBOL",
+        "TS_ISO",
+        "TS",
+        "PRICE",
+        "VOLUME",
+        "EXCHANGE",
+        "CONDITIONS",
+        "TRADE_ID",
+        "TAPE",
+        "FEED"
+      ],
+      "primary_key": [
+        "SYMBOL",
+        "TS",
+        "TRADE_ID"
+      ],
+      "column_types": {
+        "SYMBOL": "VARCHAR(5)",
+        "TS_ISO": "VARCHAR(30)",
+        "TS": "LONG",
+        "PRICE": "FLOAT",
+        "VOLUME": "INT",
+        "EXCHANGE": "VARCHAR(1)",
+        "CONDITIONS": "VARCHAR(7)",
+        "TRADE_ID": "LONG",
+        "TAPE": "VARCHAR(1)",
+        "FEED": "VARCHAR(3)"
+      },
+      "column_nullables": {
+        "SYMBOL": false,
+        "TS_ISO": false,
+        "TS": false,
+        "PRICE": false,
+        "VOLUME": false,
+        "EXCHANGE": false,
+        "CONDITIONS": true,
+        "TRADE_ID": false,
+        "TAPE": false,
+        "FEED": false
+      }
+    }
+  },
+  "sqls": [
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT START_TS, BOTTOM_TS, END_TS, START_PRICE, BOTTOM_PRICE, END_PRICE FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES STRT.TS AS START_TS, LAST(DOWN.TS) AS BOTTOM_TS, LAST(UP.TS) AS END_TS, STRT.PRICE AS START_PRICE, MIN(DOWN.PRICE) AS BOTTOM_PRICE, MAX(UP.PRICE) AS END_PRICE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST UP\n  PATTERN(STRT DOWN+ UP+)\n  DEFINE\n    STRT AS STRT.TS BETWEEN 1722441600000000000 AND 1722528000000000000,\n    DOWN AS DOWN.PRICE < PREV(DOWN.PRICE),\n    UP AS UP.PRICE > PREV(UP.PRICE)\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, A.PRICE AS START_PRICE, LAST(B.PRICE) AS BOTTOM_PRICE, LAST(U.PRICE) AS RECOVERY_PRICE, COUNT(*) AS TRADE_COUNT\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B+ C+ D+ E)\n  SUBSET U = (C, D)\n  DEFINE\n    A AS PRICE >= 200,\n    B AS PRICE < PREV(PRICE),\n    C AS PRICE > PREV(PRICE) AND PRICE <= A.PRICE,\n    D AS PRICE > PREV(PRICE),\n    E AS PRICE <= PREV(PRICE) AND COUNT(*) <= 20\n)"
+    },
+    {
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/LandingPattern.java",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES S.TS AS START_TS, W.PRICE AS WEAK_PRICE, LAST(Y.PRICE) AS DESCENT_PRICE, Z.PRICE AS LANDING_PRICE, Z.TS - S.TS AS ELAPSED_NS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S W Y+ Z)\n  DEFINE\n    S AS S.VOLUME >= 500 AND S.PRICE <= 200,\n    W AS W.VOLUME < S.VOLUME AND W.PRICE <= S.PRICE,\n    Y AS Y.PRICE <= PREV(Y.PRICE) AND Y.VOLUME <= S.VOLUME AND Y.TS <= S.TS + 90000000000,\n    Z AS Z.PRICE < W.PRICE * 0.995 AND Z.VOLUME < W.VOLUME AND Z.TS <= S.TS + 90000000000\n)"
+    },
+    {
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/k1.query",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES S1.TS AS START_TS, FIRST(B1.TS) AS FIRST_SMALL_TS, LAST(B1.TS) AS LAST_SMALL_TS, B2.TS AS END_TS, S1.PRICE AS START_PRICE, B2.PRICE AS END_PRICE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S1 G* B1 (B1 | G)* B2)\n  DEFINE\n    S1 AS S1.VOLUME >= 500 AND S1.PRICE >= 500,\n    G AS G.TS - S1.TS <= 600000000,\n    B1 AS B1.VOLUME < 100 AND B1.PRICE > S1.PRICE,\n    B2 AS B2.VOLUME >= 100 AND B2.PRICE < S1.PRICE AND B2.PRICE > B1.PRICE AND B2.TS - S1.TS <= 600000000\n)"
+    },
+    {
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/k2.query",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES S1.TS AS START_TS, FIRST(B1.PRICE) AS FIRST_LOW_VOLUME_PRICE, FIRST(B2.PRICE) AS FIRST_BREAKOUT_PRICE, S2.PRICE AS PULLBACK_PRICE, FIRST(B3.PRICE) AS SECOND_LOW_VOLUME_PRICE, B4.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S1 G* B1 (B1 | G)* B2 G* S2 G* B3 (B3 | G)* B4)\n  DEFINE\n    S1 AS S1.VOLUME BETWEEN 300 AND 500 AND S1.PRICE < 500,\n    G AS G.TS - S1.TS <= 3000,\n    B1 AS B1.VOLUME BETWEEN 1000 AND 2000,\n    B2 AS B2.VOLUME BETWEEN 2000 AND 5000 AND B2.PRICE > S1.PRICE,\n    S2 AS S2.PRICE < B2.PRICE AND S2.VOLUME BETWEEN 300 AND 500,\n    B3 AS B3.VOLUME BETWEEN 1000 AND 2000 AND B3.PRICE >= S2.PRICE,\n    B4 AS B4.VOLUME BETWEEN 2000 AND 5000 AND B4.PRICE > S2.PRICE AND B4.TS - S1.TS <= 3000\n)"
+    },
+    {
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/kn1.query",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES S1.TS AS START_TS, S2.TS AS END_TS, S1.PRICE AS START_PRICE, S2.PRICE AS END_PRICE, COUNT(B1.*) AS SMALL_TRADE_COUNT, COUNT(B2.*) AS BLOCK_TRADE_COUNT\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S1 G* (B1 (B1 | G)* B2)* G* S2)\n  DEFINE\n    S1 AS S1.VOLUME >= 5000,\n    G AS G.TS - S1.TS <= 1000,\n    B1 AS B1.VOLUME < 1000,\n    B2 AS B2.VOLUME >= 5000,\n    S2 AS S2.VOLUME >= 5000 AND S2.PRICE > S1.PRICE * 1.1 AND S2.TS - S1.TS <= 1000\n)"
+    },
+    {
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/reg3.query",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES P1.TS AS START_TS, P3.PRICE AS FIRST_RISE_PRICE, P4.EXCHANGE AS NEW_EXCHANGE, P6.TS AS END_TS, P6.PRICE AS END_PRICE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(P1 G* P2 G* P3 G* P4 G* P5 G* P6)\n  DEFINE\n    P1 AS P1.VOLUME < 10 AND P1.PRICE > 400,\n    G AS G.TS - P1.TS <= 30000000000,\n    P2 AS P2.VOLUME >= 100 AND P2.PRICE > 400 AND P2.PRICE < 1.3 * P1.PRICE AND P2.TS BETWEEN 1722420000000000000 AND 1722423600000000000,\n    P3 AS P3.PRICE > 1.3 * P1.PRICE,\n    P4 AS P4.EXCHANGE != P1.EXCHANGE AND PRICE > 400,\n    P5 AS P5.CONDITIONS IS NULL,\n    P6 AS P6.PRICE > P4.PRICE AND P6.TS - P1.TS <= 30000000000\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES BASE.TS AS START_TS, LAST(SURGE.TS) AS SURGE_END_TS, COOL.TS AS COOL_TS, COUNT(SURGE.*) AS SURGE_COUNT, SUM(SURGE.VOLUME) AS SURGE_VOLUME\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(BASE SURGE{3,10} COOL{1,2})\n  DEFINE\n    BASE AS BASE.VOLUME BETWEEN 50 AND 500,\n    SURGE AS SURGE.VOLUME >= BASE.VOLUME * 10 AND SURGE.TS - BASE.TS <= 10000000000,\n    COOL AS COOL.VOLUME < PREV(COOL.VOLUME) / 2 AND COOL.VOLUME >= 50\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES BASE.TS AS BASE_TS, BASE.PRICE AS BASE_PRICE, MAX(JUMP.PRICE) AS PEAK_PRICE, REVERSAL.TS AS REVERSAL_TS, REVERSAL.PRICE AS REVERSAL_PRICE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(BASE JUMP+ REVERSAL)\n  DEFINE\n    JUMP AS JUMP.PRICE <= 300 AND JUMP.PRICE >= BASE.PRICE * 1.01 AND JUMP.TS - BASE.TS <= 60000000000,\n    REVERSAL AS REVERSAL.PRICE < LAST(JUMP.PRICE) * 0.99 AND COUNT(*) >= 20 AND REVERSAL.TS - BASE.TS <= 60000000000\n)"
+    },
+    {
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(UP.TS) AS START_TS, LAST(DOWN.TS) AS END_TS, COUNT(UP.*) AS UP_COUNT, COUNT(DOWN.*) AS DOWN_COUNT\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((UP DOWN){2,})\n  DEFINE\n    UP AS UP.PRICE > PREV(UP.PRICE),\n    DOWN AS DOWN.PRICE < PREV(DOWN.PRICE) AND DOWN.TS BETWEEN 1722427200000000000 AND 1722452400000000000\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO, CLASSIFIER() AS TRADE_CLASS, START_EVENT.PRICE AS START_PRICE, END_EVENT.PRICE AS END_PRICE\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(START_EVENT {- GAP*? -} END_EVENT)\n  DEFINE\n    START_EVENT AS PRICE BETWEEN 300 AND 500 AND VOLUME >= 500,\n    GAP AS GAP.TS - START_EVENT.TS <= 500000000,\n    END_EVENT AS VOLUME >= 500 AND END_EVENT.PRICE >= START_EVENT.PRICE * 1.02 AND END_EVENT.TS - START_EVENT.TS <= 500000000\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(OPENING.TS) AS FIRST_TS, LAST(OPENING.TS) AS FIFTH_TS, SUM(OPENING.VOLUME) AS OPENING_VOLUME\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(^ OPENING{5, 10})\n  DEFINE\n    OPENING AS OPENING.VOLUME < 100 AND OPENING.TS - FIRST(OPENING.TS) <= 1000000000\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(BASE.TS) AS BASE_START_TS, LAST(BASE.TS) AS BASE_END_TS, AVG(BASE.PRICE) AS BASE_AVG_PRICE, AVG(BASE.VOLUME) AS BASE_AVG_SIZE, SPIKE.TS AS SPIKE_TS, SPIKE.PRICE AS SPIKE_PRICE, SPIKE.VOLUME AS SPIKE_SIZE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(BASE{3,10} SPIKE)\n  DEFINE\n    BASE AS BASE.PRICE BETWEEN 100 AND 200 AND BASE.TS >= 1722441600000000000,\n    SPIKE AS SPIKE.PRICE > AVG(BASE.PRICE) * 1.01 AND SPIKE.VOLUME > AVG(BASE.VOLUME) * 5 AND SPIKE.TS - FIRST(BASE.TS) <= 60000000000\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-union-variables",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(TS) AS START_TS, LAST(TS) AS END_TS, COUNT(LARGE.*) AS NUMBER_LARGE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST LARGE\n  PATTERN((SMALL | MEDIUM){2,4} LARGE+)\n  SUBSET NORMAL = (SMALL, MEDIUM)\n  DEFINE\n    SMALL AS SMALL.VOLUME < 10000,\n    MEDIUM AS MEDIUM.VOLUME BETWEEN 15000 AND 25000,\n    LARGE AS LARGE.VOLUME >= 100000 AND SYMBOL IN ('AAPL', 'ADBE', 'AMAT', 'AMD')\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MID_TS, C.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.VOLUME >= 1000 AND PRICE >= 300,\n    B AS B.PRICE >= A.PRICE * 1.02 AND B.EXCHANGE = 'Q',\n    C AS C.PRICE <= A.PRICE * 0.998 AND C.PRICE >= A.PRICE * 0.995 AND C.TS - A.TS <= 500000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT SYMBOL, START_TS, END_TS, TOTAL_SIZE FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, G.TS AS END_TS, SUM(VOLUME) AS TOTAL_SIZE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.VOLUME < 50,\n    B AS B.PRICE > A.PRICE,\n    C AS C.VOLUME >= 100,\n    D AS D.EXCHANGE = 'Q',\n    E AS E.CONDITIONS IS NULL,\n    F AS F.PRICE < E.PRICE,\n    G AS G.VOLUME >= 500 AND G.TS - A.TS <= 5000000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, LAST(B.TS) AS FIRST_RUN_END, LAST(D.TS) AS SECOND_RUN_END, LAST(F.TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST D\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.PRICE BETWEEN 100 AND 150,\n    B AS B.VOLUME < 100 AND B.TS - A.TS <= 30000000000,\n    C AS C.VOLUME >= 500,\n    D AS D.PRICE > PREV(D.PRICE),\n    E AS E.EXCHANGE != A.EXCHANGE,\n    F AS F.PRICE < PREV(F.PRICE) AND F.TS - A.TS <= 30000000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, D.TS AS END_TS, COUNT(B.*) AS BURST_ROWS, SUM(B.VOLUME) AS BURST_VOLUME\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST C\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.VOLUME BETWEEN 50 AND 200,\n    B AS B.VOLUME > A.VOLUME * 10 AND B.TS - A.TS <= 60000000000,\n    C AS C.PRICE < PREV(C.PRICE),\n    D AS D.PRICE > A.PRICE * 1.005 AND D.TS - A.TS <= 60000000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES R.TRADE_ID AS FIRST_TRADE, B.TRADE_ID AS SECOND_TRADE, M.TRADE_ID AS LAST_TRADE, COUNT(GAP.*) AS GAP_COUNT\n  ONE ROW PER MATCH\n  PATTERN(R {- GAP* -} B {- GAP* -} M)\n  DEFINE\n    R AS R.PRICE < 120 AND R.VOLUME >= 500,\n    GAP AS GAP.TS - R.TS <= 40000,\n    B AS B.EXCHANGE != R.EXCHANGE AND B.PRICE BETWEEN R.PRICE * 0.99 AND R.PRICE * 1.01,\n    M AS M.PRICE BETWEEN R.PRICE * 1.02 AND R.PRICE * 1.1 AND M.TS - R.TS <= 40000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT SYMBOL, START_TS, END_TS, MATCH_VOLUME FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, E.TS AS END_TS, SUM(VOLUME) AS MATCH_VOLUME\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E)\n  DEFINE\n    A AS A.EXCHANGE = 'Q' AND A.VOLUME < 100,\n    B AS B.VOLUME >= 100,\n    C AS C.PRICE > B.PRICE,\n    D AS D.CONDITIONS IS NOT NULL,\n    E AS E.VOLUME >= 1000 AND E.TS - A.TS <= 15000000000\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST UP\n  PATTERN((STRT DOWN+ UP+)$)\n  DEFINE\n    STRT AS STRT.VOLUME >= 10000,\n    DOWN AS DOWN.PRICE < PREV(DOWN.PRICE) AND DOWN.PRICE >= 250,\n    UP AS UP.PRICE > PREV(UP.PRICE)\n)"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s13222-022-00404-3",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES BIG_TRADE.VOLUME * BIG_TRADE.PRICE AS TRADE_VALUE\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(BIG_TRADE)\n  DEFINE\n    BIG_TRADE AS BIG_TRADE.VOLUME * BIG_TRADE.PRICE >= 2500000\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO, CLASSIFIER() AS TRADE_CLASS, A.TS AS START_TS, B.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A {- GAP*? -} B)\n  DEFINE\n    A AS A.VOLUME >= 1000,\n    GAP AS GAP.TS - A.TS <= 120000000000,\n    B AS B.VOLUME >= A.VOLUME * 5 AND B.TS - A.TS <= 120000000000\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, C.TS AS END_TS, COUNT(B.*) AS MIDDLE_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B+ C)\n  DEFINE\n    A AS A.PRICE >= 250,\n    B AS B.VOLUME < 500 AND B.TS - A.TS <= 120000000000,\n    C AS C.VOLUME >= 2000 AND COUNT(*) <= 30 AND C.TS - A.TS <= 120000000000\n)"
+    },
+    {
+      "url": "https://docs.snowflake.com/en/sql-reference/constructs/match_recognize",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(S1.TS) AS START_TS, S2.TS AS END_TS, COUNT(*) AS ROW_COUNT\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S1{1,25} NOT_S1{1,25} S2)\n  DEFINE\n    S1 AS S1.VOLUME < 50,\n    NOT_S1 AS NOT_S1.VOLUME >= 50,\n    S2 AS S2.VOLUME >= 5000 AND S2.TS - FIRST(S1.TS) <= 60000000000\n)"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s13222-022-00404-3",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES LIMIT_50.TS AS START_TS, DECREASE_10.TS AS DROP_TS, INCREASE_5.TS AS RECOVERY_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(LIMIT_50 DECREASE_10 INCREASE_5)\n  DEFINE\n    LIMIT_50 AS LIMIT_50.PRICE <= 50,\n    DECREASE_10 AS DECREASE_10.PRICE <= PREV(DECREASE_10.PRICE) * 0.90,\n    INCREASE_5 AS INCREASE_5.PRICE >= PREV(INCREASE_5.PRICE) * 1.05\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS, A.PRICE AS START_PRICE, B.PRICE AS END_PRICE\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A GAP* B)\n  DEFINE\n    A AS A.PRICE >= 450,\n    GAP AS GAP.TS - A.TS <= 600000000000,\n    B AS B.PRICE > A.PRICE * 2 AND B.PRICE <= 900\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(B.TS) AS PEAK_TS, C.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A+ B+ C)\n  DEFINE\n    A AS A.PRICE BETWEEN 100 AND 200 AND A.VOLUME >= 100,\n    B AS B.PRICE > LAST(A.PRICE) AND B.PRICE <= 300 AND B.TS - FIRST(A.TS) <= 15000000000,\n    C AS C.VOLUME >= 5000 AND C.PRICE > LAST(B.PRICE) AND C.TS - FIRST(A.TS) <= 15000000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, D.TS AS END_TS, MAX(C.VOLUME) AS MAX_CHAIN_SIZE\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A+ B+ C+ D)\n  DEFINE\n    A AS A.VOLUME BETWEEN 100 AND 500,\n    B AS B.VOLUME <= 1500,\n    C AS C.VOLUME / 2 < LAST(B.VOLUME) AND C.VOLUME > FIRST(B.VOLUME) * 3 AND C.VOLUME >= 4000,\n    D AS D.VOLUME > LAST(C.VOLUME) AND D.TS - FIRST(A.TS) <= 9000000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST D\n  PATTERN((A+ B+ C | C A+ B+) D)\n  DEFINE\n    A AS A.PRICE BETWEEN 80 AND 500 AND A.VOLUME >= 500,\n    B AS B.PRICE > LAST(A.PRICE) AND B.PRICE <= 240 AND B.VOLUME >= 500,\n    C AS C.EXCHANGE = 'Q' AND C.VOLUME >= 500,\n    D AS COUNT(*) <= 10\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(B.TS) AS END_TS, COUNT(A.*) AS A_ROWS, COUNT(B.*) AS B_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B A*)+)\n  DEFINE\n    A AS A.PRICE BETWEEN 100 AND 300 AND A.VOLUME BETWEEN 100 AND 500,\n    B AS B.PRICE BETWEEN 200 AND 400 AND B.VOLUME BETWEEN 50 AND 1000 AND COUNT(*) >= 200\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A+ B+ C+)\n  DEFINE\n    A AS A.PRICE BETWEEN 100 AND 300 AND A.VOLUME BETWEEN 100 AND 500,\n    B AS B.PRICE BETWEEN 150 AND 250 AND B.VOLUME BETWEEN 50 AND 1000,\n    C AS C.PRICE BETWEEN 200 AND 400 AND C.VOLUME BETWEEN 400 AND 2000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ALL ROWS PER MATCH\n  PATTERN(S (A+ | B+)+ C)\n  DEFINE\n    S AS MOD(TRADE_ID, 10) =1, \n    A AS A.PRICE BETWEEN 90 AND 210,\n    B AS B.PRICE BETWEEN 90 AND 210,\n    C AS C.VOLUME >= 10000 AND C.CONDITIONS IS NOT NULL AND COUNT(*) <= 50\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, C.TS AS END_TS, COUNT(B.*) AS NESTED_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A? B+)+ C)\n  DEFINE\n    A AS A.FEED IN ('SIP', 'IEX') AND A.EXCHANGE = 'P' AND A.VOLUME < 2000,\n    B AS B.EXCHANGE = 'Q' AND B.VOLUME BETWEEN 500 AND 5000,\n    C AS C.VOLUME >= 10000 AND C.TS <= 1789978925000000000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, C.TS AS END_TS, COUNT(B.*) AS BRANCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A | A B)+ C)\n  DEFINE\n    A AS A.TAPE = 'C' AND A.PRICE > 100 AND A.VOLUME > 1000,\n    B AS B.TAPE = 'C' AND B.VOLUME BETWEEN 900 AND 1000,\n    C AS C.VOLUME >= 5000 AND C.TS <= 1722441600000000000 AND COUNT(*) <= 20\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(TS) AS START_TS, D.TS AS END_TS, COUNT(*) AS OPTIONAL_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A | B C?)+ D)\n  DEFINE\n    A AS A.PRICE BETWEEN 100 AND 150,\n    B AS B.PRICE BETWEEN 150 AND 200,\n    C AS C.VOLUME < 1000,\n    D AS D.PRICE >= 220 AND D.VOLUME >= 1000\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, D.TS AS END_TS, COUNT(*) AS PREFIX_ALTERNATIVES\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A B | A C | A)+ D)\n  DEFINE\n    A AS A.EXCHANGE = 'Q' AND A.VOLUME > 5000,\n    B AS B.VOLUME > 10000,\n    C AS C.CONDITIONS IS NULL,\n    D AS D.VOLUME >= 10000 AND D.TS <= 1722441600000000000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A | A B)* C)\n  DEFINE\n    A AS A.VOLUME > 5000 AND A.PRICE > 200,\n    B AS B.VOLUME BETWEEN 2500 AND 5000,\n    C AS C.VOLUME >= 10000 AND C.CONDITIONS IS NOT NULL\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(B.TS) AS START_TS, D.TS AS END_TS, COUNT(B.*) AS CORE_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(((A?? B{2,5} C??)+ D))\n  DEFINE\n    A AS A.PRICE < 200,\n    B AS B.PRICE BETWEEN 100 AND 300,\n    C AS C.PRICE BETWEEN 250 AND 400,\n    D AS D.VOLUME >= 5000 AND COUNT(*) <= 50\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(B.TS) AS START_TS, D.TS AS END_TS, COUNT(*) AS NESTED_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((((A?? | X?) B{2,9} C??)+ D))\n  DEFINE\n    A AS A.EXCHANGE = 'Q',\n    X AS X.TAPE = 'C' AND X.PRICE > 400,\n    B AS B.VOLUME BETWEEN 3000 AND 6000,\n    C AS C.CONDITIONS IS NULL,\n    D AS D.VOLUME >= 10000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(TS) AS START_TS, LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A+ B*)+ C)\n  DEFINE\n    A AS A.VOLUME BETWEEN 100 AND 300 AND A.PRICE >= 400,\n    B AS B.VOLUME BETWEEN 200 AND 400,\n    C AS C.PRICE >= 500 AND COUNT(*) <= 20\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A* B+)+ C)\n  DEFINE\n    A AS A.VOLUME <= 2000 AND A.SYMBOL = 'AAPL',\n    B AS B.VOLUME >= 5000 AND B.SYMBOL = 'MSFT',\n    C AS C.VOLUME >= 10000 AND COUNT(*) <= 20\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE EXCHANGE = 'Z') MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A+ | B+)+ C)\n  DEFINE\n    A AS A.VOLUME <= 2500,\n    B AS B.VOLUME <= 1500,\n    C AS C.VOLUME >= 5000 AND C.SYMBOL = 'AAPL'\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE TAPE = 'A') MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, C.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A B+ | A B B+)+ C)\n  DEFINE\n    A AS A.EXCHANGE = 'Q',\n    B AS B.FEED = 'SIP',\n    C AS C.VOLUME >= 5000 AND C.CONDITIONS IS NOT NULL\n)"
+    },
+    {
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A*? B+ C)\n  DEFINE\n    A AS A.PRICE >= 250 AND A.VOLUME >= 100,\n    B AS B.PRICE * B.VOLUME >= 100000,\n    C AS C.CONDITIONS IS NOT NULL AND C.VOLUME >= 5000\n)"
+    },
+    {
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A+ B+ C* D)\n  DEFINE\n    A AS A.VOLUME < 1000,\n    B AS B.VOLUME BETWEEN 500 AND 1500,\n    C AS C.VOLUME BETWEEN 2000 AND 3000 AND TAPE = 'A',\n    D AS D.VOLUME >= 10000 AND COUNT(*) <= 10\n)"
+    },
+    {
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL, EXCHANGE\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, C.TS AS END_TS, COUNT(*) AS RELUCTANT_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A*? B* C)\n  DEFINE\n    A AS A.PRICE < 200,\n    B AS B.PRICE BETWEEN 150 AND 250,\n    C AS C.PRICE > 300 AND C.VOLUME >= 5000\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(TS) AS START_TS, C.TS AS END_TS, COUNT(*) AS RELUCTANT_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S A+? B+ C)\n  DEFINE\n    A AS A.VOLUME <= 1000,\n    B AS B.VOLUME >= 500,\n    C AS C.VOLUME >= 10000 AND C.CONDITIONS IS NOT NULL AND S.TAPE = 'Y'\n)"
+    },
+    {
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(TS) AS START_TS, D.TS AS END_TS, COUNT(*) AS ADJACENT_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A | B){1,20} (B | C){1,20} D)\n  DEFINE\n    A AS A.PRICE <= 200,\n    B AS B.PRICE BETWEEN 150 AND 250,\n    C AS C.PRICE >= 200,\n    D AS D.VOLUME >= 10000 AND MATCH_NUMBER() < 200\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, D.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* (B | C) Z* D)\n  DEFINE\n    A AS A.VOLUME >= 500,\n    Z AS Z.TS - A.TS <= 10000000,\n    B AS B.VOLUME BETWEEN 1000 AND 2000,\n    C AS C.VOLUME BETWEEN 100 AND 500,\n    D AS D.VOLUME >= 10000 AND D.TS - A.TS <= 10000000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B+ C*)+ D)\n  DEFINE\n    A AS A.PRICE < 150,\n    B AS B.PRICE BETWEEN 100 AND 300,\n    C AS C.PRICE BETWEEN 100 AND 300,\n    D AS D.PRICE >= 500 AND D.VOLUME >= 4000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B? C+)+ D)\n  DEFINE\n    A AS A.VOLUME < 100,\n    B AS B.VOLUME BETWEEN 50 AND 500,\n    C AS C.VOLUME BETWEEN 100 AND 1000,\n    D AS D.VOLUME >= 10000\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE VOLUME >= 200) MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS ATS, D.TS AS DTS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B{1,5} C{0,5}){2,10} D)\n  DEFINE\n    A AS A.TAPE = 'C',\n    B AS B.VOLUME BETWEEN 500 AND 1500,\n    C AS C.VOLUME BETWEEN 1000 AND 2000,\n    D AS D.CONDITIONS IS NOT NULL AND D.VOLUME >= 5000\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, B.TS AS END_TS, COUNT(A.*) AS PARTITION_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(^ A{0, 100} B{5, 100} $)\n  DEFINE\n    A AS A.CONDITIONS IS NOT NULL AND A.VOLUME <= 500,\n    B AS B.CONDITIONS IS NULL AND B.VOLUME >= 5000\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO, A.TS AS START_TS, C.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A {- (B+)+ -} C)\n  DEFINE\n    A AS A.EXCHANGE = 'Q' AND A.VOLUME >= 500,\n    B AS B.PRICE BETWEEN 100 AND 400,\n    C AS C.VOLUME >= 10000 AND COUNT(*) <= 30\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(B.TS) AS END_TS, C.VOLUME AS TERMINAL_SIZE\n  ONE ROW PER MATCH\n  PATTERN(PERMUTE(A+ B+, C))\n  DEFINE\n    A AS A.PRICE BETWEEN 100 AND 300,\n    B AS B.PRICE BETWEEN 100 AND 300,\n    C AS C.VOLUME >= 10000 AND C.VOLUME / 5 > PREV(C.VOLUME)\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(D.TS) AS END_TS, COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  PATTERN(A+ PERMUTE(B, C) D+)\n  DEFINE\n    A AS A.VOLUME <= 1000,\n    B AS B.VOLUME BETWEEN 500 AND 1500 AND B.TS <= 1722441600000,\n    C AS C.EXCHANGE = 'Q' AND C.VOLUME * C.PRICE >= 10000,\n    D AS D.VOLUME >= 1000 AND D.TS - FIRST(A.TS) <= 10000000\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(B.TS) AS START_TS, D.TS AS END_TS, COUNT(B.*) AS B_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((B+ C??)* D)\n  DEFINE\n    B AS B.FEED = 'SIP' AND B.VOLUME < 2000,\n    C AS C.TAPE = 'C',\n    D AS D.VOLUME >= 10000 AND D.CONDITIONS IS NOT NULL\n)"
+    },
+    {
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, C.TS AS END_TS, COUNT(N.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A N*? B N*? C)\n  DEFINE\n    A AS A.PRICE < 100,\n    B AS B.PRICE < A.PRICE * 0.98,\n    C AS C.PRICE > B.PRICE * 0.98 AND C.TS - A.TS <= 500000000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(C.TS) AS END_TS, COUNT(*) AS BRANCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A+ B+ C+)\n  DEFINE\n    A AS VOLUME > 1000,\n    B AS VOLUME > 800 AND MATCH_NUMBER() > 100,\n    C AS VOLUME < 2000\n)"
+    },
+    {
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, D.TS AS END_TS, COUNT(*) AS WILDCARD_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST U\n  PATTERN(A (B | C)+ D)\n  SUBSET U = (B, C)\n  DEFINE\n    A AS A.EXCHANGE = 'Q' AND A.VOLUME < 100 AND SYMBOL IN ('AAPL', 'MSFT', 'NVDA'),\n    B AS B.VOLUME > 1000,\n    C AS C.PRICE BETWEEN 50 AND 500,\n    D AS D.VOLUME >= 10000 AND D.CONDITIONS IS NOT NULL\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, D.TS AS END_TS, COUNT(B.*) AS B_ROWS, COUNT(C.*) AS C_ROWS\n  ONE ROW PER MATCH\n  PATTERN(A (B+ | B C+)+ D)\n  DEFINE\n    A AS A.TAPE = 'C',\n    B AS B.PRICE BETWEEN 100 AND 300 AND B.TS <= 1722401600000000000,\n    C AS C.PRICE BETWEEN 200 AND 400,\n    D AS D.VOLUME >= 10000 AND COUNT(*) <= 15\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY EXCHANGE\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(A.TS) AS PREFIX_END_TS, B.TS AS END_TS, COUNT(A.*) AS PREFIX_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A+)+ B)\n  DEFINE\n    A AS A.EXCHANGE = 'Q' AND A.PRICE BETWEEN 100 AND 300,\n    B AS B.VOLUME >= 10000 AND B.PRICE > LAST(A.PRICE)\n)"
+    },
+    {
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY FEED, TAPE\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, LAST(C.TS) AS RANGE_END_TS, D.TS AS END_TS, COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A{2,} B{2,} C{2,} D)\n  DEFINE\n    A AS A.FEED = 'SIP' AND A.PRICE BETWEEN 100 AND 400 AND A.VOLUME BETWEEN 100 AND 500,\n    B AS B.TAPE = 'C' AND B.PRICE BETWEEN 150 AND 350 AND B.VOLUME BETWEEN 50 AND 1000,\n    C AS C.PRICE BETWEEN 200 AND 300 AND C.VOLUME BETWEEN 400 AND 2000,\n    D AS D.VOLUME >= 10000 AND D.TS - FIRST(A.TS) <= 60000000000\n)"
+    },
+    {
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL, EXCHANGE\n  ORDER BY TS, TRADE_ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B)\n  DEFINE\n    A AS A.PRICE >= 500,\n    B AS B.PRICE >= A.PRICE * 1.2\n)"
+    },
+    {
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL, EXCHANGE\n  ORDER BY TS, TRADE_ID\n  MEASURES A.PRICE AS APRICE, A.TS AS ATS, B.PRICE AS BPRICE, B.TS AS BTS\n  ONE ROW PER MATCH\n  PATTERN(A GAP* B)\n  DEFINE\n    A AS A.PRICE >= 400,\n    B AS B.PRICE >= A.PRICE * 1.1 AND COUNT(*) <= 100\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z{1,20} B)\n  DEFINE\n    A AS A.VOLUME BETWEEN 1000 AND 2000,\n    B AS B.VOLUME >= 100000\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z{2,10} B Z{1,10} C)\n  DEFINE\n    A AS A.PRICE <= 100,\n    B AS B.VOLUME >= 1000 AND B.PRICE > A.PRICE AND B.VOLUME <= A.VOLUME,\n    C AS C.VOLUME >= 5000\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A {- G*? -} B)\n  DEFINE\n    A AS A.TRADE_ID >= 1678 AND A.TRADE_ID < 1702,\n    B AS B.TRADE_ID >= 1702 AND B.TRADE_ID < 1726\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A {- G1* -} B {- G2*? -} C)\n  DEFINE\n    A AS C.VOLUME >= 250 AND A.TRADE_ID < 5186,\n    B AS C.VOLUME >= 500 AND B.TRADE_ID < 5592 AND B.PRICE > 1.05 * A.PRICE,\n    C AS C.VOLUME >= 1000 AND C.TRADE_ID < 6007\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS\n  ALL ROWS PER MATCH\n  PATTERN(A {- G1*? -} B {- G2* -} C)\n  DEFINE\n    A AS A.VOLUME >= 2000,\n    B AS B.VOLUME >= A.VOLUME * 10,\n    C AS C.VOLUME >= B.VOLUME * 10 AND C.TRADE_ID < 39019\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z{1,20} B)\n  DEFINE\n    A AS A.TRADE_ID >= 1678 AND A.TRADE_ID < 1702,\n    B AS B.TRADE_ID >= 1702 AND B.TRADE_ID < 1726\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z{2,10} B Z{1,10} C)\n  DEFINE\n    A AS A.TRADE_ID >= 4792 AND A.TRADE_ID < 5186,\n    B AS B.TRADE_ID >= 5186 AND B.TRADE_ID < 5592,\n    C AS C.TRADE_ID >= 5592 AND C.TRADE_ID < 6007\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS RANGE_TS, C.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C)\n  DEFINE\n    A AS A.EXCHANGE = 'D' AND A.FEED = 'sip',\n    B AS B.TS >= 1722434294228904881 AND B.TS < 1722434326370378742,\n    C AS C.EXCHANGE IN ('Q', 'P', 'Z') AND C.FEED = 'sip'\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-recognition-expressions",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS BEFORE_RANGE_TS, C.TS AS RANGE_TS, D.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D)\n  DEFINE\n    A AS A.EXCHANGE = 'D' AND A.FEED = 'sip',\n    B AS B.EXCHANGE = 'Z' AND B.FEED != 'sip',\n    C AS C.TS >= 1722439454704801130 AND C.TS < 1722440160331467992,\n    D AS D.EXCHANGE IN ('Q', 'P', 'Z') AND D.FEED = 'sip'\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, C.TS AS RANGE_TS, E.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A? B C D E)\n  DEFINE\n    A AS A.EXCHANGE = 'D' AND A.FEED != 'sip',\n    B AS B.EXCHANGE = 'D' AND B.FEED = 'sip',\n    C AS PREV(C.TS, 1) >= 1722450837513686408 AND C.TS < 1722515175948760483,\n    E AS E.EXCHANGE IN ('Q', 'P', 'Z', 'K') AND D.FEED = 'sip'\n)"
+    },
+    {
+      "url": "https://asktom.oracle.com/ords/f?p=100%3A11%3A%3A%3A%3A%3AP11_QUESTION_ID%3A9539596000346559947",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n    PARTITION BY SYMBOL\n    ORDER BY TS, TRADE_ID\n    MEASURES PRICE * VOLUME AS TOTAL_VALUE\n    ALL ROWS PER MATCH\n    AFTER MATCH SKIP TO NEXT ROW\n    PATTERN (A (B | Z)+ C)\n    DEFINE\n        A AS A.PRICE * A.VOLUME >= 1000000,\n        B AS B.PRICE * B.VOLUME >= 1000000,\n        C AS 1.1 * C.PRICE < FIRST(A.PRICE) AND COUNT(*) <= 15\n)"
+    },
+    {
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n    PARTITION BY SYMBOL\n    ORDER BY TS, TRADE_ID\n    ALL ROWS PER MATCH\n    AFTER MATCH SKIP TO NEXT ROW\n    PATTERN (A B{3,8} C)\n    DEFINE\n        A AS A.PRICE * A.VOLUME >= 1000000 AND A.TAPE = 'C' AND A.FEED = 'sip',\n        B AS B.PRICE >= PREV(B.PRICE),\n        C AS C.PRICE < PREV(C.PRICE)\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n    PARTITION BY SYMBOL\n    ORDER BY TS, TRADE_ID\n    MEASURES A.TS AS START_TS, D.TS AS END_TS, SUM(VOLUME) AS SUM_SIZE\n    ONE ROW PER MATCH\n    PATTERN(A (B+ | C+)+ D)\n    DEFINE\n        A AS VOLUME >= 2000,\n        B AS VOLUME >= 500 AND PRICE < LAST(A.PRICE),\n        C AS VOLUME >= 500,\n        D AS PRICE > LAST(A.PRICE)\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/cd/E15523_01/doc.1111/e14476/examples.htm",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n    PARTITION BY SYMBOL\n    ORDER BY TS DESC, TRADE_ID DESC\n    MEASURES CLASSIFIER() AS VAR_LABEL\n    ALL ROWS PER MATCH\n    PATTERN((A | B){1,3} (A | B){1,3} C)\n    DEFINE\n        A AS EXCHANGE = 'D',\n        B AS EXCHANGE = 'Q',\n        C AS EXCHANGE = 'P' AND MATCH_NUMBER() < 100\n)"
+    },
+    {
+      "url": "https://arxiv.org/abs/2401.12639",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n    PARTITION BY SYMBOL\n    ORDER BY TS, TRADE_ID\n    MEASURES MATCH_NUMBER() AS MN, S.TS AS START_TS, C.TS AS END_TS\n    ALL ROWS PER MATCH\n    PATTERN (S A (A | B){5, 12} C)\n    DEFINE\n        S AS S.VOLUME >= 1000 AND S.PRICE > 10,\n        A AS PRICE BETWEEN 218.7 AND 228.259,\n        B AS PRICE BETWEEN 218.7 AND 228.259,\n        C AS SUM(A.PRICE) > 200 AND C.PRICE > 10 AND SUM(PRICE) <= 2000 AND MATCH_NUMBER() < 2000\n)"
+    },
+    {
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n    PARTITION BY SYMBOL\n    ORDER BY TS, TRADE_ID\n    MEASURES MATCH_NUMBER() AS MN, LAST(C.TS) AS END_TS\n    ALL ROWS PER MATCH\n    PATTERN (A (A | B){10, 20} C)\n    DEFINE\n        A AS VOLUME BETWEEN 1 AND 8189664 AND SYMBOL = 'AAPL',\n        B AS VOLUME BETWEEN 1 AND 8189664,\n        C AS MAX(A.VOLUME) <= 8189664 AND MATCH_NUMBER() < 2000\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z{1,8} B)\n  DEFINE\n    A AS A.CONDITIONS LIKE '%7%',\n    B AS B.CONDITIONS LIKE '%4%' AND B.CONDITIONS NOT LIKE '%7%' AND B.SYMBOL IN ('AAPL', 'ADBE', 'AMAT', 'AMD', 'AMZN', 'AVGO', 'CSCO', 'GOOG', 'GOOGL', 'INTC')\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL, EXCHANGE\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {- G*? -} B)\n  DEFINE\n    A AS A.PRICE <= 21.3243,\n    B AS B.PRICE > 21.3243 AND B.PRICE <= 22.7212\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS RANGE_TS, C.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A B C)\n  DEFINE\n    A AS A.EXCHANGE = 'A',\n    B AS B.EXCHANGE IN ('C', 'X', 'M'),\n    C AS C.EXCHANGE IN ('K', 'Z')\n)"
+    },
+    {
+      "url": "https://arxiv.org/abs/2401.12639",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE TAPE = 'C') MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES S.TS AS START_TS, FINISH.TS AS END_TS, MATCH_NUMBER() AS MN\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(S (A | B){2,6} FINISH)\n  DEFINE\n    S AS S.PRICE * S.VOLUME >= 713836,\n    A AS A.PRICE * A.VOLUME >= 117042 AND A.PRICE * A.VOLUME < 713836,\n    B AS B.PRICE * B.VOLUME >= 25445 AND B.PRICE * B.VOLUME < 117042,\n    FINISH AS FINISH.PRICE * FINISH.VOLUME < 25445\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY TAPE\n  ORDER BY TS, TRADE_ID\n  MEASURES FIRST(A.TS) AS START_TS, C.TS AS END_TS, COUNT(A.*) AS A_ROWS\n  ONE ROW PER MATCH\n  PATTERN(A (B A*)+ C)\n  DEFINE\n    A AS A.SYMBOL = 'AAPL' AND A.VOLUME >= 250,\n    B AS B.SYMBOL = 'ADBE' AND B.VOLUME >= 50,\n    C AS C.SYMBOL IN ('AMAT', 'AMD')\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY EXCHANGE\n  ORDER BY TRADE_ID, TS\n  MEASURES A.TRADE_ID AS START_ID, B.TRADE_ID AS MIDDLE_ID, C.TRADE_ID AS END_ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST B\n  PATTERN(A {- G1* -} B {- G2*? -} C)\n  DEFINE\n    A AS A.TRADE_ID <= 13,\n    B AS B.TRADE_ID > 13 AND B.TRADE_ID <= 105,\n    C AS C.TRADE_ID > 105 AND C.TRADE_ID <= 1687\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE FEED = 'sip') MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A Z{0,4} B Z{1,6} C)\n  DEFINE\n    A AS A.TAPE = 'A' AND A.EXCHANGE = 'H',\n    B AS B.TAPE = 'A' AND B.EXCHANGE IN ('P', 'Z', 'N'),\n    C AS C.TAPE = 'C' AND C.EXCHANGE IN ('K', 'Z')\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY TAPE\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {- (G1 | G2)+ -} B)\n  SUBSET U = (G1, G2)\n  DEFINE\n    A AS A.CONDITIONS LIKE '%7%' AND A.VOLUME >= 1000,\n    G1 AS G1.VOLUME BETWEEN 100 AND 800,\n    G2 AS G1.VOLUME < 100,\n    B AS B.CONDITIONS LIKE '%4%' AND B.CONDITIONS NOT LIKE '%7%' AND COUNT(U.*) <= 10\n)"
+    },
+    {
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS DESC, TRADE_ID DESC\n  MEASURES A.TS AS START_TS, B.TS AS RANGE_TS, C.TS AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C)\n  DEFINE\n    A AS A.TS <= 1722413780327870720,\n    B AS B.TS > 1722413780327870720 AND B.TS <= 1722427050100101376,\n    C AS C.TS > 1722427050100101376 AND C.TS <= 1722434297247974912\n)"
+    },
+    {
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY EXCHANGE\n  ORDER BY TS, TRADE_ID\n  MEASURES S.TS AS START_TS, FINISH.TS AS END_TS, COUNT(*) AS MATCH_ROWS\n  ALL ROWS PER MATCH\n  PATTERN(S (A | B){3,9} FINISH)\n  DEFINE\n    S AS S.PRICE <= 21.3243,\n    A AS A.PRICE > 21.3243 AND A.PRICE <= 22.7212,\n    B AS B.PRICE > 22.7212 AND B.PRICE <= 42.0270,\n    FINISH AS FINISH.PRICE > 42.0270\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, D.TS AS END_TS, COUNT(B.*) AS B_ROWS, COUNT(C.*) AS C_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST D\n  PATTERN(A (B+ | C+)+ D)\n  DEFINE\n    A AS A.VOLUME >= 4328,\n    B AS B.VOLUME >= 827 AND B.VOLUME < 4328,\n    C AS C.VOLUME >= 106 AND C.VOLUME < 827,\n    D AS D.VOLUME < 106\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#permutation",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE FEED = 'sip') MATCH_RECOGNIZE(\n  PARTITION BY TAPE\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS A_TS, B.TS AS B_TS, C.TS AS C_TS, D.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(PERMUTE(A, B, C) D)\n  DEFINE\n    A AS A.CONDITIONS LIKE '%F%' AND A.EXCHANGE = 'A',\n    B AS B.CONDITIONS LIKE '%F%' AND B.EXCHANGE = 'N',\n    C AS C.CONDITIONS LIKE '%F%' AND C.EXCHANGE IN ('P', 'Z'),\n    D AS D.CONDITIONS NOT LIKE '%F%' AND D.EXCHANGE = 'D' AND MATCH_NUMBER() < 2000\n)"
+    },
+    {
+      "url": "https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#best_practices_for_pattern_recognition",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A Z{2,20} B)\n  DEFINE\n    A AS A.TAPE = 'A' AND A.EXCHANGE = 'H',\n    B AS B.TAPE = 'C' OR (B.TAPE = 'A' AND B.EXCHANGE IN ('K', 'Z'))\n)"
+    },
+    {
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY EXCHANGE\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {- G1* -} B {- G2*? -} C)\n  DEFINE\n    A AS A.CONDITIONS LIKE '%7%',\n    B AS B.CONDITIONS LIKE '%4%' AND B.CONDITIONS NOT LIKE '%7%' AND B.SYMBOL IN ('AAPL', 'ADBE', 'AMAT', 'AMD', 'AMZN', 'AVGO', 'CSCO', 'GOOG', 'GOOGL', 'INTC'),\n    C AS C.CONDITIONS LIKE '%T%' AND C.CONDITIONS NOT LIKE '%4%' AND C.CONDITIONS NOT LIKE '%7%'\n)"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TRADE_ID, TS\n  MEASURES A.TRADE_ID AS START_ID, B.TRADE_ID AS RANGE_ID, LAST(C.TRADE_ID) AS END_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST C\n  PATTERN(A B C{1,3})\n  DEFINE\n    A AS A.TRADE_ID <= 13 AND A.TS_ISO LIKE '%-07-31%',\n    B AS B.TRADE_ID > 13 AND B.TRADE_ID <= 105,\n    C AS C.TRADE_ID > 105 AND C.TRADE_ID <= 1687 AND C.TS_ISO LIKE '%2024-07-31%'\n)"
+    },
+    {
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE FEED = 'sip') MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, D.TS AS END_TS, COUNT(B.*) AS B_ROWS, COUNT(C.*) AS C_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B+ | B C+)+ D)\n  DEFINE\n    A AS A.EXCHANGE = 'D' AND A.TS_ISO LIKE '%-08-01%',\n    B AS B.EXCHANGE IN ('C', 'X', 'M'),\n    C AS C.EXCHANGE IN ('K', 'Z'),\n    D AS D.EXCHANGE = 'D'\n)"
+    },
+    {
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "sql": "SELECT * FROM NASDAQ MATCH_RECOGNIZE(\n  PARTITION BY TAPE\n  ORDER BY TS, TRADE_ID\n  MEASURES MATCH_NUMBER() AS MN, D.TS AS END_TS\n  ALL ROWS PER MATCH\n  PATTERN((A | B){2,5} (A | C){2,5} D)\n  DEFINE\n    A AS A.PRICE * A.VOLUME >= 713836,\n    B AS B.PRICE * B.VOLUME >= 117042 AND B.PRICE * B.VOLUME < 713836,\n    C AS C.PRICE * C.VOLUME >= 25445 AND C.PRICE * C.VOLUME < 117042,\n    D AS D.PRICE * D.VOLUME < 25445\n)"
+    },
+    {
+      "url": "https://dl.acm.org/doi/abs/10.14778/3494124.3494137",
+      "sql": "SELECT * FROM (SELECT * FROM NASDAQ WHERE TAPE IN ('A', 'C')) MATCH_RECOGNIZE(\n  PARTITION BY SYMBOL\n  ORDER BY TS, TRADE_ID\n  MEASURES A.TS AS START_TS, B.TS AS MIDDLE_TS, C.TS AS END_TS, COUNT(Z.*) AS GAP_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST B\n  PATTERN(A Z{2,20} B Z{2,10} C)\n  DEFINE\n    A AS A.VOLUME * A.PRICE >= 5000 AND A.VOLUME > 50,\n    B AS B.VOLUME * B.PRICE >= 4 * (A.VOLUME * A.PRICE),\n    C AS C.VOLUME * C.PRICE >= 4 * (B.VOLUME * B.PRICE)\n)"
+    }
+  ]
+}

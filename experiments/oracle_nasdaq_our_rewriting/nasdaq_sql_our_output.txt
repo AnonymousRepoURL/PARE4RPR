@@ -1,0 +1,111 @@
+rpr_sql> python .\our_method.py .\data\nasdaq_sql.json `
+>>   --system oracle `
+>>   --sample-table NASDAQ_SAMPLE `
+>>   --sample-must-appear-partition-filter `
+>>   --sample-window-condition-prefilter `
+>>   --schema EXPR `
+>>   --runs 3 `
+>>   --timeout 5 `
+>>   --fetch-size 2000
+[1/100] 0.035s (sampling 0.002s): ordered_range_pushdown
+[2/100] 0.061s (sampling 0.005s): measures_variable_renaming, redundant_subset_variable_removal, count_range_pushdown, must_appear_partition_filter_pushdown
+[3/100] 0.092s (sampling 0.007s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation
+[4/100] 0.014s (sampling 0.000s): define_independent_constraint_propagation, must_appear_var_false_pushdown
+[5/100] 0.172s (sampling 0.009s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[6/100] 0.090s (sampling 0.005s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[7/100] 0.194s (sampling 0.006s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, row_filter_4_special_pattern, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[8/100] 0.044s (sampling 0.007s): define_independent_constraint_propagation, define_independent_constraint_propagation, incremental_condition_pushdown, define_independent_constraint_propagation
+[9/100] 0.047s (sampling 0.005s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, implied_incremental_condition_removal, incremental_condition_pushdown, define_independent_constraint_propagation
+[10/100] 0.030s (sampling 0.005s): define_independent_constraint_propagation, define_independent_constraint_propagation, ordered_range_pushdown, must_appear_partition_filter_pushdown, define_independent_constraint_propagation
+[11/100] 0.095s (sampling 0.013s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, row_filter_4_special_pattern, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning_via_join
+[12/100] 0.036s (sampling 0.013s): anchor_top_k_filter, define_independent_constraint_propagation, define_independent_constraint_propagation, define_independent_constraint_propagation
+[13/100] 0.040s (sampling 0.002s): define_independent_constraint_propagation, define_independent_constraint_propagation, ordered_range_pushdown, define_independent_constraint_propagation
+[14/100] 0.025s (sampling 0.004s): redundant_subset_variable_removal, alternation_variable_merge, define_partition_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[15/100] 0.122s (sampling 0.008s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, row_filtering_via_window_func, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[16/100] 0.111s (sampling 0.009s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[17/100] 0.097s (sampling 0.007s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[18/100] 0.057s (sampling 0.008s): define_independent_constraint_propagation, define_independent_constraint_propagation, implied_incremental_condition_removal, incremental_condition_pushdown, define_independent_constraint_propagation
+[19/100] 0.119s (sampling 0.008s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, row_filtering_via_window_func, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[20/100] 0.091s (sampling 0.007s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[21/100] 0.046s (sampling 0.009s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning_via_join
+[22/100] 0.013s (sampling 0.000s): single_variable_pattern_pushdown, column_pruning_via_join
+[23/100] 0.073s (sampling 0.011s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, row_filter_4_special_pattern, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning_via_join
+[24/100] 0.056s (sampling 0.007s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[25/100] 0.063s (sampling 0.006s): define_independent_constraint_propagation, forward_adjusted_condition, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[26/100] 0.051s (sampling 0.011s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning_via_join
+[27/100] 0.006s (sampling 0.000s): define_independent_constraint_propagation, must_appear_var_false_pushdown
+[28/100] 0.097s (sampling 0.007s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[29/100] 0.012s (sampling 0.000s): define_independent_constraint_propagation, must_appear_var_false_pushdown
+[30/100] 0.150s (sampling 0.020s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning_via_join
+[31/100] 0.049s (sampling 0.007s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[32/100] 0.314s (sampling 0.015s): regex_optimization_plus, must_appear_partition_filter_pushdown, column_pruning_via_join
+[33/100] 0.043s (sampling 0.009s): define_independent_constraint_propagation, regex_optimization_plus, count_range_pushdown, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[34/100] 0.058s (sampling 0.006s): nested_quantifier_range_simplification, ordered_range_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[35/100] 0.076s (sampling 0.006s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, ordered_range_pushdown, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[36/100] 0.047s (sampling 0.005s): must_appear_partition_filter_pushdown, column_pruning
+[37/100] 0.056s (sampling 0.006s): ordered_range_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[38/100] 0.043s (sampling 0.005s): must_appear_partition_filter_pushdown, column_pruning
+[39/100] 0.048s (sampling 0.005s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[40/100] 0.045s (sampling 0.005s): must_appear_partition_filter_pushdown, column_pruning
+[41/100] 0.050s (sampling 0.005s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[42/100] 0.061s (sampling 0.003s): define_independent_constraint_propagation, define_partition_pushdown, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[43/100] 0.261s (sampling 0.003s): define_partition_pushdown, regex_optimization_plus, column_pruning_via_join
+[44/100] 0.041s (sampling 0.005s): must_appear_partition_filter_pushdown, column_pruning
+[45/100] 0.041s (sampling 0.009s): must_appear_partition_filter_pushdown, column_pruning
+[46/100] 0.117s (sampling 0.005s): define_independent_constraint_propagation, regex_optimization_plus, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[47/100] 0.030s (sampling 0.005s): must_appear_partition_filter_pushdown, column_pruning
+[48/100] 0.045s (sampling 0.008s): define_independent_constraint_propagation, forward_adjusted_condition, must_appear_partition_filter_pushdown, column_pruning
+[49/100] 0.035s (sampling 0.005s): alternation_variable_merge, match_number_guard_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[50/100] 0.089s (sampling 0.007s): define_independent_constraint_propagation, alternation_variable_merge, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, implied_incremental_condition_removal, row_filtering_via_window_func, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[51/100] 0.103s (sampling 0.006s): regex_optimization_plus, must_appear_partition_filter_pushdown, regex_optimization_plus, column_pruning
+[52/100] 2.439s (sampling 0.006s): regex_optimization_plus, nested_quantifier_range_simplification, must_appear_partition_filter_pushdown, regex_optimization_plus, column_pruning
+[53/100] 20.123s (sampling 0.004s): must_appear_partition_filter_pushdown, column_pruning
+[54/100] 0.034s (sampling 0.000s): anchor_partition_size_filter, anchor_partition_size_filter, column_pruning
+[55/100] 0.043s (sampling 0.006s): define_independent_constraint_propagation, count_range_pushdown, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[56/100] 0.039s (sampling 0.005s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, adjacent_infinite_quantifier_overlap, define_independent_constraint_propagation, column_pruning
+[57/100] 0.077s (sampling 0.009s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[58/100] 0.032s (sampling 0.005s): nested_quantifier_range_simplification, must_appear_partition_filter_pushdown, column_pruning
+[59/100] 0.055s (sampling 0.005s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, incremental_condition_pushdown, define_independent_constraint_propagation
+[60/100] 0.005s (sampling 0.000s): match_number_guard_pushdown, must_appear_var_false_pushdown
+[61/100] 0.047s (sampling 0.007s): alternation_variable_merge, redundant_subset_variable_removal, define_partition_pushdown, column_pruning
+[62/100] 0.070s (sampling 0.014s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[63/100] 0.049s (sampling 0.004s): define_independent_constraint_propagation, define_partition_pushdown, forward_adjusted_condition, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[64/100] 0.117s (sampling 0.002s): define_independent_constraint_propagation, define_partition_pushdown, forward_adjusted_condition, define_independent_constraint_propagation, incremental_condition_pushdown, define_independent_constraint_propagation, column_pruning
+[65/100] 0.029s (sampling 0.006s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[66/100] 0.043s (sampling 0.007s): define_independent_constraint_propagation, count_range_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[67/100] 0.031s (sampling 0.005s): must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation, column_pruning
+[68/100] 0.074s (sampling 0.006s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[69/100] 0.038s (sampling 0.010s): must_appear_partition_filter_pushdown, row_filter_4_special_pattern, column_pruning_via_join
+[70/100] 0.013s (sampling 0.000s): define_independent_constraint_propagation, must_appear_var_false_pushdown
+[71/100] 0.074s (sampling 0.014s): define_independent_constraint_propagation, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, row_filter_4_special_pattern, define_independent_constraint_propagation, column_pruning_via_join
+[72/100] 0.030s (sampling 0.004s): must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[73/100] 0.061s (sampling 0.007s): must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[74/100] 0.361s (sampling 0.317s): ordered_range_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[75/100] 0.360s (sampling 0.302s): ordered_range_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[76/100] 0.179s (sampling 0.112s): define_independent_constraint_propagation, forward_adjusted_condition, define_independent_constraint_propagation, ordered_range_pushdown, must_appear_partition_filter_pushdown, define_independent_constraint_propagation, column_pruning
+[77/100] 0.045s (sampling 0.019s): alternation_variable_merge, count_range_pushdown, forward_adjusted_condition, must_appear_partition_filter_pushdown, column_pruning_via_join
+[78/100] 0.056s (sampling 0.020s): must_appear_partition_filter_pushdown, column_pruning_via_join
+[79/100] 0.037s (sampling 0.007s): define_independent_constraint_propagation, regex_optimization_plus, forward_adjusted_condition, must_appear_partition_filter_pushdown
+[80/100] 0.026s (sampling 0.005s): match_number_guard_pushdown, column_pruning_via_join
+[81/100] 0.396s (sampling 0.006s): define_independent_constraint_propagation, alternation_variable_merge, match_number_guard_pushdown, define_independent_constraint_propagation, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[82/100] 0.027s (sampling 0.001s): define_independent_constraint_propagation, alternation_variable_merge, match_number_guard_pushdown, define_partition_pushdown, column_pruning_via_join
+[83/100] 0.029s (sampling 0.006s): define_partition_pushdown, must_appear_partition_filter_pushdown, row_filtering_via_window_func, column_pruning
+[84/100] 0.036s (sampling 0.006s): must_appear_partition_filter_pushdown, row_filter_4_special_pattern, column_pruning_via_join
+[85/100] 0.021s (sampling 0.006s): must_appear_partition_filter_pushdown, column_pruning
+[86/100] 0.063s (sampling 0.026s): alternation_variable_merge, must_appear_partition_filter_pushdown, column_pruning_via_join
+[87/100] 0.037s (sampling 0.007s): must_appear_partition_filter_pushdown, column_pruning
+[88/100] 0.050s (sampling 0.014s): ordered_range_pushdown, row_filter_4_special_pattern, column_pruning_via_join
+[89/100] 0.061s (sampling 0.008s): must_appear_partition_filter_pushdown, row_filtering_via_window_func, column_pruning
+[90/100] 0.032s (sampling 0.007s): count_range_pushdown, must_appear_partition_filter_pushdown
+[91/100] 0.035s (sampling 0.007s): ordered_range_pushdown
+[92/100] 0.041s (sampling 0.006s): alternation_variable_merge, must_appear_partition_filter_pushdown, row_filtering_via_window_func, define_independent_constraint_propagation
+[93/100] 0.038s (sampling 0.007s): must_appear_partition_filter_pushdown, column_pruning
+[94/100] 0.087s (sampling 0.011s): match_number_guard_pushdown, must_appear_partition_filter_pushdown, column_pruning_via_join
+[95/100] 0.031s (sampling 0.005s): must_appear_partition_filter_pushdown, row_filtering_via_window_func, column_pruning
+[96/100] 0.056s (sampling 0.010s): must_appear_partition_filter_pushdown, row_filter_4_special_pattern, column_pruning_via_join
+[97/100] 0.796s (sampling 0.736s): ordered_range_pushdown, must_appear_partition_filter_pushdown, column_pruning
+[98/100] 0.042s (sampling 0.006s): must_appear_partition_filter_pushdown, column_pruning
+[99/100] 0.039s (sampling 0.007s): alternation_variable_merge, column_pruning_via_join
+[100/100] 0.059s (sampling 0.011s): unchanged
+rewritten queries written to data\nasdaq_sql_our_method.txt
+rewrite metrics written to data\nasdaq_sql_our_method.metrics.json

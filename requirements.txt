@@ -1,0 +1,4 @@
+greenery==4.2.2
+openai>=1.0.0
+cx_Oracle>=8.3.0
+matplotlib>=3.8.0

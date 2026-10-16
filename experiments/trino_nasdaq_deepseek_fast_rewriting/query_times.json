@@ -1,0 +1,4115 @@
+{
+  "generated_at": "2026-10-01T04:11:22+00:00",
+  "query_file": "data\\nasdaq_sql_trino_deepseek_v1_no_thinking.txt",
+  "trino_url": "http://localhost:8080",
+  "catalog": "postgresql",
+  "schema": "public",
+  "user": "demo",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 734315,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.528355,
+          "rows_fetched": 734315,
+          "started_at": "2026-09-30T14:00:51+00:00",
+          "finished_at": "2026-09-30T14:01:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.429741,
+          "rows_fetched": 734315,
+          "started_at": "2026-09-30T17:05:27+00:00",
+          "finished_at": "2026-09-30T17:06:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 57.466418,
+          "rows_fetched": 734315,
+          "started_at": "2026-09-30T20:11:57+00:00",
+          "finished_at": "2026-09-30T20:12:54+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.474838
+    },
+    {
+      "id": 2,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html",
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 291452,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.316431,
+          "rows_fetched": 291452,
+          "started_at": "2026-09-30T14:01:50+00:00",
+          "finished_at": "2026-09-30T14:02:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.740022,
+          "rows_fetched": 291452,
+          "started_at": "2026-09-30T17:06:21+00:00",
+          "finished_at": "2026-09-30T17:07:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.202644,
+          "rows_fetched": 291452,
+          "started_at": "2026-09-30T20:12:54+00:00",
+          "finished_at": "2026-09-30T20:13:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 63.419699
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/sigmod2021-index-pattern/index-pattern/blob/master/pattern/pattern-experiments/src/main/java/sigmod2021/pattern/experiments/LandingPattern.java",
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.420553,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T14:02:56+00:00",
+          "finished_at": "2026-09-30T14:03:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 57.058797,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T17:07:21+00:00",
+          "finished_at": "2026-09-30T17:08:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 56.832305,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T20:13:58+00:00",
+          "finished_at": "2026-09-30T20:14:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.103885
+    },
+    {
+      "id": 4,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/k1.query",
+      "output_file": "4.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.015197,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:03:51+00:00",
+          "finished_at": "2026-09-30T14:08:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.032219,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:08:18+00:00",
+          "finished_at": "2026-09-30T17:13:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:14:55+00:00",
+          "finished_at": "2026-09-30T20:14:55+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.015805
+    },
+    {
+      "id": 5,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/k2.query",
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.719249,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:08:51+00:00",
+          "finished_at": "2026-09-30T14:09:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.626819,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:13:18+00:00",
+          "finished_at": "2026-09-30T17:14:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.176452,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:14:55+00:00",
+          "finished_at": "2026-09-30T20:15:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 57.507507
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/ElAlev/cer-srt/blob/main/stockqueries/ESPER/kn1.query",
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 62.077566,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:09:45+00:00",
+          "finished_at": "2026-09-30T14:10:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.705413,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:14:17+00:00",
+          "finished_at": "2026-09-30T17:15:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.95272,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:15:53+00:00",
+          "finished_at": "2026-09-30T20:16:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 64.578566
+    },
+    {
+      "id": 7,
+      "url": null,
+      "output_file": "7.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 0.355163,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:43:57+00:00",
+          "finished_at": "2026-10-01T03:43:57+00:00",
+          "error": "COLUMN_NOT_FOUND: line 53:9: Column 'is_p1' cannot be resolved",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 0.194029,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:52:49+00:00",
+          "finished_at": "2026-10-01T03:52:50+00:00",
+          "error": "COLUMN_NOT_FOUND: line 53:9: Column 'is_p1' cannot be resolved",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 0.149275,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T04:01:45+00:00",
+          "finished_at": "2026-10-01T04:01:45+00:00",
+          "error": "COLUMN_NOT_FOUND: line 53:9: Column 'is_p1' cannot be resolved",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 0.232822
+    },
+    {
+      "id": 8,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 443,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 67.577505,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T14:15:47+00:00",
+          "finished_at": "2026-09-30T14:16:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.251444,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T17:22:32+00:00",
+          "finished_at": "2026-09-30T17:23:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.909338,
+          "rows_fetched": 443,
+          "started_at": "2026-09-30T20:16:58+00:00",
+          "finished_at": "2026-09-30T20:17:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 60.579429
+    },
+    {
+      "id": 9,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "9.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 92.920503,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:16:55+00:00",
+          "finished_at": "2026-09-30T14:18:28+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 80.04kB, Top Consumers: {MatchAggregation=975.28MB, PagesToPagesIndexes=43.02MB, MergeSortedPages=5.47MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 89.098533,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:23:27+00:00",
+          "finished_at": "2026-09-30T17:24:56+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 80.04kB, Top Consumers: {MatchAggregation=977.07MB, PagesToPagesIndexes=43.02MB, MergeSortedPages=3.72MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 79.708954,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:17:57+00:00",
+          "finished_at": "2026-09-30T20:19:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 40.04kB, Top Consumers: {MatchAggregation=717.35MB, MergeSortedPages=262.16MB, PagesToPagesIndexes=43.02MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 87.242663
+    },
+    {
+      "id": 10,
+      "url": "https://iotdb.apache.org/UserGuide/latest-Table/User-Manual/Pattern-Query_apache.html#_2-4-1-pattern-types",
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 162718,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 53.034221,
+          "rows_fetched": 162718,
+          "started_at": "2026-09-30T14:18:28+00:00",
+          "finished_at": "2026-09-30T14:19:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 53.760535,
+          "rows_fetched": 162718,
+          "started_at": "2026-09-30T17:24:56+00:00",
+          "finished_at": "2026-09-30T17:25:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 53.777602,
+          "rows_fetched": 162718,
+          "started_at": "2026-09-30T20:19:17+00:00",
+          "finished_at": "2026-09-30T20:20:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 53.524119
+    },
+    {
+      "id": 11,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "11.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.288697,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T14:19:21+00:00",
+          "finished_at": "2026-09-30T14:20:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.487621,
+          "rows_fetched": 12,
+          "started_at": "2026-09-30T17:25:50+00:00",
+          "finished_at": "2026-09-30T17:27:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.161712,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:20:11+00:00",
+          "finished_at": "2026-09-30T20:20:51+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.91MB, Delta: 922.83kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.39MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 68.979343
+    },
+    {
+      "id": 12,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "12.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 6,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.972912,
+          "rows_fetched": 6,
+          "started_at": "2026-09-30T14:20:52+00:00",
+          "finished_at": "2026-09-30T14:21:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.311746,
+          "rows_fetched": 6,
+          "started_at": "2026-09-30T17:27:06+00:00",
+          "finished_at": "2026-09-30T17:27:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.264064,
+          "rows_fetched": 6,
+          "started_at": "2026-09-30T20:20:51+00:00",
+          "finished_at": "2026-09-30T20:21:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 47.849574
+    },
+    {
+      "id": 13,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 544,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 236.326295,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T14:21:44+00:00",
+          "finished_at": "2026-09-30T14:25:41+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 210.667483,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T17:27:50+00:00",
+          "finished_at": "2026-09-30T17:31:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 225.995751,
+          "rows_fetched": 544,
+          "started_at": "2026-09-30T20:21:38+00:00",
+          "finished_at": "2026-09-30T20:25:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 224.329843
+    },
+    {
+      "id": 14,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-union-variables",
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 76,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 120.93603,
+          "rows_fetched": 76,
+          "started_at": "2026-09-30T14:25:41+00:00",
+          "finished_at": "2026-09-30T14:27:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 115.062961,
+          "rows_fetched": 76,
+          "started_at": "2026-09-30T17:31:21+00:00",
+          "finished_at": "2026-09-30T17:33:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 128.703159,
+          "rows_fetched": 76,
+          "started_at": "2026-09-30T20:25:24+00:00",
+          "finished_at": "2026-09-30T20:27:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 121.567383
+    },
+    {
+      "id": 15,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "15.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.039318,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:27:42+00:00",
+          "finished_at": "2026-09-30T14:32:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.014001,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:33:16+00:00",
+          "finished_at": "2026-09-30T17:38:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:27:33+00:00",
+          "finished_at": "2026-09-30T20:27:33+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.017773
+    },
+    {
+      "id": 16,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.690706,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:32:42+00:00",
+          "finished_at": "2026-09-30T14:33:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 70.241454,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:38:16+00:00",
+          "finished_at": "2026-09-30T17:39:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 33.360831,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:27:33+00:00",
+          "finished_at": "2026-09-30T20:28:06+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.19MB, Delta: 1.08MB, Top Consumers: {MergeSortedPages=993.06MB, PagesToPagesIndexes=25.66MB, GenericSpiller=4.47MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 59.76433
+    },
+    {
+      "id": 17,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 90.698028,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T14:33:57+00:00",
+          "finished_at": "2026-09-30T14:35:28+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 85.408357,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T17:39:26+00:00",
+          "finished_at": "2026-09-30T17:40:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 97.55528,
+          "rows_fetched": 4506,
+          "started_at": "2026-09-30T20:28:06+00:00",
+          "finished_at": "2026-09-30T20:29:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 91.220555
+    },
+    {
+      "id": 18,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "18.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.577895,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T14:35:28+00:00",
+          "finished_at": "2026-09-30T14:36:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.899813,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T17:40:51+00:00",
+          "finished_at": "2026-09-30T17:41:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.508383,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T20:29:44+00:00",
+          "finished_at": "2026-09-30T20:30:48+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 59.66203
+    },
+    {
+      "id": 19,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.384597,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T14:36:27+00:00",
+          "finished_at": "2026-09-30T14:37:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 54.202762,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T17:41:47+00:00",
+          "finished_at": "2026-09-30T17:42:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.961233,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T20:30:48+00:00",
+          "finished_at": "2026-09-30T20:31:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.849531
+    },
+    {
+      "id": 20,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 928,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 67.052916,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T14:37:22+00:00",
+          "finished_at": "2026-09-30T14:38:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 62.842247,
+          "rows_fetched": 928,
+          "started_at": "2026-09-30T17:42:42+00:00",
+          "finished_at": "2026-09-30T17:43:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 32.808849,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:31:49+00:00",
+          "finished_at": "2026-09-30T20:32:22+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.23MB, Delta: 1.08MB, Top Consumers: {MergeSortedPages=997.42MB, PagesToPagesIndexes=21.32MB, GenericSpiller=4.49MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 54.234671
+    },
+    {
+      "id": 21,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 76.753194,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:38:29+00:00",
+          "finished_at": "2026-09-30T14:39:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 73.349995,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:43:44+00:00",
+          "finished_at": "2026-09-30T17:44:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.136974,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:32:22+00:00",
+          "finished_at": "2026-09-30T20:33:02+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.90MB, Delta: 923kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.39MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 63.413388
+    },
+    {
+      "id": 22,
+      "url": null,
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2169,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 35.984895,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-01T03:43:57+00:00",
+          "finished_at": "2026-10-01T03:44:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 35.080057,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-01T03:52:50+00:00",
+          "finished_at": "2026-10-01T03:53:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 36.86755,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-01T04:01:45+00:00",
+          "finished_at": "2026-10-01T04:02:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 35.977501
+    },
+    {
+      "id": 23,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "23.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035301,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:41:02+00:00",
+          "finished_at": "2026-09-30T14:46:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027127,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:46:10+00:00",
+          "finished_at": "2026-09-30T17:51:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:33:43+00:00",
+          "finished_at": "2026-09-30T20:33:43+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020809
+    },
+    {
+      "id": 24,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "24.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.014188,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:46:02+00:00",
+          "finished_at": "2026-09-30T14:51:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.020503,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:51:11+00:00",
+          "finished_at": "2026-09-30T17:56:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:33:43+00:00",
+          "finished_at": "2026-09-30T20:33:43+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.011564
+    },
+    {
+      "id": 25,
+      "url": "https://docs.snowflake.com/en/sql-reference/constructs/match_recognize",
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15807,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 151.283056,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T14:51:02+00:00",
+          "finished_at": "2026-09-30T14:53:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 136.208302,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T17:56:11+00:00",
+          "finished_at": "2026-09-30T17:58:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 133.229859,
+          "rows_fetched": 15807,
+          "started_at": "2026-09-30T20:33:43+00:00",
+          "finished_at": "2026-09-30T20:35:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 140.240406
+    },
+    {
+      "id": 26,
+      "url": "https://link.springer.com/article/10.1007/s13222-022-00404-3",
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 76.25451,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:53:33+00:00",
+          "finished_at": "2026-09-30T14:54:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 72.144753,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:58:27+00:00",
+          "finished_at": "2026-09-30T17:59:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.156867,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:35:56+00:00",
+          "finished_at": "2026-09-30T20:36:36+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 922.80kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.41MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 62.852043
+    },
+    {
+      "id": 27,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "27.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.022307,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T14:54:50+00:00",
+          "finished_at": "2026-09-30T14:59:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.037638,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:59:39+00:00",
+          "finished_at": "2026-09-30T18:04:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:36:36+00:00",
+          "finished_at": "2026-09-30T20:36:36+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.019982
+    },
+    {
+      "id": 28,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5785,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 174.26299,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T14:59:50+00:00",
+          "finished_at": "2026-09-30T15:02:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 158.10374,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T18:04:39+00:00",
+          "finished_at": "2026-09-30T18:07:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 176.320303,
+          "rows_fetched": 5785,
+          "started_at": "2026-09-30T20:36:36+00:00",
+          "finished_at": "2026-09-30T20:39:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 169.562344
+    },
+    {
+      "id": 29,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "29.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.014172,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:02:44+00:00",
+          "finished_at": "2026-09-30T15:07:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023251,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:07:17+00:00",
+          "finished_at": "2026-09-30T18:12:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:39:33+00:00",
+          "finished_at": "2026-09-30T20:39:33+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.012474
+    },
+    {
+      "id": 30,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "30.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 137,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 45.604336,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:07:44+00:00",
+          "finished_at": "2026-09-30T15:08:30+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 922.98kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.44MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.504319,
+          "rows_fetched": 137,
+          "started_at": "2026-09-30T18:12:17+00:00",
+          "finished_at": "2026-09-30T18:13:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 39.873234,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:39:33+00:00",
+          "finished_at": "2026-09-30T20:40:13+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.83MB, Delta: 922.92kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.30MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 54.993963
+    },
+    {
+      "id": 31,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 72.941915,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:08:30+00:00",
+          "finished_at": "2026-09-30T15:09:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 50.416369,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:13:37+00:00",
+          "finished_at": "2026-09-30T18:14:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 62.841796,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:40:13+00:00",
+          "finished_at": "2026-09-30T20:41:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 62.066693
+    },
+    {
+      "id": 32,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "32.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 68158,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 44.504945,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:09:43+00:00",
+          "finished_at": "2026-09-30T15:10:27+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.93MB, Delta: 922.80kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.41MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.215481,
+          "rows_fetched": 68158,
+          "started_at": "2026-09-30T18:14:27+00:00",
+          "finished_at": "2026-09-30T18:15:42+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 39.605769,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:41:16+00:00",
+          "finished_at": "2026-09-30T20:41:55+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.84MB, Delta: 923kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.31MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 53.108732
+    },
+    {
+      "id": 33,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "33.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 46.598747,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:10:27+00:00",
+          "finished_at": "2026-09-30T15:11:14+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.88MB, Delta: 922.91kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.38MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.016293,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:15:42+00:00",
+          "finished_at": "2026-09-30T18:20:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.854989,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:41:55+00:00",
+          "finished_at": "2026-09-30T20:42:37+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.82MB, Delta: 922.96kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.29MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 129.49001
+    },
+    {
+      "id": 34,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 66,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 71.478826,
+          "rows_fetched": 66,
+          "started_at": "2026-09-30T15:11:14+00:00",
+          "finished_at": "2026-09-30T15:12:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 64.849545,
+          "rows_fetched": 66,
+          "started_at": "2026-09-30T18:20:43+00:00",
+          "finished_at": "2026-09-30T18:21:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.97472,
+          "rows_fetched": 66,
+          "started_at": "2026-09-30T20:42:37+00:00",
+          "finished_at": "2026-09-30T20:43:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 65.767697
+    },
+    {
+      "id": 35,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 202,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 82.88064,
+          "rows_fetched": 202,
+          "started_at": "2026-09-30T15:12:25+00:00",
+          "finished_at": "2026-09-30T15:13:48+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 77.523818,
+          "rows_fetched": 202,
+          "started_at": "2026-09-30T18:21:47+00:00",
+          "finished_at": "2026-09-30T18:23:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 72.215524,
+          "rows_fetched": 202,
+          "started_at": "2026-09-30T20:43:38+00:00",
+          "finished_at": "2026-09-30T20:44:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 77.539994
+    },
+    {
+      "id": 36,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "36.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 101.965018,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:13:48+00:00",
+          "finished_at": "2026-09-30T15:15:30+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1019.71MB, Delta: 4.32MB, Top Consumers: {MergeSortedPages=609.79MB, Matcher=360.23MB, PagesToPagesIndexes=46.94MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 99.273233,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:23:05+00:00",
+          "finished_at": "2026-09-30T18:24:44+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1022.29MB, Delta: 4.35MB, Top Consumers: {MergeSortedPages=608.06MB, Matcher=364.55MB, PagesToPagesIndexes=46.94MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 99.520476,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:44:50+00:00",
+          "finished_at": "2026-09-30T20:46:30+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1022.29MB, Delta: 4.35MB, Top Consumers: {MergeSortedPages=608.06MB, Matcher=364.55MB, PagesToPagesIndexes=46.94MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 100.252909
+    },
+    {
+      "id": 37,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 75.275714,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T15:15:30+00:00",
+          "finished_at": "2026-09-30T15:16:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.651198,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T18:24:44+00:00",
+          "finished_at": "2026-09-30T18:25:54+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.365093,
+          "rows_fetched": 31,
+          "started_at": "2026-09-30T20:46:30+00:00",
+          "finished_at": "2026-09-30T20:47:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 69.764002
+    },
+    {
+      "id": 38,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4105,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 82.440288,
+          "rows_fetched": 4105,
+          "started_at": "2026-09-30T15:16:45+00:00",
+          "finished_at": "2026-09-30T15:18:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 74.252,
+          "rows_fetched": 4105,
+          "started_at": "2026-09-30T18:25:54+00:00",
+          "finished_at": "2026-09-30T18:27:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 68.458452,
+          "rows_fetched": 4105,
+          "started_at": "2026-09-30T20:47:34+00:00",
+          "finished_at": "2026-09-30T20:48:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 75.050247
+    },
+    {
+      "id": 39,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "39.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 44.660048,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:18:08+00:00",
+          "finished_at": "2026-09-30T15:18:52+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.95MB, Delta: 80.04kB, Top Consumers: {MergeSortedPages=608.06MB, MatchAggregation=363.57MB, PagesToPagesIndexes=48.70MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 44.946134,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:27:08+00:00",
+          "finished_at": "2026-09-30T18:27:53+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 80.04kB, Top Consumers: {MergeSortedPages=604.60MB, MatchAggregation=367.09MB, PagesToPagesIndexes=48.70MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 39.935903,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:48:43+00:00",
+          "finished_at": "2026-09-30T20:49:23+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.93MB, Delta: 80.04kB, Top Consumers: {MergeSortedPages=605.47MB, MatchAggregation=366.15MB, PagesToPagesIndexes=48.70MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 43.180695
+    },
+    {
+      "id": 40,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 104.51625,
+          "rows_fetched": 10,
+          "started_at": "2026-09-30T15:18:52+00:00",
+          "finished_at": "2026-09-30T15:20:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 96.49167,
+          "rows_fetched": 10,
+          "started_at": "2026-09-30T18:27:53+00:00",
+          "finished_at": "2026-09-30T18:29:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.291973,
+          "rows_fetched": 10,
+          "started_at": "2026-09-30T20:49:23+00:00",
+          "finished_at": "2026-09-30T20:50:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 97.766631
+    },
+    {
+      "id": 41,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 424804,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 69.83844,
+          "rows_fetched": 424804,
+          "started_at": "2026-09-30T15:20:37+00:00",
+          "finished_at": "2026-09-30T15:21:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 64.07985,
+          "rows_fetched": 424804,
+          "started_at": "2026-09-30T18:29:30+00:00",
+          "finished_at": "2026-09-30T18:30:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 61.200772,
+          "rows_fetched": 424804,
+          "started_at": "2026-09-30T20:50:55+00:00",
+          "finished_at": "2026-09-30T20:51:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 65.039687
+    },
+    {
+      "id": 42,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "42.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02948,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:21:47+00:00",
+          "finished_at": "2026-09-30T15:26:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.029432,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:30:34+00:00",
+          "finished_at": "2026-09-30T18:35:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:51:56+00:00",
+          "finished_at": "2026-09-30T20:51:56+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.019637
+    },
+    {
+      "id": 43,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "43.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 90.668284,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:26:47+00:00",
+          "finished_at": "2026-09-30T15:28:18+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1012.89MB, Delta: 13.65MB, Top Consumers: {Matcher=892.01MB, MergeSortedPages=114.07MB, PagesToPagesIndexes=6.32MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 81.652012,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:35:34+00:00",
+          "finished_at": "2026-09-30T18:36:55+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1012.89MB, Delta: 13.65MB, Top Consumers: {Matcher=892.01MB, MergeSortedPages=114.07MB, PagesToPagesIndexes=6.32MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 84.534845,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:51:56+00:00",
+          "finished_at": "2026-09-30T20:53:21+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1012.89MB, Delta: 13.65MB, Top Consumers: {Matcher=892.01MB, MergeSortedPages=114.07MB, PagesToPagesIndexes=6.32MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 85.61838
+    },
+    {
+      "id": 44,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 5.826988,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:28:18+00:00",
+          "finished_at": "2026-09-30T15:28:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 5.15606,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:36:55+00:00",
+          "finished_at": "2026-09-30T18:37:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 4.562368,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:53:21+00:00",
+          "finished_at": "2026-09-30T20:53:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 5.181805
+    },
+    {
+      "id": 45,
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1619,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 89.147775,
+          "rows_fetched": 1619,
+          "started_at": "2026-09-30T15:28:23+00:00",
+          "finished_at": "2026-09-30T15:29:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 78.345633,
+          "rows_fetched": 1619,
+          "started_at": "2026-09-30T18:37:01+00:00",
+          "finished_at": "2026-09-30T18:38:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.474635,
+          "rows_fetched": 1619,
+          "started_at": "2026-09-30T20:53:25+00:00",
+          "finished_at": "2026-09-30T20:54:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 77.322681
+    },
+    {
+      "id": 46,
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "output_file": "46.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 252.310865,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:29:53+00:00",
+          "finished_at": "2026-09-30T15:34:05+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=659.72MB, MergeSortedPages=312.82MB, PagesToPagesIndexes=49.98MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 240.289635,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:38:19+00:00",
+          "finished_at": "2026-09-30T18:42:19+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=656.09MB, MergeSortedPages=316.41MB, PagesToPagesIndexes=49.98MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 172.229487,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:54:30+00:00",
+          "finished_at": "2026-09-30T20:57:22+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=650.00MB, MergeSortedPages=322.49MB, PagesToPagesIndexes=49.98MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 221.609996
+    },
+    {
+      "id": 47,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "47.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.028052,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:34:05+00:00",
+          "finished_at": "2026-09-30T15:39:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.034522,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:42:19+00:00",
+          "finished_at": "2026-09-30T18:47:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:57:22+00:00",
+          "finished_at": "2026-09-30T20:57:22+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020858
+    },
+    {
+      "id": 48,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "48.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.008189,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:39:05+00:00",
+          "finished_at": "2026-09-30T15:44:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.031531,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:47:19+00:00",
+          "finished_at": "2026-09-30T18:52:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:57:22+00:00",
+          "finished_at": "2026-09-30T20:57:22+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.01324
+    },
+    {
+      "id": 49,
+      "url": "https://s2e-lab.github.io/preprints/icpc24-preprint.pdf",
+      "output_file": "49.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035326,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:44:05+00:00",
+          "finished_at": "2026-09-30T15:49:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.01057,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T18:52:20+00:00",
+          "finished_at": "2026-09-30T18:57:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:57:22+00:00",
+          "finished_at": "2026-09-30T20:57:22+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.015299
+    },
+    {
+      "id": 50,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "50.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4081,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 147.543725,
+          "rows_fetched": 4081,
+          "started_at": "2026-09-30T15:53:38+00:00",
+          "finished_at": "2026-09-30T15:56:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 148.011165,
+          "rows_fetched": 4081,
+          "started_at": "2026-09-30T19:00:33+00:00",
+          "finished_at": "2026-09-30T19:03:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 172.220333,
+          "rows_fetched": 4081,
+          "started_at": "2026-09-30T20:57:22+00:00",
+          "finished_at": "2026-09-30T21:00:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 155.925074
+    },
+    {
+      "id": 51,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "51.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 110.937276,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T15:56:06+00:00",
+          "finished_at": "2026-09-30T15:57:57+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1020.48MB, Delta: 13.05MB, Top Consumers: {Matcher=970.02MB, PagesToPagesIndexes=46.78MB, MergeSortedPages=3.67MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 110.147501,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:03:01+00:00",
+          "finished_at": "2026-09-30T19:04:51+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1020.48MB, Delta: 13.05MB, Top Consumers: {Matcher=970.02MB, PagesToPagesIndexes=46.78MB, MergeSortedPages=3.67MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 55.773284,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:00:14+00:00",
+          "finished_at": "2026-09-30T21:01:10+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1018.78MB, Delta: 6.75MB, Top Consumers: {MergeSortedPages=608.92MB, Matcher=360.34MB, PagesToPagesIndexes=46.78MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 92.28602
+    },
+    {
+      "id": 52,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "52.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1465,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 219.128943,
+          "rows_fetched": 1465,
+          "started_at": "2026-09-30T15:57:57+00:00",
+          "finished_at": "2026-09-30T16:01:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 214.838258,
+          "rows_fetched": 1465,
+          "started_at": "2026-09-30T19:04:51+00:00",
+          "finished_at": "2026-09-30T19:08:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 259.229716,
+          "rows_fetched": 1465,
+          "started_at": "2026-09-30T21:01:10+00:00",
+          "finished_at": "2026-09-30T21:05:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 231.065639
+    },
+    {
+      "id": 53,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1670,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 8.370446,
+          "rows_fetched": 1670,
+          "started_at": "2026-09-30T16:01:36+00:00",
+          "finished_at": "2026-09-30T16:01:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 8.285497,
+          "rows_fetched": 1670,
+          "started_at": "2026-09-30T19:08:26+00:00",
+          "finished_at": "2026-09-30T19:08:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 9.24617,
+          "rows_fetched": 1670,
+          "started_at": "2026-09-30T21:05:29+00:00",
+          "finished_at": "2026-09-30T21:05:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 8.634038
+    },
+    {
+      "id": 54,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "54.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 90.511869,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:01:44+00:00",
+          "finished_at": "2026-09-30T16:03:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 89.086886,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:08:34+00:00",
+          "finished_at": "2026-09-30T19:10:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 98.690025,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:05:38+00:00",
+          "finished_at": "2026-09-30T21:07:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 92.762927
+    },
+    {
+      "id": 55,
+      "url": null,
+      "output_file": "55.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 408,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 97.47428,
+          "rows_fetched": 408,
+          "started_at": "2026-10-01T03:44:33+00:00",
+          "finished_at": "2026-10-01T03:46:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 100.140348,
+          "rows_fetched": 408,
+          "started_at": "2026-10-01T03:53:25+00:00",
+          "finished_at": "2026-10-01T03:55:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 97.494915,
+          "rows_fetched": 408,
+          "started_at": "2026-10-01T04:02:22+00:00",
+          "finished_at": "2026-10-01T04:04:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 98.369848
+    },
+    {
+      "id": 56,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "56.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.040448,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:04:31+00:00",
+          "finished_at": "2026-09-30T16:09:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.037252,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:11:11+00:00",
+          "finished_at": "2026-09-30T19:16:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:07:57+00:00",
+          "finished_at": "2026-09-30T21:07:57+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.0259
+    },
+    {
+      "id": 57,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "57.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02359,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:09:32+00:00",
+          "finished_at": "2026-09-30T16:14:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.029138,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:16:11+00:00",
+          "finished_at": "2026-09-30T19:21:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:07:57+00:00",
+          "finished_at": "2026-09-30T21:07:57+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.017576
+    },
+    {
+      "id": 58,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4097,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 64.526791,
+          "rows_fetched": 4097,
+          "started_at": "2026-09-30T16:14:32+00:00",
+          "finished_at": "2026-09-30T16:15:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 65.228011,
+          "rows_fetched": 4097,
+          "started_at": "2026-09-30T19:21:12+00:00",
+          "finished_at": "2026-09-30T19:22:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 66.606611,
+          "rows_fetched": 4097,
+          "started_at": "2026-09-30T21:07:57+00:00",
+          "finished_at": "2026-09-30T21:09:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 65.453804
+    },
+    {
+      "id": 59,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "59.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.008165,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:15:36+00:00",
+          "finished_at": "2026-09-30T16:20:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.040094,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:22:17+00:00",
+          "finished_at": "2026-09-30T19:27:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:09:04+00:00",
+          "finished_at": "2026-09-30T21:09:04+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.016086
+    },
+    {
+      "id": 60,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.081096,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:20:36+00:00",
+          "finished_at": "2026-09-30T16:21:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.906721,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:27:17+00:00",
+          "finished_at": "2026-09-30T19:28:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.922702,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:09:04+00:00",
+          "finished_at": "2026-09-30T21:09:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.303506
+    },
+    {
+      "id": 61,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "61.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.032425,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:21:27+00:00",
+          "finished_at": "2026-09-30T16:26:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.021841,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:28:07+00:00",
+          "finished_at": "2026-09-30T19:33:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:09:51+00:00",
+          "finished_at": "2026-09-30T21:09:51+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.018089
+    },
+    {
+      "id": 62,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 126.900886,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:26:27+00:00",
+          "finished_at": "2026-09-30T16:28:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 97.658713,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:33:07+00:00",
+          "finished_at": "2026-09-30T19:34:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 84.94265,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:09:51+00:00",
+          "finished_at": "2026-09-30T21:11:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 103.167416
+    },
+    {
+      "id": 63,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "63.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 743,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 192.875668,
+          "rows_fetched": 743,
+          "started_at": "2026-09-30T16:28:34+00:00",
+          "finished_at": "2026-09-30T16:31:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 197.633789,
+          "rows_fetched": 743,
+          "started_at": "2026-09-30T19:34:45+00:00",
+          "finished_at": "2026-09-30T19:38:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 197.82412,
+          "rows_fetched": 743,
+          "started_at": "2026-09-30T21:11:16+00:00",
+          "finished_at": "2026-09-30T21:14:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 196.111192
+    },
+    {
+      "id": 64,
+      "url": "https://learn.microsoft.com/dotnet/standard/base-types/backtracking-in-regular-expressions",
+      "output_file": "64.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 53.29026,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:31:47+00:00",
+          "finished_at": "2026-09-30T16:32:40+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1022.98MB, Delta: 1.07MB, Top Consumers: {PagesToPagesIndexes=1011.38MB, MergeSortedPages=8.79MB, GenericSpiller=2.81MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 54.607925,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:38:02+00:00",
+          "finished_at": "2026-09-30T19:38:57+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.05MB, Delta: 1.07MB, Top Consumers: {PagesToPagesIndexes=1012.45MB, MergeSortedPages=7.93MB, GenericSpiller=2.66MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 54.633132,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:14:33+00:00",
+          "finished_at": "2026-09-30T21:15:28+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.14MB, Delta: 1.07MB, Top Consumers: {PagesToPagesIndexes=1011.38MB, MergeSortedPages=8.79MB, GenericSpiller=2.96MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 54.177106
+    },
+    {
+      "id": 65,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.214026,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:32:40+00:00",
+          "finished_at": "2026-09-30T16:34:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 93.27797,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:38:57+00:00",
+          "finished_at": "2026-09-30T19:40:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 91.309226,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:15:28+00:00",
+          "finished_at": "2026-09-30T21:16:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 91.933741
+    },
+    {
+      "id": 66,
+      "url": "https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/",
+      "output_file": "66.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 48.057792,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:34:12+00:00",
+          "finished_at": "2026-09-30T16:35:00+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=705.90MB, MergeSortedPages=315.55MB, GenericSpiller=1.41MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 46.883093,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:40:30+00:00",
+          "finished_at": "2026-09-30T19:41:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=706.88MB, MergeSortedPages=314.56MB, GenericSpiller=1.41MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 52.959568,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:16:59+00:00",
+          "finished_at": "2026-09-30T21:17:52+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=707.75MB, MergeSortedPages=313.69MB, GenericSpiller=1.41MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.300151
+    },
+    {
+      "id": 67,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-syntax",
+      "output_file": "67.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.092694,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T16:35:00+00:00",
+          "finished_at": "2026-09-30T16:35:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.471524,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T19:41:17+00:00",
+          "finished_at": "2026-09-30T19:42:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 52.326691,
+          "rows_fetched": 242,
+          "started_at": "2026-09-30T21:17:52+00:00",
+          "finished_at": "2026-09-30T21:18:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 51.630303
+    },
+    {
+      "id": 68,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "68.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 181,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 91.741824,
+          "rows_fetched": 181,
+          "started_at": "2026-09-30T16:35:51+00:00",
+          "finished_at": "2026-09-30T16:37:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 91.550678,
+          "rows_fetched": 181,
+          "started_at": "2026-09-30T19:42:08+00:00",
+          "finished_at": "2026-09-30T19:43:40+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.818602,
+          "rows_fetched": 181,
+          "started_at": "2026-09-30T21:18:45+00:00",
+          "finished_at": "2026-09-30T21:20:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 92.037035
+    },
+    {
+      "id": 69,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "69.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 39.819352,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:37:23+00:00",
+          "finished_at": "2026-09-30T16:38:02+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.69MB, Delta: 923.34kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.18MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 39.924144,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:43:40+00:00",
+          "finished_at": "2026-09-30T19:44:20+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 922.91kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.902958,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:20:18+00:00",
+          "finished_at": "2026-09-30T21:20:59+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.86MB, Delta: 922.95kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.34MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.548818
+    },
+    {
+      "id": 70,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "70.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 39.787682,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:38:02+00:00",
+          "finished_at": "2026-09-30T16:38:42+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.54MB, Delta: 924.97kB, Top Consumers: {MergeSortedPages=1016.56MB, GenericSpiller=6.98MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 40.912916,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:44:20+00:00",
+          "finished_at": "2026-09-30T19:45:01+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.91MB, Delta: 923.04kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.39MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.592231,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:20:59+00:00",
+          "finished_at": "2026-09-30T21:21:40+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.78MB, Delta: 922.92kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.25MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.430943
+    },
+    {
+      "id": 71,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.41956,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:38:42+00:00",
+          "finished_at": "2026-09-30T16:39:23+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.79MB, Delta: 922.80kB, Top Consumers: {MergeSortedPages=1016.54MB, GenericSpiller=7.26MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 40.637709,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:45:01+00:00",
+          "finished_at": "2026-09-30T19:45:42+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.74MB, Delta: 924.78kB, Top Consumers: {MergeSortedPages=1016.58MB, GenericSpiller=7.16MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.27591,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:21:40+00:00",
+          "finished_at": "2026-09-30T21:22:20+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.66MB, Delta: 924.78kB, Top Consumers: {MergeSortedPages=1016.57MB, GenericSpiller=7.08MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.444393
+    },
+    {
+      "id": 72,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "output_file": "72.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3942,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.236656,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T16:39:23+00:00",
+          "finished_at": "2026-09-30T16:40:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.546598,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T19:45:42+00:00",
+          "finished_at": "2026-09-30T19:46:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.326142,
+          "rows_fetched": 3942,
+          "started_at": "2026-09-30T21:22:20+00:00",
+          "finished_at": "2026-09-30T21:23:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 47.703132
+    },
+    {
+      "id": 73,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 402,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 49.441334,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T16:40:11+00:00",
+          "finished_at": "2026-09-30T16:41:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.331626,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T19:46:29+00:00",
+          "finished_at": "2026-09-30T19:47:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.933101,
+          "rows_fetched": 402,
+          "started_at": "2026-09-30T21:23:08+00:00",
+          "finished_at": "2026-09-30T21:23:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 48.90202
+    },
+    {
+      "id": 74,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1937,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 57.903507,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T16:41:00+00:00",
+          "finished_at": "2026-09-30T16:41:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.648704,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T19:47:18+00:00",
+          "finished_at": "2026-09-30T19:48:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.942102,
+          "rows_fetched": 1937,
+          "started_at": "2026-09-30T21:23:56+00:00",
+          "finished_at": "2026-09-30T21:24:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.498104
+    },
+    {
+      "id": 75,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#row-pattern-recognition-expressions",
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 59.450787,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:41:58+00:00",
+          "finished_at": "2026-09-30T16:42:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.61377,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:48:17+00:00",
+          "finished_at": "2026-09-30T19:49:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.594143,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:24:55+00:00",
+          "finished_at": "2026-09-30T21:25:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 60.219567
+    },
+    {
+      "id": 76,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "76.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 245997,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.085213,
+          "rows_fetched": 245997,
+          "started_at": "2026-09-30T16:42:58+00:00",
+          "finished_at": "2026-09-30T16:44:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 67.199239,
+          "rows_fetched": 245997,
+          "started_at": "2026-09-30T19:49:18+00:00",
+          "finished_at": "2026-09-30T19:50:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 68.070076,
+          "rows_fetched": 245997,
+          "started_at": "2026-09-30T21:25:55+00:00",
+          "finished_at": "2026-09-30T21:27:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 67.118176
+    },
+    {
+      "id": 77,
+      "url": "https://asktom.oracle.com/ords/f?p=100%3A11%3A%3A%3A%3A%3AP11_QUESTION_ID%3A9539596000346559947",
+      "output_file": "77.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.242335,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:44:04+00:00",
+          "finished_at": "2026-09-30T16:44:44+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 922.83kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.41MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 41.419342,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:50:25+00:00",
+          "finished_at": "2026-09-30T19:51:06+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.97MB, Delta: 922.77kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.105882,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:27:03+00:00",
+          "finished_at": "2026-09-30T21:27:43+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.93MB, Delta: 922.83kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.41MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.589186
+    },
+    {
+      "id": 78,
+      "url": "https://github.com/questdb/roadmap/issues/121",
+      "output_file": "78.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 41.114266,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:44:44+00:00",
+          "finished_at": "2026-09-30T16:45:25+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.78MB, Delta: 923.04kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.26MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 40.4829,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:51:06+00:00",
+          "finished_at": "2026-09-30T19:51:47+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.79MB, Delta: 925.12kB, Top Consumers: {MergeSortedPages=1016.54MB, GenericSpiller=7.25MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.552815,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:27:43+00:00",
+          "finished_at": "2026-09-30T21:28:24+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.95MB, Delta: 922.83kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.71666
+    },
+    {
+      "id": 79,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2010,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.167834,
+          "rows_fetched": 2010,
+          "started_at": "2026-09-30T16:45:25+00:00",
+          "finished_at": "2026-09-30T16:46:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.58531,
+          "rows_fetched": 2010,
+          "started_at": "2026-09-30T19:51:47+00:00",
+          "finished_at": "2026-09-30T19:52:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.475663,
+          "rows_fetched": 2010,
+          "started_at": "2026-09-30T21:28:24+00:00",
+          "finished_at": "2026-09-30T21:29:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.409602
+    },
+    {
+      "id": 80,
+      "url": "https://docs.oracle.com/cd/E15523_01/doc.1111/e14476/examples.htm",
+      "output_file": "80.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 39.721947,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:46:23+00:00",
+          "finished_at": "2026-09-30T16:47:03+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.73MB, Delta: 922.76kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.22MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 39.793384,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:52:45+00:00",
+          "finished_at": "2026-09-30T19:53:25+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.73MB, Delta: 922.95kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.20MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 39.743167,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:29:22+00:00",
+          "finished_at": "2026-09-30T21:30:02+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.78MB, Delta: 922.88kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.25MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 39.752833
+    },
+    {
+      "id": 81,
+      "url": "https://arxiv.org/abs/2401.12639",
+      "output_file": "81.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.731197,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:47:03+00:00",
+          "finished_at": "2026-09-30T16:47:44+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.63MB, Delta: 924.98kB, Top Consumers: {MergeSortedPages=1016.62MB, GenericSpiller=7.01MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 41.654743,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:53:25+00:00",
+          "finished_at": "2026-09-30T19:54:07+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.74MB, Delta: 925.05kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.21MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.904,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:30:02+00:00",
+          "finished_at": "2026-09-30T21:30:43+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.90MB, Delta: 922.84kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.38MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.096647
+    },
+    {
+      "id": 82,
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "output_file": "82.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.69643,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:47:44+00:00",
+          "finished_at": "2026-09-30T16:48:25+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.44MB, Delta: 924.73kB, Top Consumers: {MergeSortedPages=1016.57MB, GenericSpiller=6.88MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 40.893289,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:54:07+00:00",
+          "finished_at": "2026-09-30T19:54:48+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.89MB, Delta: 922.78kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.36MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.79693,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:30:43+00:00",
+          "finished_at": "2026-09-30T21:31:24+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.87MB, Delta: 923.22kB, Top Consumers: {MergeSortedPages=1016.53MB, GenericSpiller=7.34MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.79555
+    },
+    {
+      "id": 83,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#quantifiers",
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 808,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.202764,
+          "rows_fetched": 808,
+          "started_at": "2026-09-30T16:48:25+00:00",
+          "finished_at": "2026-09-30T16:49:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.245314,
+          "rows_fetched": 808,
+          "started_at": "2026-09-30T19:54:48+00:00",
+          "finished_at": "2026-09-30T19:55:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.31176,
+          "rows_fetched": 808,
+          "started_at": "2026-09-30T21:31:24+00:00",
+          "finished_at": "2026-09-30T21:32:14+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.919946
+    },
+    {
+      "id": 84,
+      "url": null,
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 522,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 123.774679,
+          "rows_fetched": 522,
+          "started_at": "2026-10-01T03:46:11+00:00",
+          "finished_at": "2026-10-01T03:48:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 124.037652,
+          "rows_fetched": 522,
+          "started_at": "2026-10-01T03:55:05+00:00",
+          "finished_at": "2026-10-01T03:57:09+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 125.772906,
+          "rows_fetched": 522,
+          "started_at": "2026-10-01T04:04:00+00:00",
+          "finished_at": "2026-10-01T04:06:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 124.528412
+    },
+    {
+      "id": 85,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 41,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.004725,
+          "rows_fetched": 41,
+          "started_at": "2026-09-30T16:50:48+00:00",
+          "finished_at": "2026-09-30T16:51:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.864827,
+          "rows_fetched": 41,
+          "started_at": "2026-09-30T19:57:10+00:00",
+          "finished_at": "2026-09-30T19:57:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.962199,
+          "rows_fetched": 41,
+          "started_at": "2026-09-30T21:33:46+00:00",
+          "finished_at": "2026-09-30T21:34:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 48.27725
+    },
+    {
+      "id": 86,
+      "url": "https://arxiv.org/abs/2401.12639",
+      "output_file": "86.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 39.458182,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:51:38+00:00",
+          "finished_at": "2026-09-30T16:52:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.70MB, Delta: 924.72kB, Top Consumers: {MergeSortedPages=1016.64MB, GenericSpiller=7.07MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 39.841507,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T19:57:57+00:00",
+          "finished_at": "2026-09-30T19:58:37+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.70MB, Delta: 925.19kB, Top Consumers: {MergeSortedPages=1016.65MB, GenericSpiller=7.05MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 39.810768,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:34:34+00:00",
+          "finished_at": "2026-09-30T21:35:14+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.64MB, Delta: 924.79kB, Top Consumers: {MergeSortedPages=1016.64MB, GenericSpiller=7.00MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 39.703486
+    },
+    {
+      "id": 87,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.690222,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T16:52:17+00:00",
+          "finished_at": "2026-09-30T16:53:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 50.114208,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T19:58:37+00:00",
+          "finished_at": "2026-09-30T19:59:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.614599,
+          "rows_fetched": 1,
+          "started_at": "2026-09-30T21:35:14+00:00",
+          "finished_at": "2026-09-30T21:36:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 49.806343
+    },
+    {
+      "id": 88,
+      "url": null,
+      "output_file": "88.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 118.774505,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:48:15+00:00",
+          "finished_at": "2026-10-01T03:50:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 118.224366,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:57:09+00:00",
+          "finished_at": "2026-10-01T03:59:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 126.070308,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T04:06:06+00:00",
+          "finished_at": "2026-10-01T04:08:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 121.02306
+    },
+    {
+      "id": 89,
+      "url": null,
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.467792,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:50:13+00:00",
+          "finished_at": "2026-10-01T03:51:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 67.348644,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:59:07+00:00",
+          "finished_at": "2026-10-01T04:00:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 80.692505,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T04:08:12+00:00",
+          "finished_at": "2026-10-01T04:09:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 71.50298
+    },
+    {
+      "id": 90,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#exclusion-syntax",
+      "output_file": "90.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 41.477053,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:54:40+00:00",
+          "finished_at": "2026-09-30T16:55:21+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 923.03kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.45MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 40.124821,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:01:02+00:00",
+          "finished_at": "2026-09-30T20:01:42+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 922.77kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.940898,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:37:38+00:00",
+          "finished_at": "2026-09-30T21:38:19+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.95MB, Delta: 923.04kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.44MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.847591
+    },
+    {
+      "id": 91,
+      "url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/dwhsg/sql-pattern-matching-data-warehouses.html",
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.056806,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:55:21+00:00",
+          "finished_at": "2026-09-30T16:56:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 43.894256,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:01:42+00:00",
+          "finished_at": "2026-09-30T20:02:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 43.658387,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:38:19+00:00",
+          "finished_at": "2026-09-30T21:39:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 43.869816
+    },
+    {
+      "id": 92,
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "output_file": "92.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.03158,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:56:05+00:00",
+          "finished_at": "2026-09-30T16:56:45+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.95MB, Delta: 922.85kB, Top Consumers: {MergeSortedPages=1016.51MB, GenericSpiller=7.44MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 40.275518,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:02:26+00:00",
+          "finished_at": "2026-09-30T20:03:06+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.80MB, Delta: 922.93kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.29MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.051978,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:39:03+00:00",
+          "finished_at": "2026-09-30T21:39:43+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.87MB, Delta: 922.82kB, Top Consumers: {MergeSortedPages=1016.50MB, GenericSpiller=7.37MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.119692
+    },
+    {
+      "id": 93,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4057,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 46.539045,
+          "rows_fetched": 4057,
+          "started_at": "2026-09-30T16:56:45+00:00",
+          "finished_at": "2026-09-30T16:57:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.017076,
+          "rows_fetched": 4057,
+          "started_at": "2026-09-30T20:03:06+00:00",
+          "finished_at": "2026-09-30T20:03:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 49.264761,
+          "rows_fetched": 4057,
+          "started_at": "2026-09-30T21:39:43+00:00",
+          "finished_at": "2026-09-30T21:40:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 48.273627
+    },
+    {
+      "id": 94,
+      "url": "https://trino.io/docs/current/sql/match-recognize.html#permutation",
+      "output_file": "94.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.550029,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:57:32+00:00",
+          "finished_at": "2026-09-30T16:58:13+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 922.83kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.42MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 42.061049,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:03:55+00:00",
+          "finished_at": "2026-09-30T20:04:37+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 922.77kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.730267,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:40:32+00:00",
+          "finished_at": "2026-09-30T21:41:13+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 922.77kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.113782
+    },
+    {
+      "id": 95,
+      "url": "https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#best_practices_for_pattern_recognition",
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7217,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 54.513941,
+          "rows_fetched": 7217,
+          "started_at": "2026-09-30T16:58:13+00:00",
+          "finished_at": "2026-09-30T16:59:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.666014,
+          "rows_fetched": 7217,
+          "started_at": "2026-09-30T20:04:37+00:00",
+          "finished_at": "2026-09-30T20:05:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 57.05038,
+          "rows_fetched": 7217,
+          "started_at": "2026-09-30T21:41:13+00:00",
+          "finished_at": "2026-09-30T21:42:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 55.743445
+    },
+    {
+      "id": 96,
+      "url": null,
+      "output_file": "96.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 89.583067,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T03:51:20+00:00",
+          "finished_at": "2026-10-01T03:52:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 90.688063,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T04:00:15+00:00",
+          "finished_at": "2026-10-01T04:01:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 109.416692,
+          "rows_fetched": 0,
+          "started_at": "2026-10-01T04:09:32+00:00",
+          "finished_at": "2026-10-01T04:11:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 96.562607
+    },
+    {
+      "id": 97,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2022/05/match_recognize.pdf",
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.732778,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T16:59:47+00:00",
+          "finished_at": "2026-09-30T17:00:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.796341,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:06:13+00:00",
+          "finished_at": "2026-09-30T20:07:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.297152,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:42:50+00:00",
+          "finished_at": "2026-09-30T21:43:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 59.275424
+    },
+    {
+      "id": 98,
+      "url": "https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4100,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.194812,
+          "rows_fetched": 4100,
+          "started_at": "2026-09-30T17:00:46+00:00",
+          "finished_at": "2026-09-30T17:01:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 67.512953,
+          "rows_fetched": 4100,
+          "started_at": "2026-09-30T20:07:13+00:00",
+          "finished_at": "2026-09-30T20:08:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 66.277701,
+          "rows_fetched": 4100,
+          "started_at": "2026-09-30T21:43:50+00:00",
+          "finished_at": "2026-09-30T21:44:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 66.661822
+    },
+    {
+      "id": 99,
+      "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/li-yeting",
+      "output_file": "99.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.416658,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T17:01:52+00:00",
+          "finished_at": "2026-09-30T17:02:32+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 922.84kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.42MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 39.784276,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T20:08:21+00:00",
+          "finished_at": "2026-09-30T20:09:00+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.95MB, Delta: 922.91kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.002732,
+          "rows_fetched": 0,
+          "started_at": "2026-09-30T21:44:56+00:00",
+          "finished_at": "2026-09-30T21:45:36+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 922.77kB, Top Consumers: {MergeSortedPages=1016.52MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.067889
+    },
+    {
+      "id": 100,
+      "url": "https://dl.acm.org/doi/abs/10.14778/3494124.3494137",
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12771,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 175.022527,
+          "rows_fetched": 12771,
+          "started_at": "2026-09-30T17:02:32+00:00",
+          "finished_at": "2026-09-30T17:05:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 176.16083,
+          "rows_fetched": 12771,
+          "started_at": "2026-09-30T20:09:00+00:00",
+          "finished_at": "2026-09-30T20:11:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 177.794393,
+          "rows_fetched": 12771,
+          "started_at": "2026-09-30T21:45:36+00:00",
+          "finished_at": "2026-09-30T21:48:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 176.325917
+    }
+  ]
+}

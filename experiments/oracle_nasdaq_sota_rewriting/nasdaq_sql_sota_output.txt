@@ -1,0 +1,108 @@
+rpr_sql> python .\sota_method.py .\data\nasdaq_sql.json `
+>>   --sample-table NASDAQ_SAMPLE `
+>>   --schema EXPR `
+>>   --runs 3 `
+>>   --timeout 5 `
+>>   --fetch-size 2000
+[1/100] 0.018s (sampling 0.010s): sequence_filtering
+[2/100] 0.012s (sampling 0.007s): sequence_filtering
+[3/100] 0.013s (sampling 0.007s): sequence_filtering
+[4/100] 0.010s (sampling 0.000s): incremental_condition_pushdown
+[5/100] 0.026s (sampling 0.009s): incremental_condition_pushdown
+[6/100] 0.014s (sampling 0.007s): incremental_condition_pushdown, sequence_filtering
+[7/100] 0.022s (sampling 0.010s): incremental_condition_pushdown, sequence_filtering
+[8/100] 0.013s (sampling 0.008s): incremental_condition_pushdown
+[9/100] 0.018s (sampling 0.009s): incremental_condition_pushdown
+[10/100] 0.009s (sampling 0.007s): sequence_filtering
+[11/100] 0.014s (sampling 0.007s): incremental_condition_pushdown
+[12/100] 0.008s (sampling 0.006s): unchanged
+[13/100] 0.010s (sampling 0.006s): sequence_filtering
+[14/100] 0.012s (sampling 0.006s): alternation_variable_merge, define_partition_pushdown
+[15/100] 0.018s (sampling 0.010s): incremental_condition_pushdown
+[16/100] 0.015s (sampling 0.005s): incremental_condition_pushdown
+[17/100] 0.017s (sampling 0.006s): incremental_condition_pushdown
+[18/100] 0.015s (sampling 0.008s): incremental_condition_pushdown
+[19/100] 0.015s (sampling 0.009s): incremental_condition_pushdown, sequence_filtering
+[20/100] 0.013s (sampling 0.005s): incremental_condition_pushdown
+[21/100] 0.010s (sampling 0.007s): sequence_filtering
+[22/100] 0.014s (sampling 0.013s): sequence_filtering
+[23/100] 0.012s (sampling 0.008s): incremental_condition_pushdown, sequence_filtering
+[24/100] 0.016s (sampling 0.005s): incremental_condition_pushdown, row_filtering
+[25/100] 0.003s (sampling 0.000s): unchanged
+[26/100] 0.009s (sampling 0.007s): sequence_filtering
+[27/100] 0.003s (sampling 0.000s): unchanged
+[28/100] 0.015s (sampling 0.010s): unchanged
+[29/100] 0.010s (sampling 0.005s): unchanged
+[30/100] 0.013s (sampling 0.008s): unchanged
+[31/100] 0.013s (sampling 0.010s): unchanged
+[32/100] 0.012s (sampling 0.009s): unchanged
+[33/100] 0.011s (sampling 0.006s): row_filtering
+[34/100] 0.014s (sampling 0.009s): sequence_filtering
+[35/100] 0.014s (sampling 0.009s): sequence_filtering
+[36/100] 0.013s (sampling 0.010s): sequence_filtering
+[37/100] 0.012s (sampling 0.007s): sequence_filtering
+[38/100] 0.010s (sampling 0.007s): sequence_filtering
+[39/100] 0.014s (sampling 0.011s): unchanged
+[40/100] 0.012s (sampling 0.007s): sequence_filtering
+[41/100] 0.010s (sampling 0.007s): sequence_filtering
+[42/100] 0.013s (sampling 0.008s): define_partition_pushdown, sequence_filtering
+[43/100] 0.008s (sampling 0.005s): define_partition_pushdown
+[44/100] 0.009s (sampling 0.004s): unchanged
+[45/100] 0.016s (sampling 0.013s): unchanged
+[46/100] 0.008s (sampling 0.005s): unchanged
+[47/100] 0.012s (sampling 0.009s): sequence_filtering
+[48/100] 0.004s (sampling 0.000s): unchanged
+[49/100] 0.011s (sampling 0.005s): alternation_variable_merge
+[50/100] 0.016s (sampling 0.008s): alternation_variable_merge, incremental_condition_pushdown
+[51/100] 0.017s (sampling 0.011s): row_filtering
+[52/100] 0.010s (sampling 0.005s): row_filtering
+[53/100] 0.012s (sampling 0.005s): row_filtering
+[54/100] 0.009s (sampling 0.007s): sequence_filtering
+[55/100] 0.015s (sampling 0.010s): row_filtering
+[56/100] 0.014s (sampling 0.011s): unchanged
+[57/100] 0.010s (sampling 0.005s): unchanged
+[58/100] 0.009s (sampling 0.006s): sequence_filtering
+[59/100] 0.013s (sampling 0.009s): incremental_condition_pushdown, sequence_filtering
+[60/100] 0.003s (sampling 0.000s): unchanged
+[61/100] 0.015s (sampling 0.007s): alternation_variable_merge, define_partition_pushdown, row_filtering
+[62/100] 0.019s (sampling 0.011s): row_filtering
+[63/100] 0.009s (sampling 0.005s): define_partition_pushdown
+[64/100] 0.014s (sampling 0.007s): define_partition_pushdown
+[65/100] 0.010s (sampling 0.008s): sequence_filtering
+[66/100] 0.011s (sampling 0.008s): sequence_filtering
+[67/100] 0.010s (sampling 0.008s): sequence_filtering
+[68/100] 0.013s (sampling 0.008s): sequence_filtering
+[69/100] 0.010s (sampling 0.007s): sequence_filtering
+[70/100] 0.016s (sampling 0.011s): unchanged
+[71/100] 0.008s (sampling 0.005s): unchanged
+[72/100] 0.006s (sampling 0.003s): sequence_filtering
+[73/100] 0.016s (sampling 0.012s): sequence_filtering
+[74/100] 0.016s (sampling 0.011s): row_filtering
+[75/100] 0.020s (sampling 0.012s): row_filtering
+[76/100] 0.010s (sampling 0.006s): unchanged
+[77/100] 0.003s (sampling 0.000s): alternation_variable_merge
+[78/100] 0.015s (sampling 0.012s): sequence_filtering
+[79/100] 0.011s (sampling 0.007s): sequence_filtering
+[80/100] 0.011s (sampling 0.008s): unchanged
+[81/100] 0.016s (sampling 0.007s): row_filtering
+[82/100] 0.009s (sampling 0.006s): define_partition_pushdown
+[83/100] 0.015s (sampling 0.011s): define_partition_pushdown, sequence_filtering
+[84/100] 0.011s (sampling 0.007s): sequence_filtering
+[85/100] 0.009s (sampling 0.005s): row_filtering
+[86/100] 0.015s (sampling 0.010s): alternation_variable_merge
+[87/100] 0.016s (sampling 0.012s): unchanged
+[88/100] 0.015s (sampling 0.011s): unchanged
+[89/100] 0.012s (sampling 0.007s): unchanged
+[90/100] 0.011s (sampling 0.007s): sequence_filtering
+[91/100] 0.011s (sampling 0.007s): row_filtering
+[92/100] 0.012s (sampling 0.005s): alternation_variable_merge, row_filtering
+[93/100] 0.011s (sampling 0.005s): row_filtering
+[94/100] 0.016s (sampling 0.008s): unchanged
+[95/100] 0.009s (sampling 0.005s): unchanged
+[96/100] 0.012s (sampling 0.007s): unchanged
+[97/100] 0.021s (sampling 0.015s): row_filtering
+[98/100] 0.016s (sampling 0.007s): sequence_filtering, row_filtering
+[99/100] 0.014s (sampling 0.008s): alternation_variable_merge
+[100/100] 0.016s (sampling 0.012s): unchanged
+rewritten queries written to data\nasdaq_sql_sota_method.txt
+rewrite metrics written to data\nasdaq_sql_sota_method.metrics.json

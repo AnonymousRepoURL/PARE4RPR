@@ -1,0 +1,1936 @@
+{
+  "name": "synthetic_row_pattern_recognition_tests",
+  "database": "oracle",
+  "database_version": "19c",
+  "description": "120 MATCH_RECOGNIZE queries over six fixed pattern families; each family contains ten ONE ROW and ten ALL ROWS variants.",
+  "generation": {
+    "table": "SYN10M",
+    "start_time": "2001-09-01T08:00:00+02:00[Europe/Berlin]",
+    "seed": 20010901,
+    "a3_length": 16,
+    "region_range": [
+      1,
+      100
+    ]
+  },
+  "table_schemas": {
+    "SYN10M": {
+      "columns": [
+        "ID",
+        "TS",
+        "A1",
+        "A2",
+        "A3",
+        "REGION"
+      ],
+      "primary_key": [
+        "ID"
+      ],
+      "column_types": {
+        "ID": "INT",
+        "TS": "LONG",
+        "A1": "LONG",
+        "A2": "DOUBLE",
+        "A3": "VARCHAR(16)",
+        "REGION": "INT"
+      },
+      "column_nullables": {
+        "ID": false,
+        "TS": false,
+        "A1": false,
+        "A2": false,
+        "A3": false,
+        "REGION": false
+      }
+    }
+  },
+  "pattern_groups": [
+    {
+      "id": 1,
+      "pattern": "(A Z* B Z* C)"
+    },
+    {
+      "id": 2,
+      "pattern": "(A B C D E F G)"
+    },
+    {
+      "id": 3,
+      "pattern": "(A B+ C D+ E F+)"
+    },
+    {
+      "id": 4,
+      "pattern": "(A (B+ C)+ D)"
+    },
+    {
+      "id": 5,
+      "pattern": "((A|B) (C|D))"
+    },
+    {
+      "id": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)"
+    }
+  ],
+  "sqls": [
+    {
+      "id": 1,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 1,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "special event-gap row filtering"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A3 LIKE 'a%',\n    Z AS Z.TS - A.TS <= 50000,\n    B AS B.A1 BETWEEN 100 AND 105 AND NOT(A3 LIKE 'a%'),\n    C AS C.A1 BETWEEN 100 AND 105 AND C.TS - A.TS <= 50000\n)"
+    },
+    {
+      "id": 2,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 2,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    CLASSIFIER() AS CLA,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS,\n    SUM(A1) AS TOTAL_A1,\n    AVG(A2) AS AVG_A2\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 400,\n    Z AS COUNT(Z.*) <= 50 AND Z.A1 - A.A1 / 10 > 0,\n    B AS B.A1 BETWEEN 500 AND 850,\n    C AS C.A2 >= 520 AND C.TS <= 999524000301\n)"
+    },
+    {
+      "id": 3,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 3,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 115,\n    B AS B.A1 BETWEEN 200 AND 800,\n    C AS C.A1 BETWEEN 500 AND 515 AND C.TS - A.TS <= 100000,\n    Z AS Z.TS - A.TS <= 100000\n)\n"
+    },
+    {
+      "id": 4,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 4,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 850,\n    B AS B.REGION = 1 AND B.A1 <= 800 AND B.A2 >= 500,\n    C AS C.A2 * 100 >= SUM(Z.A2) + SUM(A.A2) AND C.TS - A.TS <= 120000,\n    Z AS Z.TS - A.TS <= 120000\n)"
+    },
+    {
+      "id": 5,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 5,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "COUNT bound",
+        "count-range pushdown",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(Z.*) AS COUNT_Z,\n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 > A.A2 - 1000,\n    C AS C.A1 BETWEEN 800 AND 805 AND C.TS - A.TS <= 70000,\n    Z AS COUNT(Z.*) <= 50 AND Z.TS - A.TS <= 70000\n)"
+    },
+    {
+      "id": 6,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 6,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "partition equality",
+        "DEFINE partition pushdown",
+        "outer WHERE pushdown",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 550,\n    Z AS Z.TS - A.TS <= 50000,\n    B AS B.A1 >= A.A1 * 2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 200,\n    C AS C.A2 >= 820 AND C.TS - A.TS <= 50000\n)"
+    },
+    {
+      "id": 7,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 7,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "MATCH_NUMBER guard",
+        "match-number guard pushdown",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    Z AS Z.TS - A.TS <= 80000,\n    B AS B.A1 >= 800 AND B.A2 >= 800 AND B.A3 LIKE 'a%',\n    C AS C.A2 >= B.A2 AND C.TS - A.TS <= 80000\n)"
+    },
+    {
+      "id": 8,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 8,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "singleton aggregate",
+        "aggregate removal",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%' AND A.A1 >= 0,\n    Z AS Z.A1 > A.A1 AND Z.TS - A.TS <= 200000,\n    B AS B.A1 BETWEEN 50 AND 250,\n    C AS C.A1 >= 900 AND SUM(A1) >= 100 AND C.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 9,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 9,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "incremental TS bounds",
+        "incremental-condition pushdown",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES A.ID AS AID, B.ID AS BID, C.ID AS CID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 450 AND A.A2 >= 500,\n    B AS B.A1 BETWEEN 500 AND 850 AND B.A2 >= 500 AND B.TS - A.TS <= 20000,\n    C AS C.A2 >= 720 AND C.TS - A.TS <= 20000,\n    Z AS Z.TS - A.TS <= 20000\n)"
+    },
+    {
+      "id": 10,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 10,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "SUBSET alias",
+        "redundant subset removal",
+        "measure renaming",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES A.ID AS AID, B.ID AS BID, C.ID AS CID\n  PATTERN(A Z* B Z* C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 350,\n    Z AS Z.TS - A.TS <= 40000,\n    B AS B.A1 BETWEEN 500 AND 600,\n    C AS C.A2 >= 750 AND C.A1 BETWEEN 100 AND 350 AND C.TS - A.TS <= 40000\n)"
+    },
+    {
+      "id": 11,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 11,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS RUNNING_END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A3 LIKE 'a%',\n    Z AS Z.TS - A.TS <= 50000,\n    B AS B.A1 BETWEEN 100 AND 105 AND NOT(A3 LIKE 'a%'),\n    C AS C.A1 BETWEEN 100 AND 105 AND C.TS - A.TS <= 50000\n)"
+    },
+    {
+      "id": 12,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 12,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS\n  ALL ROWS PER MATCH  \n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 400,\n    Z AS COUNT(Z.*) <= 50 AND Z.A1 - A.A1 / 10 > 0,\n    B AS B.A1 BETWEEN 500 AND 850,\n    C AS C.A2 >= 520 AND C.TS <= 999524000301\n)"
+    },
+    {
+      "id": 13,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 13,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS\n  ALL ROWS PER MATCH\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 115,\n    B AS B.A1 BETWEEN 200 AND 800,\n    C AS C.A1 BETWEEN 500 AND 515 AND C.TS - A.TS <= 100000,\n    Z AS Z.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 14,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 14,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 850,\n    B AS B.REGION < 10 AND B.A1 <= 800 AND B.A2 >= 500,\n    C AS C.A2 * 100 >= SUM(Z.A2) + SUM(A.A2) AND C.TS - A.TS <= 120000,\n    Z AS Z.TS - A.TS <= 120000\n)"
+    },
+    {
+      "id": 15,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 15,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "COUNT bound",
+        "count-range pushdown",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(Z.*) AS COUNT_Z\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 > A.A2 - 1000,\n    C AS C.A1 BETWEEN 800 AND 805 AND C.TS - A.TS <= 70000,\n    Z AS COUNT(Z.*) <= 50 AND Z.TS - A.TS <= 70000\n)"
+    },
+    {
+      "id": 16,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 16,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "partition equality",
+        "DEFINE partition pushdown",
+        "outer WHERE pushdown",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 550,\n    Z AS Z.TS - A.TS <= 50000,\n    B AS B.A1 >= A.A1 * 2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 200,\n    C AS C.A2 >= 820 AND C.TS - A.TS <= 50000\n)"
+    },
+    {
+      "id": 17,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 17,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "MATCH_NUMBER guard",
+        "match-number guard pushdown",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    Z AS Z.TS - A.TS <= 80000,\n    B AS B.A1 >= 800 AND B.A2 >= 800 AND B.A3 LIKE 'a%',\n    C AS C.A2 >= B.A2 AND C.TS - A.TS <= 80000\n)"
+    },
+    {
+      "id": 18,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 18,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "singleton aggregate",
+        "aggregate removal",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%' AND A.A1 >= 0,\n    Z AS Z.A1 > A.A1 AND Z.TS - A.TS <= 200000,\n    B AS B.A1 BETWEEN 50 AND 250,\n    C AS C.A1 >= 900 AND SUM(A1) >= 100 AND C.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 19,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 19,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "incremental TS bounds",
+        "incremental-condition pushdown",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 450 AND A.A2 >= 500,\n    B AS B.A1 BETWEEN 500 AND 850 AND B.A2 >= 500 AND B.TS - A.TS <= 20000,\n    C AS C.A2 >= 720 AND C.TS - A.TS <= 20000,\n    Z AS Z.TS - A.TS <= 20000\n)"
+    },
+    {
+      "id": 20,
+      "pattern_group": 1,
+      "pattern": "(A Z* B Z* C)",
+      "variant": 20,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "SUBSET alias",
+        "redundant subset removal",
+        "measure renaming",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  ALL ROWS PER MATCH\n  PATTERN(A {-Z*-} B {-Z*-} C)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 350,\n    Z AS Z.TS - A.TS <= 40000,\n    B AS B.A1 BETWEEN 500 AND 600,\n    C AS C.A2 >= 750 AND C.A1 BETWEEN 100 AND 350 AND C.TS - A.TS <= 40000\n)"
+    },
+    {
+      "id": 21,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 1,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 <= 260 AND A.A2 <= 500,\n    B AS B.A2 <= A.A2,\n    C AS C.A2 <= B.A2 AND C.A1 <= 260 AND C.A3 LIKE 'a%',\n    D AS D.A2 <= C.A2,\n    E AS E.A1 >= 660 AND E.A2 <= D.A2 AND E.A3 LIKE 'a%',\n    F AS F.A2 <= E.A2,\n    G AS G.A2 <= F.A2 AND G.A1 BETWEEN 400 AND 500\n)"
+    },
+    {
+      "id": 22,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 2,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 > PREV(A.A1) AND A.A3 LIKE '%a%' AND A.REGION <= 100,\n    B AS B.A1 > A.A1,\n    C AS C.A1 > B.A1,\n    D AS D.A1 > A.A1 * 1.2 AND D.TS <= 999524000301,\n    E AS E.A1 < D.A1,\n    F AS F.A1 < E.A1,\n    G AS G.A1 <= D.A1 * 0.8\n)"
+    },
+    {
+      "id": 23,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 3,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST A\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 315,\n    B AS B.TS - A.TS <= 10000,\n    C AS C.TS - A.TS <= 10000,\n    D AS D.A2 <= 620 AND D.A1 <= A.A1 * 0.8,\n    E AS E.TS - A.TS <= 10000,\n    F AS F.TS - A.TS <= 10000,\n    G AS G.A1 BETWEEN 500 AND 515 AND G.A3 != A.A3 AND G.TS - A.TS <= 1000000\n)"
+    },
+    {
+      "id": 24,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 4,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    A.ID AS AID,\n    B.ID AS BID,\n    C.ID AS CID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 < 650,\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620 AND D.A1 LIKE '%a%',\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS G.REGION > 10,\n    G AS G.REGION <= 20\n)"
+    },
+    {
+      "id": 25,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 5,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950 AND MATCH_NUMBER() < 10,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A1 >= 300 AND G.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 26,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 6,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 >= A.A1 * 1.2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 2000,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A1 >= 300 AND G.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 27,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 7,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A2 >= B.A2\n)"
+    },
+    {
+      "id": 28,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 8,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST D\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A1 >= PREV(D.A1) AND D.TS - A.TS <= 200000,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A1 >= 900 AND SUM(A1) >= 100 AND G.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 29,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 9,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 < 650,\n    B AS B.A2 >= 420 AND B.TS - A.TS <= 72000,\n    C AS C.A1 >= 200 AND C.TS - A.TS <= 72000,\n    D AS D.A2 <= 620 AND D.TS - A.TS <= 72000,\n    E AS E.A1 BETWEEN 50 AND 950 AND E.TS - A.TS <= 72000,\n    F AS F.A2 BETWEEN 350 AND 700 AND F.TS - A.TS <= 72000,\n    G AS G.A1 >= 300 AND G.TS - A.TS <= 36000\n)"
+    },
+    {
+      "id": 30,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 10,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES A.ID AS AID,\n    D.ID AS DID,\n    G.ID AS GID\n  ONE ROW PER MATCH\n  PATTERN(A B C D E F G)\n  SUBSET U = (A, B, C, D, E, F, G)\n  DEFINE\n    A AS A.A1 < 650,\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A2 >= 500 AND SUM(U.A2) <= 800 AND G.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 31,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 11,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 <= 260 AND A.A2 <= 500,\n    B AS B.A2 <= A.A2,\n    C AS C.A2 <= B.A2 AND C.A1 <= 260 AND C.A3 LIKE 'a%',\n    D AS D.A2 <= C.A2,\n    E AS E.A1 >= 660 AND E.A2 <= D.A2 AND E.A3 LIKE 'a%',\n    F AS F.A2 <= E.A2,\n    G AS G.A2 <= F.A2 AND G.A1 BETWEEN 400 AND 500\n)"
+    },
+    {
+      "id": 32,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 12,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 > PREV(A.A1) AND A.A3 LIKE '%a%' AND A.REGION <= 100,\n    B AS B.A1 > A.A1,\n    C AS C.A1 > B.A1,\n    D AS D.A1 > A.A1 * 1.2 AND D.TS <= 999524000301,\n    E AS E.A1 < D.A1,\n    F AS F.A1 < E.A1,\n    G AS G.A1 <= D.A1 * 0.8\n)"
+    },
+    {
+      "id": 33,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 13,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST A\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 315,\n    B AS B.TS - A.TS <= 10000,\n    C AS C.TS - A.TS <= 10000,\n    D AS D.A2 <= 620 AND D.A1 <= A.A1 * 0.8,\n    E AS E.TS - A.TS <= 10000,\n    F AS F.TS - A.TS <= 10000,\n    G AS G.A1 BETWEEN 500 AND 515 AND G.A3 != A.A3 AND G.TS - A.TS <= 1000000\n)"
+    },
+    {
+      "id": 34,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 14,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 < 650,\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620 AND D.A1 LIKE '%a%',\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS G.REGION > 10,\n    G AS G.REGION <= 20\n)"
+    },
+    {
+      "id": 35,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 15,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950 AND MATCH_NUMBER() < 10,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A1 >= 300 AND G.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 36,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 16,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 >= A.A1 * 1.2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 2000,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A1 >= 300 AND G.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 37,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 17,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A2 >= B.A2\n)"
+    },
+    {
+      "id": 38,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 18,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO FIRST D\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A1 >= PREV(D.A1) AND D.TS - A.TS <= 200000,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A1 >= 900 AND SUM(A1) >= 100 AND G.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 39,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 19,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B C D E F G)\n  DEFINE\n    A AS A.A1 < 650,\n    B AS B.A2 >= 420 AND B.TS - A.TS <= 72000,\n    C AS C.A1 >= 200 AND C.TS - A.TS <= 72000,\n    D AS D.A2 <= 620 AND D.TS - A.TS <= 72000,\n    E AS E.A1 BETWEEN 50 AND 950 AND E.TS - A.TS <= 72000,\n    F AS F.A2 BETWEEN 350 AND 700 AND F.TS - A.TS <= 72000,\n    G AS G.A1 >= 300 AND G.TS - A.TS <= 36000\n)"
+    },
+    {
+      "id": 40,
+      "pattern_group": 2,
+      "pattern": "(A B C D E F G)",
+      "variant": 20,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  ALL ROWS PER MATCH\n  PATTERN(A B C D E F G)\n  SUBSET U = (A, B, C, D, E, F, G)\n  DEFINE\n    A AS A.A1 < 650,\n    B AS B.A2 >= 420,\n    C AS C.A1 >= 200,\n    D AS D.A2 <= 620,\n    E AS E.A1 BETWEEN 50 AND 950,\n    F AS F.A2 BETWEEN 350 AND 700,\n    G AS G.A2 >= 500 AND SUM(U.A2) <= 800 AND G.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 41,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 1,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 500,\n    B AS B.A2 BETWEEN 300 AND 700,\n    C AS C.A1 BETWEEN 100 AND 500,\n    D AS D.A2 BETWEEN 300 AND 700,\n    E AS E.A1 BETWEEN 100 AND 500, \n    F AS COUNT(*) <= 10\n    \n)"
+    },
+    {
+      "id": 42,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 2,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES FIRST(TS) AS START_TS, LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST D\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 500,\n    C AS C.A1 >= 500,\n    D AS D.A1 <= 150,\n    E AS E.A2 <= 600,\n    F AS F.TS <= 999524000301\n)"
+    },
+    {
+      "id": 43,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 3,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS,\n    SUM(A1) AS TOTAL_A1,\n    AVG(A2) AS AVG_A2\n  AFTER MATCH SKIP TO LAST F\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 115,\n    B AS B.TS - A.TS <= 10000,\n    C AS C.A2 BETWEEN 100 AND 900 AND C.TS - A.TS <= 1000000,\n    D AS D.TS - A.TS <= 10000,\n    E AS E.TS - A.TS <= 10000,\n    F AS F.A1 BETWEEN 500 AND 515 AND F.TS - A.TS <= 1000000\n)"
+    },
+    {
+      "id": 44,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 4,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 400,\n    B AS B.A2 BETWEEN 430 AND 620 AND B.A1 >= A.A1,\n    C AS C.A1 >= 750,\n    D AS D.A1 BETWEEN 150 AND 850 AND D.A1 >= PREV(D.A1),\n    E AS E.REGION > 10 AND E.A1 = A.A1,\n    F AS F.REGION <= 20 AND F.A1 > E.A1\n)"
+    },
+    {
+      "id": 45,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 5,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(B.*) AS COUNT_REPEATED,\n    A.ID AS AID,\n    C.ID AS CID,\n    F.ID AS FID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 BETWEEN 430 AND 620 AND COUNT(B.*) <= 50,\n    C AS C.A1 >= 250,\n    D AS D.A1 BETWEEN 150 AND 850,\n    E AS E.A2 <= 580,\n    F AS F.A1 >= 350 AND F.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 46,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 6,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    C.ID AS CID,\n    F.ID AS FID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 >= A.A1 * 1.2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 2000,\n    C AS C.A1 >= 250,\n    D AS D.A1 BETWEEN 150 AND 850,\n    E AS E.A2 <= 580,\n    F AS F.A1 >= 350 AND F.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 47,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 7,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    C.ID AS CID,\n    F.ID AS FID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 >= 250,\n    D AS D.A1 BETWEEN 150 AND 850,\n    E AS E.A2 <= 580,\n    F AS F.A2 >= B.A2 AND F.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 48,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 8,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST D\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A2 BETWEEN 430 AND 620,\n    C AS C.A1 >= 250,\n    D AS D.A1 >= PREV(D.A1) AND D.TS - A.TS <= 200000,\n    E AS E.A2 <= 580,\n    F AS F.A1 >= 900 AND A.A1 <= 100 AND F.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 49,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 9,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES A.ID AS AID,\n    C.ID AS CID,\n    F.ID AS FID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 BETWEEN 430 AND 620 AND B.TS - A.TS <= 72000,\n    C AS C.A1 >= 250 AND C.TS - A.TS <= 72000,\n    D AS D.A1 BETWEEN 150 AND 850 AND D.TS - A.TS <= 72000,\n    E AS E.A2 <= 580 AND E.TS - A.TS <= 72000,\n    F AS F.A1 >= 350 AND F.TS - A.TS <= 36000\n)"
+    },
+    {
+      "id": 50,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 10,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES \n    A.ID AS AID,\n    C.ID AS CID,\n    F.ID AS FID\n  ONE ROW PER MATCH\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700 AND D.A2 >= 0,\n    B AS B.A2 BETWEEN 430 AND 620,\n    C AS C.A1 >= 250 AND C.A2 >= 50,\n    D AS D.A1 BETWEEN 150 AND 850 AND D.A2 >= 50,\n    E AS E.A2 BETWEEN 0 AND 580,\n    F AS F.A2 >= 500 AND SUM(A2) <= 800 AND F.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 51,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 11,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 500,\n    B AS B.A2 BETWEEN 300 AND 700,\n    C AS C.A1 BETWEEN 100 AND 500,\n    D AS D.A2 BETWEEN 300 AND 700,\n    E AS E.A1 BETWEEN 100 AND 500, \n    F AS COUNT(*) <= 10\n)"
+    },
+    {
+      "id": 52,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 12,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO FIRST D\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 500,\n    C AS C.A1 >= 500,\n    D AS D.A1 <= 150,\n    E AS E.A2 <= 600,\n    F AS F.TS <= 999524000301\n)"
+    },
+    {
+      "id": 53,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 13,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST F\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 115,\n    B AS B.TS - A.TS <= 10000,\n    C AS C.A2 BETWEEN 100 AND 900 AND C.TS - A.TS <= 10000,\n    D AS D.TS - A.TS <= 10000,\n    E AS E.TS - A.TS <= 10000,\n    F AS F.A1 BETWEEN 500 AND 515 AND F.TS - A.TS <= 10000\n)"
+    },
+    {
+      "id": 54,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 14,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 400,\n    B AS B.A2 BETWEEN 430 AND 620 AND B.A1 >= A.A1,\n    C AS C.A1 >= 750,\n    D AS D.A1 BETWEEN 150 AND 850 AND D.A1 >= PREV(D.A1),\n    E AS E.REGION > 10 AND E.A1 = A.A1,\n    F AS F.REGION <= 20 AND F.A1 > E.A1\n)"
+    },
+    {
+      "id": 55,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 15,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(B.*) AS COUNT_REPEATED\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 BETWEEN 430 AND 620 AND COUNT(B.*) <= 50,\n    C AS C.A1 >= 250,\n    D AS D.A1 BETWEEN 150 AND 850,\n    E AS E.A2 <= 580,\n    F AS F.A1 >= 350 AND F.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 56,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 16,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 >= A.A1 * 1.2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 2000,\n    C AS C.A1 >= 250,\n    D AS D.A1 BETWEEN 150 AND 850,\n    E AS E.A2 <= 580,\n    F AS F.A1 >= 350 AND F.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 57,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 17,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 >= 250,\n    D AS D.A1 BETWEEN 150 AND 850,\n    E AS E.A2 <= 580,\n    F AS F.A2 >= B.A2 AND F.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 58,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 18,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO FIRST D\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A2 BETWEEN 430 AND 620,\n    C AS C.A1 >= 250,\n    D AS D.A1 >= PREV(D.A1) AND D.TS - A.TS <= 200000,\n    E AS E.A2 <= 580,\n    F AS F.A1 >= 900 AND A.A1 <= 100 AND F.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 59,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 19,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 BETWEEN 430 AND 620 AND B.TS - A.TS <= 72000,\n    C AS C.A1 >= 250 AND C.TS - A.TS <= 72000,\n    D AS D.A1 BETWEEN 150 AND 850 AND D.TS - A.TS <= 72000,\n    E AS E.A2 <= 580 AND E.TS - A.TS <= 72000,\n    F AS F.A1 >= 350 AND F.TS - A.TS <= 36000\n)"
+    },
+    {
+      "id": 60,
+      "pattern_group": 3,
+      "pattern": "(A B+ C D+ E F+)",
+      "variant": 20,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  ALL ROWS PER MATCH\n  PATTERN(A B+ C D+ E F+)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700 AND D.A2 >= 0,\n    B AS B.A2 BETWEEN 430 AND 620,\n    C AS C.A1 >= 250 AND C.A2 >= 50,\n    D AS D.A1 BETWEEN 150 AND 850 AND D.A2 >= 50,\n    E AS E.A2 BETWEEN 0 AND 580,\n    F AS F.A2 >= 500 AND SUM(A2) <= 800 AND F.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 61,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 1,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS,\n    SUM(A1) AS TOTAL_A1,\n    AVG(A2) AS AVG_A2\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A3 LIKE 'a%',\n    B AS B.A2 < 400 AND B.A1 BETWEEN 100 AND 105,\n    C AS C.A2 >= 400 AND C.A1 BETWEEN 100 AND 105,\n    D AS D.A1 BETWEEN 100 AND 105 AND COUNT(*) <= 100\n)"
+    },
+    {
+      "id": 62,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 2,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    D.ID AS DIS,\n    NEXT(D.ID) AS NEXT_DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 450,\n    B AS B.A2 >= 440,\n    C AS C.A1 < 340,\n    D AS D.A2 <= 610 AND D.TS <= 999524000301\n)"
+    },
+    {
+      "id": 63,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 3,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    FIRST(REGION) AS MATCH_REGION,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST B\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 <= 100,\n    B AS B.A2 >= 440 AND B.A1 >= A.A1 * 3,\n    C AS C.A2 <= 440,\n    D AS D.A2 <= 100 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 64,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 4,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO LAST C\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 750,\n    B AS B.A2 >= 440 AND B.A1 >= A.A1 * 3,\n    C AS C.REGION > 10,\n    D AS D.REGION <= 20\n)"
+    },
+    {
+      "id": 65,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 5,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(B.*) AS COUNT_REPEATED,\n    A.ID AS AID,\n    B.ID AS BID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 >= 440 AND COUNT(B.*) <= 50,\n    C AS C.A1 BETWEEN 200 AND 600,\n    D AS D.A2 <= 610 AND D.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 66,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 6,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    B.ID AS BID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 >= A.A1 * 1.2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 2000,\n    C AS C.A1 BETWEEN 200 AND 900,\n    D AS D.A2 <= 610 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 67,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 7,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    B.ID AS BID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 BETWEEN 200 AND 900,\n    D AS D.A2 >= B.A2 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 68,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 8,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A1 >= PREV(B.A1) AND B.TS - A.TS <= 200000,\n    C AS C.A1 BETWEEN 200 AND 900,\n    D AS D.A1 >= 900 AND SUM(A1) >= 100 AND D.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 69,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 9,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES A.ID AS AID,\n    B.ID AS BID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 750,\n    B AS B.A2 >= 440 AND B.TS - A.TS <= 72000,\n    C AS C.A1 BETWEEN 200 AND 900 AND C.TS - A.TS <= 72000,\n    D AS D.A2 <= 610 AND D.TS - A.TS <= 36000\n)"
+    },
+    {
+      "id": 70,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 10,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES A.ID AS AID,\n    B.ID AS BID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 750 AND A.A2 >= 0,\n    B AS B.A2 >= 440 AND B.A2 >= 0,\n    C AS C.A1 BETWEEN 200 AND 900 AND C.A2 >= 0,\n    D AS D.A2 >= 500 AND SUM(A2) <= 800 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 71,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 11,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A3 LIKE 'a%',\n    B AS B.A2 < 400 AND B.A1 BETWEEN 100 AND 105,\n    C AS C.A2 >= 400 AND C.A1 BETWEEN 100 AND 105,\n    D AS D.A1 BETWEEN 100 AND 105 AND COUNT(*) <= 100\n)"
+    },
+    {
+      "id": 72,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 12,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 450,\n    B AS B.A2 >= 440,\n    C AS C.A1 < 340,\n    D AS D.A2 <= 610 AND D.TS <= 999524000301\n)"
+    },
+    {
+      "id": 73,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 13,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST B\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 <= 100,\n    B AS B.A2 >= 440 AND B.A1 >= A.A1 * 3,\n    C AS C.A2 <= 440,\n    D AS D.A2 <= 100 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 74,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 14,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "nested-quantifier stress case",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO LAST C\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 750,\n    B AS B.A2 >= 440 AND B.A1 >= A.A1 * 3,\n    C AS C.REGION > 10,\n    D AS D.REGION <= 20\n)"
+    },
+    {
+      "id": 75,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 15,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(B.*) AS COUNT_REPEATED\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 >= 440 AND COUNT(B.*) <= 50,\n    C AS C.A1 BETWEEN 200 AND 600,\n    D AS D.A2 <= 610 AND D.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 76,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 16,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 >= A.A1 * 1.2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 2000,\n    C AS C.A1 BETWEEN 200 AND 900,\n    D AS D.A2 <= 610 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 77,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 17,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 BETWEEN 200 AND 900,\n    D AS D.A2 >= B.A2 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 78,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 18,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO FIRST B\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A1 >= PREV(B.A1) AND B.TS - A.TS <= 200000,\n    C AS C.A1 BETWEEN 200 AND 900,\n    D AS D.A1 >= 900 AND SUM(A1) >= 100 AND D.TS - A.TS <= 200000\n)"
+    },
+    {
+      "id": 79,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 19,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 750,\n    B AS B.A2 >= 440 AND B.TS - A.TS <= 72000,\n    C AS C.A1 BETWEEN 200 AND 900 AND C.TS - A.TS <= 72000,\n    D AS D.A2 <= 610 AND D.TS - A.TS <= 36000\n)"
+    },
+    {
+      "id": 80,
+      "pattern_group": 4,
+      "pattern": "(A (B+ C)+ D)",
+      "variant": 20,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  ALL ROWS PER MATCH\n  PATTERN(A (B+ C)+ D)\n  DEFINE\n    A AS A.A1 BETWEEN 150 AND 750 AND A.A2 >= 0,\n    B AS B.A2 >= 440 AND B.A2 >= 0,\n    C AS C.A1 BETWEEN 200 AND 900 AND C.A2 >= 0,\n    D AS D.A2 >= 500 AND SUM(A2) <= 800 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 81,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 1,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    SUM(A1) AS TOTAL_A1,\n    AVG(A2) AS AVG_A2\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 < 5,\n    B AS B.A1 <= 10,\n    C AS C.A1 <= 10 AND MATCH_NUMBER() <= 500,\n    D AS D.A1 < 50 AND MATCH_NUMBER() <= 100\n)"
+    },
+    {
+      "id": 82,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 2,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    SUM(A1) AS TOTAL_A1,\n    AVG(A2) AS AVG_A2\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.TS <= 999524000301,\n    B AS B.TS <= 999524000301,\n    C AS C.A3 LIKE 'a%',\n    D AS NOT(D.A3 LIKE 'a%')\n)"
+    },
+    {
+      "id": 83,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 3,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    SUM(A1) AS TOTAL_A1,\n    AVG(A2) AS AVG_A2\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN ((A | B) (C | D))\n  SUBSET U = (A, B), V = (C, D)\n  DEFINE\n    A AS A.A1 <= 100,\n    B AS B.A1 <= 100,\n    C AS C.TS - U.TS <= 1000,\n    D AS D.TS - U.TS <= 1000\n)\n\n"
+    },
+    {
+      "id": 84,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 4,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.REGION <= 10,\n    B AS B.REGION <= 10,\n    C AS NOT(C.A3 LIKE 'a%'),\n    D AS NOT(D.A3 LIKE '2%' OR D.A3 LIKE 'd%')\n)"
+    },
+    {
+      "id": 85,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 5,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(C.*) AS COUNT_REPEATED,\n    FIRST(ID) AS FIRST_ID,\n    LAST(ID) AS LAST_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 125 AND A.A3 LIKE '%c%',\n    B AS B.A1 BETWEEN 100 AND 125 AND B.A3 LIKE '%c%',\n    C AS COUNT(*) <= 2 AND C.TS - A.TS <= 500000,\n    D AS COUNT(*) <= 2 AND D.TS - B.TS <= 500000\n)"
+    },
+    {
+      "id": 86,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 6,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(ID) AS FIRST_ID,\n    LAST(ID) AS LAST_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 BETWEEN 300 AND 850,\n    C AS C.A1 >= PREV(C.A1) * 2 AND MATCH_NUMBER() <= 2000,\n    D AS D.A1 <= PREV(D.A1) / 2 AND MATCH_NUMBER() <= 2000\n)"
+    },
+    {
+      "id": 87,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 7,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    FIRST(ID) AS FIRST_ID,\n    LAST(ID) AS LAST_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 BETWEEN 100 AND 300,\n    C AS C.A2 >= A.A2 AND C.TS - A.TS <= 100000,\n    D AS D.A2 >= B.A2 AND D.TS - B.TS <= 100000\n)"
+    },
+    {
+      "id": 88,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 8,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A3 LIKE 'b%' OR B.A3 LIKE 'c%',\n    C AS C.A1 >= 900 AND SUM(A.A1) >= 100,\n    D AS D.A1 >= 900 AND SUM(B.A1) >= 100\n)"
+    },
+    {
+      "id": 89,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 9,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    FIRST(ID) AS FIRST_ID,\n    LAST(ID) AS LAST_ID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 < 550,\n    B AS B.A1 >= 450,\n    C AS C.A2 <= 200,\n    D AS D.A2 >= 800\n)"
+    },
+    {
+      "id": 90,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 10,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES FIRST(ID) AS FIRST_ID,\n    LAST(ID) AS LAST_ID\n  ONE ROW PER MATCH\n  PATTERN((A|B) (C|D))\n  SUBSET U = (A, B), V = (C, D)\n  DEFINE\n    A AS A.A1 < 550 AND A.A2 >= 300,\n    B AS B.A1 >= 450 AND B.A2 >= 400,\n    C AS C.A2 >= U.A2 * 2 AND C.TS - U.TS <= 100000,\n    D AS D.A2 >= U.A2 * 2 AND D.TS - U.TS <= 100000\n)"
+    },
+    {
+      "id": 91,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 11,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 < 5,\n    B AS B.A1 <= 10,\n    C AS C.A1 <= 10 AND MATCH_NUMBER() <= 500,\n    D AS D.A1 < 50 AND MATCH_NUMBER() <= 100\n)"
+    },
+    {
+      "id": 92,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 12,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.TS <= 999524000301,\n    B AS B.TS <= 999524000301,\n    C AS C.A3 LIKE 'a%',\n    D AS NOT(D.A3 LIKE 'a%')\n)"
+    },
+    {
+      "id": 93,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 13,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  SUBSET U = (A, B), V = (C, D)\n  DEFINE\n    A AS A.A1 <= 100,\n    B AS B.A1 <= 100,\n    C AS C.TS - U.TS <= 1000,\n    D AS D.TS - U.TS <= 1000\n)"
+    },
+    {
+      "id": 94,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 14,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.REGION <= 10,\n    B AS B.REGION <= 10,\n    C AS NOT(C.A3 LIKE 'a%'),\n    D AS NOT(D.A3 LIKE '2%' OR D.A3 LIKE 'd%')\n)"
+    },
+    {
+      "id": 95,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 15,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(C.*) AS COUNT_REPEATED\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 125 AND A.A3 LIKE '%c%',\n    B AS B.A1 BETWEEN 100 AND 125 AND B.A3 LIKE '%c%',\n    C AS COUNT(*) <= 2 AND C.TS - A.TS <= 500000,\n    D AS COUNT(*) <= 2 AND D.TS - B.TS <= 500000\n)"
+    },
+    {
+      "id": 96,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 16,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850,\n    B AS B.A1 BETWEEN 300 AND 850,\n    C AS C.A1 >= PREV(C.A1) * 2 AND MATCH_NUMBER() <= 2000,\n    D AS D.A1 <= PREV(D.A1) / 2 AND MATCH_NUMBER() <= 2000\n)"
+    },
+    {
+      "id": 97,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 17,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300,\n    B AS B.A1 BETWEEN 100 AND 300,\n    C AS C.A2 >= A.A2 AND C.TS - A.TS <= 100000,\n    D AS D.A2 >= B.A2 AND D.TS - B.TS <= 100000\n)"
+    },
+    {
+      "id": 98,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 18,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A3 LIKE 'b%' OR A.A3 LIKE 'c%',\n    B AS B.A3 LIKE 'b%' OR B.A3 LIKE 'c%',\n    C AS C.A1 >= 900 AND SUM(A.A1) >= 100,\n    D AS D.A1 >= 900 AND SUM(B.A1) >= 100\n)"
+    },
+    {
+      "id": 99,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 19,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN((A|B) (C|D))\n  DEFINE\n    A AS A.A1 < 550,\n    B AS B.A1 >= 450,\n    C AS C.A2 <= 200,\n    D AS D.A2 >= 800\n)"
+    },
+    {
+      "id": 100,
+      "pattern_group": 5,
+      "pattern": "((A|B) (C|D))",
+      "variant": 20,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  ALL ROWS PER MATCH\n  PATTERN((A|B) (C|D))\n  SUBSET U = (A, B), V = (C, D)\n  DEFINE\n    A AS A.A1 < 550 AND A.A2 >= 300,\n    B AS B.A1 >= 450 AND B.A2 >= 400,\n    C AS C.A2 >= U.A2 * 2 AND C.TS - U.TS <= 100000,\n    D AS D.A2 >= U.A2 * 2 AND D.TS - U.TS <= 100000\n)"
+    },
+    {
+      "id": 101,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 1,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES\n    A.ID AS AID,\n    D.ID AS DID,\n    SUM(B.A2) AS SUM_BA2,\n    SUM(C.A2) AS SUM_CA2\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 360 AND A.A3 LIKE 'a%',\n    B AS B.A2 >= 500,\n    C AS C.A1 >= 500,\n    D AS D.A2 <= 100 AND D.TS - A.TS <= 100000,\n    Z AS Z.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 102,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 2,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES \n    MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    Z AS Z.A1 > PREV(Z.A1),\n    B AS B.A2 >= 500,\n    C AS C.A1 >= 500,\n    D AS D.TS <= 999524000301\n)"
+    },
+    {
+      "id": 103,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 3,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 600 AND B.TS - A.TS <= 100000,\n    C AS C.A1 <= 150 AND C.TS - A.TS <= 100000,\n    D AS D.A2 <= 100 AND D.TS - A.TS <= 100000,\n    Z AS Z.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 104,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 4,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ONE ROW column pruning",
+        "measure aggregation",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    COUNT(*) AS MATCH_ROWS\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A1 <= 200,\n    C AS C.A1 >= 800,\n    D AS D.A2 <= 600 AND D.REGION <= 10,\n    Z AS Z.A1 >= PREV(Z.A1)\n)"
+    },
+    {
+      "id": 105,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 5,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(B.*) AS COUNT_REPEATED,\n    A.ID AS AID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 >= 500 AND COUNT(B.*) <= 50,\n    C AS C.A1 >= 500,\n    D AS D.A2 <= 600 AND D.TS - A.TS <= 500000,\n    Z AS COUNT(Z.*) <= 50 AND Z.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 106,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 6,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    A.ID AS AID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850 AND A.TS >= 1009324001099,\n    B AS B.A1 >= A.A1 * 2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 200,\n    C AS C.A1 >= 500,\n    D AS D.A2 <= 600 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 107,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 7,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS,\n    A.ID AS AID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300 AND A.TS <= 1001324000361,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 >= 500,\n    D AS D.A2 >= B.A2 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 108,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 8,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    FIRST(TS) AS START_TS,\n    LAST(TS) AS END_TS\n  ONE ROW PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 0 AND 200,\n    B AS B.A2 >= 700,\n    C AS C.A1 >= 700,\n    D AS D.A1 >= 900 AND D.A2 <= 200 AND D.TS - A.TS <= 20000,\n    Z AS Z.A1 > A.A1 * 3 AND Z.TS - A.TS <= 20000\n)"
+    },
+    {
+      "id": 109,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 9,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES \n    A.ID AS AID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 500 AND COUNT(*) <= 50,\n    C AS C.A1 >= 500 AND COUNT(*) <= 50,\n    D AS D.A2 <= 300 AND D.A2 = A.A2 AND COUNT(*) <= 50,\n    Z AS COUNT(*) <= 50\n)"
+    },
+    {
+      "id": 110,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 10,
+      "rows_per_match": "ONE ROW PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  MEASURES \n    A.ID AS AID,\n    D.ID AS DID\n  ONE ROW PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  SUBSET U = (A, B, C, D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 500 AND A.A2 >=0,\n    C AS C.A1 >= 500 AND C.A2 >= 0,\n    D AS D.A2 >= 500 AND SUM(U.A2) <= 800 AND D.TS - A.TS <= 10000,\n    Z AS Z.TS - A.TS <= 10000\n)"
+    },
+    {
+      "id": 111,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 11,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "independent predicates",
+        "sequence filtering",
+        "row filtering",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 360 AND A.A3 LIKE 'a%',\n    B AS B.A2 >= 500,\n    C AS C.A1 >= 500,\n    D AS D.A2 <= 100 AND D.TS - A.TS <= 100000,\n    Z AS Z.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 112,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 12,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "ordered TS ranges",
+        "ordered-range pushdown",
+        "column pruning",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    Z AS Z.A1 > PREV(Z.A1),\n    B AS B.A2 >= 500,\n    C AS C.A1 >= 500,\n    D AS D.TS <= 999524000301\n)"
+    },
+    {
+      "id": 113,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 13,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "dependent predicates",
+        "constraint propagation",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 600 AND B.TS - A.TS <= 100000,\n    C AS C.A1 <= 150 AND C.TS - A.TS <= 100000,\n    D AS D.A2 <= 100 AND D.TS - A.TS <= 100000,\n    Z AS Z.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 114,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 14,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "physical navigation",
+        "PREV",
+        "no partition",
+        "ALL ROWS join-back pruning",
+        "running measures",
+        "alternation/regex optimization",
+        "quantifier-boundary stress case"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  PARTITION BY REGION\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP TO NEXT ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A1 <= 200,\n    C AS C.A1 >= 800,\n    D AS D.A2 <= 600 AND D.REGION <= 10,\n    Z AS Z.A1 >= PREV(Z.A1)\n)"
+    },
+    {
+      "id": 115,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 15,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 5",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  MEASURES MATCH_NUMBER() AS MATCH_NO,\n    CLASSIFIER() AS ROW_CLASS,\n    COUNT(B.*) AS COUNT_REPEATED\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A {- Z* -} (B+|C+) {- Z* -} D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 105 AND A.A3 LIKE '%c%',\n    B AS B.A2 >= 500 AND COUNT(B.*) <= 50,\n    C AS C.A1 >= 500,\n    D AS D.A2 <= 600 AND D.TS - A.TS <= 500000,\n    Z AS COUNT(Z.*) <= 50 AND Z.TS - A.TS <= 500000\n)"
+    },
+    {
+      "id": 116,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 16,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 6",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 300 AND 850 AND A.TS >= 1009324001099,\n    B AS B.A1 >= A.A1 * 2 AND A.A2 <= 800 AND MATCH_NUMBER() <= 200,\n    C AS C.A1 >= 500,\n    D AS D.A2 <= 600 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 117,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 17,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 7",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 300 AND A.TS <= 1001324000361,\n    B AS B.A1 >= 500 AND B.A2 >= 500 AND B.A3 LIKE '%a',\n    C AS C.A1 >= 500,\n    D AS D.A2 >= B.A2 AND D.TS - A.TS <= 100000\n)"
+    },
+    {
+      "id": 118,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 18,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 8",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 0 AND 200,\n    B AS B.A2 >= 700,\n    C AS C.A1 >= 700,\n    D AS D.A1 >= 900 AND D.A2 <= 200 AND D.TS - A.TS <= 20000,\n    Z AS Z.A1 > A.A1 * 3 AND Z.TS - A.TS <= 20000\n)"
+    },
+    {
+      "id": 119,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 19,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 9",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS, ID\n  ALL ROWS PER MATCH\n  AFTER MATCH SKIP PAST LAST ROW\n  PATTERN(A Z* (B+|C+) Z* D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 500 AND COUNT(*) <= 50,\n    C AS C.A1 >= 500 AND COUNT(*) <= 50,\n    D AS D.A2 <= 300 AND D.A2 = A.A2 AND COUNT(*) <= 50,\n    Z AS COUNT(*) <= 50\n)"
+    },
+    {
+      "id": 120,
+      "pattern_group": 6,
+      "pattern": "(A Z* (B+|C+) Z* D)",
+      "variant": 20,
+      "rows_per_match": "ALL ROWS PER MATCH",
+      "targeted_features": [
+        "first-20 template case 10",
+        "hand-tuned selectivity",
+        "bounded match search",
+        "running ALL ROWS semantics"
+      ],
+      "url": "synthetic://row-pattern-recognition",
+      "sql": "SELECT * FROM SYN10M MATCH_RECOGNIZE(\n  ORDER BY TS DESC, ID\n  ALL ROWS PER MATCH\n  PATTERN(A Z* (B+|C+) Z* D)\n  SUBSET U = (A, B, C, D)\n  DEFINE\n    A AS A.A1 BETWEEN 100 AND 700,\n    B AS B.A2 >= 500 AND A.A2 >=0,\n    C AS C.A1 >= 500 AND C.A2 >= 0,\n    D AS D.A2 >= 500 AND SUM(U.A2) <= 800 AND D.TS - A.TS <= 10000,\n    Z AS Z.TS - A.TS <= 10000\n)"
+    }
+  ]
+}

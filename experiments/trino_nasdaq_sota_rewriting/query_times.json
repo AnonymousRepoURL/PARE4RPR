@@ -1,0 +1,4115 @@
+{
+  "generated_at": "2026-10-02T21:27:06+00:00",
+  "query_file": "data\\nasdaq_sql_trino_sota_method.txt",
+  "trino_url": "http://localhost:8080",
+  "catalog": "postgresql",
+  "schema": "public",
+  "user": "demo",
+  "fetch_size": 2000,
+  "timeout_seconds": 300.0,
+  "runs_per_query": 3,
+  "max_output_rows": 5000,
+  "query_count": 100,
+  "queries": [
+    {
+      "id": 1,
+      "url": null,
+      "output_file": "1.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 734315,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.97555,
+          "rows_fetched": 734315,
+          "started_at": "2026-10-02T14:00:42+00:00",
+          "finished_at": "2026-10-02T14:01:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.143376,
+          "rows_fetched": 734315,
+          "started_at": "2026-10-02T16:56:02+00:00",
+          "finished_at": "2026-10-02T16:57:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 60.019971,
+          "rows_fetched": 734315,
+          "started_at": "2026-10-02T19:58:59+00:00",
+          "finished_at": "2026-10-02T19:59:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.046299
+    },
+    {
+      "id": 2,
+      "url": null,
+      "output_file": "2.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 291452,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 38.424632,
+          "rows_fetched": 291452,
+          "started_at": "2026-10-02T14:01:38+00:00",
+          "finished_at": "2026-10-02T14:02:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.955504,
+          "rows_fetched": 291452,
+          "started_at": "2026-10-02T16:57:00+00:00",
+          "finished_at": "2026-10-02T16:57:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 39.483401,
+          "rows_fetched": 291452,
+          "started_at": "2026-10-02T19:59:59+00:00",
+          "finished_at": "2026-10-02T20:00:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 38.621179
+    },
+    {
+      "id": 3,
+      "url": null,
+      "output_file": "3.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 37.127179,
+          "rows_fetched": 242,
+          "started_at": "2026-10-02T14:02:16+00:00",
+          "finished_at": "2026-10-02T14:02:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 40.755575,
+          "rows_fetched": 242,
+          "started_at": "2026-10-02T16:57:38+00:00",
+          "finished_at": "2026-10-02T16:58:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 41.367841,
+          "rows_fetched": 242,
+          "started_at": "2026-10-02T20:00:39+00:00",
+          "finished_at": "2026-10-02T20:01:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 39.750198
+    },
+    {
+      "id": 4,
+      "url": null,
+      "output_file": "4.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.020519,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:02:53+00:00",
+          "finished_at": "2026-10-02T14:07:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.03278,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:58:19+00:00",
+          "finished_at": "2026-10-02T17:03:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:01:20+00:00",
+          "finished_at": "2026-10-02T20:01:20+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.017766
+    },
+    {
+      "id": 5,
+      "url": null,
+      "output_file": "5.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 68.177159,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:07:53+00:00",
+          "finished_at": "2026-10-02T14:09:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 59.509127,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:03:19+00:00",
+          "finished_at": "2026-10-02T17:04:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 58.342396,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:01:20+00:00",
+          "finished_at": "2026-10-02T20:02:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 62.009561
+    },
+    {
+      "id": 6,
+      "url": null,
+      "output_file": "6.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.173401,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:09:02+00:00",
+          "finished_at": "2026-10-02T14:10:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 44.379919,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:04:18+00:00",
+          "finished_at": "2026-10-02T17:05:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.910361,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:02:19+00:00",
+          "finished_at": "2026-10-02T20:03:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.15456
+    },
+    {
+      "id": 7,
+      "url": null,
+      "output_file": "7.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.037261,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:10:12+00:00",
+          "finished_at": "2026-10-02T14:15:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.036622,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:05:03+00:00",
+          "finished_at": "2026-10-02T17:10:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:03:18+00:00",
+          "finished_at": "2026-10-02T20:03:18+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.024628
+    },
+    {
+      "id": 8,
+      "url": null,
+      "output_file": "8.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 443,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.471168,
+          "rows_fetched": 443,
+          "started_at": "2026-10-02T14:15:12+00:00",
+          "finished_at": "2026-10-02T14:16:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 56.924581,
+          "rows_fetched": 443,
+          "started_at": "2026-10-02T17:10:03+00:00",
+          "finished_at": "2026-10-02T17:11:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 62.412803,
+          "rows_fetched": 443,
+          "started_at": "2026-10-02T20:03:18+00:00",
+          "finished_at": "2026-10-02T20:04:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.269517
+    },
+    {
+      "id": 9,
+      "url": null,
+      "output_file": "9.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 92.115229,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:16:07+00:00",
+          "finished_at": "2026-10-02T14:17:39+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 80.04kB, Top Consumers: {MatchAggregation=974.42MB, PagesToPagesIndexes=43.02MB, MergeSortedPages=6.35MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 81.64884,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:11:00+00:00",
+          "finished_at": "2026-10-02T17:12:21+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 80.04kB, Top Consumers: {MatchAggregation=966.52MB, PagesToPagesIndexes=43.02MB, MergeSortedPages=14.22MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 89.402009,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:04:21+00:00",
+          "finished_at": "2026-10-02T20:05:50+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 40.04kB, Top Consumers: {MatchAggregation=680.56MB, MergeSortedPages=298.86MB, PagesToPagesIndexes=43.02MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 87.722026
+    },
+    {
+      "id": 10,
+      "url": null,
+      "output_file": "10.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 162718,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.670629,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-02T14:17:39+00:00",
+          "finished_at": "2026-10-02T14:18:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.697249,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-02T17:12:21+00:00",
+          "finished_at": "2026-10-02T17:13:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 63.048625,
+          "rows_fetched": 162718,
+          "started_at": "2026-10-02T20:05:50+00:00",
+          "finished_at": "2026-10-02T20:06:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 56.138834
+    },
+    {
+      "id": 11,
+      "url": null,
+      "output_file": "11.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 80.4971,
+          "rows_fetched": 12,
+          "started_at": "2026-10-02T14:18:35+00:00",
+          "finished_at": "2026-10-02T14:19:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 66.362727,
+          "rows_fetched": 12,
+          "started_at": "2026-10-02T17:13:11+00:00",
+          "finished_at": "2026-10-02T17:14:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 43.100883,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:06:53+00:00",
+          "finished_at": "2026-10-02T20:07:36+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.39MB, Delta: 922.25kB, Top Consumers: {MergeSortedPages=1016.36MB, GenericSpiller=7.03MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 63.320237
+    },
+    {
+      "id": 12,
+      "url": null,
+      "output_file": "12.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 6,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 43.619133,
+          "rows_fetched": 6,
+          "started_at": "2026-10-02T14:19:56+00:00",
+          "finished_at": "2026-10-02T14:20:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 37.937877,
+          "rows_fetched": 6,
+          "started_at": "2026-10-02T17:14:17+00:00",
+          "finished_at": "2026-10-02T17:14:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.256229,
+          "rows_fetched": 6,
+          "started_at": "2026-10-02T20:07:36+00:00",
+          "finished_at": "2026-10-02T20:08:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.937746
+    },
+    {
+      "id": 13,
+      "url": null,
+      "output_file": "13.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 544,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 198.367959,
+          "rows_fetched": 544,
+          "started_at": "2026-10-02T14:20:39+00:00",
+          "finished_at": "2026-10-02T14:23:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 177.302292,
+          "rows_fetched": 544,
+          "started_at": "2026-10-02T17:14:55+00:00",
+          "finished_at": "2026-10-02T17:17:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 200.894549,
+          "rows_fetched": 544,
+          "started_at": "2026-10-02T20:08:24+00:00",
+          "finished_at": "2026-10-02T20:11:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 192.188267
+    },
+    {
+      "id": 14,
+      "url": null,
+      "output_file": "14.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 76,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 19.147,
+          "rows_fetched": 76,
+          "started_at": "2026-10-02T14:23:58+00:00",
+          "finished_at": "2026-10-02T14:24:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 18.560004,
+          "rows_fetched": 76,
+          "started_at": "2026-10-02T17:17:53+00:00",
+          "finished_at": "2026-10-02T17:18:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 20.484334,
+          "rows_fetched": 76,
+          "started_at": "2026-10-02T20:11:45+00:00",
+          "finished_at": "2026-10-02T20:12:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 19.397113
+    },
+    {
+      "id": 15,
+      "url": null,
+      "output_file": "15.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.576702,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:24:17+00:00",
+          "finished_at": "2026-10-02T14:25:07+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.091709,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:18:11+00:00",
+          "finished_at": "2026-10-02T17:19:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.565935,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:12:05+00:00",
+          "finished_at": "2026-10-02T20:13:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 53.078115
+    },
+    {
+      "id": 16,
+      "url": null,
+      "output_file": "16.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 67.187118,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:25:07+00:00",
+          "finished_at": "2026-10-02T14:26:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 65.485552,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:19:00+00:00",
+          "finished_at": "2026-10-02T17:20:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 34.031424,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:13:05+00:00",
+          "finished_at": "2026-10-02T20:13:39+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.66MB, Delta: 1.08MB, Top Consumers: {MergeSortedPages=995.69MB, PagesToPagesIndexes=23.49MB, GenericSpiller=4.48MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 55.568031
+    },
+    {
+      "id": 17,
+      "url": null,
+      "output_file": "17.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4506,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 103.547026,
+          "rows_fetched": 4506,
+          "started_at": "2026-10-02T14:26:15+00:00",
+          "finished_at": "2026-10-02T14:27:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 104.216659,
+          "rows_fetched": 4506,
+          "started_at": "2026-10-02T17:20:06+00:00",
+          "finished_at": "2026-10-02T17:21:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 117.067582,
+          "rows_fetched": 4506,
+          "started_at": "2026-10-02T20:13:39+00:00",
+          "finished_at": "2026-10-02T20:15:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 108.277089
+    },
+    {
+      "id": 18,
+      "url": null,
+      "output_file": "18.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 52.267741,
+          "rows_fetched": 31,
+          "started_at": "2026-10-02T14:27:58+00:00",
+          "finished_at": "2026-10-02T14:28:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.082197,
+          "rows_fetched": 31,
+          "started_at": "2026-10-02T17:21:50+00:00",
+          "finished_at": "2026-10-02T17:22:41+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.041977,
+          "rows_fetched": 31,
+          "started_at": "2026-10-02T20:15:36+00:00",
+          "finished_at": "2026-10-02T20:16:40+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 55.797305
+    },
+    {
+      "id": 19,
+      "url": null,
+      "output_file": "19.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 20.092653,
+          "rows_fetched": 1,
+          "started_at": "2026-10-02T14:28:50+00:00",
+          "finished_at": "2026-10-02T14:29:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 18.907023,
+          "rows_fetched": 1,
+          "started_at": "2026-10-02T17:22:41+00:00",
+          "finished_at": "2026-10-02T17:23:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 21.514943,
+          "rows_fetched": 1,
+          "started_at": "2026-10-02T20:16:40+00:00",
+          "finished_at": "2026-10-02T20:17:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 20.17154
+    },
+    {
+      "id": 20,
+      "url": null,
+      "output_file": "20.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 928,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 59.53632,
+          "rows_fetched": 928,
+          "started_at": "2026-10-02T14:29:11+00:00",
+          "finished_at": "2026-10-02T14:30:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 55.773796,
+          "rows_fetched": 928,
+          "started_at": "2026-10-02T17:23:00+00:00",
+          "finished_at": "2026-10-02T17:23:56+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 34.705337,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:17:01+00:00",
+          "finished_at": "2026-10-02T20:17:36+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.23MB, Delta: 1.08MB, Top Consumers: {MergeSortedPages=997.42MB, PagesToPagesIndexes=21.32MB, GenericSpiller=4.49MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 50.005151
+    },
+    {
+      "id": 21,
+      "url": null,
+      "output_file": "21.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 82.133594,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:30:10+00:00",
+          "finished_at": "2026-10-02T14:31:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 80.273089,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:23:56+00:00",
+          "finished_at": "2026-10-02T17:25:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 56.795218,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:17:36+00:00",
+          "finished_at": "2026-10-02T20:18:33+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.82MB, Delta: 922.42kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.44MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.44kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 73.0673
+    },
+    {
+      "id": 22,
+      "url": null,
+      "output_file": "22.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2169,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 84.977883,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-02T14:31:32+00:00",
+          "finished_at": "2026-10-02T14:32:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 77.576605,
+          "rows_fetched": 2169,
+          "started_at": "2026-10-02T17:25:16+00:00",
+          "finished_at": "2026-10-02T17:26:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 56.00121,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:18:33+00:00",
+          "finished_at": "2026-10-02T20:19:29+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.84MB, Delta: 922.41kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.46MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.44kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 72.851899
+    },
+    {
+      "id": 23,
+      "url": null,
+      "output_file": "23.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035597,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:32:57+00:00",
+          "finished_at": "2026-10-02T14:37:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.03229,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:26:34+00:00",
+          "finished_at": "2026-10-02T17:31:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:19:29+00:00",
+          "finished_at": "2026-10-02T20:19:29+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.022629
+    },
+    {
+      "id": 24,
+      "url": null,
+      "output_file": "24.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 175.632715,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:37:57+00:00",
+          "finished_at": "2026-10-02T14:40:53+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 5.04kB, Top Consumers: {MatchAggregation=564.21MB, MergeSortedPages=419.39MB, PagesToPagesIndexes=37.27MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 155.79617,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:31:34+00:00",
+          "finished_at": "2026-10-02T17:34:10+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=565.38MB, MergeSortedPages=419.39MB, PagesToPagesIndexes=37.27MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 181.979051,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:19:29+00:00",
+          "finished_at": "2026-10-02T20:22:31+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=565.38MB, MergeSortedPages=419.39MB, PagesToPagesIndexes=37.27MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 171.135979
+    },
+    {
+      "id": 25,
+      "url": null,
+      "output_file": "25.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 15807,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 132.416069,
+          "rows_fetched": 15807,
+          "started_at": "2026-10-02T14:40:53+00:00",
+          "finished_at": "2026-10-02T14:43:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 128.049733,
+          "rows_fetched": 15807,
+          "started_at": "2026-10-02T17:34:10+00:00",
+          "finished_at": "2026-10-02T17:36:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 135.029668,
+          "rows_fetched": 15807,
+          "started_at": "2026-10-02T20:22:31+00:00",
+          "finished_at": "2026-10-02T20:24:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 131.831823
+    },
+    {
+      "id": 26,
+      "url": null,
+      "output_file": "26.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 17.408769,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:43:05+00:00",
+          "finished_at": "2026-10-02T14:43:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 17.7085,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:36:18+00:00",
+          "finished_at": "2026-10-02T17:36:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 18.733959,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:24:46+00:00",
+          "finished_at": "2026-10-02T20:25:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 17.950409
+    },
+    {
+      "id": 27,
+      "url": null,
+      "output_file": "27.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023883,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:43:23+00:00",
+          "finished_at": "2026-10-02T14:48:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.023558,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:36:35+00:00",
+          "finished_at": "2026-10-02T17:41:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:25:05+00:00",
+          "finished_at": "2026-10-02T20:25:05+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.015814
+    },
+    {
+      "id": 28,
+      "url": null,
+      "output_file": "28.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 5785,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 161.044807,
+          "rows_fetched": 5785,
+          "started_at": "2026-10-02T14:48:23+00:00",
+          "finished_at": "2026-10-02T14:51:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 168.87455,
+          "rows_fetched": 5785,
+          "started_at": "2026-10-02T17:41:35+00:00",
+          "finished_at": "2026-10-02T17:44:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 168.388945,
+          "rows_fetched": 5785,
+          "started_at": "2026-10-02T20:25:05+00:00",
+          "finished_at": "2026-10-02T20:27:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 166.102767
+    },
+    {
+      "id": 29,
+      "url": null,
+      "output_file": "29.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.034243,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:51:04+00:00",
+          "finished_at": "2026-10-02T14:56:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 41.384939,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:44:24+00:00",
+          "finished_at": "2026-10-02T17:45:06+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.70MB, Delta: 922.76kB, Top Consumers: {MergeSortedPages=1016.36MB, GenericSpiller=7.34MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.464542,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:27:53+00:00",
+          "finished_at": "2026-10-02T20:28:34+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 922.05kB, Top Consumers: {MergeSortedPages=1017.24MB, GenericSpiller=6.75MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 127.294575
+    },
+    {
+      "id": 30,
+      "url": null,
+      "output_file": "30.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 44.817131,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:56:04+00:00",
+          "finished_at": "2026-10-02T14:56:49+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.78MB, Delta: 922.53kB, Top Consumers: {MergeSortedPages=1016.35MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 41.418694,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:45:06+00:00",
+          "finished_at": "2026-10-02T17:45:47+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.46MB, Delta: 922.52kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.09MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 43.313416,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:28:34+00:00",
+          "finished_at": "2026-10-02T20:29:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.72MB, Delta: 922.47kB, Top Consumers: {MergeSortedPages=1016.39MB, GenericSpiller=7.33MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 43.18308
+    },
+    {
+      "id": 31,
+      "url": null,
+      "output_file": "31.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 71.457575,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:56:49+00:00",
+          "finished_at": "2026-10-02T14:58:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 61.532181,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:45:47+00:00",
+          "finished_at": "2026-10-02T17:46:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 61.496681,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:29:17+00:00",
+          "finished_at": "2026-10-02T20:30:18+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 64.828812
+    },
+    {
+      "id": 32,
+      "url": null,
+      "output_file": "32.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 43.622563,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:58:00+00:00",
+          "finished_at": "2026-10-02T14:58:44+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.79MB, Delta: 922.50kB, Top Consumers: {MergeSortedPages=1016.36MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 39.918975,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:46:49+00:00",
+          "finished_at": "2026-10-02T17:47:29+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.31MB, Delta: 922.10kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=6.95MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.795862,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:30:18+00:00",
+          "finished_at": "2026-10-02T20:30:59+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.51MB, Delta: 922.59kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.13MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 41.4458
+    },
+    {
+      "id": 33,
+      "url": null,
+      "output_file": "33.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 45.658418,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T14:58:44+00:00",
+          "finished_at": "2026-10-02T14:59:30+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.65MB, Delta: 922.70kB, Top Consumers: {MergeSortedPages=1016.34MB, GenericSpiller=7.30MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 42.703815,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:47:29+00:00",
+          "finished_at": "2026-10-02T17:48:11+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.76MB, Delta: 923.06kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.39MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.616324,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:30:59+00:00",
+          "finished_at": "2026-10-02T20:31:41+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.79MB, Delta: 922.70kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.41MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 43.326186
+    },
+    {
+      "id": 34,
+      "url": null,
+      "output_file": "34.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 66,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 79.04909,
+          "rows_fetched": 66,
+          "started_at": "2026-10-02T14:59:30+00:00",
+          "finished_at": "2026-10-02T15:00:49+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 67.197832,
+          "rows_fetched": 66,
+          "started_at": "2026-10-02T17:48:11+00:00",
+          "finished_at": "2026-10-02T17:49:19+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 66.288443,
+          "rows_fetched": 66,
+          "started_at": "2026-10-02T20:31:41+00:00",
+          "finished_at": "2026-10-02T20:32:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 70.845122
+    },
+    {
+      "id": 35,
+      "url": null,
+      "output_file": "35.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 202,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 86.342878,
+          "rows_fetched": 202,
+          "started_at": "2026-10-02T15:00:49+00:00",
+          "finished_at": "2026-10-02T15:02:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 75.224598,
+          "rows_fetched": 202,
+          "started_at": "2026-10-02T17:49:19+00:00",
+          "finished_at": "2026-10-02T17:50:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 74.172133,
+          "rows_fetched": 202,
+          "started_at": "2026-10-02T20:32:47+00:00",
+          "finished_at": "2026-10-02T20:34:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 78.57987
+    },
+    {
+      "id": 36,
+      "url": null,
+      "output_file": "36.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 25.893909,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:02:15+00:00",
+          "finished_at": "2026-10-02T15:02:41+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 22.845132,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:50:34+00:00",
+          "finished_at": "2026-10-02T17:50:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 22.781135,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:34:01+00:00",
+          "finished_at": "2026-10-02T20:34:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 23.840059
+    },
+    {
+      "id": 37,
+      "url": null,
+      "output_file": "37.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 31,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 80.679534,
+          "rows_fetched": 31,
+          "started_at": "2026-10-02T15:02:41+00:00",
+          "finished_at": "2026-10-02T15:04:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 71.327871,
+          "rows_fetched": 31,
+          "started_at": "2026-10-02T17:50:57+00:00",
+          "finished_at": "2026-10-02T17:52:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.005689,
+          "rows_fetched": 31,
+          "started_at": "2026-10-02T20:34:24+00:00",
+          "finished_at": "2026-10-02T20:35:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 74.004365
+    },
+    {
+      "id": 38,
+      "url": null,
+      "output_file": "38.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4105,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 82.619489,
+          "rows_fetched": 4105,
+          "started_at": "2026-10-02T15:04:02+00:00",
+          "finished_at": "2026-10-02T15:05:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 72.603434,
+          "rows_fetched": 4105,
+          "started_at": "2026-10-02T17:52:08+00:00",
+          "finished_at": "2026-10-02T17:53:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 71.829204,
+          "rows_fetched": 4105,
+          "started_at": "2026-10-02T20:35:34+00:00",
+          "finished_at": "2026-10-02T20:36:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 75.684042
+    },
+    {
+      "id": 39,
+      "url": null,
+      "output_file": "39.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 42.958932,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:05:24+00:00",
+          "finished_at": "2026-10-02T15:06:07+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.97MB, Delta: 80.04kB, Top Consumers: {MergeSortedPages=609.79MB, MatchAggregation=361.85MB, PagesToPagesIndexes=48.70MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 38.969484,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:53:21+00:00",
+          "finished_at": "2026-10-02T17:54:00+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.96MB, Delta: 80.04kB, Top Consumers: {MergeSortedPages=608.92MB, MatchAggregation=362.71MB, PagesToPagesIndexes=48.70MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.510452,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:36:46+00:00",
+          "finished_at": "2026-10-02T20:37:27+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 80.04kB, Top Consumers: {MergeSortedPages=606.33MB, MatchAggregation=365.29MB, PagesToPagesIndexes=48.70MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 40.812956
+    },
+    {
+      "id": 40,
+      "url": null,
+      "output_file": "40.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 10,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 105.024915,
+          "rows_fetched": 10,
+          "started_at": "2026-10-02T15:06:07+00:00",
+          "finished_at": "2026-10-02T15:07:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 94.012122,
+          "rows_fetched": 10,
+          "started_at": "2026-10-02T17:54:00+00:00",
+          "finished_at": "2026-10-02T17:55:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 93.257841,
+          "rows_fetched": 10,
+          "started_at": "2026-10-02T20:37:27+00:00",
+          "finished_at": "2026-10-02T20:39:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 97.431626
+    },
+    {
+      "id": 41,
+      "url": null,
+      "output_file": "41.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 424804,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.205398,
+          "rows_fetched": 424804,
+          "started_at": "2026-10-02T15:07:52+00:00",
+          "finished_at": "2026-10-02T15:08:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 25.524952,
+          "rows_fetched": 424804,
+          "started_at": "2026-10-02T17:55:34+00:00",
+          "finished_at": "2026-10-02T17:55:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 26.228056,
+          "rows_fetched": 424804,
+          "started_at": "2026-10-02T20:39:00+00:00",
+          "finished_at": "2026-10-02T20:39:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 26.652802
+    },
+    {
+      "id": 42,
+      "url": null,
+      "output_file": "42.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 8,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 5.18259,
+          "rows_fetched": 8,
+          "started_at": "2026-10-02T15:08:21+00:00",
+          "finished_at": "2026-10-02T15:08:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 4.9464,
+          "rows_fetched": 8,
+          "started_at": "2026-10-02T17:55:59+00:00",
+          "finished_at": "2026-10-02T17:56:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 5.528966,
+          "rows_fetched": 8,
+          "started_at": "2026-10-02T20:39:26+00:00",
+          "finished_at": "2026-10-02T20:39:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 5.219319
+    },
+    {
+      "id": 43,
+      "url": null,
+      "output_file": "43.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027416,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:08:26+00:00",
+          "finished_at": "2026-10-02T15:13:26+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02219,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T17:56:04+00:00",
+          "finished_at": "2026-10-02T18:01:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:39:32+00:00",
+          "finished_at": "2026-10-02T20:39:32+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.016535
+    },
+    {
+      "id": 44,
+      "url": null,
+      "output_file": "44.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 5.267862,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:13:26+00:00",
+          "finished_at": "2026-10-02T15:13:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 5.270467,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:01:04+00:00",
+          "finished_at": "2026-10-02T18:01:09+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 4.645202,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:39:32+00:00",
+          "finished_at": "2026-10-02T20:39:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 5.061177
+    },
+    {
+      "id": 45,
+      "url": null,
+      "output_file": "45.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1619,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 79.455062,
+          "rows_fetched": 1619,
+          "started_at": "2026-10-02T15:13:31+00:00",
+          "finished_at": "2026-10-02T15:14:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 77.472509,
+          "rows_fetched": 1619,
+          "started_at": "2026-10-02T18:01:09+00:00",
+          "finished_at": "2026-10-02T18:02:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 63.325717,
+          "rows_fetched": 1619,
+          "started_at": "2026-10-02T20:39:36+00:00",
+          "finished_at": "2026-10-02T20:40:40+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 73.417763
+    },
+    {
+      "id": 46,
+      "url": null,
+      "output_file": "46.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.030293,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:14:51+00:00",
+          "finished_at": "2026-10-02T15:19:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 229.533595,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:02:27+00:00",
+          "finished_at": "2026-10-02T18:06:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=652.61MB, MergeSortedPages=319.89MB, PagesToPagesIndexes=49.98MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 187.26439,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:40:40+00:00",
+          "finished_at": "2026-10-02T20:43:47+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 20.04kB, Top Consumers: {MatchAggregation=651.74MB, MergeSortedPages=320.76MB, PagesToPagesIndexes=49.98MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 238.942759
+    },
+    {
+      "id": 47,
+      "url": null,
+      "output_file": "47.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1037,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.964837,
+          "rows_fetched": 1037,
+          "started_at": "2026-10-02T15:19:51+00:00",
+          "finished_at": "2026-10-02T15:20:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 42.897927,
+          "rows_fetched": 1037,
+          "started_at": "2026-10-02T18:06:17+00:00",
+          "finished_at": "2026-10-02T18:06:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 37.941118,
+          "rows_fetched": 1037,
+          "started_at": "2026-10-02T20:43:47+00:00",
+          "finished_at": "2026-10-02T20:44:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.934627
+    },
+    {
+      "id": 48,
+      "url": null,
+      "output_file": "48.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035934,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:20:39+00:00",
+          "finished_at": "2026-10-02T15:25:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.025002,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:06:59+00:00",
+          "finished_at": "2026-10-02T18:11:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:44:25+00:00",
+          "finished_at": "2026-10-02T20:44:25+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020312
+    },
+    {
+      "id": 49,
+      "url": null,
+      "output_file": "49.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02122,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:25:39+00:00",
+          "finished_at": "2026-10-02T15:30:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02816,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:11:59+00:00",
+          "finished_at": "2026-10-02T18:17:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:44:25+00:00",
+          "finished_at": "2026-10-02T20:44:25+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.01646
+    },
+    {
+      "id": 50,
+      "url": null,
+      "output_file": "50.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4081,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 203.715146,
+          "rows_fetched": 4081,
+          "started_at": "2026-10-02T15:30:39+00:00",
+          "finished_at": "2026-10-02T15:34:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 144.588175,
+          "rows_fetched": 4081,
+          "started_at": "2026-10-02T18:19:21+00:00",
+          "finished_at": "2026-10-02T18:21:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 157.271192,
+          "rows_fetched": 4081,
+          "started_at": "2026-10-02T20:44:25+00:00",
+          "finished_at": "2026-10-02T20:47:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 168.524838
+    },
+    {
+      "id": 51,
+      "url": null,
+      "output_file": "51.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.029955,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:34:03+00:00",
+          "finished_at": "2026-10-02T15:39:03+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.027434,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:21:46+00:00",
+          "finished_at": "2026-10-02T18:26:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:47:02+00:00",
+          "finished_at": "2026-10-02T20:47:02+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.01913
+    },
+    {
+      "id": 52,
+      "url": null,
+      "output_file": "52.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1465,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 150.972791,
+          "rows_fetched": 1465,
+          "started_at": "2026-10-02T15:39:03+00:00",
+          "finished_at": "2026-10-02T15:41:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 121.382165,
+          "rows_fetched": 1465,
+          "started_at": "2026-10-02T18:26:46+00:00",
+          "finished_at": "2026-10-02T18:28:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 104.492471,
+          "rows_fetched": 1465,
+          "started_at": "2026-10-02T20:47:02+00:00",
+          "finished_at": "2026-10-02T20:48:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 125.615809
+    },
+    {
+      "id": 53,
+      "url": null,
+      "output_file": "53.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1670,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 16.016755,
+          "rows_fetched": 1670,
+          "started_at": "2026-10-02T15:41:34+00:00",
+          "finished_at": "2026-10-02T15:41:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 12.805639,
+          "rows_fetched": 1670,
+          "started_at": "2026-10-02T18:28:47+00:00",
+          "finished_at": "2026-10-02T18:29:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 11.148058,
+          "rows_fetched": 1670,
+          "started_at": "2026-10-02T20:48:47+00:00",
+          "finished_at": "2026-10-02T20:48:58+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 13.323484
+    },
+    {
+      "id": 54,
+      "url": null,
+      "output_file": "54.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 1.830182,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:41:50+00:00",
+          "finished_at": "2026-10-02T15:41:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 2.03691,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:29:00+00:00",
+          "finished_at": "2026-10-02T18:29:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.426794,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:48:58+00:00",
+          "finished_at": "2026-10-02T20:48:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 1.764629
+    },
+    {
+      "id": 55,
+      "url": null,
+      "output_file": "55.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 60.688582,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:41:52+00:00",
+          "finished_at": "2026-10-02T15:42:52+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.55MB, Delta: 922.68kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.18MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 75.182954,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:29:02+00:00",
+          "finished_at": "2026-10-02T18:30:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.98MB, Delta: 80.04kB, Top Consumers: {MatchAggregation=736.02MB, PagesToPagesIndexes=245.41MB, MergeSortedPages=41.68MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.592245,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:48:59+00:00",
+          "finished_at": "2026-10-02T20:49:40+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.78MB, Delta: 922.49kB, Top Consumers: {MergeSortedPages=1016.43MB, GenericSpiller=7.35MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.82126
+    },
+    {
+      "id": 56,
+      "url": null,
+      "output_file": "56.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.024908,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:42:52+00:00",
+          "finished_at": "2026-10-02T15:47:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.02515,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:30:17+00:00",
+          "finished_at": "2026-10-02T18:35:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:49:40+00:00",
+          "finished_at": "2026-10-02T20:49:40+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.016686
+    },
+    {
+      "id": 57,
+      "url": null,
+      "output_file": "57.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.026225,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:50:39+00:00",
+          "finished_at": "2026-10-02T15:55:39+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.037328,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:35:17+00:00",
+          "finished_at": "2026-10-02T18:40:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:49:40+00:00",
+          "finished_at": "2026-10-02T20:49:40+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.021184
+    },
+    {
+      "id": 58,
+      "url": null,
+      "output_file": "58.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4097,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 70.882218,
+          "rows_fetched": 4097,
+          "started_at": "2026-10-02T15:55:39+00:00",
+          "finished_at": "2026-10-02T15:56:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 108.059336,
+          "rows_fetched": 4097,
+          "started_at": "2026-10-02T18:40:18+00:00",
+          "finished_at": "2026-10-02T18:42:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 70.102528,
+          "rows_fetched": 4097,
+          "started_at": "2026-10-02T20:49:40+00:00",
+          "finished_at": "2026-10-02T20:50:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 83.014694
+    },
+    {
+      "id": 59,
+      "url": null,
+      "output_file": "59.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.036034,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T15:56:50+00:00",
+          "finished_at": "2026-10-02T16:01:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.025451,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:42:06+00:00",
+          "finished_at": "2026-10-02T18:47:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:50:50+00:00",
+          "finished_at": "2026-10-02T20:50:50+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.020495
+    },
+    {
+      "id": 60,
+      "url": null,
+      "output_file": "60.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 42.479315,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:01:50+00:00",
+          "finished_at": "2026-10-02T16:02:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 69.654434,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:47:06+00:00",
+          "finished_at": "2026-10-02T18:48:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 44.886326,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:50:50+00:00",
+          "finished_at": "2026-10-02T20:51:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 52.340025
+    },
+    {
+      "id": 61,
+      "url": null,
+      "output_file": "61.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.03085,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:02:32+00:00",
+          "finished_at": "2026-10-02T16:07:33+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.018279,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:48:15+00:00",
+          "finished_at": "2026-10-02T18:53:15+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:51:35+00:00",
+          "finished_at": "2026-10-02T20:51:35+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.016376
+    },
+    {
+      "id": 62,
+      "url": null,
+      "output_file": "62.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 134.905467,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:07:33+00:00",
+          "finished_at": "2026-10-02T16:09:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.00408,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T18:53:15+00:00",
+          "finished_at": "2026-10-02T18:58:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 112.722089,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:51:35+00:00",
+          "finished_at": "2026-10-02T20:53:28+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 182.543879
+    },
+    {
+      "id": 63,
+      "url": null,
+      "output_file": "63.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 743,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 62.810486,
+          "rows_fetched": 743,
+          "started_at": "2026-10-02T16:09:47+00:00",
+          "finished_at": "2026-10-02T16:10:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 109.480792,
+          "rows_fetched": 743,
+          "started_at": "2026-10-02T18:58:16+00:00",
+          "finished_at": "2026-10-02T19:00:05+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 62.642153,
+          "rows_fetched": 743,
+          "started_at": "2026-10-02T20:53:28+00:00",
+          "finished_at": "2026-10-02T20:54:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 78.311144
+    },
+    {
+      "id": 64,
+      "url": null,
+      "output_file": "64.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 2.359751,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:10:50+00:00",
+          "finished_at": "2026-10-02T16:10:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 2.923016,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:00:05+00:00",
+          "finished_at": "2026-10-02T19:00:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 1.81925,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:54:30+00:00",
+          "finished_at": "2026-10-02T20:54:32+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 2.367339
+    },
+    {
+      "id": 65,
+      "url": null,
+      "output_file": "65.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.084366,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:10:53+00:00",
+          "finished_at": "2026-10-02T16:11:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 100.30557,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:00:08+00:00",
+          "finished_at": "2026-10-02T19:01:48+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 57.37991,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:54:32+00:00",
+          "finished_at": "2026-10-02T20:55:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 71.923282
+    },
+    {
+      "id": 66,
+      "url": null,
+      "output_file": "66.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 72.322118,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:11:51+00:00",
+          "finished_at": "2026-10-02T16:13:03+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=1006.23MB, MergeSortedPages=16.60MB, PagesToPagesIndexes=1.06MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 119.717089,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:01:48+00:00",
+          "finished_at": "2026-10-02T19:03:48+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.99MB, Delta: 10.04kB, Top Consumers: {MatchAggregation=869.21MB, MergeSortedPages=153.01MB, PagesToPagesIndexes=1.06MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 63.958747,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:55:29+00:00",
+          "finished_at": "2026-10-02T20:56:33+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1024.00MB, Delta: 5.04kB, Top Consumers: {MatchAggregation=867.11MB, MergeSortedPages=155.11MB, PagesToPagesIndexes=1.06MB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 85.332651
+    },
+    {
+      "id": 67,
+      "url": null,
+      "output_file": "67.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 242,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 57.423812,
+          "rows_fetched": 242,
+          "started_at": "2026-10-02T16:13:03+00:00",
+          "finished_at": "2026-10-02T16:14:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 101.860896,
+          "rows_fetched": 242,
+          "started_at": "2026-10-02T19:03:48+00:00",
+          "finished_at": "2026-10-02T19:05:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 51.823412,
+          "rows_fetched": 242,
+          "started_at": "2026-10-02T20:56:33+00:00",
+          "finished_at": "2026-10-02T20:57:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 70.369373
+    },
+    {
+      "id": 68,
+      "url": null,
+      "output_file": "68.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 181,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 107.573658,
+          "rows_fetched": 181,
+          "started_at": "2026-10-02T16:14:01+00:00",
+          "finished_at": "2026-10-02T16:15:48+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 213.570808,
+          "rows_fetched": 181,
+          "started_at": "2026-10-02T19:05:30+00:00",
+          "finished_at": "2026-10-02T19:09:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 107.176925,
+          "rows_fetched": 181,
+          "started_at": "2026-10-02T20:57:25+00:00",
+          "finished_at": "2026-10-02T20:59:12+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 142.773797
+    },
+    {
+      "id": 69,
+      "url": null,
+      "output_file": "69.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 40274,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 101.400782,
+          "rows_fetched": 40274,
+          "started_at": "2026-10-02T16:15:48+00:00",
+          "finished_at": "2026-10-02T16:17:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 90.512662,
+          "rows_fetched": 40274,
+          "started_at": "2026-10-02T19:12:15+00:00",
+          "finished_at": "2026-10-02T19:13:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 42.937348,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:59:12+00:00",
+          "finished_at": "2026-10-02T20:59:55+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.58MB, Delta: 922.67kB, Top Consumers: {MergeSortedPages=1016.50MB, GenericSpiller=7.09MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 78.283597
+    },
+    {
+      "id": 70,
+      "url": null,
+      "output_file": "70.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 80.01433,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:17:30+00:00",
+          "finished_at": "2026-10-02T16:18:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 74.843664,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:13:46+00:00",
+          "finished_at": "2026-10-02T19:15:00+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.884733,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T20:59:55+00:00",
+          "finished_at": "2026-10-02T21:00:37+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.70MB, Delta: 922.63kB, Top Consumers: {MergeSortedPages=1016.43MB, GenericSpiller=7.27MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 65.580909
+    },
+    {
+      "id": 71,
+      "url": null,
+      "output_file": "71.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.035696,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:18:50+00:00",
+          "finished_at": "2026-10-02T16:23:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.013121,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:15:00+00:00",
+          "finished_at": "2026-10-02T19:20:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:00:37+00:00",
+          "finished_at": "2026-10-02T21:00:37+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.016272
+    },
+    {
+      "id": 72,
+      "url": null,
+      "output_file": "72.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 3942,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 46.133462,
+          "rows_fetched": 3942,
+          "started_at": "2026-10-02T16:23:50+00:00",
+          "finished_at": "2026-10-02T16:24:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 46.534421,
+          "rows_fetched": 3942,
+          "started_at": "2026-10-02T19:20:01+00:00",
+          "finished_at": "2026-10-02T19:20:47+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.283856,
+          "rows_fetched": 3942,
+          "started_at": "2026-10-02T21:00:37+00:00",
+          "finished_at": "2026-10-02T21:01:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 46.317246
+    },
+    {
+      "id": 73,
+      "url": null,
+      "output_file": "73.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 402,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 48.803588,
+          "rows_fetched": 402,
+          "started_at": "2026-10-02T16:24:36+00:00",
+          "finished_at": "2026-10-02T16:25:25+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 47.134579,
+          "rows_fetched": 402,
+          "started_at": "2026-10-02T19:20:47+00:00",
+          "finished_at": "2026-10-02T19:21:34+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 46.601553,
+          "rows_fetched": 402,
+          "started_at": "2026-10-02T21:01:24+00:00",
+          "finished_at": "2026-10-02T21:02:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 47.51324
+    },
+    {
+      "id": 74,
+      "url": null,
+      "output_file": "74.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1937,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 87.340509,
+          "rows_fetched": 1937,
+          "started_at": "2026-10-02T16:25:25+00:00",
+          "finished_at": "2026-10-02T16:26:52+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 56.526729,
+          "rows_fetched": 1937,
+          "started_at": "2026-10-02T19:21:34+00:00",
+          "finished_at": "2026-10-02T19:22:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 86.728692,
+          "rows_fetched": 1937,
+          "started_at": "2026-10-02T21:02:10+00:00",
+          "finished_at": "2026-10-02T21:03:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 76.86531
+    },
+    {
+      "id": 75,
+      "url": null,
+      "output_file": "75.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 88.227491,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:26:52+00:00",
+          "finished_at": "2026-10-02T16:28:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 58.26777,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:22:31+00:00",
+          "finished_at": "2026-10-02T19:23:29+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 87.264282,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:03:37+00:00",
+          "finished_at": "2026-10-02T21:05:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 77.919848
+    },
+    {
+      "id": 76,
+      "url": null,
+      "output_file": "76.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 245997,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 66.93261,
+          "rows_fetched": 245997,
+          "started_at": "2026-10-02T16:28:20+00:00",
+          "finished_at": "2026-10-02T16:29:27+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.871081,
+          "rows_fetched": 245997,
+          "started_at": "2026-10-02T19:23:29+00:00",
+          "finished_at": "2026-10-02T19:24:30+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 64.964291,
+          "rows_fetched": 245997,
+          "started_at": "2026-10-02T21:05:04+00:00",
+          "finished_at": "2026-10-02T21:06:09+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 64.255994
+    },
+    {
+      "id": 77,
+      "url": null,
+      "output_file": "77.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 40.439827,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:29:27+00:00",
+          "finished_at": "2026-10-02T16:30:08+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.25MB, Delta: 922.23kB, Top Consumers: {MergeSortedPages=1016.35MB, GenericSpiller=6.90MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 65.346616,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:24:30+00:00",
+          "finished_at": "2026-10-02T19:25:35+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.95MB, Delta: 80.04kB, Top Consumers: {MatchAggregation=894.45MB, PagesToPagesIndexes=118.13MB, MergeSortedPages=11.04MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.841299,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:06:09+00:00",
+          "finished_at": "2026-10-02T21:06:50+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.75MB, Delta: 924.85kB, Top Consumers: {MergeSortedPages=1016.45MB, GenericSpiller=7.30MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 48.875914
+    },
+    {
+      "id": 78,
+      "url": null,
+      "output_file": "78.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 10263,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 55.078536,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:30:08+00:00",
+          "finished_at": "2026-10-02T16:31:03+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.47MB, Delta: 922.98kB, Top Consumers: {MergeSortedPages=1016.39MB, GenericSpiller=7.09MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.44kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 79.449674,
+          "rows_fetched": 10263,
+          "started_at": "2026-10-02T19:25:35+00:00",
+          "finished_at": "2026-10-02T19:26:55+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 54.904353,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:06:50+00:00",
+          "finished_at": "2026-10-02T21:07:45+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.58MB, Delta: 922.67kB, Top Consumers: {MergeSortedPages=1016.50MB, GenericSpiller=7.09MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.44kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 63.144188
+    },
+    {
+      "id": 79,
+      "url": null,
+      "output_file": "79.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 2010,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 59.427438,
+          "rows_fetched": 2010,
+          "started_at": "2026-10-02T16:31:03+00:00",
+          "finished_at": "2026-10-02T16:32:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.107597,
+          "rows_fetched": 2010,
+          "started_at": "2026-10-02T19:26:55+00:00",
+          "finished_at": "2026-10-02T19:27:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 59.24906,
+          "rows_fetched": 2010,
+          "started_at": "2026-10-02T21:07:45+00:00",
+          "finished_at": "2026-10-02T21:08:44+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 55.928032
+    },
+    {
+      "id": 80,
+      "url": null,
+      "output_file": "80.txt",
+      "output_complete": true,
+      "output_source_run": 2,
+      "best_partial_rows": 11017,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 43.610538,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:32:02+00:00",
+          "finished_at": "2026-10-02T16:32:46+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.79MB, Delta: 922.62kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.42MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 166.784682,
+          "rows_fetched": 11017,
+          "started_at": "2026-10-02T19:27:44+00:00",
+          "finished_at": "2026-10-02T19:30:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.643373,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:08:44+00:00",
+          "finished_at": "2026-10-02T21:09:25+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.32MB, Delta: 922.91kB, Top Consumers: {MergeSortedPages=1016.47MB, GenericSpiller=6.85MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 83.679531
+    },
+    {
+      "id": 81,
+      "url": null,
+      "output_file": "81.txt",
+      "output_complete": false,
+      "output_source_run": 2,
+      "best_partial_rows": 15447,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 42.587597,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:32:46+00:00",
+          "finished_at": "2026-10-02T16:33:28+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.50MB, Delta: 922.66kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.12MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.032691,
+          "rows_fetched": 15447,
+          "started_at": "2026-10-02T19:30:31+00:00",
+          "finished_at": "2026-10-02T19:35:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.521041,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:09:25+00:00",
+          "finished_at": "2026-10-02T21:10:06+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.43MB, Delta: 922.66kB, Top Consumers: {MergeSortedPages=1016.45MB, GenericSpiller=6.98MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 128.04711
+    },
+    {
+      "id": 82,
+      "url": null,
+      "output_file": "82.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.022329,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:33:28+00:00",
+          "finished_at": "2026-10-02T16:38:28+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.031329,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:35:31+00:00",
+          "finished_at": "2026-10-02T19:40:31+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "timeout",
+          "query_elapsed_seconds": 300.0,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:10:06+00:00",
+          "finished_at": "2026-10-02T21:10:06+00:00",
+          "error": null,
+          "inferred": true
+        }
+      ],
+      "average_query_latency_seconds": 300.017886
+    },
+    {
+      "id": 83,
+      "url": null,
+      "output_file": "83.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 808,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 28.273635,
+          "rows_fetched": 808,
+          "started_at": "2026-10-02T16:38:28+00:00",
+          "finished_at": "2026-10-02T16:38:57+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 30.412049,
+          "rows_fetched": 808,
+          "started_at": "2026-10-02T19:40:31+00:00",
+          "finished_at": "2026-10-02T19:41:01+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 28.619709,
+          "rows_fetched": 808,
+          "started_at": "2026-10-02T21:10:06+00:00",
+          "finished_at": "2026-10-02T21:10:35+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 29.101798
+    },
+    {
+      "id": 84,
+      "url": null,
+      "output_file": "84.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 522,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 47.979529,
+          "rows_fetched": 522,
+          "started_at": "2026-10-02T16:38:57+00:00",
+          "finished_at": "2026-10-02T16:39:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 49.956859,
+          "rows_fetched": 522,
+          "started_at": "2026-10-02T19:41:01+00:00",
+          "finished_at": "2026-10-02T19:41:51+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.008869,
+          "rows_fetched": 522,
+          "started_at": "2026-10-02T21:10:35+00:00",
+          "finished_at": "2026-10-02T21:11:22+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 48.315086
+    },
+    {
+      "id": 85,
+      "url": null,
+      "output_file": "85.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 41,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 51.361851,
+          "rows_fetched": 41,
+          "started_at": "2026-10-02T16:39:45+00:00",
+          "finished_at": "2026-10-02T16:40:36+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 51.536662,
+          "rows_fetched": 41,
+          "started_at": "2026-10-02T19:41:51+00:00",
+          "finished_at": "2026-10-02T19:42:43+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 48.564494,
+          "rows_fetched": 41,
+          "started_at": "2026-10-02T21:11:22+00:00",
+          "finished_at": "2026-10-02T21:12:11+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 50.487669
+    },
+    {
+      "id": 86,
+      "url": null,
+      "output_file": "86.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 41.105966,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:40:36+00:00",
+          "finished_at": "2026-10-02T16:41:17+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.44MB, Delta: 922.58kB, Top Consumers: {MergeSortedPages=1016.39MB, GenericSpiller=7.05MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 44.920864,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:42:43+00:00",
+          "finished_at": "2026-10-02T19:43:28+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.24MB, Delta: 922.13kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=6.86MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.35339,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:12:11+00:00",
+          "finished_at": "2026-10-02T21:12:51+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.64MB, Delta: 922.48kB, Top Consumers: {MergeSortedPages=1016.56MB, GenericSpiller=7.09MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.12674
+    },
+    {
+      "id": 87,
+      "url": null,
+      "output_file": "87.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 1,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 50.71755,
+          "rows_fetched": 1,
+          "started_at": "2026-10-02T16:41:17+00:00",
+          "finished_at": "2026-10-02T16:42:08+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 52.337297,
+          "rows_fetched": 1,
+          "started_at": "2026-10-02T19:43:28+00:00",
+          "finished_at": "2026-10-02T19:44:20+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 47.437997,
+          "rows_fetched": 1,
+          "started_at": "2026-10-02T21:12:51+00:00",
+          "finished_at": "2026-10-02T21:13:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 50.164281
+    },
+    {
+      "id": 88,
+      "url": null,
+      "output_file": "88.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 42.311385,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:42:08+00:00",
+          "finished_at": "2026-10-02T16:42:50+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.67MB, Delta: 922.76kB, Top Consumers: {MergeSortedPages=1016.36MB, GenericSpiller=7.31MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 52.516478,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:44:20+00:00",
+          "finished_at": "2026-10-02T19:45:13+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1021.41MB, Delta: 2.91MB, Top Consumers: {MergeSortedPages=964.12MB, PagesToPagesIndexes=53.11MB, GenericSpiller=4.18MB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.940316,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:13:38+00:00",
+          "finished_at": "2026-10-02T21:14:19+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.92MB, Delta: 924.77kB, Top Consumers: {MergeSortedPages=1016.49MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 45.25606
+    },
+    {
+      "id": 89,
+      "url": null,
+      "output_file": "89.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 55.25957,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:42:50+00:00",
+          "finished_at": "2026-10-02T16:43:46+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 56.903729,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:45:13+00:00",
+          "finished_at": "2026-10-02T19:46:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 50.869055,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:14:19+00:00",
+          "finished_at": "2026-10-02T21:15:10+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 54.344118
+    },
+    {
+      "id": 90,
+      "url": null,
+      "output_file": "90.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 46.481651,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:43:46+00:00",
+          "finished_at": "2026-10-02T16:44:32+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.71MB, Delta: 922.61kB, Top Consumers: {MergeSortedPages=1016.18MB, GenericSpiller=7.53MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 50.220425,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:46:10+00:00",
+          "finished_at": "2026-10-02T19:47:00+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.73MB, Delta: 922.41kB, Top Consumers: {MergeSortedPages=1016.20MB, GenericSpiller=7.53MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 45.670767,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:15:10+00:00",
+          "finished_at": "2026-10-02T21:15:56+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.11MB, Delta: 924.50kB, Top Consumers: {MergeSortedPages=1015.42MB, GenericSpiller=7.69MB, ScanFilterAndProjectOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 47.457614
+    },
+    {
+      "id": 91,
+      "url": null,
+      "output_file": "91.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 44.966376,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:44:32+00:00",
+          "finished_at": "2026-10-02T16:45:17+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 45.332498,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:47:00+00:00",
+          "finished_at": "2026-10-02T19:47:45+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 42.388206,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:15:56+00:00",
+          "finished_at": "2026-10-02T21:16:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 44.229027
+    },
+    {
+      "id": 92,
+      "url": null,
+      "output_file": "92.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 43.548005,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:45:17+00:00",
+          "finished_at": "2026-10-02T16:46:01+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.81MB, Delta: 922.61kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.44MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 44.574749,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:47:45+00:00",
+          "finished_at": "2026-10-02T19:48:30+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.26MB, Delta: 922.30kB, Top Consumers: {MergeSortedPages=1016.33MB, GenericSpiller=6.92MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.591371,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:16:38+00:00",
+          "finished_at": "2026-10-02T21:17:19+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.92MB, Delta: 924.80kB, Top Consumers: {MergeSortedPages=1016.49MB, GenericSpiller=7.43MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.904708
+    },
+    {
+      "id": 93,
+      "url": null,
+      "output_file": "93.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4057,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 80.786118,
+          "rows_fetched": 4057,
+          "started_at": "2026-10-02T16:46:01+00:00",
+          "finished_at": "2026-10-02T16:47:21+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 82.777386,
+          "rows_fetched": 4057,
+          "started_at": "2026-10-02T19:48:30+00:00",
+          "finished_at": "2026-10-02T19:49:53+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 77.813076,
+          "rows_fetched": 4057,
+          "started_at": "2026-10-02T21:17:19+00:00",
+          "finished_at": "2026-10-02T21:18:37+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 80.45886
+    },
+    {
+      "id": 94,
+      "url": null,
+      "output_file": "94.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 42.346696,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:47:21+00:00",
+          "finished_at": "2026-10-02T16:48:04+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.83MB, Delta: 922.61kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 45.629622,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:49:53+00:00",
+          "finished_at": "2026-10-02T19:50:38+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.84MB, Delta: 922.41kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.788161,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:18:37+00:00",
+          "finished_at": "2026-10-02T21:19:19+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 924.27kB, Top Consumers: {MergeSortedPages=1016.48MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 43.254826
+    },
+    {
+      "id": 95,
+      "url": null,
+      "output_file": "95.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 7217,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 57.744515,
+          "rows_fetched": 7217,
+          "started_at": "2026-10-02T16:48:04+00:00",
+          "finished_at": "2026-10-02T16:49:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 60.147109,
+          "rows_fetched": 7217,
+          "started_at": "2026-10-02T19:50:38+00:00",
+          "finished_at": "2026-10-02T19:51:38+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 54.317146,
+          "rows_fetched": 7217,
+          "started_at": "2026-10-02T21:19:19+00:00",
+          "finished_at": "2026-10-02T21:20:13+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 57.402923
+    },
+    {
+      "id": 96,
+      "url": null,
+      "output_file": "96.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 41.224045,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:49:02+00:00",
+          "finished_at": "2026-10-02T16:49:43+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.66MB, Delta: 922.77kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.30MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 44.419246,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:51:38+00:00",
+          "finished_at": "2026-10-02T19:52:23+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.79MB, Delta: 922.05kB, Top Consumers: {MergeSortedPages=1017.21MB, GenericSpiller=6.58MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 41.831531,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:20:13+00:00",
+          "finished_at": "2026-10-02T21:20:55+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.93MB, Delta: 924.74kB, Top Consumers: {MergeSortedPages=1016.48MB, GenericSpiller=7.44MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.491607
+    },
+    {
+      "id": 97,
+      "url": null,
+      "output_file": "97.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 58.602809,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:49:43+00:00",
+          "finished_at": "2026-10-02T16:50:41+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 61.153758,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:52:23+00:00",
+          "finished_at": "2026-10-02T19:53:24+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 55.719724,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:20:55+00:00",
+          "finished_at": "2026-10-02T21:21:50+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 58.492097
+    },
+    {
+      "id": 98,
+      "url": null,
+      "output_file": "98.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 4100,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 94.390615,
+          "rows_fetched": 4100,
+          "started_at": "2026-10-02T16:50:41+00:00",
+          "finished_at": "2026-10-02T16:52:16+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 100.106188,
+          "rows_fetched": 4100,
+          "started_at": "2026-10-02T19:53:24+00:00",
+          "finished_at": "2026-10-02T19:55:04+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 92.894167,
+          "rows_fetched": 4100,
+          "started_at": "2026-10-02T21:21:50+00:00",
+          "finished_at": "2026-10-02T21:23:23+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 95.79699
+    },
+    {
+      "id": 99,
+      "url": null,
+      "output_file": "99.txt",
+      "output_complete": false,
+      "output_source_run": 1,
+      "best_partial_rows": 0,
+      "runs": [
+        {
+          "run": 1,
+          "status": "error",
+          "query_elapsed_seconds": 42.415736,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T16:52:16+00:00",
+          "finished_at": "2026-10-02T16:52:58+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.74MB, Delta: 922.70kB, Top Consumers: {MergeSortedPages=1016.37MB, GenericSpiller=7.36MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "error",
+          "query_elapsed_seconds": 44.746062,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T19:55:04+00:00",
+          "finished_at": "2026-10-02T19:55:49+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.84MB, Delta: 922.41kB, Top Consumers: {MergeSortedPages=1016.38MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "error",
+          "query_elapsed_seconds": 40.914281,
+          "rows_fetched": 0,
+          "started_at": "2026-10-02T21:23:23+00:00",
+          "finished_at": "2026-10-02T21:24:04+00:00",
+          "error": "EXCEEDED_LOCAL_MEMORY_LIMIT: Query exceeded per-node memory limit of 1GB [Allocated: 1023.94MB, Delta: 924.27kB, Top Consumers: {MergeSortedPages=1016.48MB, GenericSpiller=7.46MB, TableScanOperator-ConnectorPageSource=1.13kB}]",
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 42.692026
+    },
+    {
+      "id": 100,
+      "url": null,
+      "output_file": "100.txt",
+      "output_complete": true,
+      "output_source_run": 1,
+      "best_partial_rows": 12771,
+      "runs": [
+        {
+          "run": 1,
+          "status": "success",
+          "query_elapsed_seconds": 183.418735,
+          "rows_fetched": 12771,
+          "started_at": "2026-10-02T16:52:58+00:00",
+          "finished_at": "2026-10-02T16:56:02+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 2,
+          "status": "success",
+          "query_elapsed_seconds": 190.310633,
+          "rows_fetched": 12771,
+          "started_at": "2026-10-02T19:55:49+00:00",
+          "finished_at": "2026-10-02T19:58:59+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        },
+        {
+          "run": 3,
+          "status": "success",
+          "query_elapsed_seconds": 181.346495,
+          "rows_fetched": 12771,
+          "started_at": "2026-10-02T21:24:04+00:00",
+          "finished_at": "2026-10-02T21:27:06+00:00",
+          "error": null,
+          "coordinator_unavailable": false
+        }
+      ],
+      "average_query_latency_seconds": 185.025288
+    }
+  ]
+}

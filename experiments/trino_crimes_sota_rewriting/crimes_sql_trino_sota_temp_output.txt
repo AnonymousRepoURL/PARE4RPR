@@ -1,0 +1,110 @@
+rpr_sql> python sota_method.py data/crimes_sql_trino.json `
+>>   --system trino `
+>>   --sample-table crimes_sample `
+>>   --trino-url http://localhost:8080 `
+>>   --catalog postgresql `
+>>   --schema public `
+>>   --runs 3 `
+>>   --timeout 1.5
+[1/100] 0.005s (sampling 0.000s): unchanged
+[2/100] 1.309s (sampling 1.305s): sequence_filtering
+[3/100] 0.621s (sampling 0.618s): incremental_condition_pushdown, sequence_filtering
+[4/100] 0.003s (sampling 0.000s): define_partition_pushdown
+[5/100] 0.003s (sampling 0.000s): unchanged
+[6/100] 4.317s (sampling 4.305s): incremental_condition_pushdown, row_filtering
+[7/100] 0.007s (sampling 0.000s): define_partition_pushdown, row_filtering
+[8/100] 0.009s (sampling 0.000s): define_partition_pushdown, row_filtering
+[9/100] 0.006s (sampling 0.000s): row_filtering
+[10/100] 0.633s (sampling 0.630s): unchanged
+[11/100] 9.388s (sampling 9.374s): incremental_condition_pushdown
+[12/100] 27.014s (sampling 26.945s): incremental_condition_pushdown, window_condition_pre_filter
+[13/100] 68.175s (sampling 67.958s): incremental_condition_pushdown
+[14/100] 5.480s (sampling 5.472s): incremental_condition_pushdown, window_condition_pre_filter
+[15/100] 43.482s (sampling 43.409s): incremental_condition_pushdown, window_condition_pre_filter
+[16/100] 140.283s (sampling 140.033s): incremental_condition_pushdown
+[17/100] 18.688s (sampling 18.664s): incremental_condition_pushdown
+[18/100] 21.075s (sampling 21.057s): incremental_condition_pushdown
+[19/100] 0.006s (sampling 0.000s): unchanged
+[20/100] 0.005s (sampling 0.000s): unchanged
+[21/100] 0.004s (sampling 0.000s): unchanged
+[22/100] 0.004s (sampling 0.000s): unchanged
+[23/100] 0.011s (sampling 0.000s): unchanged
+[24/100] 24.848s (sampling 24.824s): incremental_condition_pushdown
+[25/100] 7.215s (sampling 7.198s): incremental_condition_pushdown
+[26/100] 1.348s (sampling 1.327s): sequence_filtering, row_filtering
+[27/100] 1.059s (sampling 1.043s): sequence_filtering, row_filtering
+[28/100] 1.365s (sampling 1.345s): sequence_filtering, row_filtering
+[29/100] 0.008s (sampling 0.000s): row_filtering
+[30/100] 1.192s (sampling 1.172s): alternation_variable_merge, sequence_filtering, row_filtering
+[31/100] 1.156s (sampling 1.142s): alternation_variable_merge, sequence_filtering, row_filtering
+[32/100] 1.437s (sampling 1.423s): alternation_variable_merge, row_filtering
+[33/100] 50.546s (sampling 50.448s): incremental_condition_pushdown, row_filtering
+[34/100] 0.832s (sampling 0.815s): sequence_filtering, row_filtering
+[35/100] 0.591s (sampling 0.574s): sequence_filtering, row_filtering
+[36/100] 0.756s (sampling 0.743s): row_filtering
+[37/100] 29.222s (sampling 29.173s): incremental_condition_pushdown, row_filtering
+[38/100] 0.683s (sampling 0.677s): sequence_filtering, row_filtering
+[39/100] 0.682s (sampling 0.674s): row_filtering
+[40/100] 0.530s (sampling 0.525s): row_filtering
+[41/100] 13.151s (sampling 13.132s): incremental_condition_pushdown, row_filtering
+[42/100] 7.880s (sampling 7.867s): incremental_condition_pushdown, row_filtering
+[43/100] 0.485s (sampling 0.478s): sequence_filtering, row_filtering
+[44/100] 0.663s (sampling 0.655s): sequence_filtering, row_filtering
+[45/100] 0.006s (sampling 0.000s): row_filtering
+[46/100] 7.169s (sampling 7.158s): incremental_condition_pushdown
+[47/100] 3.066s (sampling 3.056s): incremental_condition_pushdown
+[48/100] 0.673s (sampling 0.668s): unchanged
+[49/100] 0.752s (sampling 0.746s): sequence_filtering
+[50/100] 0.603s (sampling 0.598s): sequence_filtering
+[51/100] 0.751s (sampling 0.747s): unchanged
+[52/100] 6.782s (sampling 6.771s): incremental_condition_pushdown
+[53/100] 7.686s (sampling 7.673s): incremental_condition_pushdown
+[54/100] 0.004s (sampling 0.000s): unchanged
+[55/100] 0.566s (sampling 0.563s): unchanged
+[56/100] 0.522s (sampling 0.516s): sequence_filtering
+[57/100] 0.869s (sampling 0.864s): sequence_filtering
+[58/100] 0.987s (sampling 0.982s): unchanged
+[59/100] 0.754s (sampling 0.750s): row_filtering
+[60/100] 0.723s (sampling 0.718s): sequence_filtering
+[61/100] 0.596s (sampling 0.592s): sequence_filtering
+[62/100] 0.564s (sampling 0.560s): sequence_filtering
+[63/100] 0.003s (sampling 0.000s): unchanged
+[64/100] 8.204s (sampling 8.192s): row_filtering
+[65/100] 0.002s (sampling 0.000s): unchanged
+[66/100] 0.700s (sampling 0.697s): unchanged
+[67/100] 0.002s (sampling 0.000s): unchanged
+[68/100] 0.002s (sampling 0.000s): unchanged
+[69/100] 0.002s (sampling 0.000s): alternation_variable_merge
+[70/100] 0.736s (sampling 0.733s): sequence_filtering
+[71/100] 0.002s (sampling 0.000s): unchanged
+[72/100] 0.002s (sampling 0.000s): unchanged
+[73/100] 0.006s (sampling 0.000s): define_partition_pushdown, row_filtering
+[74/100] 0.823s (sampling 0.814s): sequence_filtering, row_filtering
+[75/100] 0.007s (sampling 0.000s): row_filtering
+[76/100] 0.002s (sampling 0.000s): row_filtering
+[77/100] 0.001s (sampling 0.000s): unchanged
+[78/100] 0.546s (sampling 0.542s): sequence_filtering
+[79/100] 0.004s (sampling 0.000s): row_filtering
+[80/100] 0.809s (sampling 0.803s): sequence_filtering, row_filtering
+[81/100] 0.659s (sampling 0.651s): sequence_filtering, row_filtering
+[82/100] 0.876s (sampling 0.871s): sequence_filtering, row_filtering
+[83/100] 0.003s (sampling 0.000s): row_filtering
+[84/100] 0.003s (sampling 0.000s): define_partition_pushdown, row_filtering
+[85/100] 0.004s (sampling 0.000s): row_filtering
+[86/100] 0.001s (sampling 0.000s): unchanged
+[87/100] 0.001s (sampling 0.000s): unchanged
+[88/100] 12.507s (sampling 12.498s): incremental_condition_pushdown
+[89/100] 0.675s (sampling 0.672s): sequence_filtering
+[90/100] 0.002s (sampling 0.000s): unchanged
+[91/100] 0.625s (sampling 0.620s): sequence_filtering, row_filtering
+[92/100] 0.666s (sampling 0.660s): sequence_filtering, row_filtering
+[93/100] 0.005s (sampling 0.000s): row_filtering
+[94/100] 0.686s (sampling 0.681s): sequence_filtering
+[95/100] 0.001s (sampling 0.000s): unchanged
+[96/100] 0.002s (sampling 0.000s): unchanged
+[97/100] 0.661s (sampling 0.659s): sequence_filtering
+[98/100] 4.824s (sampling 4.821s): unchanged
+[99/100] 0.566s (sampling 0.561s): alternation_variable_merge
+[100/100] 0.003s (sampling 0.000s): alternation_variable_merge
+rewritten queries written to data\crimes_sql_trino_sota_method.txt
+rewrite metrics written to data\crimes_sql_trino_sota_method.metrics.json

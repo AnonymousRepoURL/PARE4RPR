@@ -1,0 +1,113 @@
+------------------------------------------------------------------
+rpr_sql % python3 llm_method.py data/crimes_sql.json \
+  --provider openai \
+  --model gpt-6-astra \
+  --reasoning-effort high \
+  --max-output-tokens 65536 \
+  --input-price-per-million 10 \
+  --cached-input-price-per-million 1 \
+  --output-price-per-million 50 \
+  --prompt-version v1
+------------------------------------------------------------------
+[1/100] (oracle): 26.464s, 2296 tokens, estimated $0.06216000
+[2/100] (oracle): 58.771s, 3367 tokens, estimated $0.11623000
+[3/100] (oracle): 27.113s, 2086 tokens, estimated $0.05518000
+[4/100] (oracle): 12.194s, 1685 tokens, estimated $0.03425000
+[5/100] (oracle): 6.865s, 1514 tokens, estimated $0.02602000
+[6/100] (oracle): 13.747s, 1865 tokens, estimated $0.03845000
+[7/100] (oracle): 16.909s, 2006 tokens, estimated $0.04586000
+[8/100] (oracle): 10.972s, 1732 tokens, estimated $0.03168000
+[9/100] (oracle): 18.919s, 2073 tokens, estimated $0.04973000
+[10/100] (oracle): 19.981s, 2016 tokens, estimated $0.04812000
+[11/100] (oracle): 57.905s, 3366 tokens, estimated $0.11506000
+[12/100] (oracle): 20.106s, 2210 tokens, estimated $0.05378000
+[13/100] (oracle): 55.150s, 3696 tokens, estimated $0.12280000
+[14/100] (oracle): 14.528s, 1828 tokens, estimated $0.03936000
+[15/100] (oracle): 37.309s, 2694 tokens, estimated $0.07858000
+[16/100] (oracle): 25.028s, 2366 tokens, estimated $0.05982000
+[17/100] (oracle): 41.969s, 2855 tokens, estimated $0.08847000
+[18/100] (oracle): 54.214s, 3353 tokens, estimated $0.11625000
+[19/100] (oracle): 26.673s, 2273 tokens, estimated $0.06069000
+[20/100] (oracle): 23.539s, 2059 tokens, estimated $0.05139000
+[21/100] (oracle): 18.103s, 1937 tokens, estimated $0.04505000
+[22/100] (oracle): 18.803s, 1922 tokens, estimated $0.04486000
+[23/100] (oracle): 48.706s, 3014 tokens, estimated $0.09930000
+[24/100] (oracle): 32.138s, 2487 tokens, estimated $0.07043000
+[25/100] (oracle): 38.072s, 2656 tokens, estimated $0.07952000
+[26/100] (oracle): 28.939s, 2369 tokens, estimated $0.06433000
+[27/100] (oracle): 18.468s, 1998 tokens, estimated $0.04634000
+[28/100] (oracle): 23.710s, 2278 tokens, estimated $0.05958000
+[29/100] (oracle): 22.758s, 2250 tokens, estimated $0.06038000
+[30/100] (oracle): 15.087s, 1893 tokens, estimated $0.04133000
+[31/100] (oracle): 15.521s, 1912 tokens, estimated $0.04296000
+[32/100] (oracle): 16.175s, 1912 tokens, estimated $0.04268000
+[33/100] (oracle): 21.888s, 2326 tokens, estimated $0.06002000
+[34/100] (oracle): 25.201s, 2518 tokens, estimated $0.06938000
+[35/100] (oracle): 23.864s, 2344 tokens, estimated $0.06152000
+[36/100] (oracle): 28.176s, 2403 tokens, estimated $0.06459000
+[37/100] (oracle): 20.190s, 2152 tokens, estimated $0.05216000
+[38/100] (oracle): 36.506s, 2566 tokens, estimated $0.07658000
+[39/100] (oracle): 19.017s, 1971 tokens, estimated $0.04739000
+[40/100] (oracle): 23.898s, 2144 tokens, estimated $0.05604000
+[41/100] (oracle): 18.470s, 2011 tokens, estimated $0.04811000
+[42/100] (oracle): 23.861s, 2166 tokens, estimated $0.05582000
+[43/100] (oracle): 18.206s, 2064 tokens, estimated $0.05060000
+[44/100] (oracle): 21.962s, 2185 tokens, estimated $0.05629000
+[45/100] (oracle): 28.858s, 2297 tokens, estimated $0.06169000
+[46/100] (oracle): 30.208s, 2410 tokens, estimated $0.06790000
+[47/100] (oracle): 47.230s, 2889 tokens, estimated $0.09001000
+[48/100] (oracle): 29.520s, 2456 tokens, estimated $0.06624000
+[49/100] (oracle): 60.000s, 3518 tokens, estimated $0.12138000
+[50/100] (oracle): 24.276s, 2171 tokens, estimated $0.05415000
+[51/100] (oracle): 23.691s, 2194 tokens, estimated $0.05594000
+[52/100] (oracle): 42.676s, 2798 tokens, estimated $0.08698000
+[53/100] (oracle): 36.750s, 2733 tokens, estimated $0.07937000
+[54/100] (oracle): 36.103s, 2669 tokens, estimated $0.07761000
+[55/100] (oracle): 16.993s, 1901 tokens, estimated $0.04429000
+[56/100] (oracle): 24.896s, 2156 tokens, estimated $0.05596000
+[57/100] (oracle): 35.090s, 2644 tokens, estimated $0.08104000
+[58/100] (oracle): 41.627s, 2740 tokens, estimated $0.08592000
+[59/100] (oracle): 49.550s, 2943 tokens, estimated $0.09547000
+[60/100] (oracle): 10.258s, 1688 tokens, estimated $0.03196000
+[61/100] (oracle): 8.804s, 1668 tokens, estimated $0.03136000
+[62/100] (oracle): 25.329s, 2323 tokens, estimated $0.06327000
+[63/100] (oracle): 49.788s, 3101 tokens, estimated $0.10117000
+[64/100] (oracle): 23.578s, 2240 tokens, estimated $0.05872000
+[65/100] (oracle): 8.541s, 1578 tokens, estimated $0.02826000
+[66/100] (oracle): 11.839s, 1622 tokens, estimated $0.03062000
+[67/100] (oracle): 13.079s, 1673 tokens, estimated $0.03365000
+[68/100] (oracle): 8.237s, 1492 tokens, estimated $0.02552000
+[69/100] (oracle): 8.814s, 1623 tokens, estimated $0.02883000
+[70/100] (oracle): 41.738s, 2710 tokens, estimated $0.08438000
+[71/100] (oracle): 40.095s, 2644 tokens, estimated $0.08152000
+[72/100] (oracle): 33.136s, 2381 tokens, estimated $0.06633000
+[73/100] (oracle): 21.342s, 2082 tokens, estimated $0.05158000
+[74/100] (oracle): 28.015s, 2313 tokens, estimated $0.06285000
+[75/100] (oracle): 26.668s, 2205 tokens, estimated $0.05789000
+[76/100] (oracle): 35.158s, 2456 tokens, estimated $0.07304000
+[77/100] (oracle): 20.916s, 1802 tokens, estimated $0.04222000
+[78/100] (oracle): 8.913s, 1578 tokens, estimated $0.02810000
+[79/100] (oracle): 18.821s, 1929 tokens, estimated $0.04541000
+[80/100] (oracle): 27.457s, 2284 tokens, estimated $0.06164000
+[81/100] (oracle): 16.337s, 1902 tokens, estimated $0.04262000
+[82/100] (oracle): 29.581s, 2276 tokens, estimated $0.06176000
+[83/100] (oracle): 23.542s, 2026 tokens, estimated $0.05042000
+[84/100] (oracle): 16.226s, 1886 tokens, estimated $0.04334000
+[85/100] (oracle): 18.053s, 1847 tokens, estimated $0.04167000
+[86/100] (oracle): 11.640s, 1549 tokens, estimated $0.02905000
+[87/100] (oracle): 14.151s, 1677 tokens, estimated $0.03453000
+[88/100] (oracle): 34.649s, 2448 tokens, estimated $0.06984000
+[89/100] (oracle): 47.116s, 2931 tokens, estimated $0.09435000
+[90/100] (oracle): 15.202s, 1811 tokens, estimated $0.03943000
+[91/100] (oracle): 17.033s, 1931 tokens, estimated $0.04531000
+[92/100] (oracle): 14.259s, 1862 tokens, estimated $0.04170000
+[93/100] (oracle): 12.671s, 1808 tokens, estimated $0.03876000
+[94/100] (oracle): 33.470s, 2435 tokens, estimated $0.06955000
+[95/100] (oracle): 8.466s, 1582 tokens, estimated $0.02814000
+[96/100] (oracle): 8.992s, 1572 tokens, estimated $0.02804000
+[97/100] (oracle): 10.845s, 1593 tokens, estimated $0.02969000
+[98/100] (oracle): 15.478s, 1879 tokens, estimated $0.04239000
+[99/100] (oracle): 24.332s, 2334 tokens, estimated $0.06226000
+[100/100] (oracle): 13.476s, 1830 tokens, estimated $0.03922000
+------------------------------------------------------------------
+total estimated LLM cost: $5.83348000
